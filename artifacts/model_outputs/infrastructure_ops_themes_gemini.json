@@ -1,0 +1,776 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "infrastructure_ops",
+  "category_name": "Infrastructure & Ops",
+  "response_count": 101,
+  "timestamp": "2026-03-07T08:14:08.552013",
+  "themes": [
+    {
+      "code": "infra_environment_setup",
+      "name": "Infrastructure Provisioning & Setup",
+      "description": "Automating the creation, configuration, and maintenance of development and production environments, including generating infrastructure-as-code (e.g., Bicep, ARM templates).",
+      "pids": [
+        2,
+        3,
+        22,
+        175,
+        177,
+        216,
+        273,
+        386,
+        447,
+        457,
+        476,
+        508,
+        553,
+        610,
+        651,
+        820,
+        825,
+        830,
+        858
+      ]
+    },
+    {
+      "code": "ci_cd_pipeline_automation",
+      "name": "CI/CD Pipeline Automation",
+      "description": "Developing, maintaining, and troubleshooting CI/CD pipelines, automating testing, managing DevOps workflows, and overseeing software deployments.",
+      "pids": [
+        42,
+        105,
+        125,
+        138,
+        163,
+        202,
+        209,
+        267,
+        347,
+        409,
+        440,
+        476,
+        492,
+        558,
+        647,
+        651,
+        791,
+        820,
+        858
+      ]
+    },
+    {
+      "code": "intelligent_monitoring_and_alerting",
+      "name": "Intelligent Monitoring & Alerting",
+      "description": "Setting up custom monitors, analyzing logs and metrics for deviations, managing alerts, and proactively predicting system failures before they impact users.",
+      "pids": [
+        2,
+        20,
+        56,
+        83,
+        126,
+        175,
+        180,
+        190,
+        202,
+        216,
+        251,
+        271,
+        280,
+        283,
+        298,
+        306,
+        322,
+        345,
+        347,
+        356,
+        370,
+        377,
+        417,
+        440,
+        500,
+        520,
+        532,
+        549,
+        558,
+        644,
+        651,
+        740,
+        852
+      ]
+    },
+    {
+      "code": "incident_response_and_rca",
+      "name": "Incident Response & Root Cause Analysis",
+      "description": "Accelerating incident resolution by analyzing live-site issues, finding root causes from logs, suggesting mitigation steps automatically, and reducing on-call toil.",
+      "pids": [
+        15,
+        20,
+        52,
+        56,
+        83,
+        93,
+        126,
+        202,
+        207,
+        209,
+        254,
+        271,
+        280,
+        370,
+        377,
+        426,
+        462,
+        500,
+        639,
+        644,
+        706,
+        830
+      ]
+    },
+    {
+      "code": "customer_support_automation",
+      "name": "Automated Customer Support",
+      "description": "Screening, triaging, and automatically responding to common customer support queries based on internal knowledge bases and repetitive issue patterns.",
+      "pids": [
+        92,
+        117,
+        202,
+        294,
+        348,
+        417,
+        426,
+        450,
+        578,
+        639,
+        647,
+        653,
+        671,
+        780
+      ]
+    },
+    {
+      "code": "routine_maintenance_and_upgrades",
+      "name": "Routine Maintenance & System Upgrades",
+      "description": "Handling ongoing service maintenance tasks, such as upgrading packages and systems, refactoring, and automating repetitive manual processes or 'drudgery'.",
+      "pids": [
+        3,
+        22,
+        111,
+        165,
+        175,
+        269,
+        270,
+        273,
+        345,
+        375,
+        462,
+        476,
+        502,
+        527,
+        532,
+        565,
+        628,
+        744,
+        789,
+        820,
+        825
+      ]
+    },
+    {
+      "code": "contextual_knowledge_and_documentation",
+      "name": "Contextual Knowledge & Search",
+      "description": "Acting as a centralized search engine to retrieve system documentation, understand complex infrastructure topology, and organize 'tribal knowledge' for developers.",
+      "pids": [
+        64,
+        126,
+        426,
+        697,
+        791
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "infra_environment_setup",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "infra_environment_setup",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "infra_environment_setup",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "contextual_knowledge_and_documentation"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca",
+        "contextual_knowledge_and_documentation"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "infra_environment_setup",
+        "intelligent_monitoring_and_alerting",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 177,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca",
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "infra_environment_setup",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 251,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 269,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "infra_environment_setup",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 283,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 426,
+      "themes": [
+        "incident_response_and_rca",
+        "customer_support_automation",
+        "contextual_knowledge_and_documentation"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 450,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 462,
+      "themes": [
+        "incident_response_and_rca",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "infra_environment_setup",
+        "ci_cd_pipeline_automation",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "ci_cd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 532,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "infra_environment_setup"
+      ]
+    },
+    {
+      "pid": 628,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "incident_response_and_rca",
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "intelligent_monitoring_and_alerting",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "infra_environment_setup",
+        "ci_cd_pipeline_automation",
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "contextual_knowledge_and_documentation"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "ci_cd_pipeline_automation",
+        "contextual_knowledge_and_documentation"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "infra_environment_setup",
+        "ci_cd_pipeline_automation",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "infra_environment_setup",
+        "routine_maintenance_and_upgrades"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "infra_environment_setup",
+        "incident_response_and_rca"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "intelligent_monitoring_and_alerting"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "infra_environment_setup",
+        "ci_cd_pipeline_automation"
+      ]
+    }
+  ]
+}

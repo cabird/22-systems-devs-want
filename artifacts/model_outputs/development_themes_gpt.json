@@ -1,0 +1,3104 @@
+{
+  "model": "gpt-5.2",
+  "category": "development",
+  "category_name": "Development",
+  "response_count": 353,
+  "timestamp": "2026-03-07T07:51:37.997579",
+  "themes": [
+    {
+      "code": "refactoring_modernization",
+      "name": "Automated Refactoring, Modernization & Tech-Debt Reduction",
+      "description": "AI that can safely refactor code (often multi-file), modernize legacy systems, perform migrations, and execute repetitive upgrades (framework/library/package updates) to reduce maintenance burden and tech debt.",
+      "pids": [
+        1,
+        2,
+        8,
+        24,
+        27,
+        34,
+        48,
+        52,
+        64,
+        74,
+        86,
+        166,
+        170,
+        180,
+        200,
+        208,
+        210,
+        225,
+        236,
+        270,
+        273,
+        280,
+        305,
+        347,
+        356,
+        376,
+        407,
+        418,
+        432,
+        443,
+        446,
+        462,
+        483,
+        484,
+        500,
+        502,
+        527,
+        539,
+        549,
+        590,
+        603,
+        604,
+        605,
+        608,
+        610,
+        627,
+        634,
+        639,
+        657,
+        687,
+        689,
+        744,
+        785,
+        816,
+        819
+      ]
+    },
+    {
+      "code": "boilerplate_and_feature_codegen",
+      "name": "Boilerplate, Scaffolding & Feature Code Generation",
+      "description": "AI that generates boilerplate/scaffolding, converts/ports code, writes small scripts, or implements well-scoped features from requirements/specs\u2014reducing \u2018yak shaving\u2019 while developers focus on core logic.",
+      "pids": [
+        2,
+        11,
+        13,
+        17,
+        42,
+        46,
+        56,
+        57,
+        59,
+        73,
+        75,
+        101,
+        105,
+        138,
+        139,
+        143,
+        153,
+        179,
+        187,
+        193,
+        194,
+        195,
+        200,
+        210,
+        211,
+        219,
+        236,
+        242,
+        245,
+        249,
+        253,
+        275,
+        277,
+        282,
+        293,
+        297,
+        298,
+        311,
+        314,
+        352,
+        368,
+        387,
+        388,
+        394,
+        396,
+        397,
+        399,
+        427,
+        439,
+        459,
+        490,
+        506,
+        569,
+        607,
+        611,
+        627,
+        644,
+        647,
+        667,
+        687,
+        692,
+        697,
+        698,
+        703,
+        717,
+        720,
+        721,
+        723,
+        730,
+        747,
+        748,
+        760,
+        774,
+        781,
+        788,
+        795,
+        806,
+        809,
+        813,
+        827,
+        839
+      ]
+    },
+    {
+      "code": "automated_testing_and_validation",
+      "name": "Automated Test Generation, Coverage & Output Validation",
+      "description": "AI that generates meaningful unit/integration tests, suggests coverage gaps/edge cases, supports TDD (tests-first constraints), and validates changes by running tests or ensuring outputs compile/pass CI to prevent regressions.",
+      "pids": [
+        10,
+        19,
+        42,
+        48,
+        59,
+        67,
+        73,
+        120,
+        150,
+        151,
+        164,
+        170,
+        180,
+        187,
+        188,
+        189,
+        194,
+        199,
+        213,
+        228,
+        245,
+        249,
+        270,
+        286,
+        293,
+        294,
+        311,
+        317,
+        350,
+        366,
+        369,
+        372,
+        376,
+        381,
+        386,
+        388,
+        422,
+        441,
+        448,
+        456,
+        457,
+        464,
+        520,
+        533,
+        553,
+        590,
+        591,
+        605,
+        609,
+        613,
+        626,
+        627,
+        639,
+        667,
+        689,
+        692,
+        723,
+        774,
+        775,
+        790,
+        795,
+        809,
+        833
+      ]
+    },
+    {
+      "code": "debugging_and_incident_rca",
+      "name": "Debugging, Root Cause Analysis & Incident Triage (with Logs/Telemetry)",
+      "description": "AI that accelerates debugging by analyzing stack traces, logs, telemetry, failed tests, and runtime behavior to find root causes, reproduce issues, propose fixes, and assist with bug triage/livesite investigations.",
+      "pids": [
+        13,
+        26,
+        29,
+        43,
+        59,
+        83,
+        120,
+        125,
+        127,
+        131,
+        145,
+        150,
+        156,
+        171,
+        174,
+        180,
+        189,
+        196,
+        199,
+        202,
+        209,
+        222,
+        286,
+        291,
+        309,
+        310,
+        313,
+        356,
+        370,
+        394,
+        395,
+        397,
+        407,
+        413,
+        428,
+        432,
+        446,
+        457,
+        461,
+        470,
+        500,
+        508,
+        527,
+        535,
+        539,
+        553,
+        556,
+        558,
+        564,
+        578,
+        598,
+        620,
+        628,
+        647,
+        648,
+        663,
+        692,
+        693,
+        696,
+        698,
+        721,
+        734,
+        751,
+        752,
+        760,
+        774,
+        827,
+        832,
+        833
+      ]
+    },
+    {
+      "code": "codebase_context_and_dependency_awareness",
+      "name": "Repo-Wide Context, Dependency Awareness & Knowledge/Docs Assistance",
+      "description": "AI that understands large/legacy codebases end-to-end (not just current file), tracks dependencies and ripple effects, performs cross-file edits safely, maintains long-running context/memory, helps onboarding, and finds/produces relevant internal/external documentation and sources.",
+      "pids": [
+        2,
+        27,
+        28,
+        34,
+        36,
+        40,
+        49,
+        59,
+        74,
+        78,
+        86,
+        88,
+        110,
+        126,
+        131,
+        145,
+        148,
+        176,
+        182,
+        189,
+        192,
+        209,
+        211,
+        212,
+        216,
+        219,
+        221,
+        222,
+        236,
+        242,
+        245,
+        261,
+        275,
+        276,
+        278,
+        286,
+        290,
+        291,
+        306,
+        310,
+        313,
+        328,
+        336,
+        339,
+        342,
+        346,
+        359,
+        375,
+        384,
+        397,
+        399,
+        400,
+        402,
+        413,
+        418,
+        427,
+        462,
+        464,
+        492,
+        520,
+        526,
+        545,
+        625,
+        626,
+        627,
+        635,
+        637,
+        696,
+        697,
+        698,
+        701,
+        703,
+        704,
+        706,
+        711,
+        713,
+        725,
+        734,
+        740,
+        750,
+        754,
+        760,
+        768,
+        780,
+        791,
+        795,
+        806,
+        816,
+        852
+      ]
+    },
+    {
+      "code": "quality_review_standards_and_security",
+      "name": "Code Quality, Reviews, Standards & Secure-by-Default Guidance",
+      "description": "AI that performs intelligent code review and real-time feedback: enforcing repo style/standards, catching typos and slip-ups, recommending best practices/pattern usage, improving correctness/reliability, reducing hallucinations, and checking security/privacy/compliance requirements (including accessibility where requested).",
+      "pids": [
+        10,
+        19,
+        22,
+        24,
+        30,
+        40,
+        67,
+        74,
+        83,
+        92,
+        106,
+        112,
+        120,
+        125,
+        132,
+        133,
+        145,
+        151,
+        153,
+        161,
+        169,
+        170,
+        174,
+        179,
+        182,
+        192,
+        196,
+        198,
+        199,
+        206,
+        208,
+        221,
+        249,
+        266,
+        282,
+        297,
+        306,
+        313,
+        319,
+        328,
+        348,
+        350,
+        359,
+        363,
+        369,
+        386,
+        387,
+        402,
+        413,
+        418,
+        422,
+        428,
+        439,
+        443,
+        456,
+        461,
+        467,
+        535,
+        553,
+        555,
+        564,
+        578,
+        587,
+        591,
+        598,
+        604,
+        605,
+        608,
+        613,
+        626,
+        670,
+        671,
+        680,
+        696,
+        704,
+        712,
+        716,
+        754,
+        771,
+        775,
+        776,
+        781,
+        820,
+        826,
+        827,
+        859
+      ]
+    },
+    {
+      "code": "performance_optimization_and_profiling",
+      "name": "Performance Optimization & Profiling Suggestions",
+      "description": "AI that identifies performance bottlenecks, suggests efficient implementations, assists with profiling/perf tools/configs, and provides context-aware optimizations (including runtime and infrastructure performance concerns).",
+      "pids": [
+        30,
+        40,
+        43,
+        59,
+        74,
+        83,
+        86,
+        117,
+        122,
+        125,
+        151,
+        179,
+        182,
+        199,
+        202,
+        347,
+        348,
+        356,
+        363,
+        370,
+        422,
+        428,
+        432,
+        443,
+        483,
+        502,
+        564,
+        598,
+        648,
+        657,
+        663,
+        688,
+        725,
+        752,
+        785,
+        852
+      ]
+    },
+    {
+      "code": "architecture_design_brainstorming_and_planning",
+      "name": "Architecture/Design Support, Brainstorming & Planning/Prioritization",
+      "description": "AI that helps with solution design and architecture decisions, offers multiple approaches with pros/cons, supports re-architecture discussions, assists sprint planning/triage/prioritization, and acts as a \u2018peer\u2019 for brainstorming and decision-making.",
+      "pids": [
+        2,
+        3,
+        10,
+        43,
+        49,
+        56,
+        85,
+        86,
+        127,
+        148,
+        176,
+        189,
+        207,
+        211,
+        259,
+        276,
+        281,
+        298,
+        360,
+        403,
+        448,
+        467,
+        474,
+        487,
+        490,
+        493,
+        506,
+        569,
+        580,
+        607,
+        637,
+        688,
+        706,
+        711,
+        720,
+        737,
+        760,
+        771,
+        795,
+        825,
+        832
+      ]
+    },
+    {
+      "code": "devops_ci_cd_and_workflow_automation",
+      "name": "DevOps/CI/CD, Infra-as-Code & Engineering Workflow Automation",
+      "description": "AI that automates non-coding engineering workflows: deployments, build/test pipeline configuration, infra-as-code generation/fixes, PR creation/description/merge, build failure diagnosis, monitoring/self-healing ops, and toolchain integration.",
+      "pids": [
+        59,
+        96,
+        113,
+        130,
+        164,
+        188,
+        199,
+        212,
+        215,
+        264,
+        270,
+        273,
+        293,
+        332,
+        370,
+        432,
+        483,
+        533,
+        553,
+        555,
+        556,
+        564,
+        601,
+        635,
+        671,
+        687,
+        692,
+        620,
+        747,
+        774,
+        795
+      ]
+    },
+    {
+      "code": "other_or_unspecified_preferences",
+      "name": "Other, Unspecified, or Preference Statements",
+      "description": "Responses that are non-specific (e.g., 'yes', 'everywhere'), primarily express preferences/attitudes (non-intrusive AI, assist-not-replace, distrust/complaints), or request broad productivity improvements without a concrete development capability.",
+      "pids": [
+        18,
+        62,
+        69,
+        79,
+        89,
+        92,
+        113,
+        158,
+        163,
+        205,
+        239,
+        251,
+        254,
+        267,
+        303,
+        305,
+        325,
+        327,
+        333,
+        341,
+        344,
+        352,
+        362,
+        377,
+        380,
+        390,
+        400,
+        401,
+        409,
+        412,
+        420,
+        424,
+        430,
+        447,
+        449,
+        451,
+        459,
+        476,
+        492,
+        547,
+        595,
+        601,
+        640,
+        653,
+        664,
+        680,
+        700,
+        737,
+        748,
+        753,
+        756,
+        759,
+        769,
+        788,
+        789,
+        791,
+        820,
+        839,
+        859
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 1,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 2,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "refactoring_modernization",
+        "codebase_context_and_dependency_awareness",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "quality_review_standards_and_security",
+        "automated_testing_and_validation",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "quality_review_standards_and_security",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 27,
+      "themes": [
+        "refactoring_modernization",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 34,
+      "themes": [
+        "refactoring_modernization",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 57,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling",
+        "devops_ci_cd_and_workflow_automation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 62,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 78,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 79,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 85,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "refactoring_modernization",
+        "performance_optimization_and_profiling",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 89,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 96,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 110,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 122,
+      "themes": [
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 127,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 130,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 131,
+      "themes": [
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 132,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 139,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 150,
+      "themes": [
+        "debugging_and_incident_rca",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 188,
+      "themes": [
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "automated_testing_and_validation",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 192,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 198,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 199,
+      "themes": [
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 208,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 210,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 215,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 221,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 222,
+      "themes": [
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "refactoring_modernization",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "refactoring_modernization",
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 239,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 242,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 251,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "refactoring_modernization",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 282,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "debugging_and_incident_rca",
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 297,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "refactoring_modernization",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 309,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "automated_testing_and_validation",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 311,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 319,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 327,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 333,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 336,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 342,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 352,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 363,
+      "themes": [
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "debugging_and_incident_rca",
+        "devops_ci_cd_and_workflow_automation",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "other_or_unspecified_preferences",
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "debugging_and_incident_rca",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 396,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 399,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 403,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "other_or_unspecified_preferences",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 412,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 418,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 420,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 424,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 430,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 432,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling",
+        "refactoring_modernization",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 439,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 441,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 448,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 449,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 451,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "quality_review_standards_and_security",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "debugging_and_incident_rca",
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 462,
+      "themes": [
+        "refactoring_modernization",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 487,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 490,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "other_or_unspecified_preferences",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "refactoring_modernization",
+        "devops_ci_cd_and_workflow_automation",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 539,
+      "themes": [
+        "refactoring_modernization",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 547,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 555,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 556,
+      "themes": [
+        "debugging_and_incident_rca",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "debugging_and_incident_rca",
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "debugging_and_incident_rca",
+        "devops_ci_cd_and_workflow_automation",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 580,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 595,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 601,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 604,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 605,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "refactoring_modernization",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 613,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "debugging_and_incident_rca",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 626,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "refactoring_modernization",
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 628,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 648,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 663,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 670,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "devops_ci_cd_and_workflow_automation",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "refactoring_modernization",
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 689,
+      "themes": [
+        "refactoring_modernization",
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 692,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 693,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 711,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 712,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 713,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 720,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "performance_optimization_and_profiling",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": [
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 747,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "devops_ci_cd_and_workflow_automation"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 750,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 752,
+      "themes": [
+        "debugging_and_incident_rca",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "quality_review_standards_and_security",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 759,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 760,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 768,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 771,
+      "themes": [
+        "quality_review_standards_and_security",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "debugging_and_incident_rca",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "refactoring_modernization",
+        "performance_optimization_and_profiling"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 790,
+      "themes": [
+        "automated_testing_and_validation"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "codebase_context_and_dependency_awareness",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 795,
+      "themes": [
+        "architecture_design_brainstorming_and_planning",
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "devops_ci_cd_and_workflow_automation",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 806,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "automated_testing_and_validation",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "boilerplate_and_feature_codegen"
+      ]
+    },
+    {
+      "pid": 816,
+      "themes": [
+        "refactoring_modernization",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 819,
+      "themes": [
+        "refactoring_modernization"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "quality_review_standards_and_security",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "debugging_and_incident_rca",
+        "quality_review_standards_and_security"
+      ]
+    },
+    {
+      "pid": 832,
+      "themes": [
+        "debugging_and_incident_rca",
+        "architecture_design_brainstorming_and_planning"
+      ]
+    },
+    {
+      "pid": 833,
+      "themes": [
+        "automated_testing_and_validation",
+        "debugging_and_incident_rca"
+      ]
+    },
+    {
+      "pid": 839,
+      "themes": [
+        "boilerplate_and_feature_codegen",
+        "other_or_unspecified_preferences"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "performance_optimization_and_profiling",
+        "codebase_context_and_dependency_awareness"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "other_or_unspecified_preferences",
+        "quality_review_standards_and_security"
+      ]
+    }
+  ]
+}

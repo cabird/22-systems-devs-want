@@ -1,0 +1,1068 @@
+{
+  "metadata": {
+    "phase": "Opportunity Theme Reconciliation",
+    "timestamp": "2026-03-07T13:37:24.011571",
+    "methodology": "Multi-model theme discovery reconciled via GPT-5.2",
+    "reconciliation_model": "gpt-5.2",
+    "discovery_models": [
+      "gpt-5.2",
+      "gemini-3.1-pro-preview",
+      "claude-opus-4-6"
+    ]
+  },
+  "categories": {
+    "design_planning": {
+      "category": "design_planning",
+      "category_name": "Design & Planning",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "requirements_gathering_synthesis",
+          "name": "Requirements Gathering, Synthesis & Clarification",
+          "description": "Help capture requirements from scattered sources (docs, chats, meetings), consolidate and de-duplicate them, surface ambiguities/inconsistencies, identify missing requirements, and translate business goals into actionable user stories/acceptance criteria so teams don\u2019t lose intent over time.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "requirements_gathering_synthesis"
+            ],
+            "gemini": [
+              "requirements_gathering_and_analysis"
+            ],
+            "opus": [
+              "requirements_gathering_analysis"
+            ]
+          }
+        },
+        {
+          "code": "architecture_design_generation",
+          "name": "Architecture & System Design Generation/Iteration",
+          "description": "Generate and iterate on system architectures and technical designs from stated requirements and constraints, recommending patterns, components, infrastructure choices, and integration approaches that fit existing systems and organizational standards.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "architecture_design_assistance"
+            ],
+            "gemini": [
+              "architecture_and_design_generation"
+            ],
+            "opus": [
+              "architecture_design_exploration"
+            ]
+          }
+        },
+        {
+          "code": "interactive_brainstorming_design_partner",
+          "name": "Interactive Brainstorming & Design Copilot",
+          "description": "Act as a conversational partner for early-stage design: bounce ideas, ask clarifying questions, suggest options, and co-evolve designs in real time\u2014supporting exploratory thinking rather than only producing a one-shot architecture document.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "architecture_design_assistance"
+            ],
+            "gemini": [
+              "interactive_design_partner"
+            ],
+            "opus": [
+              "architecture_design_exploration"
+            ]
+          }
+        },
+        {
+          "code": "tradeoff_decision_support_simulation",
+          "name": "Trade-off Analysis, What-if Simulation & Decision Support",
+          "description": "Compare alternatives with concrete pros/cons (cost, complexity, performance, maintainability), run scenario/what-if reasoning, and help teams justify decisions with evidence-based analysis rather than generic recommendations.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "decision_support_simulation_risk"
+            ],
+            "gemini": [
+              "design_tradeoffs_and_alternatives"
+            ],
+            "opus": [
+              "tradeoff_decision_support",
+              "architecture_design_exploration"
+            ]
+          }
+        },
+        {
+          "code": "design_validation_risk_edge_cases",
+          "name": "Design Validation, Risk Assessment & Edge-Case Discovery",
+          "description": "Review proposed designs to find gaps, hidden dependencies, security/compliance concerns, edge cases, and feasibility risks early; validate alignment to requirements and non-functional needs (reliability, scalability, operability) before implementation.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "decision_support_simulation_risk"
+            ],
+            "gemini": [
+              "architecture_review_and_risk_assessment"
+            ],
+            "opus": [
+              "risk_assessment_validation"
+            ]
+          }
+        },
+        {
+          "code": "project_planning_tasking_status_automation",
+          "name": "Project Planning, Ticket/Task Breakdown & Status Automation",
+          "description": "Turn requirements/designs into executable plans: break down work into epics/stories/tasks, generate Jira/ADO items, estimate effort, plan milestones/sprints, track dependencies, and automate recurring project admin (status updates, progress summaries, coordination).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "project_planning_work_management"
+            ],
+            "gemini": [
+              "work_item_generation_and_task_breakdown",
+              "project_management_and_status_reporting"
+            ],
+            "opus": [
+              "project_planning_management",
+              "status_reporting_communication"
+            ]
+          }
+        },
+        {
+          "code": "documentation_spec_diagram_generation",
+          "name": "Documentation, Specs & Diagram/Artifact Generation",
+          "description": "Draft and maintain design docs/specs/proposals and generate supporting artifacts (templates, slides, UML/DFD/flowcharts/Visio-style diagrams), including converting meeting notes or rough outlines into structured, presentable documentation.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "documentation_artifact_generation"
+            ],
+            "gemini": [
+              "documentation_and_diagram_generation"
+            ],
+            "opus": [
+              "documentation_generation"
+            ]
+          }
+        },
+        {
+          "code": "context_retrieval_codebase_and_institutional_memory",
+          "name": "Context Retrieval: Codebase Understanding & Institutional Memory",
+          "description": "Index and reason over large codebases and organizational knowledge (internal docs, APIs, prior decisions, emails/chats/meetings) to provide accurate, context-aware design guidance and preserve long-lived project memory and rationale.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "context_retrieval_system_understanding"
+            ],
+            "gemini": [
+              "internal_context_and_codebase_understanding",
+              "meeting_and_decision_context_tracking"
+            ],
+            "opus": [
+              "codebase_context_understanding"
+            ]
+          }
+        },
+        {
+          "code": "research_and_information_synthesis",
+          "name": "Research, Information Gathering & Knowledge Synthesis",
+          "description": "Proactively gather and synthesize relevant information from internal and external sources (standards, OSS options, best practices, comparable solutions) to inform design choices, reducing time spent searching and consolidating fragmented references.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [],
+            "gemini": [],
+            "opus": [
+              "research_information_gathering"
+            ]
+          }
+        },
+        {
+          "code": "trustworthy_outputs_with_citations",
+          "name": "Trustworthy Outputs: Higher Accuracy & Verifiable Citations",
+          "description": "Improve reliability for design/planning tasks by reducing hallucinations and providing verifiable grounding (citations/links, traceability to sources, clear uncertainty) so teams can safely act on AI suggestions without introducing costly mistakes.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "trust_accuracy_citations"
+            ],
+            "gemini": [],
+            "opus": [
+              "reduce_hallucinations_improve_accuracy"
+            ]
+          }
+        }
+      ]
+    },
+    "development": {
+      "category": "development",
+      "category_name": "Development",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "refactoring_modernization",
+          "name": "Automated Refactoring, Modernization & Tech-Debt Reduction",
+          "description": "AI that can safely refactor multi-file code, modernize legacy systems, perform migrations, and execute repetitive upgrades (framework/library/dependency updates) while preserving behavior\u2014reducing maintenance burden and technical debt.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "refactoring_modernization"
+            ],
+            "gemini": [
+              "refactoring_and_modernization"
+            ],
+            "opus": [
+              "refactoring_and_maintenance"
+            ]
+          }
+        },
+        {
+          "code": "boilerplate_scaffolding_feature_codegen",
+          "name": "Boilerplate, Scaffolding & Routine Feature Code Generation",
+          "description": "AI that generates boilerplate/scaffolding, ports/converts code, writes small scripts, and implements well-scoped features from requirements or specs to reduce repetitive \u201cyak shaving\u201d and speed up delivery.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "boilerplate_and_feature_codegen"
+            ],
+            "gemini": [
+              "boilerplate_and_repetitive_tasks"
+            ],
+            "opus": [
+              "boilerplate_and_repetitive_automation"
+            ]
+          }
+        },
+        {
+          "code": "automated_testing_validation",
+          "name": "Automated Test Generation, Coverage & Change Validation",
+          "description": "AI that writes meaningful unit/integration/E2E tests, identifies edge cases and coverage gaps, supports TDD workflows, and validates changes by running tests/CI checks to prevent regressions.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "automated_testing_and_validation"
+            ],
+            "gemini": [
+              "automated_test_generation"
+            ],
+            "opus": [
+              "automated_test_generation"
+            ]
+          }
+        },
+        {
+          "code": "debugging_root_cause_fixing",
+          "name": "Debugging, Root Cause Analysis & Bug Fix Assistance",
+          "description": "AI that accelerates debugging by analyzing stack traces, logs, telemetry, and failing tests; reproduces issues; identifies root causes; suggests fixes; and helps triage incidents/regressions.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "debugging_and_incident_rca"
+            ],
+            "gemini": [
+              "debugging_and_bug_fixing"
+            ],
+            "opus": [
+              "bug_fixing_and_debugging"
+            ]
+          }
+        },
+        {
+          "code": "repo_wide_context_dependency_awareness",
+          "name": "Repo-Wide Context, Dependency Awareness & Safe Multi-File Changes",
+          "description": "AI that understands large/legacy codebases end-to-end, tracks dependencies and ripple effects, maintains long-running context, navigates architecture across modules/services, and performs accurate cross-file edits with awareness of existing conventions.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "codebase_context_and_dependency_awareness"
+            ],
+            "gemini": [
+              "large_codebase_context"
+            ],
+            "opus": [
+              "codebase_understanding_and_context"
+            ]
+          }
+        },
+        {
+          "code": "code_quality_review_security_compliance",
+          "name": "Code Quality, Review Automation, Standards & Security/Compliance Guidance",
+          "description": "AI that performs intelligent code review and real-time feedback: enforcing style/standards, catching correctness issues and bad practices, identifying security vulnerabilities, and guiding secure-by-default and compliance-aware implementation (including accessibility where relevant).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "quality_review_standards_and_security"
+            ],
+            "gemini": [
+              "code_quality_and_reviews"
+            ],
+            "opus": [
+              "code_review_and_quality"
+            ]
+          }
+        },
+        {
+          "code": "performance_profiling_optimization",
+          "name": "Performance Profiling & Optimization Suggestions",
+          "description": "AI that identifies performance bottlenecks, assists with profiling and interpretation of performance signals, and suggests (or safely implements) optimizations for runtime efficiency and resource usage.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "performance_optimization_and_profiling"
+            ],
+            "gemini": [
+              "performance_optimization"
+            ],
+            "opus": [
+              "performance_optimization"
+            ]
+          }
+        },
+        {
+          "code": "architecture_design_planning_support",
+          "name": "Architecture, Design Brainstorming & Planning Support",
+          "description": "AI that helps with solution/architecture decisions by proposing options with tradeoffs, recommending patterns, translating requirements into designs, and supporting planning/triage/prioritization as a \u201cthinking partner.\u201d",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "architecture_design_brainstorming_and_planning"
+            ],
+            "gemini": [
+              "architecture_and_design_support"
+            ],
+            "opus": [
+              "architecture_and_design"
+            ]
+          }
+        },
+        {
+          "code": "devops_ci_cd_iac_workflow_automation",
+          "name": "DevOps, CI/CD, IaC & Engineering Workflow Automation",
+          "description": "AI that automates non-coding engineering workflows such as CI/CD setup and troubleshooting, deployments, infrastructure-as-code generation/fixes, build failure diagnosis, and toolchain/PR workflow automation to reduce operational toil.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "devops_ci_cd_and_workflow_automation"
+            ],
+            "gemini": [
+              "devops_and_infrastructure"
+            ],
+            "opus": [
+              "devops_and_infrastructure"
+            ]
+          }
+        },
+        {
+          "code": "documentation_knowledge_retrieval_onboarding",
+          "name": "Documentation Generation, Knowledge Retrieval & Onboarding/Learning Support",
+          "description": "AI that writes and maintains documentation/comments, answers codebase- and API-specific questions with trustworthy sources, synthesizes internal \u201ctribal knowledge,\u201d and accelerates onboarding and learning within a tech stack or organization.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "codebase_context_and_dependency_awareness"
+            ],
+            "gemini": [
+              "documentation_and_knowledge_retrieval"
+            ],
+            "opus": [
+              "documentation_and_knowledge"
+            ]
+          }
+        }
+      ]
+    },
+    "quality_risk": {
+      "category": "quality_risk",
+      "category_name": "Quality & Risk Management",
+      "theme_count": 9,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "automated_test_generation_and_quality_gates",
+          "name": "Automated Test Generation, Maintenance & Quality Gates",
+          "description": "Generate and maintain meaningful unit/integration/E2E tests from requirements, code changes, UI/workflow context, and repo history; propose edge cases and test data; identify coverage gaps and regressions; and enforce quality checks in CI/CD (e.g., missing tests, failing validations) to prevent low-quality changes from shipping.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "automated_test_generation",
+              "test_coverage_and_quality_gates"
+            ],
+            "gemini": [
+              "automated_test_generation"
+            ],
+            "opus": [
+              "automated_test_generation"
+            ]
+          }
+        },
+        {
+          "code": "intelligent_pr_code_review",
+          "name": "Intelligent PR/Code Review Assistant",
+          "description": "Act as a context-aware reviewer that understands the codebase and team norms to summarize large diffs, flag likely bugs and anti-patterns, improve readability/maintainability, suggest refactors, and surface performance concerns\u2014reducing reviewer load and catching issues earlier.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "pr_code_review_assistant"
+            ],
+            "gemini": [
+              "intelligent_code_review"
+            ],
+            "opus": [
+              "intelligent_code_review"
+            ]
+          }
+        },
+        {
+          "code": "security_vulnerability_detection_and_fix_guidance",
+          "name": "Security Vulnerability Detection & Fix Guidance",
+          "description": "Proactively scan code, PRs, and dependencies to identify security vulnerabilities (e.g., auth/authz gaps, insecure patterns, risky libraries/cryptography) and provide actionable remediation guidance (and sometimes suggested patches) before merge or deployment.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "security_risk_detection"
+            ],
+            "gemini": [
+              "security_vulnerability_detection"
+            ],
+            "opus": [
+              "security_vulnerability_detection"
+            ]
+          }
+        },
+        {
+          "code": "compliance_and_audit_automation",
+          "name": "Compliance, Standards & Audit Process Automation",
+          "description": "Reduce compliance toil by interpreting internal/external standards and policies, translating them into actionable developer steps, checking whether compliance bars are met, automating evidence collection and form/questionnaire filling, and improving audit readiness (e.g., SFI/S360/security review workflows).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "compliance_policy_automation"
+            ],
+            "gemini": [
+              "compliance_and_standards"
+            ],
+            "opus": [
+              "compliance_process_automation"
+            ]
+          }
+        },
+        {
+          "code": "proactive_risk_monitoring_and_prediction",
+          "name": "Proactive Risk Monitoring, Prediction & Anomaly Detection",
+          "description": "Use telemetry, logs, configurations, and historical change data to predict high-risk changes, detect regressions/anomalies early, track risk trends across services, assess likely impact, and generate prioritized risk reports/alerts so teams can mitigate issues before incidents escalate.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "real_time_risk_monitoring_analytics"
+            ],
+            "gemini": [
+              "proactive_risk_anomaly_detection"
+            ],
+            "opus": [
+              "proactive_risk_prediction"
+            ]
+          }
+        },
+        {
+          "code": "debugging_root_cause_and_failure_triage",
+          "name": "Debugging, Root Cause Analysis & Failure Triage",
+          "description": "Accelerate diagnosis of complex failures by triaging test/CI failures and incidents, analyzing variants and signals across systems, identifying likely root causes, and suggesting next-best debugging steps\u2014reducing firefighting and post-incident investigation time.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "debugging_root_cause_triage"
+            ],
+            "gemini": [
+              "debugging_and_root_cause_analysis"
+            ],
+            "opus": [
+              "root_cause_debugging"
+            ]
+          }
+        },
+        {
+          "code": "knowledge_retrieval_and_standards_guidance",
+          "name": "Knowledge Retrieval, Summarization & Standards Guidance",
+          "description": "Find and synthesize relevant code/docs/policies quickly, summarize long or complex guidance, explain ambiguous requirements, and provide up-to-date, org-specific best practices\u2014helping developers apply standards correctly without deep manual searching.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "knowledge_search_summarization"
+            ],
+            "gemini": [
+              "documentation_and_information_retrieval"
+            ],
+            "opus": [
+              "standards_knowledge_advisory"
+            ]
+          }
+        },
+        {
+          "code": "agentic_workflow_automation_and_remediation",
+          "name": "Agentic Workflow Automation & Automated Remediation",
+          "description": "Execute multi-step quality/risk tasks across tools (repos, CI, ticketing, scanners) such as running validations, opening/updating PRs, fixing low-hanging issues (including dependency/security updates), and applying repetitive repairs\u2014reducing manual overhead and speeding up remediation loops.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "agentic_task_automation_integration"
+            ],
+            "gemini": [
+              "automated_remediation_and_fixes",
+              "general_automation_and_assistance"
+            ],
+            "opus": [
+              "general_quality_automation"
+            ]
+          }
+        },
+        {
+          "code": "ai_driven_exploratory_chaos_and_fuzz_testing",
+          "name": "AI-Driven Exploratory, Chaos & Fuzz Testing",
+          "description": "Autonomously explore products like a user/attacker would\u2014probing workflows, configurations, and edge cases via exploratory testing, fuzzing, monkey testing, and chaos experiments\u2014to uncover unexpected failures and hidden bugs before customers do.",
+          "source_models": [
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [],
+            "gemini": [],
+            "opus": [
+              "exploratory_chaos_testing"
+            ]
+          }
+        }
+      ]
+    },
+    "infrastructure_ops": {
+      "category": "infrastructure_ops",
+      "category_name": "Infrastructure & Ops",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "intelligent_monitoring_alerting_anomaly_detection",
+          "name": "Intelligent Monitoring, Alerting & Anomaly Detection",
+          "description": "AI that continuously analyzes metrics, logs, and system behavior to set up/tune monitors, detect anomalies, predict failures, and generate higher-signal alerts (e.g., dynamic thresholds) to reduce missed conditions and on-call noise.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "smart_monitoring_alerts"
+            ],
+            "gemini": [
+              "intelligent_monitoring_and_alerting"
+            ],
+            "opus": [
+              "intelligent_monitoring_alerting"
+            ]
+          }
+        },
+        {
+          "code": "incident_response_rca_mitigation_self_heal",
+          "name": "Incident Response Automation (Triage, RCA, Mitigation, Self-Heal)",
+          "description": "AI that accelerates incident handling by correlating signals across systems, summarizing live incidents, finding likely root causes, proposing mitigations/runbooks, enriching incident records, and optionally executing safe self-healing actions to reduce time-to-recovery and on-call burden.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "incident_response_rca_remediation"
+            ],
+            "gemini": [
+              "incident_response_and_rca"
+            ],
+            "opus": [
+              "incident_response_root_cause"
+            ]
+          }
+        },
+        {
+          "code": "cicd_pipeline_and_deployment_automation",
+          "name": "CI/CD Pipeline & Deployment Automation (Build/Release/Debugging)",
+          "description": "AI that creates, explains, migrates, and maintains CI/CD pipelines; automates deployments (including unattended/overnight); reviews pipeline configurations; and troubleshoots pipeline/build/deployment failures by analyzing logs and dependencies across interconnected components.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "cicd_deployment_automation"
+            ],
+            "gemini": [
+              "ci_cd_pipeline_automation"
+            ],
+            "opus": [
+              "cicd_pipeline_automation"
+            ]
+          }
+        },
+        {
+          "code": "infrastructure_provisioning_and_iac_generation",
+          "name": "Automated Environment Setup & Infrastructure Provisioning (IaC Generation)",
+          "description": "AI that reduces toil in creating/rebuilding dev/test/prod environments and provisioning infrastructure by generating or updating infrastructure-as-code (e.g., Bicep/ARM/EV2), understanding existing infra-from-code, and assisting with setup, configuration, and migrations.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "infra_environment_provisioning_iac"
+            ],
+            "gemini": [
+              "infra_environment_setup"
+            ],
+            "opus": [
+              "environment_setup_provisioning"
+            ]
+          }
+        },
+        {
+          "code": "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "name": "Proactive Maintenance, Upgrades, Security/Compliance & Cost Optimization",
+          "description": "AI that plans and drives routine operational upkeep\u2014upgrades/patching, dependency and API/workflow migrations, security/compliance posture management, and resource/cost optimization\u2014by generating actionable work items and recommendations to keep services healthy.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "proactive_maintenance_security_cost_optimization"
+            ],
+            "gemini": [
+              "routine_maintenance_and_upgrades"
+            ],
+            "opus": [
+              "infra_maintenance_upgrades"
+            ]
+          }
+        },
+        {
+          "code": "customer_support_triage_and_autoresponse",
+          "name": "Customer Support Triage & Auto-Response",
+          "description": "AI that screens and buckets support requests, correlates user-reported issues with telemetry/logs, drafts responses from known solutions/knowledge bases, and escalates appropriately\u2014reducing repetitive support workload for engineering and support teams.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "customer_support_automation"
+            ],
+            "gemini": [
+              "customer_support_automation"
+            ],
+            "opus": [
+              "customer_support_triage"
+            ]
+          }
+        },
+        {
+          "code": "knowledge_management_doc_search_and_system_context",
+          "name": "Knowledge Management, Documentation Search & System Context",
+          "description": "AI that captures and organizes tribal knowledge, retrieves relevant docs with citations, surfaces related prior incidents and decisions, and builds a holistic understanding of system topology/dependencies to speed troubleshooting, onboarding, and decision-making.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "knowledge_management_doc_search_context"
+            ],
+            "gemini": [
+              "contextual_knowledge_and_documentation"
+            ],
+            "opus": [
+              "knowledge_documentation_context"
+            ]
+          }
+        },
+        {
+          "code": "ops_toil_automation_and_script_generation",
+          "name": "Ops Toil Automation & Script Writing/Debugging",
+          "description": "AI that eliminates repetitive manual infrastructure/ops work by generating, debugging, and maintaining reliable automation scripts (e.g., Bash) and run-anywhere task automations, including cross-platform compatibility and reduced \u201cdrudgery.\u201d",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "scripting_task_automation"
+            ],
+            "gemini": [],
+            "opus": [
+              "automate_toil_repetitive",
+              "script_writing_debugging"
+            ]
+          }
+        },
+        {
+          "code": "testing_quality_validation_and_safe_deploy",
+          "name": "Testing, Quality Validation & Safer Releases",
+          "description": "AI that improves delivery quality by generating unit/integration tests, validating changes and quality gates, enabling local workflow/pipeline testing, and helping determine safe/unsafe deployment timing to reduce regressions and failed releases.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "testing_quality_validation"
+            ],
+            "gemini": [],
+            "opus": []
+          }
+        },
+        {
+          "code": "ai_tooling_ux_accuracy_and_cohesive_workflows",
+          "name": "Better AI Tooling UX (Accuracy, Control & Cohesive Workflows)",
+          "description": "Developers want AI assistance that is accurate and trustworthy, integrated across related infra tasks (not fragmented), provides usable UI/controls, and supports human understanding/learning rather than opaque automation.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "tooling_experience_accuracy_learning"
+            ],
+            "gemini": [],
+            "opus": []
+          }
+        }
+      ]
+    },
+    "meta_work": {
+      "category": "meta_work",
+      "category_name": "Meta-Work",
+      "theme_count": 9,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "automated_documentation",
+          "name": "Automated Documentation Generation & Maintenance",
+          "description": "Generate, update, and validate documentation directly from code, PRs, specs, and tests (e.g., READMEs, inline comments, API docs, architecture overviews/diagrams). Developers want this to reduce manual doc work and prevent teams being blocked by missing or outdated documentation.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "documentation_automation"
+            ],
+            "gemini": [
+              "automated_documentation"
+            ],
+            "opus": [
+              "automated_documentation"
+            ]
+          }
+        },
+        {
+          "code": "knowledge_search_and_discovery",
+          "name": "Project Knowledge Search & Discovery (with Traceable Sources)",
+          "description": "Act as a smart, project-aware search and Q&A layer across repos, internal docs, tickets, and tools\u2014aggregating and summarizing relevant information while providing links/citations back to authoritative sources. Developers want faster answers, less time spent hunting, and higher trust via provenance.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "research_knowledge_discovery"
+            ],
+            "gemini": [
+              "research_and_knowledge_discovery"
+            ],
+            "opus": [
+              "information_discovery"
+            ]
+          }
+        },
+        {
+          "code": "brainstorming_and_solution_exploration",
+          "name": "Brainstorming, Option Generation & Rapid Exploration",
+          "description": "Serve as a technical sounding board to expand solution options, propose architectures/approaches, compare tradeoffs, and help rapidly explore directions (including lightweight prototypes/mockups when useful). Developers want to move faster from problem to plausible approaches and avoid getting stuck on first ideas.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "brainstorming_ideation_prototyping"
+            ],
+            "gemini": [
+              "research_and_knowledge_discovery"
+            ],
+            "opus": [
+              "research_brainstorming"
+            ]
+          }
+        },
+        {
+          "code": "personalized_learning_and_upskilling",
+          "name": "Personalized Learning for New Technologies",
+          "description": "Provide tailored explanations, tutorials, examples, and learning plans to help developers learn new languages/frameworks/APIs and fill skill gaps. Developers value adaptive, judgment-free Q&A and targeted guidance that matches their current knowledge level.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "learning_onboarding_mentoring"
+            ],
+            "gemini": [
+              "learning_and_onboarding"
+            ],
+            "opus": [
+              "learning_new_technologies"
+            ]
+          }
+        },
+        {
+          "code": "team_onboarding_and_mentoring",
+          "name": "Team Onboarding, Mentoring & Institutional Knowledge Transfer",
+          "description": "Help onboard new team members by answering domain/system-specific questions, generating onboarding materials, and capturing institutional knowledge so it\u2019s easier to find and reuse. Developers want faster ramp-up for newcomers and less repeated human mentoring load.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "learning_onboarding_mentoring"
+            ],
+            "gemini": [
+              "learning_and_onboarding"
+            ],
+            "opus": [
+              "onboarding_mentoring"
+            ]
+          }
+        },
+        {
+          "code": "stakeholder_communication_support",
+          "name": "Stakeholder/Client Communication Drafting & Translation",
+          "description": "Draft, rewrite, proofread, and tailor communications (emails, updates, explanations) for different audiences, including simplifying technical details for non-technical stakeholders and translating or adjusting tone. Developers want to reduce coordination time and improve clarity/accuracy in external-facing messages.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "communication_stakeholder_support"
+            ],
+            "gemini": [
+              "stakeholder_communication"
+            ],
+            "opus": [
+              "stakeholder_communication"
+            ]
+          }
+        },
+        {
+          "code": "meeting_assistance",
+          "name": "Meeting Scheduling, Notes, Summaries & Action Items",
+          "description": "Reduce meeting overhead by scheduling, transcribing, capturing structured notes, summarizing discussions, and extracting decisions/action items (including recaps for missed meetings). Developers want to spend less time in meetings while staying aligned and accountable.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "meeting_assistance"
+            ],
+            "gemini": [
+              "meeting_management_and_summarization"
+            ],
+            "opus": [
+              "meeting_management"
+            ]
+          }
+        },
+        {
+          "code": "planning_prioritization_and_status_tracking",
+          "name": "Planning, Prioritization, Blocker Detection & Status Reporting",
+          "description": "Support meta-work coordination by breaking down goals into tasks, prioritizing work, planning timelines/dependencies, tracking progress/decisions, identifying blockers, and generating status/progress reports. Developers want better alignment and less manual project-management overhead.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "planning_prioritization_status_reporting"
+            ],
+            "gemini": [
+              "project_management_and_task_prioritization"
+            ],
+            "opus": [
+              "task_planning_prioritization"
+            ]
+          }
+        },
+        {
+          "code": "proactive_personal_agent_and_admin_automation",
+          "name": "Proactive Personal Agent & Routine Admin Automation",
+          "description": "Act as a context-aware assistant with memory that proactively follows up on commitments, surfaces what needs attention, and automates low-value admin work (e.g., triaging email/messages, organizing tasks, handling routine responses) with appropriate human oversight. Developers want less cognitive load and fewer interruptions from repetitive coordination tasks.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "proactive_personal_agent"
+            ],
+            "gemini": [
+              "general_omnipresent_assistance"
+            ],
+            "opus": [
+              "admin_automation"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1309 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "design_planning",
+  "category_name": "Design & Planning",
+  "response_count": 162,
+  "timestamp": "2026-03-07T08:51:23.821361",
+  "themes": [
+    {
+      "code": "no_final_decisions",
+      "name": "No Final Decision-Making or Trade-offs",
+      "description": "AI should not make final judgment calls, strategic trade-offs, or pivotal decisions. Developers insist that humans must retain accountability, agency, and the final say over the direction of the project or architecture.",
+      "pids": [
+        3,
+        11,
+        59,
+        69,
+        112,
+        158,
+        166,
+        179,
+        206,
+        240,
+        249,
+        276,
+        294,
+        300,
+        313,
+        345,
+        366,
+        386,
+        387,
+        395,
+        422,
+        428,
+        508,
+        511,
+        566,
+        680,
+        696,
+        716,
+        721,
+        723,
+        774,
+        788,
+        823,
+        859
+      ]
+    },
+    {
+      "code": "no_system_architecture",
+      "name": "No Independent System Architecture & High-Level Design",
+      "description": "AI should not independently architect or design entire systems. Developers express concerns about AI lacking the deep context required, producing unmaintainable designs, or biasing the team toward outdated or over-simplified patterns.",
+      "pids": [
+        13,
+        29,
+        73,
+        93,
+        153,
+        163,
+        192,
+        195,
+        200,
+        205,
+        206,
+        216,
+        217,
+        219,
+        228,
+        249,
+        290,
+        294,
+        305,
+        313,
+        349,
+        359,
+        360,
+        372,
+        387,
+        391,
+        409,
+        432,
+        443,
+        456,
+        470,
+        508,
+        533,
+        545,
+        549,
+        553,
+        560,
+        566,
+        607,
+        608,
+        611,
+        680,
+        698,
+        704,
+        716,
+        748,
+        809,
+        852
+      ]
+    },
+    {
+      "code": "no_human_dynamics_and_communication",
+      "name": "No Handling of Human Dynamics, Empathy, or Communication",
+      "description": "AI should not take over tasks that require emotional intelligence, interpersonal communication, team collaboration, or stakeholder alignment. Developers emphasize that these areas fundamentally require human empathy and understanding.",
+      "pids": [
+        10,
+        28,
+        48,
+        53,
+        59,
+        75,
+        82,
+        143,
+        153,
+        161,
+        179,
+        266,
+        291,
+        313,
+        344,
+        345,
+        422,
+        526,
+        598,
+        611,
+        636,
+        780,
+        830,
+        854
+      ]
+    },
+    {
+      "code": "no_autonomous_project_management",
+      "name": "No Autonomous Task and Project Management",
+      "description": "AI should not autonomously manage Agile teams, assign tasks to individuals, dictate timelines, or estimate effort. Developers feel AI cannot grasp team capabilities, rapidly changing priorities, or the human nuances of task assignment.",
+      "pids": [
+        40,
+        48,
+        53,
+        112,
+        133,
+        143,
+        161,
+        291,
+        341,
+        356,
+        357,
+        390,
+        407,
+        440,
+        493,
+        506,
+        636,
+        682,
+        687,
+        730,
+        753
+      ]
+    },
+    {
+      "code": "no_requirements_gathering",
+      "name": "No Direct Requirements Gathering",
+      "description": "AI should not be solely responsible for requirements gathering or interacting directly with clients/stakeholders. Developers believe this process requires deep human interaction, interpretation of subjective needs, and nuance that AI lacks.",
+      "pids": [
+        28,
+        73,
+        153,
+        193,
+        281,
+        300,
+        314,
+        344,
+        395,
+        409,
+        533,
+        598,
+        607,
+        671,
+        780,
+        827,
+        830
+      ]
+    },
+    {
+      "code": "no_autonomous_execution",
+      "name": "No Fully Autonomous Execution (Human-in-the-Loop Required)",
+      "description": "AI should act only as a companion or assistant, not operate fully autonomously. All AI outputs must be subject to human review, steering, and oversight to ensure accountability, prevent unchecked errors, and protect human engineering skills.",
+      "pids": [
+        17,
+        40,
+        73,
+        114,
+        133,
+        158,
+        189,
+        200,
+        216,
+        305,
+        306,
+        366,
+        386,
+        387,
+        391,
+        401,
+        428,
+        432,
+        434,
+        483,
+        526,
+        527,
+        545,
+        564,
+        587,
+        607,
+        608,
+        700,
+        704,
+        809,
+        826,
+        859
+      ]
+    },
+    {
+      "code": "trust_accuracy_limitations",
+      "name": "Limits Due to Trust, Accuracy, and Hallucinations",
+      "description": "Restrictions based on current AI capabilities. AI should not handle critical or complex tasks where accuracy is paramount due to issues with hallucinations, lack of accurate grounding data, or unreliability in producing trustworthy results.",
+      "pids": [
+        55,
+        69,
+        101,
+        133,
+        145,
+        182,
+        189,
+        205,
+        211,
+        300,
+        341,
+        359,
+        368,
+        370,
+        372,
+        409,
+        428,
+        456,
+        483,
+        522,
+        625,
+        664,
+        671,
+        687,
+        769,
+        813,
+        852
+      ]
+    },
+    {
+      "code": "no_vision_and_strategy",
+      "name": "No Product Vision or Business Strategy",
+      "description": "AI should not independently drive the overarching product vision, business strategy, or creative direction. These areas require creative intuition, long-term goal alignment, and a deep understanding of business context.",
+      "pids": [
+        3,
+        10,
+        59,
+        259,
+        294,
+        443,
+        721,
+        723,
+        788
+      ]
+    },
+    {
+      "code": "privacy_security_constraints",
+      "name": "No Handling of Sensitive or Confidential Data",
+      "description": "AI should not process highly sensitive, confidential, proprietary, or high-stakes information due to security and data privacy concerns.",
+      "pids": [
+        259,
+        261,
+        275
+      ]
+    },
+    {
+      "code": "no_constraints",
+      "name": "No Constraints (Happy to Automate Everything)",
+      "description": "Respondents who do not have any specific areas they want to restrict AI from handling. They are either happy to use AI across all areas of design and planning to save time, or actively desire full automation.",
+      "pids": [
+        2,
+        8,
+        26,
+        73,
+        190,
+        216,
+        310,
+        369,
+        384,
+        394,
+        402,
+        459,
+        558,
+        587,
+        603,
+        717,
+        756,
+        792,
+        814
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "no_final_decisions",
+        "no_vision_and_strategy"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "no_vision_and_strategy",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "no_requirements_gathering",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "no_vision_and_strategy",
+        "no_final_decisions",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "no_final_decisions",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "no_constraints",
+        "no_system_architecture",
+        "no_requirements_gathering",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "no_final_decisions",
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "no_autonomous_project_management",
+        "trust_accuracy_limitations",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "no_human_dynamics_and_communication",
+        "no_requirements_gathering",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "no_autonomous_execution",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "no_final_decisions",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "trust_accuracy_limitations",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 192,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "no_system_architecture",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "no_final_decisions",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "no_constraints",
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 217,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "no_system_architecture",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "privacy_security_constraints",
+        "no_vision_and_strategy"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "privacy_security_constraints"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "privacy_security_constraints"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "no_final_decisions",
+        "no_system_architecture",
+        "no_vision_and_strategy"
+      ]
+    },
+    {
+      "pid": 300,
+      "themes": [
+        "no_final_decisions",
+        "no_requirements_gathering",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "no_final_decisions",
+        "no_human_dynamics_and_communication",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "no_autonomous_project_management",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "no_requirements_gathering",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "no_final_decisions",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 349,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 357,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "no_system_architecture",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "no_final_decisions",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "trust_accuracy_limitations",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "no_final_decisions",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "no_system_architecture",
+        "no_final_decisions",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 391,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "no_requirements_gathering",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "no_requirements_gathering",
+        "no_system_architecture",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "no_final_decisions",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "trust_accuracy_limitations",
+        "no_final_decisions",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 432,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 434,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "no_system_architecture",
+        "no_vision_and_strategy"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "no_system_architecture",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "no_autonomous_execution",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "no_final_decisions",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 511,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 522,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "no_human_dynamics_and_communication",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "no_requirements_gathering",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 566,
+      "themes": [
+        "no_system_architecture",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "no_constraints",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "no_requirements_gathering",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "no_system_architecture",
+        "no_requirements_gathering",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "no_system_architecture",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "no_autonomous_project_management",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "no_requirements_gathering",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "no_system_architecture",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 682,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "no_autonomous_project_management",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "no_final_decisions",
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "no_final_decisions",
+        "no_vision_and_strategy"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "no_vision_and_strategy",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "no_system_architecture"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "no_autonomous_project_management"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "no_requirements_gathering",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "no_vision_and_strategy",
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 792,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "no_system_architecture",
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 814,
+      "themes": [
+        "no_constraints"
+      ]
+    },
+    {
+      "pid": 823,
+      "themes": [
+        "no_final_decisions"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "no_autonomous_execution"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "no_requirements_gathering",
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "no_system_architecture",
+        "trust_accuracy_limitations"
+      ]
+    },
+    {
+      "pid": 854,
+      "themes": [
+        "no_human_dynamics_and_communication"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "no_final_decisions",
+        "no_autonomous_execution"
+      ]
+    }
+  ]
+}

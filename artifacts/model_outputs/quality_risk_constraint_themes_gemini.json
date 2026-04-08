@@ -1,0 +1,807 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "quality_risk",
+  "category_name": "Quality & Risk Management",
+  "response_count": 124,
+  "timestamp": "2026-03-07T08:40:31.215504",
+  "themes": [
+    {
+      "code": "final_decision_accountability",
+      "name": "Final Decision-Making & Accountability",
+      "description": "AI should not make the final call on release readiness, risk acceptance, quality bars, or incident escalation. Developers insist that humans must remain accountable and retain ultimate sign-off authority.",
+      "pids": [
+        10,
+        15,
+        47,
+        59,
+        106,
+        120,
+        143,
+        153,
+        249,
+        313,
+        331,
+        345,
+        346,
+        359,
+        387,
+        476,
+        574,
+        637,
+        640,
+        687,
+        703,
+        721,
+        723,
+        740,
+        742,
+        775
+      ]
+    },
+    {
+      "code": "security_compliance_threat_modeling",
+      "name": "Security, Compliance & Threat Modeling",
+      "description": "AI should not be trusted to identify security issues, verify compliance, or write threat models autonomously. Developers view this area as too high-risk and complex for current AI capabilities.",
+      "pids": [
+        1,
+        42,
+        153,
+        171,
+        174,
+        206,
+        276,
+        402,
+        428,
+        459,
+        506,
+        574,
+        608,
+        636,
+        737,
+        753,
+        754
+      ]
+    },
+    {
+      "code": "autonomous_commits_deployments",
+      "name": "Autonomous Code Commits & Production Deployments",
+      "description": "AI must not be allowed to automatically merge pull requests, commit code changes, or deploy directly to production environments without human intervention and oversight.",
+      "pids": [
+        22,
+        24,
+        59,
+        155,
+        196,
+        212,
+        225,
+        429,
+        559,
+        636,
+        651,
+        701,
+        826
+      ]
+    },
+    {
+      "code": "code_reviews_pr_approvals",
+      "name": "Code Reviews & Pull Request Approvals",
+      "description": "AI should not be the sole reviewer of code or approve pull requests. Developers believe AI lacks the deep domain context to understand intentional design choices and cannot reliably replace peer review.",
+      "pids": [
+        21,
+        48,
+        82,
+        210,
+        286,
+        380,
+        387,
+        429,
+        535,
+        545,
+        590,
+        591,
+        598,
+        665,
+        785
+      ]
+    },
+    {
+      "code": "sensitive_customer_data",
+      "name": "Sensitive & Customer Data Handling",
+      "description": "AI must not interact directly with or process customer data, PII, or sensitive secrets due to the risk of data leakage, privacy breaches, and non-compliance.",
+      "pids": [
+        187,
+        292,
+        413,
+        620,
+        737,
+        754,
+        851
+      ]
+    },
+    {
+      "code": "complex_architecture_planning",
+      "name": "Complex Architecture, Strategy & Requirements Planning",
+      "description": "AI should not be used to define system requirements, architect complex systems, design optimal algorithms, or handle overarching test planning, as these require human innovation and strategic context.",
+      "pids": [
+        49,
+        93,
+        171,
+        344,
+        360,
+        376,
+        674,
+        688,
+        700,
+        859
+      ]
+    },
+    {
+      "code": "human_ethics_communication",
+      "name": "Ethical Judgments & Human Communication",
+      "description": "AI should not handle tasks that rely on empathy, ethical trade-offs, crisis communication, or stakeholder management. These are inherently human tasks.",
+      "pids": [
+        10,
+        59,
+        155,
+        313,
+        331,
+        345,
+        565,
+        721,
+        723,
+        740,
+        775
+      ]
+    },
+    {
+      "code": "unsupervised_execution_verification",
+      "name": "Unsupervised Execution & Quality Verification",
+      "description": "AI should not operate entirely unsupervised or be responsible for verifying its own quality/correctness. A human-in-the-loop is always required to validate AI outputs because AI is a 'black box' prone to hallucinations.",
+      "pids": [
+        1,
+        18,
+        42,
+        53,
+        55,
+        67,
+        74,
+        88,
+        92,
+        94,
+        120,
+        206,
+        236,
+        305,
+        344,
+        350,
+        359,
+        400,
+        443,
+        446,
+        483,
+        603,
+        640,
+        657,
+        687,
+        799
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 1,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 47,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "final_decision_accountability",
+        "autonomous_commits_deployments",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 94,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "final_decision_accountability",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "final_decision_accountability",
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "autonomous_commits_deployments",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 210,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 292,
+      "themes": [
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "complex_architecture_planning",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "final_decision_accountability",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "final_decision_accountability",
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 429,
+      "themes": [
+        "autonomous_commits_deployments",
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 574,
+      "themes": [
+        "final_decision_accountability",
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "final_decision_accountability",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "final_decision_accountability",
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 742,
+      "themes": [
+        "final_decision_accountability"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "security_compliance_threat_modeling"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "security_compliance_threat_modeling",
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "final_decision_accountability",
+        "human_ethics_communication"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "code_reviews_pr_approvals"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "unsupervised_execution_verification"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "autonomous_commits_deployments"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "sensitive_customer_data"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "complex_architecture_planning"
+      ]
+    }
+  ]
+}

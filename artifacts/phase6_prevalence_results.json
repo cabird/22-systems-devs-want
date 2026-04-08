@@ -1,0 +1,6034 @@
+{
+  "phase": "Phase 6 - Prevalence Calculation",
+  "timestamp": "2026-03-08T14:52:44.642999",
+  "methodology": {
+    "consensus_method": "majority_vote",
+    "threshold": "2+ of 3 models must agree",
+    "models": [
+      "gpt-5.2",
+      "gemini-3.1-pro-preview",
+      "claude-opus-4-6"
+    ]
+  },
+  "overall_summary": {
+    "total_responses": 989,
+    "total_with_themes": 923,
+    "coverage_pct": 93.3
+  },
+  "category_results": {
+    "design_planning": {
+      "category": "design_planning",
+      "response_count": 223,
+      "methodology": "majority_vote (2+ of 3 models)",
+      "theme_prevalence": [
+        {
+          "code": "project_planning_tasking_status_automation",
+          "count": 68,
+          "percentage": 30.5,
+          "pids": [
+            5,
+            8,
+            10,
+            15,
+            28,
+            29,
+            68,
+            73,
+            75,
+            96,
+            128,
+            133,
+            145,
+            150,
+            151,
+            153,
+            155,
+            157,
+            158,
+            169,
+            170,
+            179,
+            180,
+            189,
+            193,
+            194,
+            195,
+            206,
+            212,
+            215,
+            216,
+            240,
+            261,
+            266,
+            305,
+            310,
+            344,
+            348,
+            380,
+            409,
+            422,
+            432,
+            440,
+            456,
+            511,
+            522,
+            527,
+            533,
+            545,
+            553,
+            560,
+            564,
+            597,
+            603,
+            607,
+            608,
+            611,
+            627,
+            635,
+            687,
+            698,
+            704,
+            721,
+            752,
+            767,
+            774,
+            823,
+            830
+          ],
+          "sample_quotes": [
+            {
+              "pid": 5,
+              "quote": "Entirely automating status update meetings. AI agents should be doing this. No more status update meetings and status report work for employees."
+            },
+            {
+              "pid": 8,
+              "quote": "Full project planning with timelines & agile tickets"
+            },
+            {
+              "pid": 10,
+              "quote": "I\u00e2\u20ac\u2122d like AI to play a key role in scenario simulation, effort estimation, and design validation during the planning phase. These areas often involve uncertainty and assumptions. AI can help model outcomes, surface risks early, and guide more informed, data-driven decisions."
+            },
+            {
+              "pid": 15,
+              "quote": "Plan and keep track of schedules"
+            },
+            {
+              "pid": 28,
+              "quote": "Being able to accurately turn a design + architecture into a project plan, with realistic timelines, and milestones."
+            }
+          ]
+        },
+        {
+          "code": "architecture_ideation_design_copilot",
+          "count": 62,
+          "percentage": 27.8,
+          "pids": [
+            11,
+            13,
+            30,
+            59,
+            68,
+            82,
+            93,
+            112,
+            130,
+            151,
+            156,
+            175,
+            176,
+            189,
+            215,
+            240,
+            245,
+            249,
+            250,
+            261,
+            264,
+            266,
+            294,
+            306,
+            312,
+            322,
+            332,
+            344,
+            348,
+            356,
+            357,
+            381,
+            384,
+            387,
+            390,
+            391,
+            395,
+            396,
+            402,
+            403,
+            412,
+            428,
+            467,
+            493,
+            505,
+            515,
+            555,
+            558,
+            566,
+            579,
+            598,
+            628,
+            664,
+            671,
+            682,
+            696,
+            721,
+            767,
+            774,
+            780,
+            848,
+            854
+          ],
+          "sample_quotes": [
+            {
+              "pid": 11,
+              "quote": "Requirements gathering and analysis, and some parts of architecture and design"
+            },
+            {
+              "pid": 13,
+              "quote": "Requirement gathering, feasibility evaluation and design comparisions/alternatives identification"
+            },
+            {
+              "pid": 30,
+              "quote": "System Architecture & Design"
+            },
+            {
+              "pid": 59,
+              "quote": "Over the next 1-3 years, I want AI to assist in exploring optimal architectural patterns, analyzing historical system bottlenecks, and generating risk aware design proposals\u00e2\u20ac\u201dso we can accelerate planning while making smarter, more informed technical decisions."
+            },
+            {
+              "pid": 68,
+              "quote": "Help provide a design based on requirements looking at the internal context and also help create tasks jn ADO"
+            }
+          ]
+        },
+        {
+          "code": "design_review_risk_tradeoff_decisions",
+          "count": 46,
+          "percentage": 20.6,
+          "pids": [
+            2,
+            10,
+            13,
+            59,
+            69,
+            83,
+            93,
+            114,
+            166,
+            189,
+            213,
+            219,
+            249,
+            276,
+            281,
+            300,
+            313,
+            328,
+            343,
+            344,
+            345,
+            349,
+            386,
+            394,
+            422,
+            428,
+            435,
+            448,
+            467,
+            470,
+            508,
+            526,
+            572,
+            587,
+            627,
+            628,
+            680,
+            687,
+            696,
+            721,
+            752,
+            760,
+            827,
+            830,
+            848,
+            851
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "Creation of tracking design decisions through the architecture easier. eg. If I choose to have a 1-minute Recovery Point Objective (RPO), what subsequent decisions were made because of this, and what child decisions were made because of those subsequent decisions. I would like to reason over the choices that I made, the impact they had, and how small changes to initial design decisions could have significant impact/improvement on the architecture (be it complexity, performance, or cost)."
+            },
+            {
+              "pid": 10,
+              "quote": "I\u00e2\u20ac\u2122d like AI to play a key role in scenario simulation, effort estimation, and design validation during the planning phase. These areas often involve uncertainty and assumptions. AI can help model outcomes, surface risks early, and guide more informed, data-driven decisions."
+            },
+            {
+              "pid": 13,
+              "quote": "Requirement gathering, feasibility evaluation and design comparisions/alternatives identification"
+            },
+            {
+              "pid": 59,
+              "quote": "Over the next 1-3 years, I want AI to assist in exploring optimal architectural patterns, analyzing historical system bottlenecks, and generating risk aware design proposals\u00e2\u20ac\u201dso we can accelerate planning while making smarter, more informed technical decisions."
+            },
+            {
+              "pid": 69,
+              "quote": "evaluate tradeoffs in design considerations (which azure technologies to use, whether to scale horizontally or vertically, etc)"
+            }
+          ]
+        },
+        {
+          "code": "context_retrieval_and_knowledge_synthesis",
+          "count": 44,
+          "percentage": 19.7,
+          "pids": [
+            2,
+            17,
+            26,
+            40,
+            55,
+            68,
+            78,
+            138,
+            143,
+            166,
+            175,
+            179,
+            182,
+            190,
+            208,
+            219,
+            237,
+            245,
+            259,
+            281,
+            291,
+            313,
+            341,
+            370,
+            390,
+            391,
+            396,
+            435,
+            443,
+            508,
+            569,
+            666,
+            671,
+            682,
+            716,
+            717,
+            723,
+            753,
+            763,
+            780,
+            792,
+            809,
+            842,
+            852
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "Creation of tracking design decisions through the architecture easier. eg. If I choose to have a 1-minute Recovery Point Objective (RPO), what subsequent decisions were made because of this, and what child decisions were made because of those subsequent decisions. I would like to reason over the choices that I made, the impact they had, and how small changes to initial design decisions could have significant impact/improvement on the architecture (be it complexity, performance, or cost)."
+            },
+            {
+              "pid": 17,
+              "quote": "I feel it will be most useful in analyzing new codebases that an engineer is jumping into, which is usually a very daunting step since it requires a lot of time and discipline to understand what's going on in a given codebase."
+            },
+            {
+              "pid": 26,
+              "quote": "integrating across platforms to gather information for design and POC"
+            },
+            {
+              "pid": 40,
+              "quote": "I enjoy requirements gathering and analysis, but it's really helpful to have AI keep track of the details to make sure that nothing gets lost. \n\nThere can be a substantial time gap between when a stakeholder mentions an important detail and the documentation is produced and reviewed, and with the volume of topics discussed and documented, it's possible for things to get lost inadvertently. Not lost conceptually, just not stated, such as the final artifacts and plans needing to address specific concerns that were brought up by a stakeholder months ago. Having AI help keep track of things would be really helpful. \n\nWith that statement I'm assuming that AI context windows are longer than my attention span and more efficient than my ability to document every detail..."
+            },
+            {
+              "pid": 55,
+              "quote": "I wish AI could analyze source code for systems and help developers understand **ACCURATELY** how systems work.  I wish AI could **ACCURATELY** make reasonable suggestions.  When it hallucinates and sends inexperienced/uneducated developers down non-viable paths, it's a big problem -- _especially_ when the code goes into production because we basically test by sending code into Production in just a few weeks."
+            }
+          ]
+        },
+        {
+          "code": "documentation_spec_diagram_generation",
+          "count": 34,
+          "percentage": 15.2,
+          "pids": [
+            57,
+            75,
+            124,
+            163,
+            170,
+            179,
+            193,
+            206,
+            213,
+            228,
+            245,
+            253,
+            275,
+            291,
+            314,
+            328,
+            332,
+            344,
+            387,
+            394,
+            401,
+            417,
+            459,
+            467,
+            483,
+            506,
+            515,
+            553,
+            560,
+            628,
+            730,
+            737,
+            795,
+            830
+          ],
+          "sample_quotes": [
+            {
+              "pid": 57,
+              "quote": "Help crafting design documents along with building architecture diagrams from the description of the features"
+            },
+            {
+              "pid": 75,
+              "quote": "I want AI to cover trivial and repetitive work (creating documents, slides, ....) so that I can focus on what really matters. I would also appreciate automatic ADO task creation (hierarchical) to help me split my goal into small tasks."
+            },
+            {
+              "pid": 124,
+              "quote": "Would love for AI to take a proof-of-concept code change and generate a design doc based on it"
+            },
+            {
+              "pid": 163,
+              "quote": "Writing user-facing documentation."
+            },
+            {
+              "pid": 170,
+              "quote": "writing documents and progress reports"
+            }
+          ]
+        },
+        {
+          "code": "requirements_gathering_synthesis",
+          "count": 33,
+          "percentage": 14.8,
+          "pids": [
+            3,
+            11,
+            13,
+            40,
+            114,
+            157,
+            158,
+            161,
+            190,
+            195,
+            200,
+            205,
+            211,
+            290,
+            291,
+            314,
+            319,
+            348,
+            349,
+            359,
+            360,
+            366,
+            369,
+            417,
+            432,
+            505,
+            522,
+            549,
+            560,
+            636,
+            748,
+            809,
+            830
+          ],
+          "sample_quotes": [
+            {
+              "pid": 3,
+              "quote": "Enabling product folks to align better with engineering, either as a prep step, or a collaborative funciton between then two."
+            },
+            {
+              "pid": 11,
+              "quote": "Requirements gathering and analysis, and some parts of architecture and design"
+            },
+            {
+              "pid": 13,
+              "quote": "Requirement gathering, feasibility evaluation and design comparisions/alternatives identification"
+            },
+            {
+              "pid": 40,
+              "quote": "I enjoy requirements gathering and analysis, but it's really helpful to have AI keep track of the details to make sure that nothing gets lost. \n\nThere can be a substantial time gap between when a stakeholder mentions an important detail and the documentation is produced and reviewed, and with the volume of topics discussed and documented, it's possible for things to get lost inadvertently. Not lost conceptually, just not stated, such as the final artifacts and plans needing to address specific concerns that were brought up by a stakeholder months ago. Having AI help keep track of things would be really helpful. \n\nWith that statement I'm assuming that AI context windows are longer than my attention span and more efficient than my ability to document every detail..."
+            },
+            {
+              "pid": 114,
+              "quote": "Requirement breakdown and pros/cons analysis given a set of guardrails. As an example, assume I have want to design a platform-managed, multi-tenant distributed cache offering using Redis for internal 1P teams. Do I go with Azure Managed Redis, or do I self-host Redis OSS to save on costs? What are the detailed pros/cons of each approach?"
+            }
+          ]
+        },
+        {
+          "code": "trustworthy_outputs_with_citations",
+          "count": 13,
+          "percentage": 5.8,
+          "pids": [
+            55,
+            72,
+            101,
+            166,
+            205,
+            228,
+            259,
+            325,
+            387,
+            435,
+            443,
+            756,
+            813
+          ],
+          "sample_quotes": [
+            {
+              "pid": 55,
+              "quote": "I wish AI could analyze source code for systems and help developers understand **ACCURATELY** how systems work.  I wish AI could **ACCURATELY** make reasonable suggestions.  When it hallucinates and sends inexperienced/uneducated developers down non-viable paths, it's a big problem -- _especially_ when the code goes into production because we basically test by sending code into Production in just a few weeks."
+            },
+            {
+              "pid": 72,
+              "quote": "Can provide more details and the source of the solution (URL)"
+            },
+            {
+              "pid": 101,
+              "quote": "Reducing hallucinations. That's my only complaint with AI today, but it's still a huge problem."
+            },
+            {
+              "pid": 166,
+              "quote": "Be able to accurately index available tools within the company, cite examples and subject matter experts, and go deep into pros and cons."
+            },
+            {
+              "pid": 205,
+              "quote": "Capturing user requirements (without hallucinating) could be particularly valuable, particularly as it often takes multiple iterations with users to get to the bottom of their requirements - that iteration could be more efficiently led by AI, and can still be validated by the user."
+            }
+          ]
+        }
+      ],
+      "consensus_codings": {
+        "2": [
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "3": [
+          "requirements_gathering_synthesis"
+        ],
+        "5": [
+          "project_planning_tasking_status_automation"
+        ],
+        "8": [
+          "project_planning_tasking_status_automation"
+        ],
+        "10": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "11": [
+          "architecture_ideation_design_copilot",
+          "requirements_gathering_synthesis"
+        ],
+        "13": [
+          "architecture_ideation_design_copilot",
+          "requirements_gathering_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "15": [
+          "project_planning_tasking_status_automation"
+        ],
+        "17": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "26": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "28": [
+          "project_planning_tasking_status_automation"
+        ],
+        "29": [
+          "project_planning_tasking_status_automation"
+        ],
+        "30": [
+          "architecture_ideation_design_copilot"
+        ],
+        "40": [
+          "context_retrieval_and_knowledge_synthesis",
+          "requirements_gathering_synthesis"
+        ],
+        "43": [
+          "ISSUE"
+        ],
+        "48": [],
+        "55": [
+          "context_retrieval_and_knowledge_synthesis",
+          "trustworthy_outputs_with_citations"
+        ],
+        "57": [
+          "documentation_spec_diagram_generation"
+        ],
+        "59": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "68": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis",
+          "project_planning_tasking_status_automation"
+        ],
+        "69": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "72": [
+          "trustworthy_outputs_with_citations"
+        ],
+        "73": [
+          "project_planning_tasking_status_automation"
+        ],
+        "75": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation"
+        ],
+        "78": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "82": [
+          "architecture_ideation_design_copilot"
+        ],
+        "83": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "93": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "96": [
+          "project_planning_tasking_status_automation"
+        ],
+        "101": [
+          "trustworthy_outputs_with_citations"
+        ],
+        "112": [
+          "architecture_ideation_design_copilot"
+        ],
+        "114": [
+          "requirements_gathering_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "124": [
+          "documentation_spec_diagram_generation"
+        ],
+        "128": [
+          "project_planning_tasking_status_automation"
+        ],
+        "130": [
+          "architecture_ideation_design_copilot"
+        ],
+        "133": [
+          "project_planning_tasking_status_automation"
+        ],
+        "138": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "143": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "145": [
+          "project_planning_tasking_status_automation"
+        ],
+        "150": [
+          "project_planning_tasking_status_automation"
+        ],
+        "151": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "153": [
+          "project_planning_tasking_status_automation"
+        ],
+        "155": [
+          "project_planning_tasking_status_automation"
+        ],
+        "156": [
+          "architecture_ideation_design_copilot"
+        ],
+        "157": [
+          "project_planning_tasking_status_automation",
+          "requirements_gathering_synthesis"
+        ],
+        "158": [
+          "project_planning_tasking_status_automation",
+          "requirements_gathering_synthesis"
+        ],
+        "161": [
+          "requirements_gathering_synthesis"
+        ],
+        "163": [
+          "documentation_spec_diagram_generation"
+        ],
+        "166": [
+          "trustworthy_outputs_with_citations",
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "169": [
+          "project_planning_tasking_status_automation"
+        ],
+        "170": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation"
+        ],
+        "175": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "176": [
+          "architecture_ideation_design_copilot"
+        ],
+        "179": [
+          "project_planning_tasking_status_automation",
+          "context_retrieval_and_knowledge_synthesis",
+          "documentation_spec_diagram_generation"
+        ],
+        "180": [
+          "project_planning_tasking_status_automation"
+        ],
+        "182": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "189": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions",
+          "architecture_ideation_design_copilot"
+        ],
+        "190": [
+          "context_retrieval_and_knowledge_synthesis",
+          "requirements_gathering_synthesis"
+        ],
+        "193": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation"
+        ],
+        "194": [
+          "project_planning_tasking_status_automation"
+        ],
+        "195": [
+          "project_planning_tasking_status_automation",
+          "requirements_gathering_synthesis"
+        ],
+        "200": [
+          "requirements_gathering_synthesis"
+        ],
+        "205": [
+          "trustworthy_outputs_with_citations",
+          "requirements_gathering_synthesis"
+        ],
+        "206": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation"
+        ],
+        "208": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "211": [
+          "requirements_gathering_synthesis"
+        ],
+        "212": [
+          "project_planning_tasking_status_automation"
+        ],
+        "213": [
+          "design_review_risk_tradeoff_decisions",
+          "documentation_spec_diagram_generation"
+        ],
+        "215": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "216": [
+          "project_planning_tasking_status_automation"
+        ],
+        "219": [
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "228": [
+          "trustworthy_outputs_with_citations",
+          "documentation_spec_diagram_generation"
+        ],
+        "237": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "240": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "245": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis",
+          "documentation_spec_diagram_generation"
+        ],
+        "249": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "250": [
+          "architecture_ideation_design_copilot"
+        ],
+        "253": [
+          "documentation_spec_diagram_generation"
+        ],
+        "259": [
+          "context_retrieval_and_knowledge_synthesis",
+          "trustworthy_outputs_with_citations"
+        ],
+        "261": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "264": [
+          "architecture_ideation_design_copilot"
+        ],
+        "266": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "275": [
+          "documentation_spec_diagram_generation"
+        ],
+        "276": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "281": [
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "290": [
+          "requirements_gathering_synthesis"
+        ],
+        "291": [
+          "context_retrieval_and_knowledge_synthesis",
+          "requirements_gathering_synthesis",
+          "documentation_spec_diagram_generation"
+        ],
+        "294": [
+          "architecture_ideation_design_copilot"
+        ],
+        "297": [
+          "ISSUE"
+        ],
+        "300": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "305": [
+          "project_planning_tasking_status_automation"
+        ],
+        "306": [
+          "architecture_ideation_design_copilot"
+        ],
+        "310": [
+          "project_planning_tasking_status_automation"
+        ],
+        "312": [
+          "architecture_ideation_design_copilot"
+        ],
+        "313": [
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "314": [
+          "documentation_spec_diagram_generation",
+          "requirements_gathering_synthesis"
+        ],
+        "319": [
+          "requirements_gathering_synthesis"
+        ],
+        "322": [
+          "architecture_ideation_design_copilot"
+        ],
+        "325": [
+          "trustworthy_outputs_with_citations"
+        ],
+        "328": [
+          "documentation_spec_diagram_generation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "332": [
+          "architecture_ideation_design_copilot",
+          "documentation_spec_diagram_generation"
+        ],
+        "341": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "343": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "344": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions",
+          "documentation_spec_diagram_generation",
+          "project_planning_tasking_status_automation"
+        ],
+        "345": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "348": [
+          "architecture_ideation_design_copilot",
+          "requirements_gathering_synthesis",
+          "project_planning_tasking_status_automation"
+        ],
+        "349": [
+          "requirements_gathering_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "356": [
+          "architecture_ideation_design_copilot"
+        ],
+        "357": [
+          "architecture_ideation_design_copilot"
+        ],
+        "359": [
+          "requirements_gathering_synthesis"
+        ],
+        "360": [
+          "requirements_gathering_synthesis"
+        ],
+        "366": [
+          "requirements_gathering_synthesis"
+        ],
+        "368": [],
+        "369": [
+          "requirements_gathering_synthesis"
+        ],
+        "370": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "372": [],
+        "380": [
+          "project_planning_tasking_status_automation"
+        ],
+        "381": [
+          "architecture_ideation_design_copilot"
+        ],
+        "384": [
+          "architecture_ideation_design_copilot"
+        ],
+        "386": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "387": [
+          "architecture_ideation_design_copilot",
+          "trustworthy_outputs_with_citations",
+          "documentation_spec_diagram_generation"
+        ],
+        "390": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "391": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "394": [
+          "documentation_spec_diagram_generation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "395": [
+          "architecture_ideation_design_copilot"
+        ],
+        "396": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "401": [
+          "documentation_spec_diagram_generation"
+        ],
+        "402": [
+          "architecture_ideation_design_copilot"
+        ],
+        "403": [
+          "architecture_ideation_design_copilot"
+        ],
+        "407": [
+          "ISSUE"
+        ],
+        "409": [
+          "project_planning_tasking_status_automation"
+        ],
+        "412": [
+          "architecture_ideation_design_copilot"
+        ],
+        "417": [
+          "documentation_spec_diagram_generation",
+          "requirements_gathering_synthesis"
+        ],
+        "422": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "428": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "432": [
+          "project_planning_tasking_status_automation",
+          "requirements_gathering_synthesis"
+        ],
+        "434": [],
+        "435": [
+          "trustworthy_outputs_with_citations",
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "440": [
+          "project_planning_tasking_status_automation"
+        ],
+        "443": [
+          "context_retrieval_and_knowledge_synthesis",
+          "trustworthy_outputs_with_citations"
+        ],
+        "448": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "456": [
+          "project_planning_tasking_status_automation"
+        ],
+        "459": [
+          "documentation_spec_diagram_generation"
+        ],
+        "463": [],
+        "467": [
+          "architecture_ideation_design_copilot",
+          "documentation_spec_diagram_generation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "470": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "483": [
+          "documentation_spec_diagram_generation"
+        ],
+        "493": [
+          "architecture_ideation_design_copilot"
+        ],
+        "505": [
+          "architecture_ideation_design_copilot",
+          "requirements_gathering_synthesis"
+        ],
+        "506": [
+          "documentation_spec_diagram_generation"
+        ],
+        "508": [
+          "context_retrieval_and_knowledge_synthesis",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "511": [
+          "project_planning_tasking_status_automation"
+        ],
+        "515": [
+          "architecture_ideation_design_copilot",
+          "documentation_spec_diagram_generation"
+        ],
+        "522": [
+          "project_planning_tasking_status_automation",
+          "requirements_gathering_synthesis"
+        ],
+        "526": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "527": [
+          "project_planning_tasking_status_automation"
+        ],
+        "533": [
+          "project_planning_tasking_status_automation"
+        ],
+        "545": [
+          "project_planning_tasking_status_automation"
+        ],
+        "549": [
+          "requirements_gathering_synthesis"
+        ],
+        "553": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation"
+        ],
+        "555": [
+          "architecture_ideation_design_copilot"
+        ],
+        "557": [
+          "ISSUE"
+        ],
+        "558": [
+          "architecture_ideation_design_copilot"
+        ],
+        "560": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation",
+          "requirements_gathering_synthesis"
+        ],
+        "564": [
+          "project_planning_tasking_status_automation"
+        ],
+        "566": [
+          "architecture_ideation_design_copilot"
+        ],
+        "569": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "572": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "579": [
+          "architecture_ideation_design_copilot"
+        ],
+        "587": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "597": [
+          "project_planning_tasking_status_automation"
+        ],
+        "598": [
+          "architecture_ideation_design_copilot"
+        ],
+        "603": [
+          "project_planning_tasking_status_automation"
+        ],
+        "607": [
+          "project_planning_tasking_status_automation"
+        ],
+        "608": [
+          "project_planning_tasking_status_automation"
+        ],
+        "611": [
+          "project_planning_tasking_status_automation"
+        ],
+        "625": [],
+        "627": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "628": [
+          "architecture_ideation_design_copilot",
+          "documentation_spec_diagram_generation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "635": [
+          "project_planning_tasking_status_automation"
+        ],
+        "636": [
+          "requirements_gathering_synthesis"
+        ],
+        "664": [
+          "architecture_ideation_design_copilot"
+        ],
+        "666": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "671": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "680": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "682": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "687": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "696": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "698": [
+          "project_planning_tasking_status_automation"
+        ],
+        "700": [
+          "ISSUE"
+        ],
+        "704": [
+          "project_planning_tasking_status_automation"
+        ],
+        "716": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "717": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "721": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions",
+          "project_planning_tasking_status_automation"
+        ],
+        "723": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "730": [
+          "documentation_spec_diagram_generation"
+        ],
+        "737": [
+          "documentation_spec_diagram_generation"
+        ],
+        "748": [
+          "requirements_gathering_synthesis"
+        ],
+        "752": [
+          "project_planning_tasking_status_automation",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "753": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "756": [
+          "trustworthy_outputs_with_citations"
+        ],
+        "760": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "763": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "767": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "769": [
+          "ISSUE"
+        ],
+        "774": [
+          "architecture_ideation_design_copilot",
+          "project_planning_tasking_status_automation"
+        ],
+        "780": [
+          "architecture_ideation_design_copilot",
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "792": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "795": [
+          "documentation_spec_diagram_generation"
+        ],
+        "809": [
+          "context_retrieval_and_knowledge_synthesis",
+          "requirements_gathering_synthesis"
+        ],
+        "810": [],
+        "813": [
+          "trustworthy_outputs_with_citations"
+        ],
+        "814": [],
+        "823": [
+          "project_planning_tasking_status_automation"
+        ],
+        "826": [
+          "ISSUE"
+        ],
+        "827": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "830": [
+          "project_planning_tasking_status_automation",
+          "documentation_spec_diagram_generation",
+          "design_review_risk_tradeoff_decisions",
+          "requirements_gathering_synthesis"
+        ],
+        "842": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "848": [
+          "architecture_ideation_design_copilot",
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "851": [
+          "design_review_risk_tradeoff_decisions"
+        ],
+        "852": [
+          "context_retrieval_and_knowledge_synthesis"
+        ],
+        "854": [
+          "architecture_ideation_design_copilot"
+        ],
+        "859": []
+      },
+      "summary": {
+        "responses_with_themes": 214,
+        "responses_with_themes_pct": 96.0,
+        "avg_themes_per_response": 1.38
+      }
+    },
+    "development": {
+      "category": "development",
+      "response_count": 353,
+      "methodology": "majority_vote (2+ of 3 models)",
+      "theme_prevalence": [
+        {
+          "code": "codegen_refactor_modernization",
+          "count": 177,
+          "percentage": 50.1,
+          "pids": [
+            1,
+            2,
+            8,
+            11,
+            13,
+            17,
+            18,
+            19,
+            24,
+            27,
+            30,
+            34,
+            36,
+            42,
+            46,
+            48,
+            52,
+            56,
+            57,
+            59,
+            64,
+            67,
+            73,
+            74,
+            75,
+            83,
+            86,
+            101,
+            105,
+            106,
+            112,
+            125,
+            138,
+            139,
+            143,
+            151,
+            153,
+            166,
+            169,
+            170,
+            179,
+            180,
+            187,
+            188,
+            189,
+            193,
+            194,
+            195,
+            198,
+            200,
+            206,
+            210,
+            211,
+            212,
+            219,
+            221,
+            225,
+            236,
+            242,
+            245,
+            249,
+            253,
+            261,
+            270,
+            273,
+            275,
+            276,
+            277,
+            280,
+            281,
+            282,
+            293,
+            297,
+            298,
+            305,
+            306,
+            311,
+            313,
+            314,
+            327,
+            333,
+            342,
+            347,
+            356,
+            368,
+            369,
+            372,
+            376,
+            380,
+            387,
+            388,
+            390,
+            394,
+            396,
+            397,
+            399,
+            400,
+            401,
+            402,
+            407,
+            418,
+            424,
+            427,
+            430,
+            432,
+            439,
+            443,
+            446,
+            448,
+            459,
+            461,
+            462,
+            467,
+            483,
+            484,
+            490,
+            500,
+            502,
+            506,
+            527,
+            539,
+            549,
+            558,
+            569,
+            580,
+            590,
+            595,
+            601,
+            603,
+            604,
+            605,
+            607,
+            608,
+            610,
+            611,
+            626,
+            627,
+            634,
+            637,
+            639,
+            644,
+            647,
+            657,
+            667,
+            671,
+            680,
+            687,
+            688,
+            689,
+            692,
+            697,
+            698,
+            703,
+            717,
+            720,
+            721,
+            723,
+            725,
+            730,
+            734,
+            744,
+            747,
+            748,
+            756,
+            774,
+            776,
+            781,
+            785,
+            788,
+            795,
+            806,
+            809,
+            813,
+            816,
+            819,
+            827,
+            859
+          ],
+          "sample_quotes": [
+            {
+              "pid": 1,
+              "quote": "Refactoring for sure. It's often the most boring task for me, and being able to mostly automate it would be amazing. Current progress is already great for a lot of use cases."
+            },
+            {
+              "pid": 2,
+              "quote": "Generation & dealing with boiler-plate code. More cross-codebase awareness, so I can make a single change in a small part of the codebase (eg changing a datatype in a model, or changing  nullability of a field), and AI will help implement those changes across the rest of the codebase. Supporting re-architecture of my codebase."
+            },
+            {
+              "pid": 8,
+              "quote": "Cloud based coding agent, for migration of old tech to new tech."
+            },
+            {
+              "pid": 11,
+              "quote": "I want AI to be able to program components of systems without me spending time crafting a prompt and babying it into writing the code over many iterations to actually save me time. \nAI today is great for fast exploration and prototyping, but I don't yet have confidence in using it for production code, specifically with the agentic scenarios."
+            },
+            {
+              "pid": 13,
+              "quote": "Coding and bug fixing"
+            }
+          ]
+        },
+        {
+          "code": "quality_review_testing_security",
+          "count": 98,
+          "percentage": 27.8,
+          "pids": [
+            10,
+            19,
+            22,
+            24,
+            40,
+            48,
+            59,
+            67,
+            73,
+            92,
+            120,
+            125,
+            145,
+            150,
+            153,
+            161,
+            164,
+            170,
+            174,
+            179,
+            180,
+            182,
+            187,
+            188,
+            189,
+            192,
+            194,
+            196,
+            199,
+            213,
+            221,
+            228,
+            245,
+            249,
+            266,
+            270,
+            280,
+            282,
+            293,
+            294,
+            306,
+            310,
+            311,
+            313,
+            317,
+            319,
+            350,
+            363,
+            366,
+            369,
+            372,
+            376,
+            381,
+            386,
+            387,
+            388,
+            402,
+            422,
+            428,
+            441,
+            443,
+            448,
+            456,
+            457,
+            464,
+            500,
+            520,
+            553,
+            555,
+            564,
+            565,
+            578,
+            587,
+            590,
+            591,
+            598,
+            604,
+            605,
+            609,
+            611,
+            613,
+            626,
+            653,
+            667,
+            671,
+            687,
+            689,
+            696,
+            704,
+            723,
+            752,
+            774,
+            775,
+            790,
+            795,
+            809,
+            826,
+            833
+          ],
+          "sample_quotes": [
+            {
+              "pid": 10,
+              "quote": "Over the next 1-3 years, I\u00e2\u20ac\u2122d like AI to play a bigger role in intelligent code reviews, automated test generation, and architectural decision support. These areas often consume significant time and require deep context. AI could help accelerate delivery while maintaining high quality and consistency."
+            },
+            {
+              "pid": 19,
+              "quote": "helping me writing code with modularity, testing and future-proof in mind. Especially with new libraries or languages."
+            },
+            {
+              "pid": 22,
+              "quote": "Help identify bad coding practices."
+            },
+            {
+              "pid": 24,
+              "quote": "Optimizing and improving codebase and security"
+            },
+            {
+              "pid": 40,
+              "quote": "I'd really like it if AI helps me make sure the code I'm writing meets repository standards, handles the size of data I'm processing efficiently, and helps me understand dependencies upstream and downstream."
+            }
+          ]
+        },
+        {
+          "code": "debugging_root_cause_fixing",
+          "count": 69,
+          "percentage": 19.5,
+          "pids": [
+            13,
+            26,
+            29,
+            43,
+            56,
+            59,
+            83,
+            86,
+            120,
+            125,
+            127,
+            131,
+            145,
+            150,
+            156,
+            171,
+            180,
+            189,
+            196,
+            202,
+            209,
+            222,
+            286,
+            291,
+            309,
+            310,
+            313,
+            356,
+            370,
+            376,
+            384,
+            394,
+            395,
+            397,
+            407,
+            413,
+            428,
+            432,
+            446,
+            456,
+            457,
+            461,
+            470,
+            508,
+            533,
+            535,
+            539,
+            553,
+            556,
+            558,
+            564,
+            598,
+            620,
+            627,
+            628,
+            647,
+            648,
+            663,
+            693,
+            696,
+            698,
+            721,
+            751,
+            752,
+            754,
+            760,
+            827,
+            832,
+            833
+          ],
+          "sample_quotes": [
+            {
+              "pid": 13,
+              "quote": "Coding and bug fixing"
+            },
+            {
+              "pid": 26,
+              "quote": "Correlating with logs for self-debugging"
+            },
+            {
+              "pid": 29,
+              "quote": "I think debugging, and bug fixing should be one of the strengths of using AI in the coming years."
+            },
+            {
+              "pid": 43,
+              "quote": "Its biggest role should be identifying which portion of work is the most important for my attention:\n- what are my customers pain points, attrition sources based on feedback, crash and perf analysis\n- what new features will bring highest ROI based on feedback and similar historical projects"
+            },
+            {
+              "pid": 56,
+              "quote": "As much as I love coding, there is simply too much work to do to want to keep doing it myself. Ideally I could delegate most coding tasks, or even log analysis tasks, to agents while I focus on the things which AI currently cannot do well (Cross team objective setting, product decision making, high level design, etc)"
+            }
+          ]
+        },
+        {
+          "code": "codebase_context_knowledge_safe_changes",
+          "count": 65,
+          "percentage": 18.4,
+          "pids": [
+            2,
+            27,
+            28,
+            34,
+            40,
+            49,
+            74,
+            88,
+            110,
+            126,
+            139,
+            145,
+            182,
+            192,
+            199,
+            208,
+            209,
+            221,
+            222,
+            245,
+            261,
+            276,
+            290,
+            306,
+            310,
+            313,
+            328,
+            336,
+            342,
+            346,
+            375,
+            381,
+            399,
+            413,
+            418,
+            427,
+            462,
+            464,
+            520,
+            526,
+            545,
+            625,
+            626,
+            627,
+            637,
+            696,
+            698,
+            701,
+            703,
+            706,
+            711,
+            713,
+            723,
+            734,
+            740,
+            744,
+            750,
+            754,
+            760,
+            768,
+            771,
+            776,
+            780,
+            816,
+            852
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "Generation & dealing with boiler-plate code. More cross-codebase awareness, so I can make a single change in a small part of the codebase (eg changing a datatype in a model, or changing  nullability of a field), and AI will help implement those changes across the rest of the codebase. Supporting re-architecture of my codebase."
+            },
+            {
+              "pid": 27,
+              "quote": "Refactoring would be the biggest help!  It's almost always tedious and well-defined tasks.  Frequently it needs more than just find-replace though.  Almost always it is over large file and multi-file workflows."
+            },
+            {
+              "pid": 28,
+              "quote": "Bigger contexts and not losing context after long periods of work. At the beginning of the chat, the AI does great; however the longer the chat and work goes, the worse the AI gets"
+            },
+            {
+              "pid": 34,
+              "quote": "Creating agents, that understand the codebase and make generic code changes."
+            },
+            {
+              "pid": 40,
+              "quote": "I'd really like it if AI helps me make sure the code I'm writing meets repository standards, handles the size of data I'm processing efficiently, and helps me understand dependencies upstream and downstream."
+            }
+          ]
+        },
+        {
+          "code": "architecture_design_planning_support",
+          "count": 38,
+          "percentage": 10.8,
+          "pids": [
+            2,
+            10,
+            43,
+            48,
+            49,
+            85,
+            86,
+            92,
+            127,
+            148,
+            176,
+            189,
+            207,
+            211,
+            259,
+            281,
+            360,
+            403,
+            409,
+            413,
+            448,
+            467,
+            474,
+            487,
+            490,
+            493,
+            506,
+            569,
+            580,
+            607,
+            706,
+            716,
+            737,
+            754,
+            760,
+            795,
+            806,
+            825
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "Generation & dealing with boiler-plate code. More cross-codebase awareness, so I can make a single change in a small part of the codebase (eg changing a datatype in a model, or changing  nullability of a field), and AI will help implement those changes across the rest of the codebase. Supporting re-architecture of my codebase."
+            },
+            {
+              "pid": 10,
+              "quote": "Over the next 1-3 years, I\u00e2\u20ac\u2122d like AI to play a bigger role in intelligent code reviews, automated test generation, and architectural decision support. These areas often consume significant time and require deep context. AI could help accelerate delivery while maintaining high quality and consistency."
+            },
+            {
+              "pid": 43,
+              "quote": "Its biggest role should be identifying which portion of work is the most important for my attention:\n- what are my customers pain points, attrition sources based on feedback, crash and perf analysis\n- what new features will bring highest ROI based on feedback and similar historical projects"
+            },
+            {
+              "pid": 48,
+              "quote": "Be able to find and improve the bad design in our old system. Before that, improve test coverage."
+            },
+            {
+              "pid": 49,
+              "quote": "Improvements in understanding large code bases and drawing architectural conclusions will be necessary for making good decisions at the class level.  Multi-step changes across boundaries for large code bases is necessary in our environment."
+            }
+          ]
+        },
+        {
+          "code": "performance_profiling_optimization",
+          "count": 33,
+          "percentage": 9.3,
+          "pids": [
+            24,
+            40,
+            43,
+            59,
+            74,
+            86,
+            117,
+            122,
+            125,
+            179,
+            182,
+            199,
+            202,
+            215,
+            347,
+            356,
+            363,
+            422,
+            428,
+            432,
+            443,
+            483,
+            502,
+            564,
+            598,
+            648,
+            657,
+            663,
+            688,
+            725,
+            752,
+            785,
+            852
+          ],
+          "sample_quotes": [
+            {
+              "pid": 24,
+              "quote": "Optimizing and improving codebase and security"
+            },
+            {
+              "pid": 40,
+              "quote": "I'd really like it if AI helps me make sure the code I'm writing meets repository standards, handles the size of data I'm processing efficiently, and helps me understand dependencies upstream and downstream."
+            },
+            {
+              "pid": 43,
+              "quote": "Its biggest role should be identifying which portion of work is the most important for my attention:\n- what are my customers pain points, attrition sources based on feedback, crash and perf analysis\n- what new features will bring highest ROI based on feedback and similar historical projects"
+            },
+            {
+              "pid": 59,
+              "quote": "Over the next 1\u00e2\u20ac\u201c3 years, I want AI to take a bigger role in automating repetitive tasks like boilerplate code generation, build configuration, and writing test cases. I\u00e2\u20ac\u2122d also value smarter AI support for debugging and performance profiling especially if it can trace issues across frameworks and platforms intelligently."
+            },
+            {
+              "pid": 74,
+              "quote": "Refactoring, maintenance, and updates will help optimize the code for better performance and maintainability.  Adding helpful code comments would be great too."
+            }
+          ]
+        },
+        {
+          "code": "devops_ci_cd_iac_workflow_automation",
+          "count": 23,
+          "percentage": 6.5,
+          "pids": [
+            59,
+            113,
+            130,
+            164,
+            199,
+            215,
+            264,
+            270,
+            273,
+            293,
+            332,
+            370,
+            377,
+            527,
+            533,
+            555,
+            556,
+            564,
+            635,
+            692,
+            747,
+            774,
+            795
+          ],
+          "sample_quotes": [
+            {
+              "pid": 59,
+              "quote": "Over the next 1\u00e2\u20ac\u201c3 years, I want AI to take a bigger role in automating repetitive tasks like boilerplate code generation, build configuration, and writing test cases. I\u00e2\u20ac\u2122d also value smarter AI support for debugging and performance profiling especially if it can trace issues across frameworks and platforms intelligently."
+            },
+            {
+              "pid": 113,
+              "quote": "I would rather it play the biggest roles in monotonous tasks like deployments and queueing tests. I do NOT want AI writing or optimizing my code for me"
+            },
+            {
+              "pid": 130,
+              "quote": "deployment, ARM template to build for build & release pipeline. wish it can be something automatically setup and connect with Azure Devops & Azure resources."
+            },
+            {
+              "pid": 164,
+              "quote": "Automating the PR creations and explainers to describe the changes. Creating extensive tests and letting the user design the process."
+            },
+            {
+              "pid": 199,
+              "quote": "Auto gen test cases, handle deployment pipelines, identify build failures and make an attempt to auto fix, scan frequently used code and files and suggest optimizations; Scan repo to identify duplication efforts for features."
+            }
+          ]
+        }
+      ],
+      "consensus_codings": {
+        "1": [
+          "codegen_refactor_modernization"
+        ],
+        "2": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes",
+          "architecture_design_planning_support"
+        ],
+        "3": [],
+        "8": [
+          "codegen_refactor_modernization"
+        ],
+        "10": [
+          "quality_review_testing_security",
+          "architecture_design_planning_support"
+        ],
+        "11": [
+          "codegen_refactor_modernization"
+        ],
+        "13": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "17": [
+          "codegen_refactor_modernization"
+        ],
+        "18": [
+          "codegen_refactor_modernization"
+        ],
+        "19": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "22": [
+          "quality_review_testing_security"
+        ],
+        "24": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "26": [
+          "debugging_root_cause_fixing"
+        ],
+        "27": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "28": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "29": [
+          "debugging_root_cause_fixing"
+        ],
+        "30": [
+          "codegen_refactor_modernization"
+        ],
+        "34": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "36": [
+          "codegen_refactor_modernization"
+        ],
+        "40": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "performance_profiling_optimization"
+        ],
+        "42": [
+          "codegen_refactor_modernization"
+        ],
+        "43": [
+          "performance_profiling_optimization",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "46": [
+          "codegen_refactor_modernization"
+        ],
+        "48": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "49": [
+          "codebase_context_knowledge_safe_changes",
+          "architecture_design_planning_support"
+        ],
+        "52": [
+          "codegen_refactor_modernization"
+        ],
+        "56": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "57": [
+          "codegen_refactor_modernization"
+        ],
+        "59": [
+          "debugging_root_cause_fixing",
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation",
+          "performance_profiling_optimization"
+        ],
+        "62": [],
+        "64": [
+          "codegen_refactor_modernization"
+        ],
+        "67": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "69": [],
+        "73": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "74": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes",
+          "performance_profiling_optimization"
+        ],
+        "75": [
+          "codegen_refactor_modernization"
+        ],
+        "78": [],
+        "79": [],
+        "83": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "85": [
+          "architecture_design_planning_support"
+        ],
+        "86": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "88": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "89": [],
+        "92": [
+          "architecture_design_planning_support",
+          "quality_review_testing_security"
+        ],
+        "96": [],
+        "101": [
+          "codegen_refactor_modernization"
+        ],
+        "105": [
+          "codegen_refactor_modernization"
+        ],
+        "106": [
+          "codegen_refactor_modernization"
+        ],
+        "110": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "112": [
+          "codegen_refactor_modernization"
+        ],
+        "113": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "117": [
+          "performance_profiling_optimization"
+        ],
+        "120": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "122": [
+          "performance_profiling_optimization"
+        ],
+        "125": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "126": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "127": [
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "130": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "131": [
+          "debugging_root_cause_fixing"
+        ],
+        "132": [],
+        "133": [],
+        "138": [
+          "codegen_refactor_modernization"
+        ],
+        "139": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "143": [
+          "codegen_refactor_modernization"
+        ],
+        "145": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing"
+        ],
+        "148": [
+          "architecture_design_planning_support"
+        ],
+        "150": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "151": [
+          "codegen_refactor_modernization"
+        ],
+        "153": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "156": [
+          "debugging_root_cause_fixing"
+        ],
+        "158": [],
+        "161": [
+          "quality_review_testing_security"
+        ],
+        "163": [],
+        "164": [
+          "quality_review_testing_security",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "166": [
+          "codegen_refactor_modernization"
+        ],
+        "169": [
+          "codegen_refactor_modernization"
+        ],
+        "170": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "171": [
+          "debugging_root_cause_fixing"
+        ],
+        "174": [
+          "quality_review_testing_security"
+        ],
+        "176": [
+          "architecture_design_planning_support"
+        ],
+        "179": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "180": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "182": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "performance_profiling_optimization"
+        ],
+        "187": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "188": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "189": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "192": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "193": [
+          "codegen_refactor_modernization"
+        ],
+        "194": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "195": [
+          "codegen_refactor_modernization"
+        ],
+        "196": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "198": [
+          "codegen_refactor_modernization"
+        ],
+        "199": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "devops_ci_cd_iac_workflow_automation",
+          "performance_profiling_optimization"
+        ],
+        "200": [
+          "codegen_refactor_modernization"
+        ],
+        "202": [
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "205": [],
+        "206": [
+          "codegen_refactor_modernization"
+        ],
+        "207": [
+          "architecture_design_planning_support"
+        ],
+        "208": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "209": [
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing"
+        ],
+        "210": [
+          "codegen_refactor_modernization"
+        ],
+        "211": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "212": [
+          "codegen_refactor_modernization"
+        ],
+        "213": [
+          "quality_review_testing_security"
+        ],
+        "215": [
+          "devops_ci_cd_iac_workflow_automation",
+          "performance_profiling_optimization"
+        ],
+        "216": [],
+        "219": [
+          "codegen_refactor_modernization"
+        ],
+        "221": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "222": [
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing"
+        ],
+        "225": [
+          "codegen_refactor_modernization"
+        ],
+        "228": [
+          "quality_review_testing_security"
+        ],
+        "236": [
+          "codegen_refactor_modernization"
+        ],
+        "239": [],
+        "242": [
+          "codegen_refactor_modernization"
+        ],
+        "245": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "249": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "251": [
+          "ISSUE"
+        ],
+        "253": [
+          "codegen_refactor_modernization"
+        ],
+        "254": [],
+        "259": [
+          "architecture_design_planning_support"
+        ],
+        "261": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "264": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "266": [
+          "quality_review_testing_security"
+        ],
+        "267": [],
+        "270": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "273": [
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "275": [
+          "codegen_refactor_modernization"
+        ],
+        "276": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "277": [
+          "codegen_refactor_modernization"
+        ],
+        "278": [],
+        "280": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "281": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "282": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "286": [
+          "debugging_root_cause_fixing"
+        ],
+        "290": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "291": [
+          "debugging_root_cause_fixing"
+        ],
+        "293": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "294": [
+          "quality_review_testing_security"
+        ],
+        "297": [
+          "codegen_refactor_modernization"
+        ],
+        "298": [
+          "codegen_refactor_modernization"
+        ],
+        "303": [
+          "ISSUE"
+        ],
+        "305": [
+          "codegen_refactor_modernization"
+        ],
+        "306": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "309": [
+          "debugging_root_cause_fixing"
+        ],
+        "310": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing"
+        ],
+        "311": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "313": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "314": [
+          "codegen_refactor_modernization"
+        ],
+        "317": [
+          "quality_review_testing_security"
+        ],
+        "319": [
+          "quality_review_testing_security"
+        ],
+        "325": [
+          "ISSUE"
+        ],
+        "327": [
+          "codegen_refactor_modernization"
+        ],
+        "328": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "332": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "333": [
+          "codegen_refactor_modernization"
+        ],
+        "336": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "339": [],
+        "341": [],
+        "342": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "344": [
+          "ISSUE"
+        ],
+        "346": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "347": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "348": [],
+        "350": [
+          "quality_review_testing_security"
+        ],
+        "352": [],
+        "356": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "359": [],
+        "360": [
+          "architecture_design_planning_support"
+        ],
+        "362": [
+          "ISSUE"
+        ],
+        "363": [
+          "quality_review_testing_security",
+          "performance_profiling_optimization"
+        ],
+        "366": [
+          "quality_review_testing_security"
+        ],
+        "368": [
+          "codegen_refactor_modernization"
+        ],
+        "369": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "370": [
+          "debugging_root_cause_fixing",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "372": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "375": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "376": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "377": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "380": [
+          "codegen_refactor_modernization"
+        ],
+        "381": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "384": [
+          "debugging_root_cause_fixing"
+        ],
+        "386": [
+          "quality_review_testing_security"
+        ],
+        "387": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "388": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "390": [
+          "codegen_refactor_modernization"
+        ],
+        "394": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "395": [
+          "debugging_root_cause_fixing"
+        ],
+        "396": [
+          "codegen_refactor_modernization"
+        ],
+        "397": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "399": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "400": [
+          "codegen_refactor_modernization"
+        ],
+        "401": [
+          "codegen_refactor_modernization"
+        ],
+        "402": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "403": [
+          "architecture_design_planning_support"
+        ],
+        "407": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "409": [
+          "architecture_design_planning_support"
+        ],
+        "412": [],
+        "413": [
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "418": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "420": [
+          "ISSUE"
+        ],
+        "422": [
+          "quality_review_testing_security",
+          "performance_profiling_optimization"
+        ],
+        "424": [
+          "codegen_refactor_modernization"
+        ],
+        "427": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "428": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "430": [
+          "codegen_refactor_modernization"
+        ],
+        "432": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "439": [
+          "codegen_refactor_modernization"
+        ],
+        "441": [
+          "quality_review_testing_security"
+        ],
+        "443": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "446": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "447": [
+          "ISSUE"
+        ],
+        "448": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "449": [],
+        "451": [],
+        "456": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "457": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "459": [
+          "codegen_refactor_modernization"
+        ],
+        "461": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "462": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "464": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "467": [
+          "architecture_design_planning_support",
+          "codegen_refactor_modernization"
+        ],
+        "470": [
+          "debugging_root_cause_fixing"
+        ],
+        "474": [
+          "architecture_design_planning_support"
+        ],
+        "476": [
+          "ISSUE"
+        ],
+        "483": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "484": [
+          "codegen_refactor_modernization"
+        ],
+        "487": [
+          "architecture_design_planning_support"
+        ],
+        "490": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "492": [],
+        "493": [
+          "architecture_design_planning_support"
+        ],
+        "500": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "502": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "506": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "508": [
+          "debugging_root_cause_fixing"
+        ],
+        "520": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "526": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "527": [
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "533": [
+          "debugging_root_cause_fixing",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "535": [
+          "debugging_root_cause_fixing"
+        ],
+        "539": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "545": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "547": [],
+        "549": [
+          "codegen_refactor_modernization"
+        ],
+        "553": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "555": [
+          "quality_review_testing_security",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "556": [
+          "devops_ci_cd_iac_workflow_automation",
+          "debugging_root_cause_fixing"
+        ],
+        "558": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "564": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing",
+          "devops_ci_cd_iac_workflow_automation",
+          "performance_profiling_optimization"
+        ],
+        "565": [
+          "quality_review_testing_security"
+        ],
+        "569": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "578": [
+          "quality_review_testing_security"
+        ],
+        "580": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "587": [
+          "quality_review_testing_security"
+        ],
+        "590": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "591": [
+          "quality_review_testing_security"
+        ],
+        "595": [
+          "codegen_refactor_modernization"
+        ],
+        "598": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "601": [
+          "codegen_refactor_modernization"
+        ],
+        "603": [
+          "codegen_refactor_modernization"
+        ],
+        "604": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "605": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "607": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "608": [
+          "codegen_refactor_modernization"
+        ],
+        "609": [
+          "quality_review_testing_security"
+        ],
+        "610": [
+          "codegen_refactor_modernization"
+        ],
+        "611": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "613": [
+          "quality_review_testing_security"
+        ],
+        "620": [
+          "debugging_root_cause_fixing"
+        ],
+        "625": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "626": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "627": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "628": [
+          "debugging_root_cause_fixing"
+        ],
+        "634": [
+          "codegen_refactor_modernization"
+        ],
+        "635": [
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "637": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "639": [
+          "codegen_refactor_modernization"
+        ],
+        "640": [],
+        "644": [
+          "codegen_refactor_modernization"
+        ],
+        "647": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "648": [
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "653": [
+          "quality_review_testing_security"
+        ],
+        "657": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "663": [
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization"
+        ],
+        "664": [],
+        "667": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "670": [],
+        "671": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "680": [
+          "codegen_refactor_modernization"
+        ],
+        "687": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "688": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "689": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "692": [
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "693": [
+          "debugging_root_cause_fixing"
+        ],
+        "696": [
+          "quality_review_testing_security",
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing"
+        ],
+        "697": [
+          "codegen_refactor_modernization"
+        ],
+        "698": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "700": [],
+        "701": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "703": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "704": [
+          "quality_review_testing_security"
+        ],
+        "706": [
+          "codebase_context_knowledge_safe_changes",
+          "architecture_design_planning_support"
+        ],
+        "711": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "712": [],
+        "713": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "716": [
+          "architecture_design_planning_support"
+        ],
+        "717": [
+          "codegen_refactor_modernization"
+        ],
+        "720": [
+          "codegen_refactor_modernization"
+        ],
+        "721": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "723": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "725": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "730": [
+          "codegen_refactor_modernization"
+        ],
+        "734": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "737": [
+          "architecture_design_planning_support"
+        ],
+        "740": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "744": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "747": [
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "748": [
+          "codegen_refactor_modernization"
+        ],
+        "750": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "751": [
+          "debugging_root_cause_fixing"
+        ],
+        "752": [
+          "debugging_root_cause_fixing",
+          "performance_profiling_optimization",
+          "quality_review_testing_security"
+        ],
+        "753": [],
+        "754": [
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "756": [
+          "codegen_refactor_modernization"
+        ],
+        "759": [],
+        "760": [
+          "codebase_context_knowledge_safe_changes",
+          "debugging_root_cause_fixing",
+          "architecture_design_planning_support"
+        ],
+        "768": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "769": [
+          "ISSUE"
+        ],
+        "771": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "774": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation"
+        ],
+        "775": [
+          "quality_review_testing_security"
+        ],
+        "776": [
+          "codegen_refactor_modernization",
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "780": [
+          "codebase_context_knowledge_safe_changes"
+        ],
+        "781": [
+          "codegen_refactor_modernization"
+        ],
+        "785": [
+          "codegen_refactor_modernization",
+          "performance_profiling_optimization"
+        ],
+        "788": [
+          "codegen_refactor_modernization"
+        ],
+        "789": [
+          "ISSUE"
+        ],
+        "790": [
+          "quality_review_testing_security"
+        ],
+        "791": [],
+        "795": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization",
+          "devops_ci_cd_iac_workflow_automation",
+          "architecture_design_planning_support"
+        ],
+        "806": [
+          "codegen_refactor_modernization",
+          "architecture_design_planning_support"
+        ],
+        "809": [
+          "quality_review_testing_security",
+          "codegen_refactor_modernization"
+        ],
+        "813": [
+          "codegen_refactor_modernization"
+        ],
+        "816": [
+          "codebase_context_knowledge_safe_changes",
+          "codegen_refactor_modernization"
+        ],
+        "819": [
+          "codegen_refactor_modernization"
+        ],
+        "820": [],
+        "825": [
+          "architecture_design_planning_support"
+        ],
+        "826": [
+          "quality_review_testing_security"
+        ],
+        "827": [
+          "codegen_refactor_modernization",
+          "debugging_root_cause_fixing"
+        ],
+        "832": [
+          "debugging_root_cause_fixing"
+        ],
+        "833": [
+          "quality_review_testing_security",
+          "debugging_root_cause_fixing"
+        ],
+        "839": [],
+        "852": [
+          "codebase_context_knowledge_safe_changes",
+          "performance_profiling_optimization"
+        ],
+        "859": [
+          "codegen_refactor_modernization"
+        ]
+      },
+      "summary": {
+        "responses_with_themes": 316,
+        "responses_with_themes_pct": 89.5,
+        "avg_themes_per_response": 1.45
+      }
+    },
+    "quality_risk": {
+      "category": "quality_risk",
+      "response_count": 155,
+      "methodology": "majority_vote (2+ of 3 models)",
+      "theme_prevalence": [
+        {
+          "code": "automated_test_generation_and_quality_gates",
+          "count": 69,
+          "percentage": 44.5,
+          "pids": [
+            15,
+            18,
+            19,
+            36,
+            48,
+            49,
+            53,
+            59,
+            64,
+            82,
+            92,
+            93,
+            94,
+            120,
+            129,
+            153,
+            156,
+            196,
+            249,
+            254,
+            263,
+            277,
+            286,
+            292,
+            293,
+            310,
+            317,
+            328,
+            344,
+            346,
+            350,
+            359,
+            369,
+            380,
+            387,
+            388,
+            400,
+            427,
+            435,
+            439,
+            459,
+            483,
+            486,
+            490,
+            559,
+            574,
+            608,
+            634,
+            636,
+            647,
+            651,
+            657,
+            663,
+            687,
+            688,
+            689,
+            703,
+            716,
+            723,
+            727,
+            737,
+            751,
+            767,
+            776,
+            795,
+            830,
+            851,
+            859,
+            860
+          ],
+          "sample_quotes": [
+            {
+              "pid": 15,
+              "quote": "Help develop and run quality testing and report the results"
+            },
+            {
+              "pid": 18,
+              "quote": "I think the best opportunity for AI in quality and risk management is to use it as a more advanced form of Monkey Testing."
+            },
+            {
+              "pid": 19,
+              "quote": "Help me designing good and thorough tests"
+            },
+            {
+              "pid": 36,
+              "quote": "More automated tests built by AI that even a PM could specify what they want to test and AI handles it"
+            },
+            {
+              "pid": 48,
+              "quote": "I want AI to automatically detect security risks and create chaos testing environments, since many scenarios are unimaginable to us but could be discovered through random exploration."
+            }
+          ]
+        },
+        {
+          "code": "intelligent_pr_code_review",
+          "count": 36,
+          "percentage": 23.2,
+          "pids": [
+            22,
+            49,
+            53,
+            55,
+            74,
+            92,
+            117,
+            171,
+            196,
+            264,
+            293,
+            328,
+            343,
+            387,
+            402,
+            403,
+            412,
+            413,
+            428,
+            429,
+            483,
+            484,
+            495,
+            591,
+            592,
+            636,
+            637,
+            640,
+            688,
+            701,
+            703,
+            716,
+            737,
+            751,
+            754,
+            826
+          ],
+          "sample_quotes": [
+            {
+              "pid": 22,
+              "quote": "Identify errors and vulnerabilities in code."
+            },
+            {
+              "pid": 49,
+              "quote": "Creating and maintaining software tests, along with catching software errors and security vulnerabilities before checking in code."
+            },
+            {
+              "pid": 53,
+              "quote": "help with green field projects, help with code reviews,  help with writing tests."
+            },
+            {
+              "pid": 55,
+              "quote": "I wish it could **ACCURATELY** make assessments about security issues or functional correctness of code."
+            },
+            {
+              "pid": 74,
+              "quote": "Code review feedback including security and compliance checks. Specifically, accessibility, localization, and security issues."
+            }
+          ]
+        },
+        {
+          "code": "security_vulnerability_detection_and_fix_guidance",
+          "count": 34,
+          "percentage": 21.9,
+          "pids": [
+            22,
+            42,
+            48,
+            49,
+            55,
+            74,
+            86,
+            120,
+            156,
+            212,
+            225,
+            249,
+            259,
+            296,
+            317,
+            328,
+            346,
+            360,
+            367,
+            369,
+            389,
+            413,
+            443,
+            474,
+            476,
+            483,
+            535,
+            590,
+            598,
+            608,
+            657,
+            700,
+            767,
+            830
+          ],
+          "sample_quotes": [
+            {
+              "pid": 22,
+              "quote": "Identify errors and vulnerabilities in code."
+            },
+            {
+              "pid": 42,
+              "quote": "I want AI to proactively evaluate contributions for potential security issues before I merge changes."
+            },
+            {
+              "pid": 48,
+              "quote": "I want AI to automatically detect security risks and create chaos testing environments, since many scenarios are unimaginable to us but could be discovered through random exploration."
+            },
+            {
+              "pid": 49,
+              "quote": "Creating and maintaining software tests, along with catching software errors and security vulnerabilities before checking in code."
+            },
+            {
+              "pid": 55,
+              "quote": "I wish it could **ACCURATELY** make assessments about security issues or functional correctness of code."
+            }
+          ]
+        },
+        {
+          "code": "compliance_and_audit_automation",
+          "count": 22,
+          "percentage": 14.2,
+          "pids": [
+            10,
+            74,
+            156,
+            206,
+            210,
+            339,
+            345,
+            360,
+            367,
+            369,
+            400,
+            429,
+            443,
+            476,
+            483,
+            590,
+            637,
+            651,
+            687,
+            721,
+            723,
+            767
+          ],
+          "sample_quotes": [
+            {
+              "pid": 10,
+              "quote": "I\u00e2\u20ac\u2122d like AI to play a major role in real-time risk prediction, compliance monitoring, and automated root cause analysis. These capabilities can help catch issues early, ensure standards are met continuously, and reduce the time spent on post-incident investigations."
+            },
+            {
+              "pid": 74,
+              "quote": "Code review feedback including security and compliance checks. Specifically, accessibility, localization, and security issues."
+            },
+            {
+              "pid": 156,
+              "quote": "test generation and security/compliance check would be ones"
+            },
+            {
+              "pid": 206,
+              "quote": "making the whole compliance less boring."
+            },
+            {
+              "pid": 210,
+              "quote": "AI can take on the repetitive overhead involved in the tasks.  E.g. a security review today requires a hundred question survey, much of which is querying and fetching data through a time-consuming process.  AI should be able to handle a first-draft and information retrieval."
+            }
+          ]
+        },
+        {
+          "code": "proactive_risk_monitoring_and_prediction",
+          "count": 18,
+          "percentage": 11.6,
+          "pids": [
+            10,
+            47,
+            59,
+            174,
+            190,
+            236,
+            249,
+            276,
+            313,
+            331,
+            343,
+            345,
+            609,
+            703,
+            721,
+            740,
+            775,
+            860
+          ],
+          "sample_quotes": [
+            {
+              "pid": 10,
+              "quote": "I\u00e2\u20ac\u2122d like AI to play a major role in real-time risk prediction, compliance monitoring, and automated root cause analysis. These capabilities can help catch issues early, ensure standards are met continuously, and reduce the time spent on post-incident investigations."
+            },
+            {
+              "pid": 47,
+              "quote": "Should be able to detect high risk changes & derisk them."
+            },
+            {
+              "pid": 59,
+              "quote": "Over the next 1\u00e2\u20ac\u201c3 years, I want AI to play a major role in proactively detecting regressions, analyzing test coverage gaps, and predicting high-risk areas in code changes so we can shift from reactive firefighting to preventive quality assurance."
+            },
+            {
+              "pid": 174,
+              "quote": "AI shows promise in detecting deviations from a known good baseline. I want these agents to alert us to potential issues while they're still low-sev, before they've had a chance to blow up."
+            },
+            {
+              "pid": 190,
+              "quote": "We need an at-scale telemetry platform that I can leverage AI for to detect security, compliance and reliability risks broadly."
+            }
+          ]
+        },
+        {
+          "code": "agentic_workflow_automation_and_remediation",
+          "count": 15,
+          "percentage": 9.7,
+          "pids": [
+            24,
+            106,
+            147,
+            187,
+            212,
+            225,
+            459,
+            483,
+            490,
+            574,
+            598,
+            634,
+            651,
+            785,
+            860
+          ],
+          "sample_quotes": [
+            {
+              "pid": 24,
+              "quote": "More pull requests to handle companywide issues"
+            },
+            {
+              "pid": 106,
+              "quote": "If the AI could do the task I previously described, but take it a little further, it would be a bigger help.  Add new files to the solution, open for add in perforce.  Basically more integration when making larger additions to a codebase.  Also more assistance in debugging would be huge."
+            },
+            {
+              "pid": 147,
+              "quote": "More automated QA checks of documents, videos, decks, etc assets. Even better is if AI could execute low hanging fruit repairs rather than merely listing them."
+            },
+            {
+              "pid": 187,
+              "quote": "Individual being able write their own Agents to do repetitive tasks to save time."
+            },
+            {
+              "pid": 212,
+              "quote": "There are lots of security requirements being pushed down to each team. They know the answer and how it should be fixed, but lack the local context. It would be nice to have an AI understand the local context for a security issue, and make a PR, or other reviewable action to take."
+            }
+          ]
+        },
+        {
+          "code": "knowledge_retrieval_and_standards_guidance",
+          "count": 14,
+          "percentage": 9.0,
+          "pids": [
+            21,
+            88,
+            93,
+            143,
+            155,
+            210,
+            400,
+            495,
+            506,
+            565,
+            623,
+            665,
+            674,
+            799
+          ],
+          "sample_quotes": [
+            {
+              "pid": 21,
+              "quote": "I find AI is good for scanning and summarizing massive amounts of information. So having an AI agent well-versed in conventions and standards could be very helpful for drafting code in environments with which I am less familiar."
+            },
+            {
+              "pid": 88,
+              "quote": "I want it to improve having context between Microsoft internal resources and my specific product info."
+            },
+            {
+              "pid": 93,
+              "quote": "Researching and generating ideas, testing, boilerplate"
+            },
+            {
+              "pid": 143,
+              "quote": "I find LLMs really shine when there is clear, robust documentation for the thing it is working on. For example, accessibility standards or cryptography and security standards. Having LLMs be able to ensure we apply best practices from lengthy documentation is very advantageous."
+            },
+            {
+              "pid": 155,
+              "quote": "Distilling complex asks into simpler information. Summarization. Better search and documentation"
+            }
+          ]
+        },
+        {
+          "code": "debugging_root_cause_and_failure_triage",
+          "count": 8,
+          "percentage": 5.2,
+          "pids": [
+            10,
+            106,
+            183,
+            360,
+            416,
+            459,
+            723,
+            775
+          ],
+          "sample_quotes": [
+            {
+              "pid": 10,
+              "quote": "I\u00e2\u20ac\u2122d like AI to play a major role in real-time risk prediction, compliance monitoring, and automated root cause analysis. These capabilities can help catch issues early, ensure standards are met continuously, and reduce the time spent on post-incident investigations."
+            },
+            {
+              "pid": 106,
+              "quote": "If the AI could do the task I previously described, but take it a little further, it would be a bigger help.  Add new files to the solution, open for add in perforce.  Basically more integration when making larger additions to a codebase.  Also more assistance in debugging would be huge."
+            },
+            {
+              "pid": 183,
+              "quote": "I would like to have AI investigate variants and help in debugging"
+            },
+            {
+              "pid": 360,
+              "quote": "In Security & Compliance, also in Debugging the issues in complex systems"
+            },
+            {
+              "pid": 416,
+              "quote": "Agentic experiences for Azure Data Explorer to help analyze logs and queries."
+            }
+          ]
+        }
+      ],
+      "consensus_codings": {
+        "10": [
+          "debugging_root_cause_and_failure_triage",
+          "proactive_risk_monitoring_and_prediction",
+          "compliance_and_audit_automation"
+        ],
+        "15": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "18": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "19": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "21": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "22": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review"
+        ],
+        "24": [
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "36": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "42": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "47": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "48": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "49": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review"
+        ],
+        "53": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "55": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review"
+        ],
+        "59": [
+          "automated_test_generation_and_quality_gates",
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "64": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "67": [
+          "ISSUE"
+        ],
+        "74": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review",
+          "compliance_and_audit_automation"
+        ],
+        "82": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "86": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "88": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "92": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "93": [
+          "automated_test_generation_and_quality_gates",
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "94": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "106": [
+          "agentic_workflow_automation_and_remediation",
+          "debugging_root_cause_and_failure_triage"
+        ],
+        "113": [
+          "ISSUE"
+        ],
+        "117": [
+          "intelligent_pr_code_review"
+        ],
+        "120": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "129": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "143": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "147": [
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "148": [
+          "ISSUE"
+        ],
+        "153": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "155": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "156": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "171": [
+          "intelligent_pr_code_review"
+        ],
+        "174": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "183": [
+          "debugging_root_cause_and_failure_triage"
+        ],
+        "187": [
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "190": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "196": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "206": [
+          "compliance_and_audit_automation"
+        ],
+        "210": [
+          "knowledge_retrieval_and_standards_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "212": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "225": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "230": [],
+        "236": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "249": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance",
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "254": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "259": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "263": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "264": [
+          "intelligent_pr_code_review"
+        ],
+        "275": [
+          "ISSUE"
+        ],
+        "276": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "277": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "286": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "292": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "293": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "296": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "305": [],
+        "310": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "313": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "317": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "328": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review",
+          "automated_test_generation_and_quality_gates"
+        ],
+        "331": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "339": [
+          "compliance_and_audit_automation"
+        ],
+        "340": [],
+        "343": [
+          "proactive_risk_monitoring_and_prediction",
+          "intelligent_pr_code_review"
+        ],
+        "344": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "345": [
+          "proactive_risk_monitoring_and_prediction",
+          "compliance_and_audit_automation"
+        ],
+        "346": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "350": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "359": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "360": [
+          "debugging_root_cause_and_failure_triage",
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "367": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "369": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "376": [],
+        "380": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "387": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "388": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "389": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "400": [
+          "automated_test_generation_and_quality_gates",
+          "knowledge_retrieval_and_standards_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "402": [
+          "intelligent_pr_code_review"
+        ],
+        "403": [
+          "intelligent_pr_code_review"
+        ],
+        "412": [
+          "intelligent_pr_code_review"
+        ],
+        "413": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "intelligent_pr_code_review"
+        ],
+        "416": [
+          "debugging_root_cause_and_failure_triage"
+        ],
+        "426": [],
+        "427": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "428": [
+          "intelligent_pr_code_review"
+        ],
+        "429": [
+          "intelligent_pr_code_review",
+          "compliance_and_audit_automation"
+        ],
+        "435": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "439": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "443": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "446": [],
+        "459": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation",
+          "debugging_root_cause_and_failure_triage"
+        ],
+        "461": [],
+        "474": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "476": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "483": [
+          "agentic_workflow_automation_and_remediation",
+          "intelligent_pr_code_review",
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation",
+          "automated_test_generation_and_quality_gates"
+        ],
+        "484": [
+          "intelligent_pr_code_review"
+        ],
+        "486": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "490": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "495": [
+          "knowledge_retrieval_and_standards_guidance",
+          "intelligent_pr_code_review"
+        ],
+        "506": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "535": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "559": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "565": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "574": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "587": [],
+        "590": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "591": [
+          "intelligent_pr_code_review"
+        ],
+        "592": [
+          "intelligent_pr_code_review"
+        ],
+        "598": [
+          "security_vulnerability_detection_and_fix_guidance",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "608": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "609": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "620": [],
+        "623": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "634": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "636": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "637": [
+          "intelligent_pr_code_review",
+          "compliance_and_audit_automation"
+        ],
+        "640": [
+          "intelligent_pr_code_review"
+        ],
+        "647": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "651": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation",
+          "compliance_and_audit_automation"
+        ],
+        "656": [],
+        "657": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "663": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "665": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "674": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "687": [
+          "automated_test_generation_and_quality_gates",
+          "compliance_and_audit_automation"
+        ],
+        "688": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "689": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "700": [
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "701": [
+          "intelligent_pr_code_review"
+        ],
+        "703": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review",
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "716": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "721": [
+          "proactive_risk_monitoring_and_prediction",
+          "compliance_and_audit_automation"
+        ],
+        "723": [
+          "automated_test_generation_and_quality_gates",
+          "debugging_root_cause_and_failure_triage",
+          "compliance_and_audit_automation"
+        ],
+        "727": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "737": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "740": [
+          "proactive_risk_monitoring_and_prediction"
+        ],
+        "742": [],
+        "751": [
+          "automated_test_generation_and_quality_gates",
+          "intelligent_pr_code_review"
+        ],
+        "754": [
+          "intelligent_pr_code_review"
+        ],
+        "767": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance",
+          "compliance_and_audit_automation"
+        ],
+        "775": [
+          "proactive_risk_monitoring_and_prediction",
+          "debugging_root_cause_and_failure_triage"
+        ],
+        "776": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "785": [
+          "agentic_workflow_automation_and_remediation"
+        ],
+        "795": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "799": [
+          "knowledge_retrieval_and_standards_guidance"
+        ],
+        "826": [
+          "intelligent_pr_code_review"
+        ],
+        "830": [
+          "automated_test_generation_and_quality_gates",
+          "security_vulnerability_detection_and_fix_guidance"
+        ],
+        "851": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "859": [
+          "automated_test_generation_and_quality_gates"
+        ],
+        "860": [
+          "automated_test_generation_and_quality_gates",
+          "agentic_workflow_automation_and_remediation",
+          "proactive_risk_monitoring_and_prediction"
+        ]
+      },
+      "summary": {
+        "responses_with_themes": 144,
+        "responses_with_themes_pct": 92.9,
+        "avg_themes_per_response": 1.42
+      }
+    },
+    "infrastructure_ops": {
+      "category": "infrastructure_ops",
+      "response_count": 101,
+      "methodology": "majority_vote (2+ of 3 models)",
+      "theme_prevalence": [
+        {
+          "code": "observability_and_incident_response_automation",
+          "count": 41,
+          "percentage": 40.6,
+          "pids": [
+            2,
+            15,
+            20,
+            52,
+            56,
+            83,
+            93,
+            126,
+            175,
+            180,
+            190,
+            202,
+            207,
+            216,
+            251,
+            254,
+            271,
+            280,
+            283,
+            298,
+            306,
+            322,
+            345,
+            347,
+            356,
+            370,
+            377,
+            417,
+            440,
+            462,
+            520,
+            532,
+            549,
+            558,
+            639,
+            644,
+            651,
+            706,
+            740,
+            830,
+            852
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "reduction in hours spent (re)building environments. reduction on toil hours spent for monitoring/alerting."
+            },
+            {
+              "pid": 15,
+              "quote": "Respond to infrastructure alerts so I don't have to be on-call"
+            },
+            {
+              "pid": 20,
+              "quote": "Monitoring and self healing."
+            },
+            {
+              "pid": 52,
+              "quote": "Alert and error triage. Finding root causes."
+            },
+            {
+              "pid": 56,
+              "quote": "I would like AI analysis of metrics and logs to accelerate root cause analysis of incidents, highlighting interesting  things in dashboards, and discovering anomalies in prerelease deployments."
+            }
+          ]
+        },
+        {
+          "code": "cicd_deployment_and_iac_automation",
+          "count": 34,
+          "percentage": 33.7,
+          "pids": [
+            2,
+            3,
+            42,
+            105,
+            125,
+            138,
+            163,
+            175,
+            177,
+            202,
+            209,
+            216,
+            267,
+            273,
+            347,
+            386,
+            409,
+            440,
+            447,
+            457,
+            476,
+            492,
+            508,
+            532,
+            553,
+            558,
+            610,
+            647,
+            651,
+            791,
+            820,
+            825,
+            830,
+            858
+          ],
+          "sample_quotes": [
+            {
+              "pid": 2,
+              "quote": "reduction in hours spent (re)building environments. reduction on toil hours spent for monitoring/alerting."
+            },
+            {
+              "pid": 3,
+              "quote": "Setting up infra, migrating infra, maintaining/updating infra."
+            },
+            {
+              "pid": 42,
+              "quote": "AI could be useful in helping set up OneBranch CI/CD pipelines, since the OneBranch system is notoriously poorly documented and hard to figure out. Training an AI system on OneBranch could significantly reduce developer frustration."
+            },
+            {
+              "pid": 105,
+              "quote": "Troubleshooting deployment issues."
+            },
+            {
+              "pid": 125,
+              "quote": "I want AI to be able to develop CI/CD pipelines to address complex issue sets"
+            }
+          ]
+        },
+        {
+          "code": "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "count": 17,
+          "percentage": 16.8,
+          "pids": [
+            3,
+            112,
+            175,
+            216,
+            269,
+            273,
+            345,
+            377,
+            476,
+            500,
+            532,
+            628,
+            651,
+            744,
+            789,
+            820,
+            825
+          ],
+          "sample_quotes": [
+            {
+              "pid": 3,
+              "quote": "Setting up infra, migrating infra, maintaining/updating infra."
+            },
+            {
+              "pid": 112,
+              "quote": "SFI, SFI, SFI, and how about SFI!!!"
+            },
+            {
+              "pid": 175,
+              "quote": "If AI can do all infra setup, troubleshooting, and maintenance, and monitoring and alerting, that would be great."
+            },
+            {
+              "pid": 216,
+              "quote": "Environment setup and maintainence and Infra monitoring."
+            },
+            {
+              "pid": 269,
+              "quote": "AI should help in maintenance of services, making sure that the lights are kept on when the developers move on to new features"
+            }
+          ]
+        },
+        {
+          "code": "customer_support_triage_and_autoresponse",
+          "count": 12,
+          "percentage": 11.9,
+          "pids": [
+            92,
+            117,
+            202,
+            294,
+            348,
+            417,
+            426,
+            450,
+            578,
+            647,
+            671,
+            780
+          ],
+          "sample_quotes": [
+            {
+              "pid": 92,
+              "quote": "If an AI agent could actually look at customer support request text and logs and make screening, bucketing, and triage decisions based on the content, that would be super helpful."
+            },
+            {
+              "pid": 117,
+              "quote": "customer support. we got a lot of repetitive customer question, like permission issue. I hope AI can detect common pattern of our customer request triaging and reply to customer directly."
+            },
+            {
+              "pid": 202,
+              "quote": "Coding: Be a coding assistant\nCI/CD: Review code/configuration; Detect safe/unsafe time to deploy\nDebugging: Assist in analyzing logs, metrics, test errors\nMonitoring: Detect anomalies, predict failures\nCustomer service: Self-service for well-known issues; Be an assistant for customer service reps."
+            },
+            {
+              "pid": 294,
+              "quote": "Customer Support needs more AI inputs"
+            },
+            {
+              "pid": 348,
+              "quote": "Customer support"
+            }
+          ]
+        },
+        {
+          "code": "testing_quality_validation_and_safe_deploy",
+          "count": 8,
+          "percentage": 7.9,
+          "pids": [
+            56,
+            202,
+            261,
+            267,
+            409,
+            476,
+            730,
+            830
+          ],
+          "sample_quotes": [
+            {
+              "pid": 56,
+              "quote": "I would like AI analysis of metrics and logs to accelerate root cause analysis of incidents, highlighting interesting  things in dashboards, and discovering anomalies in prerelease deployments."
+            },
+            {
+              "pid": 202,
+              "quote": "Coding: Be a coding assistant\nCI/CD: Review code/configuration; Detect safe/unsafe time to deploy\nDebugging: Assist in analyzing logs, metrics, test errors\nMonitoring: Detect anomalies, predict failures\nCustomer service: Self-service for well-known issues; Be an assistant for customer service reps."
+            },
+            {
+              "pid": 261,
+              "quote": "project development and testing"
+            },
+            {
+              "pid": 267,
+              "quote": "If it can help with testing/deploying pipelines locally (there are tools available but the dev exp is not the best) - if we can enable using AI here"
+            },
+            {
+              "pid": 409,
+              "quote": "CI/CD pipelines that address and implement software fundamentals such as automated system testing and evaluation, deployment, security testing, code reviews, branch maintenance, etc."
+            }
+          ]
+        },
+        {
+          "code": "knowledge_management_doc_search_and_system_context",
+          "count": 7,
+          "percentage": 6.9,
+          "pids": [
+            64,
+            126,
+            280,
+            417,
+            426,
+            697,
+            791
+          ],
+          "sample_quotes": [
+            {
+              "pid": 64,
+              "quote": "Organizing \"tribal knowledge\" for easy transfer of context."
+            },
+            {
+              "pid": 126,
+              "quote": "Custom monitoring and alerts without having to think about it. being able to setup after \"understanding\" our infra from our infra code. For copilot to read our ev2 and know how our infra is setup would be insane. I'm assuming then it could help debug produciton incidents as well"
+            },
+            {
+              "pid": 280,
+              "quote": "AI is really well suited imo, for pattern recognition tasks. Hence, it should be able to pay a much bigger role in Monitoring, setting and firing up alerts based on previous history of incidents. Similarly, it might be useful for it to pull up related incidents to allow for quicker diagnosis and mitigation."
+            },
+            {
+              "pid": 417,
+              "quote": "Helping with Customer Service through knowledge bases and flagging aberrations in metrics"
+            },
+            {
+              "pid": 426,
+              "quote": "Having full context on our service - while maintaining privacy- and helping in troubleshooting/customer support."
+            }
+          ]
+        },
+        {
+          "code": "ops_toil_automation_and_script_generation",
+          "count": 7,
+          "percentage": 6.9,
+          "pids": [
+            22,
+            111,
+            165,
+            177,
+            270,
+            527,
+            565
+          ],
+          "sample_quotes": [
+            {
+              "pid": 22,
+              "quote": "Help debug scripts used for infra tasks."
+            },
+            {
+              "pid": 111,
+              "quote": "Remove long manual processes"
+            },
+            {
+              "pid": 165,
+              "quote": "to be able to make bash scripts which are compatible with different unix os like osx, ubuntu or centos, azurelinux etc."
+            },
+            {
+              "pid": 177,
+              "quote": "I don't want to have to do all the setup and tedious things that are not really a part of my day-to-day job but are pre-requisites for everything I do."
+            },
+            {
+              "pid": 270,
+              "quote": "Hopefully it can automate the boring things"
+            }
+          ]
+        },
+        {
+          "code": "ai_tooling_ux_accuracy_and_cohesive_workflows",
+          "count": 7,
+          "percentage": 6.9,
+          "pids": [
+            17,
+            30,
+            133,
+            242,
+            278,
+            397,
+            502
+          ],
+          "sample_quotes": [
+            {
+              "pid": 17,
+              "quote": "I want AI to enhance human engineer's ability WHILE increasing the rate at which human engineers learn and develop. The human should always be paramount, and AI should be a tool to enhance what humans can understand and apply to their work, not a crutch to replace learning and thinking and therefore stunting human learning."
+            },
+            {
+              "pid": 30,
+              "quote": "Creating prompts that make Models intelligent and set context for solving critical problems"
+            },
+            {
+              "pid": 133,
+              "quote": "I would like it to answer questions more accurately"
+            },
+            {
+              "pid": 242,
+              "quote": "analyze our needs and give suggestion, but need to improve accuracy"
+            },
+            {
+              "pid": 278,
+              "quote": "We need a more cohesive AI experience for Infra related work. The items are generally interrelated, but we currently need to use AI to solve them separately repeatedly which makes the tasks easier but still tedious."
+            }
+          ]
+        }
+      ],
+      "consensus_codings": {
+        "2": [
+          "cicd_deployment_and_iac_automation",
+          "observability_and_incident_response_automation"
+        ],
+        "3": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "15": [
+          "observability_and_incident_response_automation"
+        ],
+        "17": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "20": [
+          "observability_and_incident_response_automation"
+        ],
+        "22": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "30": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "42": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "43": [
+          "ISSUE"
+        ],
+        "52": [
+          "observability_and_incident_response_automation"
+        ],
+        "56": [
+          "testing_quality_validation_and_safe_deploy",
+          "observability_and_incident_response_automation"
+        ],
+        "64": [
+          "knowledge_management_doc_search_and_system_context"
+        ],
+        "83": [
+          "observability_and_incident_response_automation"
+        ],
+        "92": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "93": [
+          "observability_and_incident_response_automation"
+        ],
+        "105": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "111": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "112": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "117": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "125": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "126": [
+          "knowledge_management_doc_search_and_system_context",
+          "observability_and_incident_response_automation"
+        ],
+        "133": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "138": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "163": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "165": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "175": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "177": [
+          "ops_toil_automation_and_script_generation",
+          "cicd_deployment_and_iac_automation"
+        ],
+        "180": [
+          "observability_and_incident_response_automation"
+        ],
+        "190": [
+          "observability_and_incident_response_automation"
+        ],
+        "202": [
+          "cicd_deployment_and_iac_automation",
+          "testing_quality_validation_and_safe_deploy",
+          "customer_support_triage_and_autoresponse",
+          "observability_and_incident_response_automation"
+        ],
+        "207": [
+          "observability_and_incident_response_automation"
+        ],
+        "209": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "216": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "242": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "251": [
+          "observability_and_incident_response_automation"
+        ],
+        "254": [
+          "observability_and_incident_response_automation"
+        ],
+        "261": [
+          "testing_quality_validation_and_safe_deploy"
+        ],
+        "267": [
+          "testing_quality_validation_and_safe_deploy",
+          "cicd_deployment_and_iac_automation"
+        ],
+        "269": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "270": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "271": [
+          "observability_and_incident_response_automation"
+        ],
+        "273": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "278": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "280": [
+          "observability_and_incident_response_automation",
+          "knowledge_management_doc_search_and_system_context"
+        ],
+        "283": [
+          "observability_and_incident_response_automation"
+        ],
+        "294": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "298": [
+          "observability_and_incident_response_automation"
+        ],
+        "306": [
+          "observability_and_incident_response_automation"
+        ],
+        "322": [
+          "observability_and_incident_response_automation"
+        ],
+        "345": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "347": [
+          "cicd_deployment_and_iac_automation",
+          "observability_and_incident_response_automation"
+        ],
+        "348": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "356": [
+          "observability_and_incident_response_automation"
+        ],
+        "370": [
+          "observability_and_incident_response_automation"
+        ],
+        "375": [],
+        "377": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "386": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "397": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "409": [
+          "cicd_deployment_and_iac_automation",
+          "testing_quality_validation_and_safe_deploy"
+        ],
+        "417": [
+          "knowledge_management_doc_search_and_system_context",
+          "customer_support_triage_and_autoresponse",
+          "observability_and_incident_response_automation"
+        ],
+        "426": [
+          "knowledge_management_doc_search_and_system_context",
+          "customer_support_triage_and_autoresponse"
+        ],
+        "440": [
+          "cicd_deployment_and_iac_automation",
+          "observability_and_incident_response_automation"
+        ],
+        "447": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "450": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "457": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "462": [
+          "observability_and_incident_response_automation"
+        ],
+        "476": [
+          "cicd_deployment_and_iac_automation",
+          "testing_quality_validation_and_safe_deploy",
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "492": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "500": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "502": [
+          "ai_tooling_ux_accuracy_and_cohesive_workflows"
+        ],
+        "508": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "520": [
+          "observability_and_incident_response_automation"
+        ],
+        "527": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "532": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "549": [
+          "observability_and_incident_response_automation"
+        ],
+        "553": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "558": [
+          "cicd_deployment_and_iac_automation",
+          "observability_and_incident_response_automation"
+        ],
+        "565": [
+          "ops_toil_automation_and_script_generation"
+        ],
+        "578": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "610": [
+          "cicd_deployment_and_iac_automation"
+        ],
+        "628": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "639": [
+          "observability_and_incident_response_automation"
+        ],
+        "644": [
+          "observability_and_incident_response_automation"
+        ],
+        "647": [
+          "cicd_deployment_and_iac_automation",
+          "customer_support_triage_and_autoresponse"
+        ],
+        "651": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization",
+          "observability_and_incident_response_automation"
+        ],
+        "653": [],
+        "664": [],
+        "671": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "697": [
+          "knowledge_management_doc_search_and_system_context"
+        ],
+        "706": [
+          "observability_and_incident_response_automation"
+        ],
+        "730": [
+          "testing_quality_validation_and_safe_deploy"
+        ],
+        "740": [
+          "observability_and_incident_response_automation"
+        ],
+        "744": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "780": [
+          "customer_support_triage_and_autoresponse"
+        ],
+        "789": [
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "791": [
+          "cicd_deployment_and_iac_automation",
+          "knowledge_management_doc_search_and_system_context"
+        ],
+        "820": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "825": [
+          "cicd_deployment_and_iac_automation",
+          "infrastructure_maintenance_upgrades_security_cost_optimization"
+        ],
+        "830": [
+          "cicd_deployment_and_iac_automation",
+          "testing_quality_validation_and_safe_deploy",
+          "observability_and_incident_response_automation"
+        ],
+        "852": [
+          "observability_and_incident_response_automation"
+        ],
+        "858": [
+          "cicd_deployment_and_iac_automation"
+        ]
+      },
+      "summary": {
+        "responses_with_themes": 98,
+        "responses_with_themes_pct": 97.0,
+        "avg_themes_per_response": 1.33
+      }
+    },
+    "meta_work": {
+      "category": "meta_work",
+      "response_count": 157,
+      "methodology": "majority_vote (2+ of 3 models)",
+      "theme_prevalence": [
+        {
+          "code": "automated_documentation",
+          "count": 72,
+          "percentage": 45.9,
+          "pids": [
+            11,
+            18,
+            28,
+            46,
+            56,
+            69,
+            73,
+            75,
+            82,
+            85,
+            88,
+            105,
+            106,
+            126,
+            129,
+            145,
+            151,
+            161,
+            165,
+            166,
+            171,
+            179,
+            187,
+            195,
+            209,
+            219,
+            225,
+            228,
+            236,
+            245,
+            253,
+            270,
+            277,
+            280,
+            281,
+            286,
+            303,
+            317,
+            343,
+            346,
+            350,
+            368,
+            377,
+            381,
+            390,
+            400,
+            407,
+            417,
+            422,
+            456,
+            464,
+            474,
+            500,
+            520,
+            535,
+            560,
+            564,
+            569,
+            590,
+            591,
+            610,
+            620,
+            639,
+            667,
+            698,
+            734,
+            744,
+            754,
+            776,
+            785,
+            806,
+            827
+          ],
+          "sample_quotes": [
+            {
+              "pid": 11,
+              "quote": "Documentation, research and brainstorming, and learning new technologies."
+            },
+            {
+              "pid": 18,
+              "quote": "AI shouldn't be involved in most of these tasks, but can be OK at documenting existing code and as a sounding board for research, as long as there is human validation of what it says and the user remembers to take everything it says with a large grain of salt."
+            },
+            {
+              "pid": 28,
+              "quote": "Having AI help create and maintain documentation based on checked-in code, PRs, tests, etc would be a game changer for documentation"
+            },
+            {
+              "pid": 46,
+              "quote": "Mostly towards documentation and knowledge discovery."
+            },
+            {
+              "pid": 56,
+              "quote": "Documentation validation, and suggestions for changes to our service taking into account new technology options."
+            }
+          ]
+        },
+        {
+          "code": "onboarding_mentoring_and_upskilling",
+          "count": 44,
+          "percentage": 28.0,
+          "pids": [
+            11,
+            26,
+            74,
+            125,
+            145,
+            161,
+            176,
+            187,
+            202,
+            209,
+            278,
+            280,
+            281,
+            290,
+            291,
+            332,
+            336,
+            347,
+            384,
+            390,
+            394,
+            395,
+            400,
+            407,
+            417,
+            427,
+            464,
+            467,
+            484,
+            493,
+            526,
+            533,
+            611,
+            627,
+            637,
+            644,
+            657,
+            698,
+            751,
+            774,
+            776,
+            781,
+            788,
+            806
+          ],
+          "sample_quotes": [
+            {
+              "pid": 11,
+              "quote": "Documentation, research and brainstorming, and learning new technologies."
+            },
+            {
+              "pid": 26,
+              "quote": "Helping me gather the resources to learn more effectively on the job."
+            },
+            {
+              "pid": 74,
+              "quote": "Learning new technologies - exercises to learn new coding languages and tech within AI agents instead of reading books or online tutorials."
+            },
+            {
+              "pid": 125,
+              "quote": "Learning New Technologies - when learning new technologies, I generally have very specific questions that I might feel embarrassed to ask a more knowledgeable person. Being able to ask a specific question about a new technology without self-concern and get an expert and specific response back is transformative in the learning process."
+            },
+            {
+              "pid": 145,
+              "quote": "Help with meeting and communication, help me find new tools and learnings, help with writing documentation from source code."
+            }
+          ]
+        },
+        {
+          "code": "knowledge_search_and_discovery",
+          "count": 42,
+          "percentage": 26.8,
+          "pids": [
+            11,
+            21,
+            26,
+            29,
+            46,
+            49,
+            69,
+            82,
+            145,
+            151,
+            169,
+            170,
+            174,
+            179,
+            194,
+            196,
+            200,
+            202,
+            213,
+            245,
+            253,
+            290,
+            298,
+            339,
+            347,
+            350,
+            377,
+            394,
+            400,
+            407,
+            484,
+            578,
+            607,
+            609,
+            627,
+            667,
+            717,
+            734,
+            744,
+            748,
+            775,
+            781
+          ],
+          "sample_quotes": [
+            {
+              "pid": 11,
+              "quote": "Documentation, research and brainstorming, and learning new technologies."
+            },
+            {
+              "pid": 21,
+              "quote": "AI is great for research, as long as it cites sources. It's more like talking to someone who knows about a subject than having to read through documentation."
+            },
+            {
+              "pid": 26,
+              "quote": "Helping me gather the resources to learn more effectively on the job."
+            },
+            {
+              "pid": 29,
+              "quote": "Researching should be where AI plays a big role in the future, to easily pick out relevant information from large amounts of research data."
+            },
+            {
+              "pid": 46,
+              "quote": "Mostly towards documentation and knowledge discovery."
+            }
+          ]
+        },
+        {
+          "code": "stakeholder_communication_support",
+          "count": 20,
+          "percentage": 12.7,
+          "pids": [
+            40,
+            120,
+            130,
+            145,
+            170,
+            182,
+            207,
+            280,
+            317,
+            341,
+            470,
+            533,
+            560,
+            564,
+            627,
+            637,
+            640,
+            698,
+            725,
+            827
+          ],
+          "sample_quotes": [
+            {
+              "pid": 40,
+              "quote": "I would like AI to help with tailoring stakeholder communications to different stakeholders. Right now so much team meta-effort goes into preparing tailored communications."
+            },
+            {
+              "pid": 120,
+              "quote": "It would be great if I can delegate the task of updating my stakeholders to an AI assistant and it can keep them informed of my recent work, and summarize any questions to me that they have."
+            },
+            {
+              "pid": 130,
+              "quote": "rephrase words to stakeholders or client - chat message or emails. help to explain the tech details or issue/concerns of technique in an easy understandable way"
+            },
+            {
+              "pid": 145,
+              "quote": "Help with meeting and communication, help me find new tools and learnings, help with writing documentation from source code."
+            },
+            {
+              "pid": 170,
+              "quote": "summarizing technical documents, writing communications"
+            }
+          ]
+        },
+        {
+          "code": "brainstorming_and_solution_exploration",
+          "count": 18,
+          "percentage": 11.5,
+          "pids": [
+            11,
+            18,
+            56,
+            69,
+            151,
+            196,
+            219,
+            298,
+            347,
+            377,
+            384,
+            407,
+            457,
+            607,
+            657,
+            667,
+            717,
+            748
+          ],
+          "sample_quotes": [
+            {
+              "pid": 11,
+              "quote": "Documentation, research and brainstorming, and learning new technologies."
+            },
+            {
+              "pid": 18,
+              "quote": "AI shouldn't be involved in most of these tasks, but can be OK at documenting existing code and as a sounding board for research, as long as there is human validation of what it says and the user remembers to take everything it says with a large grain of salt."
+            },
+            {
+              "pid": 56,
+              "quote": "Documentation validation, and suggestions for changes to our service taking into account new technology options."
+            },
+            {
+              "pid": 69,
+              "quote": "Documentation seems like a good use case as long as there is detailed review of the output, as hallucinations are common. Researching new tech/designs is good too. It is not so great at actually learning new techs as it does the work for you and you miss a chance to learn by doing."
+            },
+            {
+              "pid": 151,
+              "quote": "Find issues in documentation. Help with research and creating working prototypes."
+            }
+          ]
+        },
+        {
+          "code": "meeting_assistance",
+          "count": 15,
+          "percentage": 9.6,
+          "pids": [
+            52,
+            145,
+            179,
+            205,
+            211,
+            225,
+            372,
+            384,
+            400,
+            422,
+            492,
+            560,
+            591,
+            698,
+            706
+          ],
+          "sample_quotes": [
+            {
+              "pid": 52,
+              "quote": "Meeting scheduling. Here is a list of names put a meeting on the calendar with a room and Teams link."
+            },
+            {
+              "pid": 145,
+              "quote": "Help with meeting and communication, help me find new tools and learnings, help with writing documentation from source code."
+            },
+            {
+              "pid": 179,
+              "quote": "I want AI to support meta work by streamlining documentation, meeting prep, and cross-functional alignment, surfacing relevant context, summarizing discussions, and tracking decisions over time. It should reduce cognitive load and help maintain clarity across fast-moving, complex initiatives"
+            },
+            {
+              "pid": 205,
+              "quote": "The killer Copilot feature for me is Recap, allowing me to quickly catch up on meetings I missed.  I already use this all the time, but I think it will become even more important over time."
+            },
+            {
+              "pid": 211,
+              "quote": "Be my personal agent. Keep track my work and thoughts and be able to attend meetings or answer some questions on my behalf."
+            }
+          ]
+        },
+        {
+          "code": "proactive_personal_agent_and_admin_automation",
+          "count": 15,
+          "percentage": 9.6,
+          "pids": [
+            75,
+            120,
+            193,
+            211,
+            225,
+            240,
+            372,
+            375,
+            627,
+            634,
+            635,
+            725,
+            756,
+            791,
+            813
+          ],
+          "sample_quotes": [
+            {
+              "pid": 75,
+              "quote": "I would like the AI to 1) automatically generate progress reports using my ADOs and send me a draft for proof reading, 2) notify me when a new technology related with my daily work or my interests comes out (with a brief summary with references), 3) automatically generating documentation from my code."
+            },
+            {
+              "pid": 120,
+              "quote": "It would be great if I can delegate the task of updating my stakeholders to an AI assistant and it can keep them informed of my recent work, and summarize any questions to me that they have."
+            },
+            {
+              "pid": 193,
+              "quote": "Just doing any mundane rote work like taking notes"
+            },
+            {
+              "pid": 211,
+              "quote": "Be my personal agent. Keep track my work and thoughts and be able to attend meetings or answer some questions on my behalf."
+            },
+            {
+              "pid": 225,
+              "quote": "Summarizing meetings and communication, helping draft documentation"
+            }
+          ]
+        },
+        {
+          "code": "planning_prioritization_and_status_tracking",
+          "count": 13,
+          "percentage": 8.3,
+          "pids": [
+            75,
+            86,
+            164,
+            179,
+            240,
+            343,
+            422,
+            636,
+            680,
+            696,
+            706,
+            791,
+            827
+          ],
+          "sample_quotes": [
+            {
+              "pid": 75,
+              "quote": "I would like the AI to 1) automatically generate progress reports using my ADOs and send me a draft for proof reading, 2) notify me when a new technology related with my daily work or my interests comes out (with a brief summary with references), 3) automatically generating documentation from my code."
+            },
+            {
+              "pid": 86,
+              "quote": "Work item and daily task orginization"
+            },
+            {
+              "pid": 164,
+              "quote": "Create roadmap and breakdown of tasks when given high level idea of the next projects."
+            },
+            {
+              "pid": 179,
+              "quote": "I want AI to support meta work by streamlining documentation, meeting prep, and cross-functional alignment, surfacing relevant context, summarizing discussions, and tracking decisions over time. It should reduce cognitive load and help maintain clarity across fast-moving, complex initiatives"
+            },
+            {
+              "pid": 240,
+              "quote": "Project management and communication. It can tell where the project goes and where to go and what I should do today (email, ping someone), based on the information it collects."
+            }
+          ]
+        }
+      ],
+      "consensus_codings": {
+        "8": [],
+        "11": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "18": [
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "21": [
+          "knowledge_search_and_discovery"
+        ],
+        "24": [],
+        "26": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "28": [
+          "automated_documentation"
+        ],
+        "29": [
+          "knowledge_search_and_discovery"
+        ],
+        "40": [
+          "stakeholder_communication_support"
+        ],
+        "46": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "49": [
+          "knowledge_search_and_discovery"
+        ],
+        "52": [
+          "meeting_assistance"
+        ],
+        "56": [
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "69": [
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "73": [
+          "automated_documentation"
+        ],
+        "74": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "75": [
+          "proactive_personal_agent_and_admin_automation",
+          "automated_documentation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "82": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "85": [
+          "automated_documentation"
+        ],
+        "86": [
+          "planning_prioritization_and_status_tracking"
+        ],
+        "88": [
+          "automated_documentation"
+        ],
+        "101": [],
+        "105": [
+          "automated_documentation"
+        ],
+        "106": [
+          "automated_documentation"
+        ],
+        "120": [
+          "proactive_personal_agent_and_admin_automation",
+          "stakeholder_communication_support"
+        ],
+        "125": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "126": [
+          "automated_documentation"
+        ],
+        "129": [
+          "automated_documentation"
+        ],
+        "130": [
+          "stakeholder_communication_support"
+        ],
+        "145": [
+          "knowledge_search_and_discovery",
+          "meeting_assistance",
+          "stakeholder_communication_support",
+          "automated_documentation",
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "151": [
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "161": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "164": [
+          "planning_prioritization_and_status_tracking"
+        ],
+        "165": [
+          "automated_documentation"
+        ],
+        "166": [
+          "automated_documentation"
+        ],
+        "169": [
+          "knowledge_search_and_discovery"
+        ],
+        "170": [
+          "knowledge_search_and_discovery",
+          "stakeholder_communication_support"
+        ],
+        "171": [
+          "automated_documentation"
+        ],
+        "174": [
+          "knowledge_search_and_discovery"
+        ],
+        "176": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "179": [
+          "knowledge_search_and_discovery",
+          "meeting_assistance",
+          "automated_documentation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "182": [
+          "stakeholder_communication_support"
+        ],
+        "187": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "193": [
+          "proactive_personal_agent_and_admin_automation"
+        ],
+        "194": [
+          "knowledge_search_and_discovery"
+        ],
+        "195": [
+          "automated_documentation"
+        ],
+        "196": [
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "200": [
+          "knowledge_search_and_discovery"
+        ],
+        "202": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "205": [
+          "meeting_assistance"
+        ],
+        "207": [
+          "stakeholder_communication_support"
+        ],
+        "209": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "211": [
+          "proactive_personal_agent_and_admin_automation",
+          "meeting_assistance"
+        ],
+        "213": [
+          "knowledge_search_and_discovery"
+        ],
+        "219": [
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "225": [
+          "proactive_personal_agent_and_admin_automation",
+          "meeting_assistance",
+          "automated_documentation"
+        ],
+        "228": [
+          "automated_documentation"
+        ],
+        "236": [
+          "automated_documentation"
+        ],
+        "240": [
+          "proactive_personal_agent_and_admin_automation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "245": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "253": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "267": [],
+        "270": [
+          "automated_documentation"
+        ],
+        "277": [
+          "automated_documentation"
+        ],
+        "278": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "280": [
+          "stakeholder_communication_support",
+          "automated_documentation",
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "281": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "286": [
+          "automated_documentation"
+        ],
+        "290": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "291": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "298": [
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "303": [
+          "automated_documentation"
+        ],
+        "317": [
+          "stakeholder_communication_support",
+          "automated_documentation"
+        ],
+        "325": [],
+        "332": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "336": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "339": [
+          "knowledge_search_and_discovery"
+        ],
+        "341": [
+          "stakeholder_communication_support"
+        ],
+        "343": [
+          "automated_documentation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "346": [
+          "automated_documentation"
+        ],
+        "347": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "350": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "368": [
+          "automated_documentation"
+        ],
+        "372": [
+          "proactive_personal_agent_and_admin_automation",
+          "meeting_assistance"
+        ],
+        "375": [
+          "proactive_personal_agent_and_admin_automation",
+          "ISSUE"
+        ],
+        "377": [
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "381": [
+          "automated_documentation"
+        ],
+        "384": [
+          "onboarding_mentoring_and_upskilling",
+          "meeting_assistance",
+          "brainstorming_and_solution_exploration"
+        ],
+        "390": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "394": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "395": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "400": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery",
+          "meeting_assistance",
+          "automated_documentation"
+        ],
+        "407": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "417": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "422": [
+          "meeting_assistance",
+          "automated_documentation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "427": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "456": [
+          "automated_documentation"
+        ],
+        "457": [
+          "brainstorming_and_solution_exploration"
+        ],
+        "464": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "467": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "470": [
+          "stakeholder_communication_support"
+        ],
+        "474": [
+          "automated_documentation"
+        ],
+        "484": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "492": [
+          "meeting_assistance"
+        ],
+        "493": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "500": [
+          "automated_documentation"
+        ],
+        "520": [
+          "automated_documentation"
+        ],
+        "526": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "533": [
+          "onboarding_mentoring_and_upskilling",
+          "stakeholder_communication_support"
+        ],
+        "535": [
+          "automated_documentation"
+        ],
+        "560": [
+          "meeting_assistance",
+          "stakeholder_communication_support",
+          "automated_documentation"
+        ],
+        "564": [
+          "stakeholder_communication_support",
+          "automated_documentation"
+        ],
+        "569": [
+          "automated_documentation"
+        ],
+        "578": [
+          "knowledge_search_and_discovery"
+        ],
+        "590": [
+          "automated_documentation"
+        ],
+        "591": [
+          "meeting_assistance",
+          "automated_documentation"
+        ],
+        "607": [
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "609": [
+          "knowledge_search_and_discovery"
+        ],
+        "610": [
+          "automated_documentation"
+        ],
+        "611": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "620": [
+          "automated_documentation"
+        ],
+        "627": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery",
+          "proactive_personal_agent_and_admin_automation",
+          "stakeholder_communication_support"
+        ],
+        "634": [
+          "proactive_personal_agent_and_admin_automation"
+        ],
+        "635": [
+          "proactive_personal_agent_and_admin_automation"
+        ],
+        "636": [
+          "planning_prioritization_and_status_tracking"
+        ],
+        "637": [
+          "onboarding_mentoring_and_upskilling",
+          "stakeholder_communication_support"
+        ],
+        "639": [
+          "automated_documentation"
+        ],
+        "640": [
+          "stakeholder_communication_support"
+        ],
+        "644": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "651": [
+          "ISSUE"
+        ],
+        "657": [
+          "onboarding_mentoring_and_upskilling",
+          "brainstorming_and_solution_exploration"
+        ],
+        "667": [
+          "knowledge_search_and_discovery",
+          "automated_documentation",
+          "brainstorming_and_solution_exploration"
+        ],
+        "680": [
+          "planning_prioritization_and_status_tracking"
+        ],
+        "689": [],
+        "696": [
+          "planning_prioritization_and_status_tracking"
+        ],
+        "698": [
+          "onboarding_mentoring_and_upskilling",
+          "meeting_assistance",
+          "stakeholder_communication_support",
+          "automated_documentation"
+        ],
+        "706": [
+          "meeting_assistance",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "717": [
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "725": [
+          "proactive_personal_agent_and_admin_automation",
+          "stakeholder_communication_support"
+        ],
+        "734": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "744": [
+          "knowledge_search_and_discovery",
+          "automated_documentation"
+        ],
+        "748": [
+          "knowledge_search_and_discovery",
+          "brainstorming_and_solution_exploration"
+        ],
+        "751": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "754": [
+          "automated_documentation"
+        ],
+        "756": [
+          "proactive_personal_agent_and_admin_automation"
+        ],
+        "769": [
+          "ISSUE"
+        ],
+        "774": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "775": [
+          "knowledge_search_and_discovery"
+        ],
+        "776": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "781": [
+          "onboarding_mentoring_and_upskilling",
+          "knowledge_search_and_discovery"
+        ],
+        "785": [
+          "automated_documentation"
+        ],
+        "788": [
+          "onboarding_mentoring_and_upskilling"
+        ],
+        "789": [
+          "ISSUE"
+        ],
+        "791": [
+          "proactive_personal_agent_and_admin_automation",
+          "planning_prioritization_and_status_tracking"
+        ],
+        "806": [
+          "onboarding_mentoring_and_upskilling",
+          "automated_documentation"
+        ],
+        "813": [
+          "proactive_personal_agent_and_admin_automation"
+        ],
+        "827": [
+          "stakeholder_communication_support",
+          "automated_documentation",
+          "planning_prioritization_and_status_tracking"
+        ]
+      },
+      "summary": {
+        "responses_with_themes": 151,
+        "responses_with_themes_pct": 96.2,
+        "avg_themes_per_response": 1.55
+      }
+    }
+  },
+  "top_themes_overall": [
+    {
+      "category": "development",
+      "code": "codegen_refactor_modernization",
+      "count": 177,
+      "percentage": 50.1
+    },
+    {
+      "category": "development",
+      "code": "quality_review_testing_security",
+      "count": 98,
+      "percentage": 27.8
+    },
+    {
+      "category": "meta_work",
+      "code": "automated_documentation",
+      "count": 72,
+      "percentage": 45.9
+    },
+    {
+      "category": "development",
+      "code": "debugging_root_cause_fixing",
+      "count": 69,
+      "percentage": 19.5
+    },
+    {
+      "category": "quality_risk",
+      "code": "automated_test_generation_and_quality_gates",
+      "count": 69,
+      "percentage": 44.5
+    },
+    {
+      "category": "design_planning",
+      "code": "project_planning_tasking_status_automation",
+      "count": 68,
+      "percentage": 30.5
+    },
+    {
+      "category": "development",
+      "code": "codebase_context_knowledge_safe_changes",
+      "count": 65,
+      "percentage": 18.4
+    },
+    {
+      "category": "design_planning",
+      "code": "architecture_ideation_design_copilot",
+      "count": 62,
+      "percentage": 27.8
+    },
+    {
+      "category": "design_planning",
+      "code": "design_review_risk_tradeoff_decisions",
+      "count": 46,
+      "percentage": 20.6
+    },
+    {
+      "category": "design_planning",
+      "code": "context_retrieval_and_knowledge_synthesis",
+      "count": 44,
+      "percentage": 19.7
+    },
+    {
+      "category": "meta_work",
+      "code": "onboarding_mentoring_and_upskilling",
+      "count": 44,
+      "percentage": 28.0
+    },
+    {
+      "category": "meta_work",
+      "code": "knowledge_search_and_discovery",
+      "count": 42,
+      "percentage": 26.8
+    },
+    {
+      "category": "infrastructure_ops",
+      "code": "observability_and_incident_response_automation",
+      "count": 41,
+      "percentage": 40.6
+    },
+    {
+      "category": "development",
+      "code": "architecture_design_planning_support",
+      "count": 38,
+      "percentage": 10.8
+    },
+    {
+      "category": "quality_risk",
+      "code": "intelligent_pr_code_review",
+      "count": 36,
+      "percentage": 23.2
+    },
+    {
+      "category": "design_planning",
+      "code": "documentation_spec_diagram_generation",
+      "count": 34,
+      "percentage": 15.2
+    },
+    {
+      "category": "quality_risk",
+      "code": "security_vulnerability_detection_and_fix_guidance",
+      "count": 34,
+      "percentage": 21.9
+    },
+    {
+      "category": "infrastructure_ops",
+      "code": "cicd_deployment_and_iac_automation",
+      "count": 34,
+      "percentage": 33.7
+    },
+    {
+      "category": "design_planning",
+      "code": "requirements_gathering_synthesis",
+      "count": 33,
+      "percentage": 14.8
+    },
+    {
+      "category": "development",
+      "code": "performance_profiling_optimization",
+      "count": 33,
+      "percentage": 9.3
+    }
+  ]
+}

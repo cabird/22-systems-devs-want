@@ -1,0 +1,1101 @@
+{
+  "metadata": {
+    "phase": "Constraint Theme Reconciliation",
+    "timestamp": "2026-03-07T13:41:24.242656",
+    "methodology": "Multi-model theme discovery reconciled via GPT-5.2",
+    "reconciliation_model": "gpt-5.2",
+    "discovery_models": [
+      "gpt-5.2",
+      "gemini-3.1-pro-preview",
+      "claude-opus-4-6"
+    ]
+  },
+  "categories": {
+    "infrastructure_ops": {
+      "category": "infrastructure_ops",
+      "category_name": "Infrastructure & Ops",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "no_direct_customer_interaction",
+          "name": "No Direct AI-to-Customer Interaction",
+          "description": "AI should not directly interact with customers or replace human-led customer support/customer-facing communications. Respondents cite lack of empathy/nuance, increased customer frustration, and reputational/brand trust risk; AI is more acceptable as behind-the-scenes support (drafting, summarizing, suggesting).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "customer_support_requires_human"
+            ],
+            "gemini": [
+              "customer_support_and_interaction"
+            ],
+            "opus": [
+              "no_direct_customer_interaction"
+            ]
+          }
+        },
+        {
+          "code": "no_autonomous_production_changes",
+          "name": "No Autonomous Production Deployments or Production Changes",
+          "description": "AI should not independently deploy to production, change production configuration/infrastructure, or execute production-affecting mitigations/rollbacks without human control. The blast radius, outage/revenue risk, and cascading dependencies make unsupervised production actions unacceptable.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_autonomous_production_operations"
+            ],
+            "gemini": [
+              "autonomous_production_deployments"
+            ],
+            "opus": [
+              "no_autonomous_production_deployments"
+            ]
+          }
+        },
+        {
+          "code": "human_approval_before_consequential_actions",
+          "name": "Human Approval/Trigger Required Before Consequential Actions",
+          "description": "AI should not be allowed to 'pull the trigger' on consequential actions (running workflows, sending messages/changes, approving change requests/releases, end-to-end auto-fix pipelines). It can propose, prepare, and recommend, but a human must explicitly review and execute/approve to preserve accountability and avoid rubber-stamping failure modes.",
+          "source_models": [
+            "gpt",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_review_for_changes_and_releases",
+              "explicit_human_trigger_and_read_only_agents"
+            ],
+            "gemini": [],
+            "opus": [
+              "human_in_the_loop_required"
+            ]
+          }
+        },
+        {
+          "code": "no_security_permissions_secrets_management",
+          "name": "No AI Management of Security, Access, Permissions, or Secrets",
+          "description": "AI should not manage security-sensitive configurations (IAM/permissions, access controls, secret/key management, compliance/security policy changes, sensitive data handling) because mistakes or hallucinations can cause severe security exposure and governance/compliance violations. Elevated-privilege operations should remain human-controlled.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "security_privacy_and_access_off_limits"
+            ],
+            "gemini": [
+              "security_permissions_and_data_privacy"
+            ],
+            "opus": [
+              "no_security_access_management"
+            ]
+          }
+        },
+        {
+          "code": "no_autonomous_incident_response_or_overrides",
+          "name": "No Autonomous Incident Response, Emergency Actions, or Critical Overrides",
+          "description": "AI should not autonomously run live incident response, perform emergency mitigations, or execute critical overrides. Respondents emphasize the need for situational awareness, nuanced trade-offs, multi-source context, and clear human accountability during high-pressure events.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_judgment_for_incidents_and_complex_ops"
+            ],
+            "gemini": [
+              "complex_decision_making_and_incident_response"
+            ],
+            "opus": [
+              "no_autonomous_incident_response"
+            ]
+          }
+        },
+        {
+          "code": "avoid_ai_for_high_precision_deterministic_work",
+          "name": "Avoid AI for High-Precision/Deterministic, High-Cost-of-Error Work",
+          "description": "AI is seen as insufficiently reliable/deterministic for operational tasks requiring high precision and correctness guarantees (due to hallucinations, edge cases, and opaque reasoning). Where correctness must be assured, respondents prefer traditional deterministic automation or strict verification with humans responsible for final correctness.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "reliability_determinism_precision_required"
+            ],
+            "gemini": [
+              "high_precision_and_deterministic_tasks"
+            ],
+            "opus": [
+              "ai_reliability_insufficient"
+            ]
+          }
+        },
+        {
+          "code": "no_full_autonomy_for_environment_setup_maintenance",
+          "name": "No Full Autonomy for Environment Setup and Ongoing Maintenance",
+          "description": "AI should not fully own foundational environment setup/configuration or ongoing maintenance (especially superuser/admin tasks). Respondents worry about hidden drift, hard-to-debug states, and long-term maintainability/understandability if AI changes core environments without strong oversight and determinism.",
+          "source_models": [
+            "gpt",
+            "gemini"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_autonomous_environment_setup_and_maintenance"
+            ],
+            "gemini": [
+              "environment_setup_and_maintenance"
+            ],
+            "opus": []
+          }
+        },
+        {
+          "code": "preserve_human_learning_and_accountability",
+          "name": "Preserve Human Learning, System Understanding, and Accountability",
+          "description": "AI should not replace work that builds engineers' foundational understanding (especially for juniors) or create over-reliance that weakens hands-on expertise. Respondents also want clear human responsibility for outcomes rather than delegating blame/ownership to AI.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "preserve_engineer_learning_and_accountability"
+            ],
+            "gemini": [
+              "skill_atrophy_and_system_understanding"
+            ],
+            "opus": [
+              "preserve_engineer_development"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_initiated_irreversible_or_destructive_data_actions",
+          "name": "No AI-Initiated Irreversible/Destructive Data Operations",
+          "description": "AI should not perform irreversible or destructive operations (e.g., deleting databases/data, destructive migrations, non-rollbackable changes) because the asymmetric cost of mistakes (easy to execute, extremely costly to recover) demands explicit human control and safeguards.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_autonomous_production_operations",
+              "security_privacy_and_access_off_limits"
+            ],
+            "gemini": [
+              "security_permissions_and_data_privacy"
+            ],
+            "opus": [
+              "no_irreversible_data_operations"
+            ]
+          }
+        },
+        {
+          "code": "no_constraints_expressed_or_pro_automation",
+          "name": "No Constraints Expressed / Comfortable with Broad AI Automation",
+          "description": "Respondents who did not identify any 'no-go' areas or explicitly want AI to automate as much infrastructure/ops work as possible (sometimes implicitly assuming confirmations/controls, but without naming exclusions).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_specific_constraints_or_pro_automation"
+            ],
+            "gemini": [
+              "no_constraints_or_full_automation_desired"
+            ],
+            "opus": [
+              "no_concerns_or_pro_ai"
+            ]
+          }
+        }
+      ]
+    },
+    "quality_risk": {
+      "category": "quality_risk",
+      "category_name": "Quality & Risk Management",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "human_final_decision_and_accountability",
+          "name": "Humans Must Make Final High-Stakes Decisions and Remain Accountable",
+          "description": "AI may surface risks, provide recommendations, or summarize evidence, but respondents do not want AI to make or own final decisions on high-stakes matters (e.g., ship/no-ship, risk acceptance, incident severity/escalation, quality bar sign-off). A human must retain final judgment, clear responsibility, and accountability for outcomes (including ethical and business-context trade-offs).",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_final_judgment_accountability"
+            ],
+            "gemini": [
+              "final_decision_accountability"
+            ],
+            "opus": [
+              "no_final_decisions_without_human_approval",
+              "human_accountability_must_be_preserved"
+            ]
+          }
+        },
+        {
+          "code": "no_autonomous_code_or_production_actions",
+          "name": "No Autonomous Code/Repo/Production Actions Without Human Approval",
+          "description": "Respondents oppose AI directly executing changes with real-world blast radius\u2014auto-editing code, committing/pushing, merging PRs, deploying, or modifying production/cloud configuration\u2014without explicit human review and approval. AI can propose changes, but must not act autonomously on shared repos or production systems.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_autonomous_repo_or_prod_actions"
+            ],
+            "gemini": [
+              "autonomous_commits_deployments"
+            ],
+            "opus": [
+              "no_autonomous_code_changes_or_production_actions"
+            ]
+          }
+        },
+        {
+          "code": "human_code_review_gate_required",
+          "name": "Human Code Review / PR Approval Must Remain the Gate",
+          "description": "Developers do not want AI to replace peer code review or be the sole reviewer/approver for pull requests. AI may assist (e.g., flag issues, summarize diffs), but meaningful human review is required for domain context, intentional design choices, and accountability at the last quality gate before CI/CD.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_code_review_gate"
+            ],
+            "gemini": [
+              "code_reviews_pr_approvals"
+            ],
+            "opus": [
+              "human_code_review_required"
+            ]
+          }
+        },
+        {
+          "code": "security_and_compliance_must_be_human_led",
+          "name": "Security, Compliance, and Threat Modeling Must Be Human-Led",
+          "description": "Respondents do not trust AI to independently assure security/compliance, author threat models autonomously, or apply security fixes without rigorous human oversight. They cite catastrophic consequences of mistakes, rapidly changing threats/regulations, and the risk of false confidence from AI-generated security judgments.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "security_compliance_human_led"
+            ],
+            "gemini": [
+              "security_compliance_threat_modeling"
+            ],
+            "opus": [
+              "no_unsupervised_security_compliance"
+            ]
+          }
+        },
+        {
+          "code": "no_sensitive_data_or_credentials_access",
+          "name": "Do Not Give AI Access to Sensitive/Customer Data or Credentials",
+          "description": "Developers want strict limits on AI handling or accessing sensitive data (customer/user data, PII, confidential internal information) and secrets (keys, certificates, credentials). The core constraint is avoiding leakage, privacy breaches, and compliance violations.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_sensitive_or_customer_data_access"
+            ],
+            "gemini": [
+              "sensitive_customer_data"
+            ],
+            "opus": [
+              "no_handling_sensitive_private_data"
+            ]
+          }
+        },
+        {
+          "code": "ai_outputs_must_be_verifiable_and_not_self_validated",
+          "name": "AI Must Be Reliable, Verifiable, and Not Responsible for Its Own Validation",
+          "description": "Respondents reject using AI for quality/risk work when outputs are hallucinatory, noisy, slow, or unverifiable, or when AI is expected to validate its own correctness. They want AI to provide grounded evidence, abstain when uncertain, and remain subject to human validation rather than being treated as an authoritative verifier.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "reliability_noise_latency_requirements"
+            ],
+            "gemini": [
+              "unsupervised_execution_verification"
+            ],
+            "opus": [
+              "ai_hallucination_and_correctness_concerns"
+            ]
+          }
+        },
+        {
+          "code": "humans_own_requirements_architecture_and_tradeoffs",
+          "name": "Humans Must Own Requirements, Architecture, and Complex Trade-Off Reasoning",
+          "description": "Developers do not want AI to define requirements, infer intent, set priorities/criteria, or own complex architecture/integration decisions and advanced optimization. These tasks require holistic system context, nuanced business logic, originality, and careful trade-off reasoning that respondents believe current AI cannot reliably provide.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "complex_design_requirements_and_optimization"
+            ],
+            "gemini": [
+              "complex_architecture_planning"
+            ],
+            "opus": [
+              "ai_lacks_architectural_and_complex_understanding",
+              "human_must_define_requirements_and_criteria"
+            ]
+          }
+        },
+        {
+          "code": "human_led_test_strategy_intent_and_signoff",
+          "name": "Test Intent/Strategy and Test-Plan Sign-Off Must Be Human-Led",
+          "description": "AI can help generate or prioritize tests, but respondents want humans to define test intent, coverage criteria, and acceptance thresholds\u2014and to sign off on test plans (including security testing). Concerns include AI generating misleading or harmful tests, missing intended behavior, or creating false confidence.",
+          "source_models": [
+            "gpt"
+          ],
+          "source_codes": {
+            "gpt": [
+              "test_intent_strategy_and_signoff_human"
+            ],
+            "gemini": [],
+            "opus": []
+          }
+        },
+        {
+          "code": "preserve_human_ethics_empathy_and_human_centric_work",
+          "name": "Preserve Human Ethics, Empathy, Communication, and Human-Centric Work",
+          "description": "Some respondents resist AI taking over work that depends on empathy, ethical judgment, stakeholder/crisis communication, or that preserves human agency and growth (e.g., learning opportunities, creativity, personally meaningful tasks). The constraint is that these areas should remain primarily human-driven rather than delegated to AI.",
+          "source_models": [
+            "gpt",
+            "gemini"
+          ],
+          "source_codes": {
+            "gpt": [
+              "preserve_human_creativity_learning_and_communication"
+            ],
+            "gemini": [
+              "human_ethics_communication"
+            ],
+            "opus": []
+          }
+        },
+        {
+          "code": "no_constraints_stated",
+          "name": "No Specific No-Go Areas Stated",
+          "description": "Respondents explicitly state no constraints (e.g., none/N/A), have not used AI, or otherwise do not name a specific quality/risk management activity they want to prohibit (sometimes implicitly assuming normal human oversight).",
+          "source_models": [
+            "gpt",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_specific_constraints"
+            ],
+            "gemini": [],
+            "opus": [
+              "no_concerns_or_not_applicable"
+            ]
+          }
+        }
+      ]
+    },
+    "design_planning": {
+      "category": "design_planning",
+      "category_name": "Design & Planning",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "human_accountability_final_decisions",
+          "name": "No AI Final Decision-Making (Human Accountability Required)",
+          "description": "Developers do not want AI to make the final call on consequential decisions (e.g., prioritization, trade-offs, technology choices, requirements interpretation, strategic direction). AI may propose options, but a human must retain responsibility, judgment, and accountability for defendable decisions.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_final_decisions_accountability"
+            ],
+            "gemini": [
+              "no_final_decisions"
+            ],
+            "opus": [
+              "no_autonomous_decisions"
+            ]
+          }
+        },
+        {
+          "code": "human_led_architecture_design",
+          "name": "No AI as Primary System Architect / High-Level Designer",
+          "description": "Developers do not want AI to independently create, select, or drive end-to-end system architecture or high-level design. Concerns include missing context, generic or stale patterns, maintainability/ownership over time, and the need for experienced engineering judgment.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_led_system_architecture"
+            ],
+            "gemini": [
+              "no_system_architecture"
+            ],
+            "opus": [
+              "no_autonomous_system_architecture"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_project_management_task_assignment",
+          "name": "No AI Running Project Management (Planning/Estimation/Task Assignment)",
+          "description": "Developers do not want AI to autonomously manage projects or Agile processes (planning, estimation, staffing, task assignment, coordination). These activities require situational awareness of people, shifting priorities, and team-owned allocation decisions that AI is seen as unable to reliably handle.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_ai_project_management_or_task_assignment"
+            ],
+            "gemini": [
+              "no_autonomous_project_management"
+            ],
+            "opus": [
+              "no_project_management_task_assignment"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_requirements_stakeholder_elicitation",
+          "name": "No AI-Led Requirements Gathering or Stakeholder Alignment",
+          "description": "Developers do not want AI to directly elicit, define, or assume requirements, or to be the primary agent interacting with customers/stakeholders for alignment. This work is viewed as requiring nuanced human interpretation, negotiation, and shared understanding; AI may help organize/refine after humans gather inputs.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_relationships_and_requirements"
+            ],
+            "gemini": [
+              "no_requirements_gathering"
+            ],
+            "opus": [
+              "no_requirements_gathering"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_empathy_team_dynamics",
+          "name": "No Replacement of Human Empathy, Collaboration, or Interpersonal Dynamics",
+          "description": "Developers do not want AI to lead or replace work that depends on empathy, trust, interpersonal communication, or navigating team dynamics and politics. This includes sensitive conversations and collaboration where emotional intelligence and human relationships are central.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_relationships_and_requirements"
+            ],
+            "gemini": [
+              "no_human_dynamics_and_communication"
+            ],
+            "opus": [
+              "human_empathy_and_interpersonal"
+            ]
+          }
+        },
+        {
+          "code": "ai_assistant_human_in_loop",
+          "name": "No Autopilot: AI Should Assist with Human-in-the-Loop Oversight",
+          "description": "Developers do not want AI to operate autonomously or proceed without review. They want AI to ask clarifying questions, surface assumptions, support iteration, and require human steering and sign-off before outputs/actions are treated as final\u2014preserving human agency, learning, and ownership.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_autopilot_execution_require_review_and_context",
+              "ai_assistant_not_replacement"
+            ],
+            "gemini": [
+              "no_autonomous_execution"
+            ],
+            "opus": [
+              "ai_as_assistant_not_replacement"
+            ]
+          }
+        },
+        {
+          "code": "trust_accuracy_and_context_limitations",
+          "name": "Avoid AI for High-Stakes Work Due to Reliability, Hallucinations, and Missing Context",
+          "description": "Developers want to restrict AI use in design/planning when correctness is critical or the system is complex, citing hallucinations, inaccuracies, outdated knowledge, and insufficient grounding in organization/domain context. AI should not be relied upon as the source of truth for consequential outputs until reliability is demonstrably high.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "require_high_reliability_grounded_outputs"
+            ],
+            "gemini": [
+              "trust_accuracy_limitations"
+            ],
+            "opus": [
+              "hallucination_and_trust",
+              "context_and_domain_limitations"
+            ]
+          }
+        },
+        {
+          "code": "privacy_confidentiality_ip_and_message_control",
+          "name": "No AI Handling Sensitive/Confidential Data or Uncontrolled External Messaging",
+          "description": "Developers do not want AI to process proprietary, confidential, or sensitive information (including product ideas/IP) due to privacy and security risks. They also want control over any outbound communications, avoiding AI sending messages or sharing information without explicit human approval.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "privacy_confidentiality_and_message_control"
+            ],
+            "gemini": [
+              "privacy_security_constraints"
+            ],
+            "opus": [
+              "data_privacy_and_ip_concerns"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_vision_strategy_creativity_taste",
+          "name": "No AI Owning Product Vision, Strategy, or Creative/Taste Judgments",
+          "description": "Developers do not want AI to set product vision, business strategy, or creative direction, or to make subjective taste-based choices. AI can support ideation, but humans should define purpose, values, differentiation, and creative intent.",
+          "source_models": [
+            "gpt",
+            "gemini"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_vision_creativity_and_taste"
+            ],
+            "gemini": [
+              "no_vision_and_strategy"
+            ],
+            "opus": []
+          }
+        },
+        {
+          "code": "no_constraints_or_unsure",
+          "name": "No Constraints Stated / Welcome Full AI Involvement / Unsure",
+          "description": "Responses that did not specify any 'do not want AI to handle' constraint (e.g., no opinion, unsure, off-topic), or explicitly welcomed AI handling everything in design and planning.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_stated_constraints_or_unsure"
+            ],
+            "gemini": [
+              "no_constraints"
+            ],
+            "opus": [
+              "no_concerns_welcome_ai"
+            ]
+          }
+        }
+      ]
+    },
+    "development": {
+      "category": "development",
+      "category_name": "Development",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "no_autonomous_architecture_system_design",
+          "name": "No Autonomous Architecture or System Design Decisions",
+          "description": "Developers do not want AI to define or significantly change system architecture, high-level design, core technical direction, or major design trade-offs. These decisions require deep domain/product context, long-term thinking, and human accountability/alignment across teams.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "architecture_and_system_design"
+            ],
+            "gemini": [
+              "architecture_and_system_design"
+            ],
+            "opus": [
+              "no_autonomous_architectural_design"
+            ]
+          }
+        },
+        {
+          "code": "no_large_unscoped_refactors",
+          "name": "No Large, Unscoped, or Sweeping Codebase Changes",
+          "description": "Developers do not want AI to perform broad refactors, multi-file rewrites, large PRs, or sweeping structural changes in one shot\u2014especially changes that expand scope, deviate from existing patterns, or are difficult to review and safely validate.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "major_unscoped_code_changes"
+            ],
+            "gemini": [
+              "large_refactoring_and_scale"
+            ],
+            "opus": [
+              "no_large_scale_refactoring"
+            ]
+          }
+        },
+        {
+          "code": "no_autonomous_execution_merge_deploy_or_agentic_control",
+          "name": "No Autonomous Execution, Merging/Deploying, or Agentic Control",
+          "description": "Developers want humans to remain in control of actions with real impact: running commands, modifying files without explicit instruction, approving/reviewing, committing, merging, releasing, or deploying. AI should not operate as a fully autonomous agent; any significant action should require explicit human confirmation and final responsibility.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_in_the_loop_for_merge_deploy"
+            ],
+            "gemini": [
+              "autonomous_execution_and_approvals"
+            ],
+            "opus": [
+              "no_unsupervised_code_changes",
+              "no_fully_autonomous_agents"
+            ]
+          }
+        },
+        {
+          "code": "no_complex_debugging_or_critical_bug_fixes",
+          "name": "No AI Ownership of Complex Debugging or Critical Bug Fixes",
+          "description": "Developers do not want AI to lead complex debugging, root-cause analysis, or high-stakes bug fixes (especially cross-system or production-critical issues). They cite lack of runtime/context, confident-but-wrong fixes, and regression risk that is hard to detect.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "debugging_and_bugfixing"
+            ],
+            "gemini": [
+              "debugging_and_bug_fixing"
+            ],
+            "opus": [
+              "no_complex_debugging_bug_fixing"
+            ]
+          }
+        },
+        {
+          "code": "no_security_privacy_secrets_handling",
+          "name": "No Security/Privacy-Sensitive Work or Secrets Handling",
+          "description": "Developers do not want AI to implement or modify security-critical code (authn/authz, crypto, vulnerability fixes), handle credentials/secrets, or work with sensitive/regulated data (e.g., PII). They worry about subtle vulnerabilities, compliance exposure, and the high cost of mistakes.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "security_privacy_secrets"
+            ],
+            "gemini": [
+              "security_privacy_and_business_logic"
+            ],
+            "opus": [
+              "no_security_sensitive_tasks"
+            ]
+          }
+        },
+        {
+          "code": "no_autonomous_performance_optimization",
+          "name": "No Autonomous Performance Optimization",
+          "description": "Developers do not want AI to independently change code/architecture for performance (latency, throughput, memory, scalability) without careful measurement and context. Optimization is scenario-dependent and mistakes can silently degrade performance or reliability.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "performance_optimization"
+            ],
+            "gemini": [
+              "performance_optimization"
+            ],
+            "opus": [
+              "no_performance_optimization"
+            ]
+          }
+        },
+        {
+          "code": "no_ai_deciding_requirements_business_logic_or_api_ux",
+          "name": "No AI-Led Requirements, Core Business Logic, or API/UX Decisions",
+          "description": "Developers do not want AI to interpret ambiguous requirements, decide product behavior, implement core business rules without guidance, or make API/UX trade-offs. These areas depend on stakeholder intent, nuanced domain knowledge, and consistency with existing product decisions.",
+          "source_models": [
+            "gpt",
+            "gemini"
+          ],
+          "source_codes": {
+            "gpt": [
+              "requirements_business_logic_api_ux"
+            ],
+            "gemini": [
+              "security_privacy_and_business_logic"
+            ],
+            "opus": []
+          }
+        },
+        {
+          "code": "preserve_developer_agency_learning_and_job_ownership",
+          "name": "Preserve Developer Agency, Learning, and Ownership",
+          "description": "Developers want to remain the primary driver of development work, preserving hands-on learning, creativity, problem-solving satisfaction, and ownership/accountability. They resist AI taking over the \u201cinteresting\u201d parts of engineering or creating dependency/deskilling or job-replacement concerns.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_agency_learning_enjoyment"
+            ],
+            "gemini": [
+              "developer_enjoyment_and_learning"
+            ],
+            "opus": [
+              "preserve_developer_learning_enjoyment"
+            ]
+          }
+        },
+        {
+          "code": "avoid_ai_when_unreliable_contextless_hard_to_verify_or_intrusive",
+          "name": "Avoid AI Output That Is Unreliable, Contextless, Hard to Verify, or Intrusive",
+          "description": "Developers restrict AI use when it lacks repo/domain context, hallucinates, produces non-compiling/incorrect code, violates conventions, or generates changes that are time-consuming to validate. This also includes disruptive assistance patterns (e.g., aggressive autocompletion, unprompted edits/formatting/imports) that break flow and create cleanup work.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "reliability_context_verifiability"
+            ],
+            "gemini": [
+              "intrusive_autocompletion_and_unprompted_edits"
+            ],
+            "opus": [
+              "lacks_codebase_context",
+              "ai_output_quality_unreliable"
+            ]
+          }
+        },
+        {
+          "code": "no_constraints_open_to_ai_help",
+          "name": "No Specific No-Go Zones (Open to AI Help)",
+          "description": "Respondents explicitly report no areas they want to prohibit, or they are broadly open to AI handling most development tasks (often assuming they can still review/validate results).",
+          "source_models": [
+            "gpt",
+            "gemini"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_constraints_open"
+            ],
+            "gemini": [
+              "no_constraints_open_to_all"
+            ],
+            "opus": []
+          }
+        }
+      ]
+    },
+    "meta_work": {
+      "category": "meta_work",
+      "category_name": "Meta-Work",
+      "theme_count": 10,
+      "models_reconciled": [
+        "gpt",
+        "gemini",
+        "opus"
+      ],
+      "themes": [
+        {
+          "code": "human_led_mentoring_onboarding",
+          "name": "Keep mentoring and onboarding human-led",
+          "description": "Developers do not want AI to directly mentor, onboard, or integrate new team members. These activities are viewed as fundamentally interpersonal and culture-bearing (trust, empathy, relationship building). AI may assist with logistics or rote steps, but a human should lead and own the experience.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_led_mentoring_onboarding"
+            ],
+            "gemini": [
+              "mentoring_and_onboarding"
+            ],
+            "opus": [
+              "no_autonomous_mentoring_onboarding"
+            ]
+          }
+        },
+        {
+          "code": "human_authored_communication",
+          "name": "Keep interpersonal and stakeholder communications human-authored",
+          "description": "Developers prefer that messages between people (coworkers, managers, clients, customers, stakeholders) remain written/voiced by humans to preserve authenticity, nuance, and trust. AI-drafted text is seen as robotic, culturally error-prone, and risky in high-impact external contexts; AI may be used for suggestions but not as the primary authorial voice.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "keep_human_authentic_communication",
+              "restrict_external_stakeholder_customer_comms"
+            ],
+            "gemini": [
+              "interpersonal_communication"
+            ],
+            "opus": [
+              "no_autonomous_communication"
+            ]
+          }
+        },
+        {
+          "code": "human_review_required_before_sending_or_publishing",
+          "name": "No autonomous sending/publishing\u2014require human review and approval",
+          "description": "AI should not take autonomous actions such as sending emails/messages, publishing documentation, or otherwise sharing/acting on outputs without explicit human review and approval. The constraint emphasizes human-in-the-loop oversight to prevent costly mistakes, misinformation, or reputational harm.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "require_human_review_before_share"
+            ],
+            "gemini": [
+              "autonomous_action"
+            ],
+            "opus": [
+              "require_human_oversight"
+            ]
+          }
+        },
+        {
+          "code": "no_confidential_or_sensitive_data",
+          "name": "Keep AI away from confidential or sensitive information",
+          "description": "Developers do not want AI tools to handle confidential data, private/sensitive communications, or restricted internal/customer information due to privacy, security, and access-control risks.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "do_not_handle_confidential_data"
+            ],
+            "gemini": [
+              "data_privacy_and_security"
+            ],
+            "opus": [
+              "confidentiality_privacy"
+            ]
+          }
+        },
+        {
+          "code": "preserve_hands_on_learning",
+          "name": "Don\u2019t outsource learning and skills development to AI",
+          "description": "Developers want learning new technologies to remain a hands-on, learn-by-doing process. They worry that relying on AI for learning erodes understanding, weakens skill development, and introduces unverified or outdated guidance; AI can supplement but should not replace genuine learning work.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "preserve_hands_on_learning"
+            ],
+            "gemini": [
+              "learning_and_development"
+            ],
+            "opus": [
+              "preserve_hands_on_learning"
+            ]
+          }
+        },
+        {
+          "code": "preserve_human_research_and_ideation",
+          "name": "Keep research/brainstorming and ideation primarily human",
+          "description": "Developers resist AI driving research, deep thinking, brainstorming, or idea generation. Concerns include reduced creativity, derivative outputs, interruption of human thought processes, and loss of system/technical understanding; AI may assist but should not lead.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "limit_ai_research_brainstorming"
+            ],
+            "gemini": [
+              "research_and_ideation"
+            ],
+            "opus": [
+              "preserve_human_creativity"
+            ]
+          }
+        },
+        {
+          "code": "human_accountability_for_high_stakes_decisions",
+          "name": "High-stakes decisions must remain human-led and accountable",
+          "description": "AI should not be the final authority for consequential judgment calls (e.g., architecture/design, strategy, prioritization trade-offs, evaluations). Developers emphasize the need for contextual judgment, human factors awareness, and clear accountability when outcomes materially affect products or people.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "human_accountability_for_judgment_calls"
+            ],
+            "gemini": [
+              "decision_making"
+            ],
+            "opus": [
+              "no_ai_decision_making"
+            ]
+          }
+        },
+        {
+          "code": "avoid_unvetted_documentation",
+          "name": "Avoid AI-generated documentation as authoritative (must be vetted)",
+          "description": "Developers do not want AI to generate, fill in, or retrieve documentation as the primary/authoritative source without strong human control. Concerns include hallucinations, missing internal context/permissions, misleadingly confident phrasing, and accumulation of low-signal \u201cAI slop.\u201d",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "avoid_unvetted_documentation"
+            ],
+            "gemini": [
+              "documentation"
+            ],
+            "opus": [
+              "ai_accuracy_unreliable"
+            ]
+          }
+        },
+        {
+          "code": "ai_outputs_not_trustworthy_as_primary_source",
+          "name": "Don\u2019t treat AI output as trustworthy/authoritative due to inaccuracy",
+          "description": "A distinct constraint is that AI outputs are seen as unreliable (hallucinations, outdated info, confident errors), making AI unsuitable as a primary source in contexts where correctness matters and errors are hard to detect without prior expertise. This drives avoidance or strict verification requirements across multiple meta-work tasks.",
+          "source_models": [
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [],
+            "gemini": [],
+            "opus": [
+              "ai_accuracy_unreliable"
+            ]
+          }
+        },
+        {
+          "code": "no_constraints_or_unsure",
+          "name": "No constraints stated / unsure",
+          "description": "Respondents explicitly reported no \u201cdo not use AI\u201d areas for meta-work, welcomed AI broadly, or could not identify any specific constraints.",
+          "source_models": [
+            "gpt",
+            "gemini",
+            "opus"
+          ],
+          "source_codes": {
+            "gpt": [
+              "no_specific_constraints_or_unsure"
+            ],
+            "gemini": [
+              "no_restrictions"
+            ],
+            "opus": [
+              "no_constraints_welcome_ai"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1432 @@
+{
+  "model": "gpt-5.2",
+  "category": "quality_risk",
+  "category_name": "Quality & Risk",
+  "response_count": 155,
+  "timestamp": "2026-03-07T08:02:46.148666",
+  "themes": [
+    {
+      "code": "automated_test_generation",
+      "name": "Automated Test Generation & Maintenance from Context/Requirements",
+      "description": "Generate (and keep updated) meaningful unit, integration, E2E, exploratory/chaos/fuzz tests from feature descriptions, code changes, UI/workflows, or repo context\u2014especially to cover edge cases and reduce tedious manual test authoring.",
+      "pids": [
+        15,
+        18,
+        19,
+        36,
+        48,
+        49,
+        53,
+        64,
+        82,
+        92,
+        93,
+        120,
+        129,
+        153,
+        156,
+        196,
+        254,
+        277,
+        286,
+        292,
+        293,
+        310,
+        317,
+        344,
+        346,
+        359,
+        369,
+        387,
+        388,
+        400,
+        427,
+        435,
+        439,
+        459,
+        476,
+        483,
+        486,
+        559,
+        574,
+        636,
+        651,
+        657,
+        663,
+        687,
+        688,
+        689,
+        716,
+        723,
+        727,
+        737,
+        751,
+        767,
+        776,
+        795,
+        851,
+        859,
+        860
+      ]
+    },
+    {
+      "code": "test_coverage_and_quality_gates",
+      "name": "Coverage/Regression Analysis, Quality Checks & CI/CD Gate Enforcement",
+      "description": "Continuously assess quality via coverage-gap analysis, regression detection, missing-gate suggestions, automated validation/compilation/test infra, and quality-bar enforcement within CI/CD\u2014surfacing what\u2019s missing and preventing low-quality changes from shipping.",
+      "pids": [
+        15,
+        59,
+        82,
+        94,
+        147,
+        153,
+        249,
+        263,
+        313,
+        331,
+        350,
+        359,
+        369,
+        380,
+        427,
+        591,
+        608,
+        634,
+        647,
+        663,
+        703,
+        723,
+        830,
+        851,
+        860
+      ]
+    },
+    {
+      "code": "pr_code_review_assistant",
+      "name": "Context-Aware PR/Code Review Assistant (Bugs, Design, Readability, Performance)",
+      "description": "Act as an additional reviewer that understands local codebase/team norms to flag likely bugs and anti-patterns, explain complex diffs, summarize large PRs, suggest refactors for maintainability/testability, and identify performance issues\u2014sometimes with confidence levels.",
+      "pids": [
+        22,
+        42,
+        47,
+        53,
+        74,
+        92,
+        94,
+        117,
+        171,
+        196,
+        230,
+        254,
+        264,
+        293,
+        328,
+        343,
+        387,
+        402,
+        403,
+        412,
+        413,
+        426,
+        428,
+        429,
+        476,
+        483,
+        591,
+        592,
+        636,
+        640,
+        651,
+        688,
+        716,
+        737,
+        751,
+        754,
+        826,
+        830,
+        851,
+        860
+      ]
+    },
+    {
+      "code": "security_risk_detection",
+      "name": "Security Vulnerability Detection & Remediation Suggestions",
+      "description": "Proactively find security flaws (including auth/authz gaps), high-risk changes, insecure patterns, and vulnerable dependencies across code/PRs/repos, and propose actionable fixes (sometimes as PRs).",
+      "pids": [
+        22,
+        42,
+        48,
+        49,
+        55,
+        74,
+        86,
+        120,
+        156,
+        190,
+        212,
+        225,
+        249,
+        259,
+        296,
+        310,
+        317,
+        328,
+        346,
+        360,
+        367,
+        369,
+        389,
+        413,
+        443,
+        474,
+        476,
+        483,
+        535,
+        590,
+        598,
+        608,
+        657,
+        700,
+        767,
+        830,
+        860
+      ]
+    },
+    {
+      "code": "compliance_policy_automation",
+      "name": "Compliance/Standards Interpretation, Monitoring & Automation (SFI/S360/Audit)",
+      "description": "Reduce compliance toil by interpreting policies/standards, checking compliance bars, monitoring/audit readiness, automating questionnaires/form-filling, and translating security/compliance requirements into local, actionable steps\u2014often with human confirmation.",
+      "pids": [
+        10,
+        74,
+        86,
+        143,
+        156,
+        190,
+        206,
+        210,
+        310,
+        339,
+        345,
+        360,
+        367,
+        369,
+        400,
+        429,
+        443,
+        476,
+        483,
+        495,
+        506,
+        565,
+        590,
+        637,
+        651,
+        674,
+        687,
+        721,
+        723,
+        767,
+        799,
+        860
+      ]
+    },
+    {
+      "code": "real_time_risk_monitoring_analytics",
+      "name": "Real-Time Risk Monitoring, Predictive Analytics, Trend/Anomaly Detection & Prioritization",
+      "description": "Use telemetry/logs/configs/history to predict high-risk changes, detect anomalies and deviations from baselines early, track risk trends across projects, assess impact, and generate risk reports to prioritize mitigation before incidents escalate.",
+      "pids": [
+        10,
+        47,
+        59,
+        174,
+        190,
+        236,
+        249,
+        263,
+        276,
+        313,
+        331,
+        343,
+        345,
+        416,
+        428,
+        587,
+        609,
+        701,
+        703,
+        721,
+        740,
+        775,
+        860
+      ]
+    },
+    {
+      "code": "debugging_root_cause_triage",
+      "name": "Debugging Help, Root Cause Analysis & Failure Triage",
+      "description": "Accelerate diagnosing issues in complex systems by investigating variants, performing root-cause analysis, and triaging test failures/incidents to reduce time spent on post-incident investigations and firefighting.",
+      "pids": [
+        10,
+        106,
+        183,
+        313,
+        360,
+        459,
+        723,
+        775
+      ]
+    },
+    {
+      "code": "knowledge_search_summarization",
+      "name": "Knowledge Retrieval, Search, Summarization & Guidance (Docs/Code/Policies)",
+      "description": "Improve developer effectiveness by finding the right internal/external resources, summarizing complex asks and long documentation, bridging org-specific context, explaining confusing code changes, and providing up-to-date guidelines/requirements.",
+      "pids": [
+        21,
+        88,
+        93,
+        143,
+        155,
+        210,
+        400,
+        476,
+        495,
+        506,
+        565,
+        623,
+        637,
+        665,
+        674,
+        754,
+        767,
+        799,
+        859
+      ]
+    },
+    {
+      "code": "agentic_task_automation_integration",
+      "name": "Agentic End-to-End Automation & Tool/Workflow Integration",
+      "description": "Let AI agents execute multi-step work across tools (e.g., create/update PRs, open/add files in VCS, configure test machines, run validations, repair low-hanging issues), and support custom user-built agents to eliminate repetitive overhead.",
+      "pids": [
+        24,
+        36,
+        106,
+        147,
+        187,
+        210,
+        212,
+        225,
+        305,
+        340,
+        344,
+        350,
+        376,
+        416,
+        427,
+        435,
+        446,
+        459,
+        461,
+        483,
+        486,
+        490,
+        574,
+        598,
+        620,
+        634,
+        651,
+        656,
+        687,
+        742,
+        767,
+        785,
+        795,
+        859,
+        860
+      ]
+    },
+    {
+      "code": "trust_reliability_human_review",
+      "name": "Trust, Reliability, and Human-in-the-Loop Expectations",
+      "description": "Requests emphasizing that AI must be demonstrably correct/reliable (or bounded to first-pass checks), provide confidence/verification, and keep humans in control\u2014sometimes expressing no desire to use AI until trust improves.",
+      "pids": [
+        55,
+        67,
+        113,
+        148,
+        196,
+        236,
+        275,
+        429,
+        483,
+        484,
+        657,
+        687,
+        701
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 10,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "compliance_policy_automation",
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "security_risk_detection",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "security_risk_detection",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 47,
+      "themes": [
+        "pr_code_review_assistant",
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "security_risk_detection",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "security_risk_detection",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "pr_code_review_assistant",
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "knowledge_search_summarization",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 94,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "agentic_task_automation_integration",
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 147,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 183,
+      "themes": [
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 210,
+      "themes": [
+        "compliance_policy_automation",
+        "agentic_task_automation_integration",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "security_risk_detection",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "security_risk_detection",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 230,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "test_coverage_and_quality_gates",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "automated_test_generation",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 263,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 292,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 296,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "real_time_risk_monitoring_analytics",
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "pr_code_review_assistant",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "pr_code_review_assistant",
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "security_risk_detection",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation",
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 367,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates",
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "automated_test_generation",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 389,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "knowledge_search_summarization",
+        "compliance_policy_automation",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 403,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 412,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "security_risk_detection",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 416,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 426,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "pr_code_review_assistant",
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 429,
+      "themes": [
+        "compliance_policy_automation",
+        "pr_code_review_assistant",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 435,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 439,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "automated_test_generation",
+        "debugging_root_cause_triage",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation",
+        "knowledge_search_summarization",
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection",
+        "compliance_policy_automation",
+        "pr_code_review_assistant",
+        "agentic_task_automation_integration",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 486,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 490,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 495,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 574,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "security_risk_detection",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "pr_code_review_assistant",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 592,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "security_risk_detection",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "compliance_policy_automation",
+        "automated_test_generation",
+        "pr_code_review_assistant",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 656,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "security_risk_detection",
+        "automated_test_generation",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 663,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "compliance_policy_automation",
+        "automated_test_generation",
+        "agentic_task_automation_integration",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "automated_test_generation",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 689,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "security_risk_detection"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "trust_reliability_human_review"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "test_coverage_and_quality_gates"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "automated_test_generation",
+        "test_coverage_and_quality_gates",
+        "debugging_root_cause_triage",
+        "compliance_policy_automation"
+      ]
+    },
+    {
+      "pid": 727,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "real_time_risk_monitoring_analytics"
+      ]
+    },
+    {
+      "pid": 742,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "pr_code_review_assistant",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "automated_test_generation",
+        "security_risk_detection",
+        "compliance_policy_automation",
+        "knowledge_search_summarization",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "debugging_root_cause_triage"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 795,
+      "themes": [
+        "automated_test_generation",
+        "agentic_task_automation_integration"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "compliance_policy_automation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "security_risk_detection",
+        "test_coverage_and_quality_gates",
+        "pr_code_review_assistant"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "test_coverage_and_quality_gates",
+        "pr_code_review_assistant",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "agentic_task_automation_integration",
+        "automated_test_generation",
+        "knowledge_search_summarization"
+      ]
+    },
+    {
+      "pid": 860,
+      "themes": [
+        "real_time_risk_monitoring_analytics",
+        "agentic_task_automation_integration",
+        "automated_test_generation",
+        "test_coverage_and_quality_gates",
+        "pr_code_review_assistant"
+      ]
+    }
+  ]
+}

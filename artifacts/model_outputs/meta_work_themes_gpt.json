@@ -1,0 +1,1390 @@
+{
+  "model": "gpt-5.2",
+  "category": "meta_work",
+  "category_name": "Meta-Work",
+  "response_count": 157,
+  "timestamp": "2026-03-07T08:19:33.278507",
+  "themes": [
+    {
+      "code": "documentation_automation",
+      "name": "Automated Documentation (Generate, Update, Validate, Diagram)",
+      "description": "AI creates and maintains accurate documentation from code/PRs/specs (including inline comments, READMEs, arch diagrams/flows), flags doc issues, and keeps docs up-to-date so teams aren\u2019t blocked by missing/outdated documentation.",
+      "pids": [
+        11,
+        18,
+        28,
+        46,
+        56,
+        69,
+        73,
+        75,
+        82,
+        85,
+        88,
+        105,
+        106,
+        126,
+        129,
+        145,
+        151,
+        161,
+        165,
+        166,
+        171,
+        179,
+        187,
+        195,
+        209,
+        219,
+        225,
+        228,
+        236,
+        245,
+        253,
+        270,
+        277,
+        280,
+        281,
+        286,
+        303,
+        317,
+        343,
+        346,
+        350,
+        368,
+        381,
+        384,
+        390,
+        400,
+        407,
+        417,
+        422,
+        456,
+        464,
+        474,
+        500,
+        520,
+        535,
+        560,
+        564,
+        569,
+        590,
+        591,
+        610,
+        620,
+        637,
+        639,
+        667,
+        698,
+        734,
+        744,
+        754,
+        776,
+        785,
+        806,
+        827
+      ]
+    },
+    {
+      "code": "research_knowledge_discovery",
+      "name": "Research, Smart Search, and Knowledge Discovery (with Sources)",
+      "description": "AI helps find, aggregate, and summarize relevant information across docs/repos/tools; answers project-specific questions; and (ideally) provides traceable citations/authoritative links to reduce time spent searching and increase trust.",
+      "pids": [
+        11,
+        18,
+        21,
+        26,
+        29,
+        46,
+        49,
+        56,
+        69,
+        75,
+        82,
+        145,
+        151,
+        169,
+        170,
+        174,
+        179,
+        194,
+        196,
+        200,
+        202,
+        213,
+        245,
+        253,
+        290,
+        298,
+        339,
+        347,
+        350,
+        377,
+        400,
+        407,
+        470,
+        484,
+        578,
+        607,
+        627,
+        644,
+        667,
+        717,
+        734,
+        744,
+        748,
+        775,
+        781,
+        806
+      ]
+    },
+    {
+      "code": "learning_onboarding_mentoring",
+      "name": "Learning, Onboarding, and Mentoring",
+      "description": "AI teaches new technologies and systems via guided tutorials, examples, Q&A without social friction, and personalized learning plans; also supports onboarding/mentoring for new team members by answering domain questions and accelerating ramp-up.",
+      "pids": [
+        11,
+        26,
+        74,
+        125,
+        145,
+        161,
+        176,
+        187,
+        202,
+        209,
+        278,
+        280,
+        281,
+        290,
+        291,
+        332,
+        336,
+        347,
+        390,
+        394,
+        395,
+        400,
+        407,
+        417,
+        427,
+        464,
+        467,
+        484,
+        493,
+        526,
+        533,
+        611,
+        627,
+        637,
+        644,
+        657,
+        698,
+        751,
+        774,
+        776,
+        781,
+        788,
+        791,
+        806
+      ]
+    },
+    {
+      "code": "communication_stakeholder_support",
+      "name": "Communication and Stakeholder/Customer Support",
+      "description": "AI drafts, tailors, rephrases, proofreads, and translates communications (emails/chats/status updates) for different audiences (stakeholders, partners, customers), improving clarity and saving time on coordination-heavy messaging.",
+      "pids": [
+        40,
+        120,
+        130,
+        145,
+        170,
+        182,
+        207,
+        211,
+        225,
+        240,
+        317,
+        341,
+        372,
+        400,
+        417,
+        470,
+        533,
+        560,
+        564,
+        609,
+        627,
+        634,
+        637,
+        640,
+        698,
+        725,
+        813,
+        827
+      ]
+    },
+    {
+      "code": "meeting_assistance",
+      "name": "Meeting Assistance (Scheduling, Notes, Recaps, Summaries)",
+      "description": "AI reduces meeting overhead by scheduling, transcribing/taking notes, summarizing/recapping missed meetings, and extracting key points to help developers stay aligned without spending excessive time in meetings.",
+      "pids": [
+        52,
+        145,
+        179,
+        193,
+        205,
+        211,
+        225,
+        372,
+        384,
+        400,
+        422,
+        492,
+        560,
+        591,
+        698,
+        706
+      ]
+    },
+    {
+      "code": "planning_prioritization_status_reporting",
+      "name": "Planning, Prioritization, and Status/Alignment Tracking",
+      "description": "AI helps manage meta-work coordination: creating roadmaps and task breakdowns, planning realistic timelines (dependencies/constraints), prioritizing work and inbox, generating status/progress reports, identifying blockers, and tracking decisions/alignment across teams.",
+      "pids": [
+        75,
+        86,
+        120,
+        164,
+        179,
+        240,
+        343,
+        422,
+        609,
+        627,
+        634,
+        636,
+        680,
+        696,
+        698,
+        706,
+        791,
+        827
+      ]
+    },
+    {
+      "code": "brainstorming_ideation_prototyping",
+      "name": "Brainstorming, Idea Expansion, and Rapid Prototyping",
+      "description": "AI serves as a creative sounding board to expand solution options, generate first-pass ideas, and in some cases produce prototypes/demos/mock-ups to explore directions faster.",
+      "pids": [
+        11,
+        18,
+        151,
+        196,
+        219,
+        298,
+        347,
+        377,
+        384,
+        407,
+        457,
+        607,
+        657,
+        667,
+        717,
+        748
+      ]
+    },
+    {
+      "code": "proactive_personal_agent",
+      "name": "Proactive Personal Agent (Context, Memory, Delegation)",
+      "description": "AI acts as an agent with awareness of the developer\u2019s responsibilities and context (long-term memory), proactively surfaces what matters, follows up on actions, and can represent the developer in limited ways (e.g., answering routine questions) with oversight.",
+      "pids": [
+        75,
+        120,
+        211,
+        240,
+        332,
+        375,
+        627,
+        725,
+        756,
+        791
+      ]
+    },
+    {
+      "code": "broad_all_purpose_assistance",
+      "name": "Broad/All-Purpose AI Help Across Meta-Work",
+      "description": "Respondents explicitly want AI help \u2018everywhere\u2019 or across all aspects of meta-work, without specifying a single capability as the primary target.",
+      "pids": [
+        8,
+        24,
+        635,
+        789
+      ]
+    },
+    {
+      "code": "out_of_scope_or_no_opportunity",
+      "name": "No Clear Meta-Work AI Opportunity / Out of Scope",
+      "description": "Responses that reject AI involvement, indicate no improvement needed, or request non-meta-work capabilities (e.g., coding/bug fixing/security) rather than meta-work assistance.",
+      "pids": [
+        101,
+        267,
+        325,
+        651,
+        689,
+        769
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 8,
+      "themes": [
+        "broad_all_purpose_assistance"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "broad_all_purpose_assistance"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "meeting_assistance"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "planning_prioritization_status_reporting",
+        "research_knowledge_discovery",
+        "documentation_automation",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 85,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "communication_stakeholder_support",
+        "planning_prioritization_status_reporting",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 130,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "meeting_assistance",
+        "communication_stakeholder_support",
+        "research_knowledge_discovery",
+        "learning_onboarding_mentoring",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "research_knowledge_discovery",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "documentation_automation",
+        "meeting_assistance",
+        "planning_prioritization_status_reporting",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "documentation_automation",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "meeting_assistance"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "meeting_assistance"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "proactive_personal_agent",
+        "meeting_assistance",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "documentation_automation",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "meeting_assistance",
+        "communication_stakeholder_support",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "planning_prioritization_status_reporting",
+        "communication_stakeholder_support",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "research_knowledge_discovery",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "documentation_automation",
+        "communication_stakeholder_support",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "documentation_automation",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "research_knowledge_discovery",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "documentation_automation",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 336,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "documentation_automation",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "communication_stakeholder_support",
+        "meeting_assistance"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "brainstorming_ideation_prototyping",
+        "meeting_assistance",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "documentation_automation",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "meeting_assistance",
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping",
+        "learning_onboarding_mentoring",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "documentation_automation",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "documentation_automation",
+        "meeting_assistance",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "documentation_automation",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "communication_stakeholder_support",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "meeting_assistance"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "communication_stakeholder_support",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "communication_stakeholder_support",
+        "meeting_assistance",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "documentation_automation",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "meeting_assistance",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "communication_stakeholder_support",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "communication_stakeholder_support",
+        "planning_prioritization_status_reporting",
+        "research_knowledge_discovery",
+        "learning_onboarding_mentoring",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "communication_stakeholder_support",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "broad_all_purpose_assistance"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "documentation_automation",
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 689,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "communication_stakeholder_support",
+        "meeting_assistance",
+        "documentation_automation",
+        "learning_onboarding_mentoring",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "meeting_assistance",
+        "planning_prioritization_status_reporting"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "communication_stakeholder_support",
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "research_knowledge_discovery",
+        "brainstorming_ideation_prototyping"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "proactive_personal_agent"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": [
+        "out_of_scope_or_no_opportunity"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "learning_onboarding_mentoring",
+        "research_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "documentation_automation"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "broad_all_purpose_assistance"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "proactive_personal_agent",
+        "planning_prioritization_status_reporting",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 806,
+      "themes": [
+        "documentation_automation",
+        "research_knowledge_discovery",
+        "learning_onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "communication_stakeholder_support"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "documentation_automation",
+        "communication_stakeholder_support",
+        "planning_prioritization_status_reporting"
+      ]
+    }
+  ]
+}

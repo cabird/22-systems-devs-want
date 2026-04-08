@@ -1,0 +1,857 @@
+{
+  "model": "gpt-5.2",
+  "category": "infrastructure_ops",
+  "category_name": "Infrastructure & Ops",
+  "response_count": 96,
+  "timestamp": "2026-03-07T08:30:44.896618",
+  "themes": [
+    {
+      "code": "no_autonomous_production_operations",
+      "name": "No Autonomous Production Operations (Deployments/Changes/Rollbacks/Data Destruction)",
+      "description": "AI should not directly execute actions against production (deployments, config changes, rollbacks, incident mitigations that change prod state, deletes/irreversible actions) due to outage risk, cascading dependencies, and high cost of mistakes. Developers want production-touch actions gated by humans.",
+      "pids": [
+        20,
+        22,
+        93,
+        126,
+        133,
+        138,
+        267,
+        273,
+        280,
+        294,
+        345,
+        356,
+        377,
+        457,
+        476,
+        508,
+        527,
+        532,
+        556,
+        565,
+        578,
+        639,
+        644,
+        653,
+        671,
+        697,
+        706,
+        707,
+        740,
+        744,
+        830,
+        852
+      ]
+    },
+    {
+      "code": "customer_support_requires_human",
+      "name": "Keep Customer Support & Customer-Facing Interaction Human",
+      "description": "AI should not replace direct customer support or sensitive customer interactions because customers find AI frustrating/dehumanizing, support is nuanced, and visible AI errors can erode trust and perceived product quality. Preferred role is assistive (drafting, suggesting, surfacing evidence) rather than primary interface.",
+      "pids": [
+        2,
+        3,
+        42,
+        83,
+        92,
+        148,
+        177,
+        180,
+        190,
+        214,
+        278,
+        347,
+        409,
+        435,
+        492,
+        527,
+        530,
+        558,
+        565,
+        667,
+        825
+      ]
+    },
+    {
+      "code": "security_privacy_and_access_off_limits",
+      "name": "Security/Privacy/Access Controls Off-Limits",
+      "description": "AI should not manage security-sensitive areas (permissions, access controls, secrets/key vaults, compliance/security policy changes, customer data/internal code handling) because hallucinations or missteps can create severe security exposure and governance violations.",
+      "pids": [
+        242,
+        271,
+        273,
+        294,
+        362,
+        386,
+        476,
+        502,
+        520,
+        653,
+        706,
+        820,
+        830
+      ]
+    },
+    {
+      "code": "human_review_for_changes_and_releases",
+      "name": "Human Review Required for Change Management, Approvals, and Releases",
+      "description": "AI should not create/approve change requests, auto-deploy without review, publish releases/release notes, or auto-fix/auto-PR changes end-to-end without human verification. Respondents want explicit review gates to prevent bad changes and avoid 'rubber-stamping' failure modes.",
+      "pids": [
+        22,
+        125,
+        165,
+        261,
+        267,
+        270,
+        322,
+        457,
+        500,
+        527,
+        532,
+        744,
+        789
+      ]
+    },
+    {
+      "code": "explicit_human_trigger_and_read_only_agents",
+      "name": "Explicit Human Trigger / Read-Only Agents (No Unsupervised Agentic Action)",
+      "description": "AI should not autonomously 'pull the trigger' (send messages, take actions on its own, run workflows) and should be constrained to suggestion/alerting or require explicit approval. This includes preference for read-only agents and avoiding uncontrolled workflow/task-board churn.",
+      "pids": [
+        64,
+        112,
+        138,
+        280,
+        377,
+        440,
+        476,
+        500,
+        527,
+        639,
+        653,
+        706,
+        744,
+        781
+      ]
+    },
+    {
+      "code": "reliability_determinism_precision_required",
+      "name": "Use AI Only Where Reliability/Determinism Is Acceptable",
+      "description": "AI is viewed as insufficiently reliable for precise, deterministic, or high-cost-of-error tasks (incl. hallucination risk, edge cases, bias). Some prefer traditional automation/algorithms where correctness must be guaranteed.",
+      "pids": [
+        46,
+        163,
+        202,
+        214,
+        216,
+        270,
+        278,
+        306,
+        356,
+        370,
+        492,
+        502,
+        578,
+        671,
+        697,
+        740,
+        780,
+        852
+      ]
+    },
+    {
+      "code": "human_judgment_for_incidents_and_complex_ops",
+      "name": "Human Judgment for Incidents, Emergencies, and Complex Contextual Reasoning",
+      "description": "AI should not own complex operational decision-making (livesite investigation, root cause across sources, emergency response decisions, critical overrides) because these require situational awareness, contextual trade-offs, and accountable judgment.",
+      "pids": [
+        30,
+        280,
+        306,
+        345,
+        532,
+        639,
+        706
+      ]
+    },
+    {
+      "code": "no_autonomous_environment_setup_and_maintenance",
+      "name": "Caution on Environment Setup/Maintenance (Context, Determinism, Superuser Tasks)",
+      "description": "AI should not fully own environment setup/maintenance (especially superuser actions) until it can be proven correct with sufficient context. Respondents fear hard-to-debug environment drift, overnight incidents, and loss of understandability/maintainability.",
+      "pids": [
+        163,
+        216,
+        549,
+        780,
+        781,
+        820
+      ]
+    },
+    {
+      "code": "preserve_engineer_learning_and_accountability",
+      "name": "Preserve Engineer Learning, Hands-On Understanding, and Accountability",
+      "description": "Avoid replacing junior engineers' learning pathways or creating over-reliance that weakens system understanding. Keep clear human responsibility for high-impact decisions and guard against rubber-stamping AI suggestions.",
+      "pids": [
+        17,
+        125,
+        148,
+        322,
+        345,
+        377,
+        457,
+        549,
+        565,
+        791
+      ]
+    },
+    {
+      "code": "no_specific_constraints_or_pro_automation",
+      "name": "No Specific No-Go Zones / Prefer Broad Automation",
+      "description": "Respondents expressed few or no constraints (e.g., 'let it do everything', 'anything automatable'), sometimes with an implied expectation of confirmations/controls but no explicit exclusions.",
+      "pids": [
+        56,
+        105,
+        111,
+        112,
+        117,
+        175,
+        227,
+        283,
+        298,
+        397,
+        447,
+        450,
+        570,
+        651,
+        678
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "no_autonomous_production_operations",
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": []
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "no_specific_constraints_or_pro_automation",
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "human_review_for_changes_and_releases",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "customer_support_requires_human",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 177,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 214,
+      "themes": [
+        "customer_support_requires_human",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 227,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 242,
+      "themes": [
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "no_autonomous_production_operations",
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "human_review_for_changes_and_releases",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "security_privacy_and_access_off_limits",
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "customer_support_requires_human",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 283,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "no_autonomous_production_operations",
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "reliability_determinism_precision_required",
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "human_review_for_changes_and_releases",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "human_judgment_for_incidents_and_complex_ops",
+        "preserve_engineer_learning_and_accountability",
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": []
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 435,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 450,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "no_autonomous_production_operations",
+        "human_review_for_changes_and_releases",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "explicit_human_trigger_and_read_only_agents",
+        "no_autonomous_production_operations",
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "customer_support_requires_human",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "human_review_for_changes_and_releases",
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "security_privacy_and_access_off_limits",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "customer_support_requires_human",
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 530,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 532,
+      "themes": [
+        "no_autonomous_production_operations",
+        "human_review_for_changes_and_releases",
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 556,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "customer_support_requires_human",
+        "no_autonomous_production_operations",
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 570,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 678,
+      "themes": [
+        "no_specific_constraints_or_pro_automation"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "no_autonomous_production_operations",
+        "security_privacy_and_access_off_limits",
+        "explicit_human_trigger_and_read_only_agents",
+        "human_judgment_for_incidents_and_complex_ops"
+      ]
+    },
+    {
+      "pid": 707,
+      "themes": [
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "no_autonomous_production_operations",
+        "explicit_human_trigger_and_read_only_agents",
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "reliability_determinism_precision_required"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "explicit_human_trigger_and_read_only_agents"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "human_review_for_changes_and_releases"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "preserve_engineer_learning_and_accountability"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "no_autonomous_environment_setup_and_maintenance",
+        "security_privacy_and_access_off_limits"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "customer_support_requires_human"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "security_privacy_and_access_off_limits",
+        "no_autonomous_production_operations"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "no_autonomous_production_operations",
+        "reliability_determinism_precision_required"
+      ]
+    }
+  ]
+}

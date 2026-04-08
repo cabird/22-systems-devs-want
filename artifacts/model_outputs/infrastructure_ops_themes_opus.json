@@ -1,0 +1,844 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "infrastructure_ops",
+  "category_name": "Infrastructure & Ops",
+  "response_count": 101,
+  "timestamp": "2026-03-07T08:16:34.914152",
+  "themes": [
+    {
+      "code": "intelligent_monitoring_alerting",
+      "name": "Intelligent Monitoring, Alerting & Anomaly Detection",
+      "description": "AI that continuously monitors infrastructure, analyzes metrics/logs in real-time, detects anomalies, predicts potential failures before they impact users, and automatically creates or tunes smart alerts. Developers see this as a natural fit for AI's pattern recognition strengths and a way to reduce on-call burden.",
+      "pids": [
+        2,
+        20,
+        56,
+        83,
+        126,
+        175,
+        180,
+        190,
+        202,
+        216,
+        251,
+        271,
+        280,
+        283,
+        298,
+        306,
+        322,
+        345,
+        347,
+        356,
+        370,
+        377,
+        417,
+        440,
+        500,
+        520,
+        532,
+        549,
+        558,
+        628,
+        644,
+        651,
+        740,
+        852
+      ]
+    },
+    {
+      "code": "incident_response_root_cause",
+      "name": "Automated Incident Response & Root Cause Analysis",
+      "description": "AI that triages alerts, correlates logs across components, performs root cause analysis, suggests or automates mitigation steps, and learns from past incidents to handle similar future ones. Developers want to shift from reactive detection/diagnosis to rapid, AI-assisted resolution and reduce on-call toil.",
+      "pids": [
+        15,
+        20,
+        52,
+        56,
+        83,
+        93,
+        105,
+        126,
+        175,
+        202,
+        207,
+        209,
+        254,
+        271,
+        280,
+        370,
+        377,
+        426,
+        462,
+        500,
+        639,
+        644,
+        706,
+        830,
+        852
+      ]
+    },
+    {
+      "code": "cicd_pipeline_automation",
+      "name": "CI/CD Pipeline Setup, Configuration & Management",
+      "description": "AI that creates, configures, maintains, debugs, and optimizes CI/CD pipelines \u2014 including generating compliant pipeline definitions, analyzing build/deployment logs, detecting safe deployment windows, and helping developers understand complex pipeline systems. Developers find pipeline configuration tedious and poorly documented.",
+      "pids": [
+        42,
+        125,
+        138,
+        163,
+        202,
+        209,
+        267,
+        347,
+        409,
+        476,
+        492,
+        558,
+        647,
+        651,
+        791,
+        820,
+        858
+      ]
+    },
+    {
+      "code": "environment_setup_provisioning",
+      "name": "Automated Environment Setup & Infrastructure Provisioning",
+      "description": "AI that automates environment creation, generates IaC templates (Bicep, EV2, etc.), configures infrastructure from prompts or code context, and handles environment-specific issues. Developers want to eliminate the tedious setup work that is a prerequisite to their core tasks.",
+      "pids": [
+        2,
+        3,
+        126,
+        165,
+        175,
+        177,
+        216,
+        273,
+        386,
+        447,
+        457,
+        508,
+        553,
+        610,
+        651,
+        825,
+        830
+      ]
+    },
+    {
+      "code": "customer_support_triage",
+      "name": "AI-Powered Customer Support & Issue Triage",
+      "description": "AI that screens and triages customer support requests, detects common issue patterns, auto-responds to known/repetitive issues using knowledge bases, and escalates appropriately. Developers want to offload repetitive customer interactions and free engineering time.",
+      "pids": [
+        92,
+        117,
+        202,
+        294,
+        348,
+        417,
+        426,
+        450,
+        578,
+        647,
+        653,
+        671,
+        780
+      ]
+    },
+    {
+      "code": "infra_maintenance_upgrades",
+      "name": "Infrastructure Maintenance, Migration & Upgrades",
+      "description": "AI that handles ongoing infrastructure maintenance including system upgrades, dependency/package updates, code and pipeline migrations, API change tracking, resource optimization, and proactive upkeep \u2014 keeping services healthy while developers focus on new features.",
+      "pids": [
+        3,
+        269,
+        273,
+        345,
+        375,
+        532,
+        628,
+        744,
+        789,
+        820,
+        825,
+        858
+      ]
+    },
+    {
+      "code": "automate_toil_repetitive",
+      "name": "General Automation of Repetitive Toil & Manual Processes",
+      "description": "A cross-cutting desire for AI to eliminate tedious, repetitive, manual drudgery in infrastructure work \u2014 developers want AI to handle the boring, rote tasks that consume time but don't require creative engineering judgment.",
+      "pids": [
+        2,
+        111,
+        177,
+        270,
+        502,
+        527,
+        565
+      ]
+    },
+    {
+      "code": "knowledge_documentation_context",
+      "name": "Knowledge Management, Documentation & System Context Understanding",
+      "description": "AI that organizes tribal knowledge, searches and surfaces relevant documentation with references, builds a holistic understanding of how infrastructure components are connected, and provides contextual awareness of existing systems to accelerate onboarding and decision-making.",
+      "pids": [
+        42,
+        64,
+        126,
+        278,
+        426,
+        476,
+        697,
+        791
+      ]
+    },
+    {
+      "code": "script_writing_debugging",
+      "name": "Infrastructure Script Writing & Debugging",
+      "description": "AI that helps write, debug, and maintain infrastructure automation scripts \u2014 including cross-platform compatible shell scripts and scripts for automating repetitive operational tasks.",
+      "pids": [
+        22,
+        165,
+        565
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "environment_setup_provisioning",
+        "intelligent_monitoring_alerting",
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "environment_setup_provisioning",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": []
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "script_writing_debugging"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": []
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "cicd_pipeline_automation",
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": []
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": []
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause",
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": []
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "script_writing_debugging",
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "environment_setup_provisioning",
+        "incident_response_root_cause",
+        "intelligent_monitoring_alerting",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 177,
+      "themes": [
+        "environment_setup_provisioning",
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "cicd_pipeline_automation",
+        "incident_response_root_cause",
+        "intelligent_monitoring_alerting",
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "cicd_pipeline_automation",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "environment_setup_provisioning",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 242,
+      "themes": []
+    },
+    {
+      "pid": 251,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": []
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 269,
+      "themes": [
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "environment_setup_provisioning",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 283,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "cicd_pipeline_automation",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "incident_response_root_cause",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": []
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "customer_support_triage",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 426,
+      "themes": [
+        "customer_support_triage",
+        "incident_response_root_cause",
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 450,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 462,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "infra_maintenance_upgrades",
+        "cicd_pipeline_automation",
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 532,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "cicd_pipeline_automation",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "script_writing_debugging",
+        "automate_toil_repetitive"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 628,
+      "themes": [
+        "infra_maintenance_upgrades",
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "customer_support_triage",
+        "cicd_pipeline_automation"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "cicd_pipeline_automation",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": []
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": []
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "intelligent_monitoring_alerting"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "customer_support_triage"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "cicd_pipeline_automation",
+        "knowledge_documentation_context"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "cicd_pipeline_automation",
+        "environment_setup_provisioning",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "environment_setup_provisioning",
+        "infra_maintenance_upgrades"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "incident_response_root_cause",
+        "environment_setup_provisioning"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "intelligent_monitoring_alerting",
+        "incident_response_root_cause"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "environment_setup_provisioning",
+        "cicd_pipeline_automation",
+        "infra_maintenance_upgrades"
+      ]
+    }
+  ]
+}

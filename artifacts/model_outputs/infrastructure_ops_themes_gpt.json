@@ -1,0 +1,910 @@
+{
+  "model": "gpt-5.2",
+  "category": "infrastructure_ops",
+  "category_name": "Infrastructure & Ops",
+  "response_count": 101,
+  "timestamp": "2026-03-07T08:11:41.111375",
+  "themes": [
+    {
+      "code": "smart_monitoring_alerts",
+      "name": "Smart Monitoring, Alerting, and Anomaly Detection",
+      "description": "AI continuously analyzes metrics/logs/system behavior to set up monitors, detect anomalies/predict failures, and generate higher-signal alerts (including smarter thresholds based on history) to reduce missed conditions and on-call noise.",
+      "pids": [
+        2,
+        20,
+        56,
+        83,
+        126,
+        175,
+        180,
+        190,
+        202,
+        216,
+        251,
+        271,
+        280,
+        283,
+        298,
+        306,
+        322,
+        345,
+        347,
+        356,
+        370,
+        377,
+        417,
+        500,
+        520,
+        532,
+        549,
+        558,
+        644,
+        651,
+        706,
+        740,
+        852
+      ]
+    },
+    {
+      "code": "incident_response_rca_remediation",
+      "name": "Incident Response Automation (Triage, RCA, Mitigation, Self-Heal)",
+      "description": "AI accelerates or automates incident handling: correlating signals, summarizing live incidents, finding root cause, proposing mitigations/runbooks, enriching incident records (ICMs), and in some cases taking safe self-healing actions to reduce on-call burden.",
+      "pids": [
+        15,
+        20,
+        52,
+        56,
+        83,
+        93,
+        126,
+        175,
+        202,
+        207,
+        209,
+        254,
+        271,
+        280,
+        370,
+        377,
+        426,
+        462,
+        500,
+        639,
+        644,
+        706,
+        830,
+        852
+      ]
+    },
+    {
+      "code": "cicd_deployment_automation",
+      "name": "CI/CD Pipeline & Deployment Automation (Build, Release, Babysitting, Debugging)",
+      "description": "AI creates, migrates, explains, and maintains CI/CD pipelines; automates deployments (including unattended/overnight); reviews pipeline configs; troubleshoots CI/CD failures from logs; and helps plan changes across interconnected CI/CD components.",
+      "pids": [
+        42,
+        105,
+        125,
+        138,
+        163,
+        202,
+        209,
+        267,
+        347,
+        409,
+        440,
+        476,
+        492,
+        532,
+        558,
+        647,
+        651,
+        744,
+        791,
+        820,
+        858
+      ]
+    },
+    {
+      "code": "infra_environment_provisioning_iac",
+      "name": "Environment/Infrastructure Provisioning via IaC Generation (Setup, Rebuild, Migration)",
+      "description": "AI reduces toil in creating/rebuilding dev/test/prod environments and provisioning infrastructure by generating or updating IaC (e.g., Bicep/EV2/AC2), understanding existing infra-from-code, and assisting with infra setup/migration.",
+      "pids": [
+        2,
+        3,
+        126,
+        175,
+        177,
+        216,
+        273,
+        386,
+        447,
+        457,
+        508,
+        553,
+        610,
+        651,
+        820,
+        825,
+        830,
+        858
+      ]
+    },
+    {
+      "code": "scripting_task_automation",
+      "name": "Script and Repetitive Ops Task Automation",
+      "description": "AI writes/debugs operational scripts and automations (e.g., Bash), handles cross-platform compatibility, and removes long manual/repetitive processes (\u201cdrudgery\u201d) by generating reliable task automation.",
+      "pids": [
+        22,
+        111,
+        165,
+        270,
+        462,
+        527,
+        532,
+        565
+      ]
+    },
+    {
+      "code": "customer_support_automation",
+      "name": "Customer Support Triage and Auto-Response",
+      "description": "AI screens and buckets support requests, correlates user-reported issues with logs, drafts responses from known solutions/KB, and escalates appropriately\u2014reducing repetitive support workload for engineers and support staff.",
+      "pids": [
+        92,
+        117,
+        202,
+        294,
+        348,
+        417,
+        426,
+        450,
+        578,
+        639,
+        647,
+        653,
+        671,
+        780
+      ]
+    },
+    {
+      "code": "knowledge_management_doc_search_context",
+      "name": "Knowledge/Docs Retrieval and Context Building (Tribal Knowledge, Related Incidents)",
+      "description": "AI captures and organizes tribal knowledge, acts like a doc/search assistant with citations, retrieves related prior incidents, and builds/share context to speed troubleshooting and decision-making.",
+      "pids": [
+        30,
+        64,
+        280,
+        417,
+        426,
+        450,
+        697,
+        791
+      ]
+    },
+    {
+      "code": "proactive_maintenance_security_cost_optimization",
+      "name": "Proactive Maintenance, Upgrades, Security/Compliance, and Resource Optimization",
+      "description": "AI plans and drives routine operational upkeep: upgrades/patching, API/workflow migrations, security/compliance posture (alerts like SFI/S360), resource allocation/cost optimization, and generating actionable maintenance work items/agenda.",
+      "pids": [
+        3,
+        112,
+        175,
+        190,
+        216,
+        269,
+        273,
+        283,
+        345,
+        375,
+        377,
+        409,
+        476,
+        532,
+        628,
+        651,
+        740,
+        744,
+        789,
+        820,
+        825,
+        830,
+        858
+      ]
+    },
+    {
+      "code": "testing_quality_validation",
+      "name": "Testing and Quality Validation (Unit Tests, Safe Deploy, Local Workflow Testing)",
+      "description": "AI improves software delivery quality by generating unit tests, validating changes, helping determine safe/unsafe deployment timing, and enabling local smoke testing of CI/CD workflows and other quality gates.",
+      "pids": [
+        202,
+        261,
+        267,
+        409,
+        476,
+        730,
+        830
+      ]
+    },
+    {
+      "code": "tooling_experience_accuracy_learning",
+      "name": "Better AI Tooling UX (Accuracy, Cohesive Workflows, UI, Learning-First)",
+      "description": "Developers want AI assistance to be accurate, integrated across related infra tasks (not fragmented), controllable via usable UI, and designed to enhance human understanding/learning rather than replacing thinking.",
+      "pids": [
+        17,
+        133,
+        242,
+        271,
+        278,
+        397,
+        502
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": []
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 177,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "cicd_deployment_automation",
+        "customer_support_automation",
+        "testing_quality_validation"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "cicd_deployment_automation",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 242,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 251,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "testing_quality_validation"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "cicd_deployment_automation",
+        "testing_quality_validation"
+      ]
+    },
+    {
+      "pid": 269,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 283,
+      "themes": [
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "cicd_deployment_automation",
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "cicd_deployment_automation",
+        "testing_quality_validation",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "customer_support_automation",
+        "smart_monitoring_alerts",
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 426,
+      "themes": [
+        "incident_response_rca_remediation",
+        "customer_support_automation",
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 450,
+      "themes": [
+        "customer_support_automation",
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 462,
+      "themes": [
+        "incident_response_rca_remediation",
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization",
+        "testing_quality_validation",
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "tooling_experience_accuracy_learning"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 532,
+      "themes": [
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization",
+        "cicd_deployment_automation",
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "cicd_deployment_automation",
+        "smart_monitoring_alerts"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "scripting_task_automation"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "infra_environment_provisioning_iac"
+      ]
+    },
+    {
+      "pid": 628,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "incident_response_rca_remediation",
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "customer_support_automation",
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization",
+        "smart_monitoring_alerts",
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": []
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "testing_quality_validation"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "smart_monitoring_alerts",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization",
+        "cicd_deployment_automation"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "customer_support_automation"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "cicd_deployment_automation",
+        "knowledge_management_doc_search_context"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "cicd_deployment_automation",
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "incident_response_rca_remediation",
+        "proactive_maintenance_security_cost_optimization",
+        "infra_environment_provisioning_iac",
+        "testing_quality_validation"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "smart_monitoring_alerts",
+        "incident_response_rca_remediation"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "infra_environment_provisioning_iac",
+        "cicd_deployment_automation",
+        "proactive_maintenance_security_cost_optimization"
+      ]
+    }
+  ]
+}

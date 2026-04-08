@@ -1,0 +1,1265 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "meta_work",
+  "category_name": "Meta-Work",
+  "response_count": 157,
+  "timestamp": "2026-03-07T08:22:09.642661",
+  "themes": [
+    {
+      "code": "automated_documentation",
+      "name": "Automated Documentation Generation & Maintenance",
+      "description": "Automatically generating, updating, and maintaining accurate documentation, architecture diagrams, and inline code comments directly from codebases, pull requests, and tests to reduce manual effort.",
+      "pids": [
+        11,
+        18,
+        28,
+        46,
+        56,
+        69,
+        73,
+        75,
+        82,
+        85,
+        88,
+        105,
+        106,
+        126,
+        129,
+        145,
+        151,
+        161,
+        165,
+        166,
+        171,
+        179,
+        187,
+        195,
+        209,
+        219,
+        225,
+        228,
+        236,
+        245,
+        253,
+        270,
+        277,
+        280,
+        281,
+        286,
+        303,
+        317,
+        343,
+        346,
+        350,
+        368,
+        377,
+        381,
+        390,
+        400,
+        407,
+        422,
+        456,
+        464,
+        474,
+        500,
+        520,
+        535,
+        560,
+        564,
+        569,
+        590,
+        591,
+        610,
+        620,
+        637,
+        639,
+        667,
+        698,
+        734,
+        744,
+        754,
+        776,
+        785,
+        806,
+        827
+      ]
+    },
+    {
+      "code": "learning_and_onboarding",
+      "name": "Learning New Technologies & Team Onboarding",
+      "description": "Creating customized learning plans, explaining new technologies or existing systems without judgment, generating interactive tutorials, and acting as a mentor to accelerate the onboarding of new team members.",
+      "pids": [
+        11,
+        26,
+        74,
+        75,
+        125,
+        145,
+        161,
+        176,
+        187,
+        202,
+        209,
+        278,
+        280,
+        281,
+        290,
+        291,
+        332,
+        336,
+        347,
+        384,
+        390,
+        394,
+        395,
+        400,
+        407,
+        417,
+        427,
+        464,
+        467,
+        484,
+        493,
+        526,
+        533,
+        578,
+        611,
+        627,
+        637,
+        644,
+        657,
+        698,
+        751,
+        774,
+        776,
+        781,
+        788,
+        791,
+        806
+      ]
+    },
+    {
+      "code": "research_and_knowledge_discovery",
+      "name": "Research, Brainstorming & Knowledge Discovery",
+      "description": "Serving as a smart search engine or sounding board to quickly discover relevant information, coalesce disparate documentation, cite authorities, and brainstorm technical solutions or architectures.",
+      "pids": [
+        11,
+        18,
+        21,
+        29,
+        46,
+        49,
+        56,
+        69,
+        82,
+        151,
+        169,
+        170,
+        174,
+        194,
+        196,
+        200,
+        202,
+        213,
+        219,
+        245,
+        253,
+        290,
+        298,
+        339,
+        347,
+        350,
+        377,
+        407,
+        457,
+        578,
+        607,
+        627,
+        657,
+        667,
+        717,
+        734,
+        744,
+        748,
+        775,
+        781
+      ]
+    },
+    {
+      "code": "stakeholder_communication",
+      "name": "Stakeholder & Client Communication",
+      "description": "Drafting, tailoring, and proofreading communications (such as emails or status updates) to clients and non-technical stakeholders, including adjusting tone, language, and explaining technical details simply.",
+      "pids": [
+        40,
+        120,
+        130,
+        145,
+        170,
+        182,
+        207,
+        240,
+        280,
+        317,
+        341,
+        372,
+        384,
+        417,
+        470,
+        533,
+        560,
+        564,
+        627,
+        634,
+        637,
+        640,
+        698,
+        725,
+        827
+      ]
+    },
+    {
+      "code": "meeting_management_and_summarization",
+      "name": "Meeting Management & Summarization",
+      "description": "Handling logistical tasks such as scheduling meetings, transcribing notes, summarizing meeting discussions, and capturing missed meetings via recap features.",
+      "pids": [
+        52,
+        145,
+        179,
+        193,
+        205,
+        211,
+        225,
+        372,
+        384,
+        400,
+        422,
+        492,
+        560,
+        591,
+        706
+      ]
+    },
+    {
+      "code": "project_management_and_task_prioritization",
+      "name": "Project Management & Task Prioritization",
+      "description": "Generating roadmaps, organizing daily tasks, auto-generating progress reports, tracking timelines, identifying project blockers, and filtering noisy inboxes.",
+      "pids": [
+        75,
+        86,
+        164,
+        179,
+        211,
+        240,
+        343,
+        372,
+        422,
+        609,
+        627,
+        634,
+        636,
+        680,
+        696,
+        706,
+        756,
+        791,
+        813,
+        827
+      ]
+    },
+    {
+      "code": "general_omnipresent_assistance",
+      "name": "General Omnipresent Assistance",
+      "description": "A holistic desire for an omnipresent AI or personal agent that integrates seamlessly into all aspects of work, autonomously handling tasks and answering questions across domains.",
+      "pids": [
+        8,
+        24,
+        211,
+        375,
+        635,
+        789
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 8,
+      "themes": [
+        "general_omnipresent_assistance"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "general_omnipresent_assistance"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "meeting_management_and_summarization"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "project_management_and_task_prioritization",
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 85,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 130,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "meeting_management_and_summarization",
+        "stakeholder_communication",
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "automated_documentation",
+        "meeting_management_and_summarization",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "meeting_management_and_summarization"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "learning_and_onboarding",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "meeting_management_and_summarization"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "general_omnipresent_assistance",
+        "project_management_and_task_prioritization",
+        "meeting_management_and_summarization"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "meeting_management_and_summarization",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "project_management_and_task_prioritization",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 336,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "automated_documentation",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "meeting_management_and_summarization",
+        "stakeholder_communication",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "general_omnipresent_assistance"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "learning_and_onboarding",
+        "meeting_management_and_summarization",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "learning_and_onboarding",
+        "meeting_management_and_summarization",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "learning_and_onboarding",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "automated_documentation",
+        "meeting_management_and_summarization",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "meeting_management_and_summarization"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "stakeholder_communication",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "stakeholder_communication",
+        "meeting_management_and_summarization",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "meeting_management_and_summarization",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "stakeholder_communication",
+        "research_and_knowledge_discovery",
+        "learning_and_onboarding",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "project_management_and_task_prioritization",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "general_omnipresent_assistance"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "learning_and_onboarding",
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "learning_and_onboarding",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "stakeholder_communication",
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "meeting_management_and_summarization",
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": [
+        "automated_documentation",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "research_and_knowledge_discovery",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "learning_and_onboarding",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "learning_and_onboarding",
+        "research_and_knowledge_discovery"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "general_omnipresent_assistance"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "project_management_and_task_prioritization",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 806,
+      "themes": [
+        "automated_documentation",
+        "learning_and_onboarding"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "project_management_and_task_prioritization"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication",
+        "project_management_and_task_prioritization"
+      ]
+    }
+  ]
+}

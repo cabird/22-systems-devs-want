@@ -1,0 +1,2447 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "development",
+  "category_name": "Development",
+  "response_count": 353,
+  "timestamp": "2026-03-06T18:39:42.594123",
+  "themes": [
+    {
+      "code": "no_autonomous_architectural_design",
+      "name": "No Autonomous Architectural or System Design Decisions",
+      "description": "Developers do not want AI to autonomously make high-level architectural, system design, or core design decisions. These require deep contextual understanding, long-term thinking, business context, cross-team trade-offs, and human judgment that AI cannot fully grasp.",
+      "pids": [
+        10,
+        20,
+        34,
+        59,
+        73,
+        92,
+        107,
+        131,
+        161,
+        188,
+        194,
+        200,
+        249,
+        260,
+        290,
+        291,
+        294,
+        311,
+        331,
+        359,
+        362,
+        370,
+        422,
+        457,
+        484,
+        529,
+        545,
+        559,
+        607,
+        611,
+        614,
+        627,
+        661,
+        696,
+        698,
+        705,
+        706,
+        721,
+        732,
+        740,
+        775,
+        781,
+        785,
+        832
+      ]
+    },
+    {
+      "code": "no_unsupervised_code_changes",
+      "name": "No Unsupervised or Unreviewable Code Changes",
+      "description": "Developers insist that AI should not commit, merge, approve, or deploy code without human review. All AI-generated code must be reviewed and validated by a human before it is accepted. This includes opposition to AI making large, sweeping changes that are difficult to review.",
+      "pids": [
+        22,
+        42,
+        43,
+        49,
+        105,
+        106,
+        120,
+        125,
+        174,
+        179,
+        180,
+        219,
+        236,
+        271,
+        281,
+        309,
+        314,
+        339,
+        350,
+        380,
+        388,
+        395,
+        400,
+        441,
+        448,
+        526,
+        527,
+        541,
+        551,
+        562,
+        591,
+        595,
+        625,
+        665,
+        681,
+        687,
+        703,
+        716,
+        725,
+        816
+      ]
+    },
+    {
+      "code": "no_large_scale_refactoring",
+      "name": "No Large-Scale Refactoring or Sweeping Code Restructuring",
+      "description": "Developers do not want AI to perform large-scale refactoring, major code restructuring, or sweeping changes across codebases. AI tends to introduce unintended changes, break dependencies, lose original context, and produce results that are harder to review than doing it manually.",
+      "pids": [
+        19,
+        36,
+        40,
+        114,
+        145,
+        163,
+        189,
+        202,
+        208,
+        270,
+        282,
+        376,
+        413,
+        500,
+        535,
+        553,
+        578,
+        599,
+        635,
+        640,
+        671,
+        833
+      ]
+    },
+    {
+      "code": "no_performance_optimization",
+      "name": "No Autonomous Performance Optimization",
+      "description": "Developers do not want AI to handle performance optimization tasks autonomously. These require deep system-level understanding, awareness of trade-offs, real-time constraints, and scenario-specific knowledge that AI currently lacks, often producing generic or incorrect suggestions.",
+      "pids": [
+        40,
+        41,
+        170,
+        196,
+        202,
+        260,
+        278,
+        280,
+        286,
+        295,
+        313,
+        332,
+        446,
+        476,
+        549,
+        576,
+        648,
+        698,
+        700,
+        701
+      ]
+    },
+    {
+      "code": "no_security_sensitive_tasks",
+      "name": "No Security-Sensitive, Privacy, or Auth-Related Tasks",
+      "description": "Developers do not want AI to handle security-critical code, authentication/authorization implementations, privacy-sensitive data handling, or credential management. The risk of subtle vulnerabilities, data exposure, and compliance failures is too high to trust AI without thorough human review.",
+      "pids": [
+        28,
+        38,
+        195,
+        218,
+        227,
+        253,
+        261,
+        266,
+        273,
+        294,
+        338,
+        363,
+        377,
+        390,
+        427,
+        487,
+        610,
+        619,
+        638,
+        723,
+        730,
+        744,
+        747,
+        831
+      ]
+    },
+    {
+      "code": "no_complex_debugging_bug_fixing",
+      "name": "No Autonomous Complex Debugging or Bug Fixing",
+      "description": "Developers do not want AI to autonomously handle complex debugging, root cause analysis, or critical bug fixes. AI lacks the deep contextual understanding of systems, often introduces regressions, and cannot reliably navigate multi-system issues or understand program state.",
+      "pids": [
+        13,
+        30,
+        59,
+        88,
+        193,
+        196,
+        205,
+        206,
+        223,
+        275,
+        290,
+        325,
+        331,
+        332,
+        356,
+        402,
+        422,
+        470,
+        483,
+        502,
+        539,
+        697,
+        701,
+        819,
+        859
+      ]
+    },
+    {
+      "code": "lacks_codebase_context",
+      "name": "AI Lacks Sufficient Codebase and Domain Context",
+      "description": "Developers express that AI does not have enough understanding of their specific codebase, domain knowledge, business logic, tribal knowledge, or existing coding patterns to produce correct and contextually appropriate results. This leads to incorrect suggestions and wasted time.",
+      "pids": [
+        2,
+        11,
+        34,
+        88,
+        110,
+        143,
+        211,
+        240,
+        245,
+        267,
+        311,
+        341,
+        360,
+        464,
+        561,
+        639,
+        671,
+        678,
+        768,
+        781,
+        825,
+        827
+      ]
+    },
+    {
+      "code": "preserve_developer_learning_enjoyment",
+      "name": "Preserve Developer Learning, Growth, and Enjoyment of Coding",
+      "description": "Developers want to retain the enjoyment, learning opportunities, and skill development that come from hands-on coding, debugging, and problem-solving. Over-reliance on AI risks deskilling engineers and removing the fulfilling aspects of their work.",
+      "pids": [
+        3,
+        17,
+        44,
+        113,
+        148,
+        176,
+        295,
+        347,
+        381,
+        428,
+        451,
+        519,
+        580,
+        590,
+        598,
+        626,
+        627,
+        634,
+        674,
+        726,
+        754,
+        783
+      ]
+    },
+    {
+      "code": "ai_output_quality_unreliable",
+      "name": "AI Output Quality Is Currently Too Unreliable",
+      "description": "Developers express that AI-generated code is frequently incorrect, hallucinates APIs, produces uncompilable code, introduces bugs, or generates verbose/unmaintainable output. Until quality improves, they prefer to limit AI involvement or do the work themselves.",
+      "pids": [
+        18,
+        29,
+        62,
+        67,
+        69,
+        101,
+        122,
+        133,
+        145,
+        151,
+        153,
+        198,
+        212,
+        228,
+        254,
+        328,
+        372,
+        386,
+        400,
+        407,
+        409,
+        430,
+        443,
+        449,
+        456,
+        459,
+        476,
+        502,
+        533,
+        547,
+        605,
+        609,
+        720,
+        722,
+        767,
+        790,
+        809,
+        811,
+        815,
+        826,
+        857
+      ]
+    },
+    {
+      "code": "no_fully_autonomous_agents",
+      "name": "No Fully Autonomous AI Agents Without Human Oversight",
+      "description": "Developers do not want AI to operate as a fully autonomous agent that takes over entire tasks, makes decisions independently, or executes actions without human consultation and step-by-step interaction. They want AI as an assistant, not a replacement.",
+      "pids": [
+        8,
+        26,
+        42,
+        48,
+        92,
+        166,
+        174,
+        199,
+        239,
+        281,
+        303,
+        305,
+        310,
+        329,
+        344,
+        346,
+        394,
+        399,
+        401,
+        448,
+        508,
+        527,
+        562,
+        591,
+        603,
+        657,
+        665,
+        687,
+        703,
+        748,
+        756,
+        839
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "lacks_codebase_context",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 34,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 38,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "no_large_scale_refactoring",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 41,
+      "themes": [
+        "no_performance_optimization",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 44,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": []
+    },
+    {
+      "pid": 57,
+      "themes": []
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 62,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": []
+    },
+    {
+      "pid": 75,
+      "themes": []
+    },
+    {
+      "pid": 78,
+      "themes": []
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "no_performance_optimization",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "lacks_codebase_context",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 91,
+      "themes": []
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 107,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 110,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": []
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 122,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 128,
+      "themes": []
+    },
+    {
+      "pid": 131,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "no_large_scale_refactoring",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 150,
+      "themes": []
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "ai_output_quality_unreliable",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": []
+    },
+    {
+      "pid": 165,
+      "themes": []
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": []
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": []
+    },
+    {
+      "pid": 187,
+      "themes": []
+    },
+    {
+      "pid": 188,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "no_large_scale_refactoring",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "no_performance_optimization",
+        "no_complex_debugging_bug_fixing",
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 198,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 199,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "no_large_scale_refactoring",
+        "no_performance_optimization",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 208,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "lacks_codebase_context",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 215,
+      "themes": []
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 218,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 221,
+      "themes": []
+    },
+    {
+      "pid": 223,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 227,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 239,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 251,
+      "themes": []
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 260,
+      "themes": [
+        "no_performance_optimization",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": []
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": []
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "no_performance_optimization",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 282,
+      "themes": [
+        "no_large_scale_refactoring",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": []
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 295,
+      "themes": [
+        "no_performance_optimization",
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 296,
+      "themes": []
+    },
+    {
+      "pid": 297,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "no_fully_autonomous_agents",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 309,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "no_fully_autonomous_agents",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 311,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": []
+    },
+    {
+      "pid": 319,
+      "themes": []
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 329,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 337,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 338,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": []
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": []
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "no_performance_optimization",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 363,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": []
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": []
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": []
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": []
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": []
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": []
+    },
+    {
+      "pid": 399,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "ai_output_quality_unreliable",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "no_large_scale_refactoring",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 430,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 441,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": []
+    },
+    {
+      "pid": 448,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 449,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 451,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "lacks_codebase_context",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "ai_output_quality_unreliable",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 487,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": []
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "no_large_scale_refactoring",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 519,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 523,
+      "themes": []
+    },
+    {
+      "pid": 524,
+      "themes": []
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 529,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "ai_output_quality_unreliable",
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "no_large_scale_refactoring",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 539,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 541,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 547,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 551,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": []
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 561,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 562,
+      "themes": [
+        "no_fully_autonomous_agents",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": []
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": []
+    },
+    {
+      "pid": 576,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 580,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": []
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 595,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 599,
+      "themes": [
+        "no_large_scale_refactoring",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 601,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 605,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": []
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 613,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 614,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 619,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": []
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 626,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "no_autonomous_architectural_design",
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": []
+    },
+    {
+      "pid": 638,
+      "themes": [
+        "no_security_sensitive_tasks",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": []
+    },
+    {
+      "pid": 648,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 661,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 666,
+      "themes": []
+    },
+    {
+      "pid": 667,
+      "themes": []
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "no_large_scale_refactoring",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 678,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 681,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": []
+    },
+    {
+      "pid": 693,
+      "themes": []
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "no_performance_optimization",
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "no_performance_optimization"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": []
+    },
+    {
+      "pid": 705,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 709,
+      "themes": []
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "no_unsupervised_code_changes",
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": []
+    },
+    {
+      "pid": 720,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 722,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 726,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 727,
+      "themes": []
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 732,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 747,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": []
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 759,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 760,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 762,
+      "themes": []
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 768,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": []
+    },
+    {
+      "pid": 771,
+      "themes": []
+    },
+    {
+      "pid": 773,
+      "themes": [
+        "no_large_scale_refactoring"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": []
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": []
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "preserve_developer_learning_enjoyment",
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 783,
+      "themes": [
+        "preserve_developer_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": []
+    },
+    {
+      "pid": 789,
+      "themes": []
+    },
+    {
+      "pid": 790,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": []
+    },
+    {
+      "pid": 799,
+      "themes": []
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 811,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 815,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 816,
+      "themes": [
+        "no_large_scale_refactoring",
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 819,
+      "themes": [
+        "no_complex_debugging_bug_fixing"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "lacks_codebase_context"
+      ]
+    },
+    {
+      "pid": 831,
+      "themes": [
+        "no_security_sensitive_tasks"
+      ]
+    },
+    {
+      "pid": 832,
+      "themes": [
+        "no_autonomous_architectural_design"
+      ]
+    },
+    {
+      "pid": 833,
+      "themes": [
+        "no_large_scale_refactoring",
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 839,
+      "themes": [
+        "no_fully_autonomous_agents"
+      ]
+    },
+    {
+      "pid": 857,
+      "themes": [
+        "ai_output_quality_unreliable"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "no_unsupervised_code_changes"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "no_complex_debugging_bug_fixing",
+        "ai_output_quality_unreliable"
+      ]
+    }
+  ]
+}

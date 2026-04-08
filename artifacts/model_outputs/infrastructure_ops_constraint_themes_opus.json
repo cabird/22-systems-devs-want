@@ -1,0 +1,804 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "infrastructure_ops",
+  "category_name": "Infrastructure & Ops",
+  "response_count": 96,
+  "timestamp": "2026-03-07T08:35:22.933289",
+  "themes": [
+    {
+      "code": "no_direct_customer_interaction",
+      "name": "No Direct AI-to-Customer Communication",
+      "description": "AI should not directly interact with or provide support to customers. Developers cite concerns about dehumanizing the experience, frustrating customers, lack of nuance and empathy, and risk to brand trust and customer relationships. Some accept AI assisting human agents behind the scenes but not replacing the human-facing role.",
+      "pids": [
+        2,
+        3,
+        42,
+        83,
+        92,
+        148,
+        177,
+        180,
+        214,
+        278,
+        347,
+        409,
+        435,
+        492,
+        527,
+        530,
+        558,
+        565,
+        667,
+        825
+      ]
+    },
+    {
+      "code": "no_autonomous_production_deployments",
+      "name": "No Autonomous Production Deployments or Changes",
+      "description": "AI should not autonomously deploy code, make configuration changes, or modify resources in production environments. Developers cite the high blast radius of misconfigurations, potential for outages, revenue loss, and the need for deterministic and carefully validated deployment processes.",
+      "pids": [
+        20,
+        22,
+        93,
+        125,
+        126,
+        133,
+        138,
+        165,
+        267,
+        273,
+        294,
+        322,
+        356,
+        377,
+        457,
+        500,
+        508,
+        527,
+        532,
+        578,
+        644,
+        671,
+        707,
+        740,
+        744,
+        789,
+        852
+      ]
+    },
+    {
+      "code": "human_in_the_loop_required",
+      "name": "Human Approval Required Before Consequential Actions",
+      "description": "AI must not take consequential actions autonomously; a human must review, approve, or trigger final execution. This is a cross-cutting design principle: AI can suggest, draft, and prepare, but a human must 'pull the trigger.' Developers emphasize accountability, oversight, and the risk of rubber-stamping.",
+      "pids": [
+        2,
+        22,
+        64,
+        112,
+        125,
+        138,
+        165,
+        280,
+        322,
+        377,
+        440,
+        447,
+        457,
+        476,
+        527,
+        639,
+        653,
+        744,
+        781
+      ]
+    },
+    {
+      "code": "no_security_access_management",
+      "name": "No AI Management of Security, Secrets, or Permissions",
+      "description": "AI should not handle security configurations, secrets/keyvault management, access controls, compliance checks, or permission grants. Developers cite the catastrophic consequences of security misconfigurations, the risk of AI hallucinations in compliance contexts, and the principle that elevated-privilege operations should remain human-controlled.",
+      "pids": [
+        242,
+        271,
+        273,
+        294,
+        362,
+        386,
+        502,
+        520,
+        706,
+        820,
+        830
+      ]
+    },
+    {
+      "code": "no_autonomous_incident_response",
+      "name": "No Autonomous Emergency Response or Critical System Overrides",
+      "description": "AI should not autonomously make decisions during live incidents, execute mitigation actions, or perform critical system overrides without human oversight. Developers cite the need for situational awareness, historical context about interconnected systems, and human judgment in high-pressure scenarios where wrong actions compound damage.",
+      "pids": [
+        280,
+        345,
+        532,
+        639,
+        706
+      ]
+    },
+    {
+      "code": "ai_reliability_insufficient",
+      "name": "AI Reliability and Precision Insufficient for High-Stakes Operations",
+      "description": "AI's current error rate, hallucination tendency, and lack of determinism make it unsuitable for infrastructure and operations tasks that demand precision and have low tolerance for mistakes. Developers note that ML should not be used where the cost of errors is high and deterministic alternatives exist, and that AI often cannot explain gaps in its reasoning.",
+      "pids": [
+        30,
+        46,
+        148,
+        163,
+        202,
+        214,
+        216,
+        270,
+        278,
+        306,
+        356,
+        370,
+        492,
+        502,
+        549,
+        578,
+        671,
+        697,
+        780,
+        852
+      ]
+    },
+    {
+      "code": "preserve_engineer_development",
+      "name": "Preserve Human Learning Pathways and Hands-On Expertise",
+      "description": "AI should not replace tasks that build foundational engineering knowledge, especially for junior engineers. Over-reliance on AI risks creating a skill gap where engineers lack the hands-on understanding needed for senior-level problem solving, and reduces pressure to keep systems simple and maintainable by humans.",
+      "pids": [
+        17,
+        549,
+        791
+      ]
+    },
+    {
+      "code": "no_irreversible_data_operations",
+      "name": "No AI-Initiated Irreversible or Destructive Data Operations",
+      "description": "AI should not perform operations that are irreversible or could result in data loss, such as deleting databases, modifying live data, or making changes that cannot be rolled back. The asymmetric cost of such errors\u2014easy to execute, extremely costly to recover from\u2014makes human control essential.",
+      "pids": [
+        271,
+        556,
+        653,
+        830
+      ]
+    },
+    {
+      "code": "no_concerns_or_pro_ai",
+      "name": "No Constraints Identified / Comfortable with Full AI Involvement",
+      "description": "Respondents who expressed no reservations about AI handling infrastructure and operations tasks, or who actively want AI to take on more of this work. Some condition their acceptance on having proper controls and confirmation steps in place.",
+      "pids": [
+        56,
+        105,
+        111,
+        112,
+        117,
+        175,
+        190,
+        227,
+        261,
+        283,
+        298,
+        397,
+        447,
+        450,
+        570,
+        651,
+        678
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "no_direct_customer_interaction",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "preserve_engineer_development"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": []
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "no_concerns_or_pro_ai",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "human_in_the_loop_required",
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "no_direct_customer_interaction",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 177,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 214,
+      "themes": [
+        "no_direct_customer_interaction",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 227,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 242,
+      "themes": [
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "no_security_access_management",
+        "no_irreversible_data_operations"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "no_security_access_management",
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "no_direct_customer_interaction",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "no_autonomous_incident_response",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 283,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "no_security_access_management",
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "no_autonomous_incident_response"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": []
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "human_in_the_loop_required",
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 435,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "no_concerns_or_pro_ai",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 450,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "no_direct_customer_interaction",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "no_security_access_management",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "no_direct_customer_interaction",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 530,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 532,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "no_autonomous_incident_response"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "preserve_engineer_development",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 556,
+      "themes": [
+        "no_irreversible_data_operations"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 570,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "no_autonomous_incident_response",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "no_irreversible_data_operations",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 678,
+      "themes": [
+        "no_concerns_or_pro_ai"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "no_autonomous_incident_response",
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 707,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "ai_reliability_insufficient"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "human_in_the_loop_required"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "no_autonomous_production_deployments"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "preserve_engineer_development"
+      ]
+    },
+    {
+      "pid": 820,
+      "themes": [
+        "no_security_access_management"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "no_direct_customer_interaction"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "no_security_access_management",
+        "no_irreversible_data_operations"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "no_autonomous_production_deployments",
+        "ai_reliability_insufficient"
+      ]
+    }
+  ]
+}

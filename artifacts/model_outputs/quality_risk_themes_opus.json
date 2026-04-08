@@ -1,0 +1,1285 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "quality_risk",
+  "category_name": "Quality & Risk",
+  "response_count": 155,
+  "timestamp": "2026-03-07T13:34:41.012217",
+  "themes": [
+    {
+      "code": "automated_test_generation",
+      "name": "Automated Test Generation & Coverage Analysis",
+      "description": "Developers want AI to generate unit tests, E2E tests, and integration tests automatically from code or requirements, identify coverage gaps, and maintain test suites. This is the most frequently cited desire, reflecting the tedium of writing and maintaining tests and the high value of comprehensive coverage.",
+      "pids": [
+        15,
+        19,
+        36,
+        49,
+        53,
+        59,
+        64,
+        82,
+        92,
+        93,
+        129,
+        153,
+        156,
+        196,
+        254,
+        263,
+        277,
+        286,
+        292,
+        293,
+        310,
+        317,
+        328,
+        344,
+        346,
+        350,
+        359,
+        369,
+        380,
+        387,
+        388,
+        400,
+        403,
+        427,
+        435,
+        439,
+        459,
+        476,
+        483,
+        486,
+        490,
+        559,
+        574,
+        608,
+        634,
+        636,
+        647,
+        651,
+        657,
+        663,
+        687,
+        688,
+        689,
+        716,
+        723,
+        727,
+        737,
+        751,
+        767,
+        776,
+        795,
+        830,
+        851,
+        860
+      ]
+    },
+    {
+      "code": "security_vulnerability_detection",
+      "name": "Security Vulnerability Detection in Code",
+      "description": "Developers want AI to proactively scan code for security flaws, vulnerabilities, and risky patterns \u2014 ideally before merge or check-in. This includes detecting issues in libraries, APIs, authentication gaps, and adverse coding patterns, serving as an always-on security reviewer.",
+      "pids": [
+        22,
+        42,
+        48,
+        49,
+        55,
+        74,
+        86,
+        156,
+        190,
+        212,
+        225,
+        249,
+        259,
+        296,
+        310,
+        317,
+        328,
+        346,
+        360,
+        367,
+        369,
+        389,
+        413,
+        443,
+        474,
+        476,
+        483,
+        535,
+        590,
+        591,
+        598,
+        608,
+        657,
+        700,
+        767,
+        830
+      ]
+    },
+    {
+      "code": "compliance_process_automation",
+      "name": "Compliance & Regulatory Process Automation",
+      "description": "Developers want AI to automate the tedious, form-heavy compliance and regulatory workflows (e.g., SFI, S360, security reviews, audit readiness). This includes auto-filling compliance questionnaires, checking whether compliance bars are met, and reducing the cognitive and time burden of regulatory processes.",
+      "pids": [
+        10,
+        74,
+        86,
+        143,
+        156,
+        190,
+        206,
+        210,
+        339,
+        345,
+        360,
+        367,
+        369,
+        400,
+        429,
+        443,
+        476,
+        483,
+        565,
+        590,
+        637,
+        651,
+        674,
+        687,
+        767,
+        799
+      ]
+    },
+    {
+      "code": "intelligent_code_review",
+      "name": "Intelligent Code Review & PR Assistance",
+      "description": "Developers want AI to serve as a thorough, context-aware code reviewer that can analyze pull requests, identify bugs, anti-patterns, and performance issues, suggest improvements, summarize large diffs, and even auto-generate fix PRs \u2014 going well beyond today's limited automated review tools.",
+      "pids": [
+        24,
+        53,
+        74,
+        117,
+        171,
+        196,
+        212,
+        264,
+        293,
+        328,
+        343,
+        402,
+        412,
+        413,
+        429,
+        483,
+        592,
+        598,
+        636,
+        640,
+        651,
+        716,
+        737,
+        751,
+        754,
+        826,
+        851,
+        860
+      ]
+    },
+    {
+      "code": "proactive_risk_prediction",
+      "name": "Proactive Risk Detection & Predictive Analytics",
+      "description": "Developers want AI to shift quality from reactive to preventive by predicting high-risk code changes, detecting regressions and anomalies early, monitoring telemetry/logs for emerging issues, tracking risk trends, and alerting teams before problems escalate \u2014 enabling smarter prioritization and fewer surprises.",
+      "pids": [
+        10,
+        47,
+        59,
+        92,
+        94,
+        174,
+        236,
+        249,
+        263,
+        276,
+        313,
+        331,
+        343,
+        345,
+        416,
+        428,
+        484,
+        587,
+        609,
+        701,
+        703,
+        721,
+        740,
+        775,
+        860
+      ]
+    },
+    {
+      "code": "exploratory_chaos_testing",
+      "name": "AI-Driven Exploratory & Chaos Testing",
+      "description": "Developers want AI to autonomously explore products as a user would \u2014 trying workflows, configurations, edge cases, and attack vectors that humans might not imagine. This includes advanced monkey testing, chaos testing, fuzz testing, and white-box exploration of both UIs and backend APIs to discover bugs before customers do.",
+      "pids": [
+        18,
+        48,
+        120,
+        359,
+        380,
+        767
+      ]
+    },
+    {
+      "code": "root_cause_debugging",
+      "name": "Root Cause Analysis & Debugging Assistance",
+      "description": "Developers want AI to assist in post-incident and in-development debugging by performing automated root cause analysis, triaging test failures, investigating variants, and reducing the time spent on incident investigations and complex system debugging.",
+      "pids": [
+        10,
+        106,
+        183,
+        313,
+        360,
+        459,
+        723,
+        775
+      ]
+    },
+    {
+      "code": "standards_knowledge_advisory",
+      "name": "Standards Knowledge Synthesis & Advisory",
+      "description": "Developers want AI to serve as a knowledgeable advisor on coding standards, best practices, internal policies, and regulatory requirements \u2014 synthesizing lengthy documentation into actionable guidance, staying current with evolving standards, and helping developers make informed decisions in unfamiliar domains.",
+      "pids": [
+        21,
+        88,
+        143,
+        155,
+        495,
+        506,
+        565,
+        623,
+        665,
+        674,
+        799
+      ]
+    },
+    {
+      "code": "general_quality_automation",
+      "name": "Broad Automation of Repetitive Quality Tasks",
+      "description": "Some developers expressed a general desire for AI to handle as many repetitive, manual quality and risk tasks as possible \u2014 without specifying a particular capability. This reflects a broad appetite for AI to take over low-cognitive-load but time-consuming quality overhead, freeing developers for higher-value work.",
+      "pids": [
+        67,
+        147,
+        187,
+        230,
+        305,
+        340,
+        376,
+        426,
+        446,
+        461,
+        620,
+        656,
+        742,
+        785,
+        859
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 10,
+      "themes": [
+        "proactive_risk_prediction",
+        "compliance_process_automation",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "exploratory_chaos_testing"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 47,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "security_vulnerability_detection",
+        "exploratory_chaos_testing"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "proactive_risk_prediction",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "intelligent_code_review",
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "compliance_process_automation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "proactive_risk_prediction",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 94,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": []
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "exploratory_chaos_testing"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "standards_knowledge_advisory",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 147,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": []
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 183,
+      "themes": [
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "compliance_process_automation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 210,
+      "themes": [
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "security_vulnerability_detection",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 230,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "proactive_risk_prediction",
+        "security_vulnerability_detection",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 263,
+      "themes": [
+        "automated_test_generation",
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": []
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 292,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 296,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "proactive_risk_prediction",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "intelligent_code_review",
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "proactive_risk_prediction",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "automated_test_generation",
+        "exploratory_chaos_testing"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "security_vulnerability_detection",
+        "compliance_process_automation",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 367,
+      "themes": [
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "exploratory_chaos_testing",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 389,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "compliance_process_automation",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 403,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 412,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "security_vulnerability_detection",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 416,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 426,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 429,
+      "themes": [
+        "compliance_process_automation",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 435,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 439,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "automated_test_generation",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "security_vulnerability_detection",
+        "compliance_process_automation",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection",
+        "compliance_process_automation",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 486,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 490,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 495,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "standards_knowledge_advisory",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 574,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "security_vulnerability_detection",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 592,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "security_vulnerability_detection",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "automated_test_generation",
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 647,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "compliance_process_automation",
+        "automated_test_generation",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 656,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "security_vulnerability_detection",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 663,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "standards_knowledge_advisory"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "standards_knowledge_advisory",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "automated_test_generation",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 689,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "security_vulnerability_detection"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "automated_test_generation",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "automated_test_generation",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 727,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "proactive_risk_prediction"
+      ]
+    },
+    {
+      "pid": 742,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "intelligent_code_review",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "automated_test_generation",
+        "compliance_process_automation",
+        "security_vulnerability_detection",
+        "exploratory_chaos_testing"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "proactive_risk_prediction",
+        "root_cause_debugging"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 795,
+      "themes": [
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "standards_knowledge_advisory",
+        "compliance_process_automation"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "security_vulnerability_detection",
+        "automated_test_generation"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "automated_test_generation",
+        "intelligent_code_review"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "general_quality_automation"
+      ]
+    },
+    {
+      "pid": 860,
+      "themes": [
+        "proactive_risk_prediction",
+        "automated_test_generation",
+        "intelligent_code_review"
+      ]
+    }
+  ]
+}

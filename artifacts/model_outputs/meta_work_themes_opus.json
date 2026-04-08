@@ -1,0 +1,1305 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "meta_work",
+  "category_name": "Meta-Work",
+  "response_count": 157,
+  "timestamp": "2026-03-07T08:24:59.701450",
+  "themes": [
+    {
+      "code": "automated_documentation",
+      "name": "Automated Documentation Generation and Maintenance",
+      "description": "Developers want AI to automatically generate, update, and maintain documentation from code, PRs, specs, and other artifacts. This is by far the most requested capability, driven by the widespread pain of outdated, incomplete, or nonexistent documentation. Developers envision AI creating first-draft docs, keeping them in sync with code changes, and producing diagrams and architecture overviews.",
+      "pids": [
+        11,
+        18,
+        28,
+        46,
+        56,
+        69,
+        73,
+        75,
+        82,
+        85,
+        88,
+        105,
+        106,
+        126,
+        129,
+        145,
+        151,
+        161,
+        165,
+        166,
+        169,
+        170,
+        171,
+        179,
+        187,
+        195,
+        209,
+        219,
+        225,
+        228,
+        236,
+        245,
+        253,
+        270,
+        277,
+        280,
+        281,
+        286,
+        303,
+        317,
+        343,
+        346,
+        350,
+        368,
+        377,
+        381,
+        384,
+        390,
+        400,
+        407,
+        417,
+        422,
+        456,
+        464,
+        474,
+        500,
+        520,
+        535,
+        560,
+        564,
+        569,
+        590,
+        591,
+        610,
+        620,
+        637,
+        639,
+        667,
+        698,
+        734,
+        744,
+        754,
+        776,
+        785,
+        806,
+        827
+      ]
+    },
+    {
+      "code": "research_brainstorming",
+      "name": "Research and Brainstorming Assistance",
+      "description": "Developers want AI to serve as a research partner and brainstorming sounding board \u2014 helping them explore technical options, synthesize large amounts of information, generate ideas, and quickly evaluate alternatives. Key requirements include citing sources and providing traceable, authoritative references.",
+      "pids": [
+        11,
+        18,
+        21,
+        29,
+        69,
+        82,
+        151,
+        194,
+        196,
+        200,
+        202,
+        219,
+        245,
+        290,
+        298,
+        347,
+        377,
+        407,
+        457,
+        607,
+        627,
+        657,
+        667,
+        717,
+        734,
+        748,
+        781
+      ]
+    },
+    {
+      "code": "learning_new_technologies",
+      "name": "Personalized Learning for New Technologies and Skills",
+      "description": "Developers want AI to accelerate their learning of new technologies, languages, APIs, and SDKs through personalized tutorials, targeted exercises, curated learning plans, and expert-level Q&A. They value the ability to ask specific questions without embarrassment and receive contextual, adaptive explanations tailored to their existing knowledge level.",
+      "pids": [
+        11,
+        26,
+        56,
+        74,
+        75,
+        125,
+        145,
+        161,
+        176,
+        187,
+        202,
+        209,
+        278,
+        290,
+        291,
+        347,
+        395,
+        407,
+        484,
+        493,
+        526,
+        533,
+        578,
+        611,
+        627,
+        637,
+        644,
+        657,
+        698,
+        751,
+        776,
+        788,
+        806
+      ]
+    },
+    {
+      "code": "stakeholder_communication",
+      "name": "Stakeholder and Client Communication Drafting",
+      "description": "Developers want AI to draft, tailor, and manage communications with stakeholders, clients, and partners \u2014 including status updates, progress reports, email responses, and meeting follow-ups. This includes adapting tone and detail level for different audiences and even handling language-specific nuances for international communication.",
+      "pids": [
+        40,
+        120,
+        130,
+        145,
+        170,
+        182,
+        207,
+        240,
+        280,
+        317,
+        341,
+        372,
+        470,
+        533,
+        560,
+        564,
+        609,
+        627,
+        634,
+        637,
+        640,
+        698,
+        725,
+        827
+      ]
+    },
+    {
+      "code": "meeting_management",
+      "name": "Meeting Summarization, Notes, and Scheduling",
+      "description": "Developers want AI to handle meeting-related overhead \u2014 scheduling meetings, generating and organizing meeting notes, summarizing discussions, extracting action items, and enabling asynchronous catch-up on missed meetings. This reduces the cognitive load and time sink of frequent meetings.",
+      "pids": [
+        52,
+        145,
+        169,
+        179,
+        193,
+        205,
+        211,
+        225,
+        372,
+        384,
+        400,
+        422,
+        492,
+        560,
+        591,
+        698,
+        706
+      ]
+    },
+    {
+      "code": "onboarding_mentoring",
+      "name": "Onboarding and Mentoring New Team Members",
+      "description": "Developers want AI to assist with onboarding newcomers by serving as an always-available mentor, generating onboarding materials, answering domain-specific questions, creating training plans, and helping new joiners ramp up to productivity faster. This includes capturing and transferring institutional knowledge.",
+      "pids": [
+        161,
+        278,
+        280,
+        281,
+        332,
+        336,
+        390,
+        394,
+        400,
+        417,
+        427,
+        464,
+        467,
+        774,
+        781
+      ]
+    },
+    {
+      "code": "task_planning_prioritization",
+      "name": "Task Planning, Prioritization, and Progress Tracking",
+      "description": "Developers want AI to help organize daily work, plan project roadmaps, break down high-level goals into tasks, prioritize work items, track progress, identify blockers, generate status reports, and manage timelines \u2014 essentially serving as an intelligent project management assistant that aligns work with goals.",
+      "pids": [
+        75,
+        86,
+        164,
+        179,
+        211,
+        240,
+        343,
+        375,
+        422,
+        627,
+        636,
+        680,
+        696,
+        706,
+        791
+      ]
+    },
+    {
+      "code": "information_discovery",
+      "name": "Information Discovery and Knowledge Navigation",
+      "description": "Developers want AI to help them find relevant information across vast documentation repositories, codebases, and organizational knowledge bases. They struggle with outdated or fragmented documentation and want AI to surface the right answers, connect them to the right people, and serve as a smart search engine with traceable sources.",
+      "pids": [
+        46,
+        49,
+        174,
+        194,
+        213,
+        253,
+        339,
+        350,
+        400,
+        578,
+        609,
+        644,
+        744,
+        775
+      ]
+    },
+    {
+      "code": "admin_automation",
+      "name": "Routine Administrative Task Automation",
+      "description": "Developers want AI to handle repetitive, low-value administrative tasks such as triaging and filtering emails, responding to routine messages, organizing daily tasks, note-taking, and other mundane work that consumes disproportionate time relative to its complexity.",
+      "pids": [
+        193,
+        303,
+        372,
+        634,
+        756,
+        791,
+        813
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 8,
+      "themes": []
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": []
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "automated_documentation",
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 56,
+      "themes": [
+        "automated_documentation",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "automated_documentation",
+        "learning_new_technologies",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 85,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": []
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 130,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "meeting_management",
+        "stakeholder_communication",
+        "learning_new_technologies",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "onboarding_mentoring",
+        "automated_documentation",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "automated_documentation",
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "automated_documentation",
+        "meeting_management",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "automated_documentation",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "admin_automation",
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "information_discovery",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "learning_new_technologies",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 207,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 209,
+      "themes": [
+        "learning_new_technologies",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "task_planning_prioritization",
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "meeting_management",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "task_planning_prioritization",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "research_brainstorming",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "automated_documentation",
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": []
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "onboarding_mentoring",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication",
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "automated_documentation",
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "research_brainstorming",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "automated_documentation",
+        "admin_automation"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": []
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 336,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "automated_documentation",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "research_brainstorming",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "automated_documentation",
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "admin_automation",
+        "meeting_management",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "learning_new_technologies",
+        "automated_documentation",
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "automated_documentation",
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "onboarding_mentoring",
+        "meeting_management",
+        "automated_documentation",
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "research_brainstorming",
+        "learning_new_technologies",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "onboarding_mentoring",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "automated_documentation",
+        "meeting_management",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "automated_documentation",
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 474,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "stakeholder_communication",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "stakeholder_communication",
+        "meeting_management",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "meeting_management",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "information_discovery",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "stakeholder_communication",
+        "research_brainstorming",
+        "learning_new_technologies",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "admin_automation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": []
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "learning_new_technologies",
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "learning_new_technologies",
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": []
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "learning_new_technologies",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 689,
+      "themes": []
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "stakeholder_communication",
+        "automated_documentation",
+        "learning_new_technologies",
+        "meeting_management"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "meeting_management",
+        "task_planning_prioritization"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "stakeholder_communication"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": [
+        "automated_documentation",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "information_discovery",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "admin_automation"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": []
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "onboarding_mentoring"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "information_discovery"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "learning_new_technologies",
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "onboarding_mentoring",
+        "research_brainstorming"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "automated_documentation"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": []
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "task_planning_prioritization",
+        "admin_automation"
+      ]
+    },
+    {
+      "pid": 806,
+      "themes": [
+        "automated_documentation",
+        "learning_new_technologies"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "admin_automation"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "automated_documentation",
+        "stakeholder_communication"
+      ]
+    }
+  ]
+}

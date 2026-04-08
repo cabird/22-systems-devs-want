@@ -1,0 +1,2932 @@
+{
+  "model": "gpt-5.2",
+  "category": "development",
+  "category_name": "Development",
+  "response_count": 353,
+  "timestamp": "2026-03-07T09:02:10.264038",
+  "themes": [
+    {
+      "code": "major_unscoped_code_changes",
+      "name": "No Large/Unscoped Codebase Changes in One Shot",
+      "description": "Avoid AI making broad refactors or sweeping edits (multiple files/folders, large PRs, out-of-scope changes, legacy replumbing, or changing logic widely) because it becomes hard to review, risks regressions, and often increases complexity or deviates from existing patterns.",
+      "pids": [
+        11,
+        19,
+        36,
+        40,
+        112,
+        114,
+        145,
+        163,
+        189,
+        196,
+        202,
+        225,
+        254,
+        260,
+        267,
+        270,
+        282,
+        298,
+        339,
+        399,
+        413,
+        461,
+        470,
+        500,
+        508,
+        520,
+        527,
+        535,
+        539,
+        541,
+        551,
+        553,
+        578,
+        599,
+        625,
+        635,
+        640,
+        665,
+        671,
+        720,
+        722,
+        725,
+        748,
+        754,
+        767,
+        768,
+        790,
+        816,
+        819,
+        827,
+        833,
+        839,
+        376
+      ]
+    },
+    {
+      "code": "human_in_the_loop_for_merge_deploy",
+      "name": "Human-in-the-Loop Required for Check-in, Merge, Deploy, and Auto-Edits",
+      "description": "AI should not autonomously apply changes, run commands, approve/submit PRs, merge, deploy, or make destructive/production-impacting actions without explicit human review and final approval due to accountability, risk, and trust/validation needs.",
+      "pids": [
+        22,
+        40,
+        42,
+        43,
+        49,
+        64,
+        69,
+        73,
+        92,
+        105,
+        106,
+        120,
+        125,
+        174,
+        179,
+        180,
+        199,
+        200,
+        211,
+        216,
+        219,
+        236,
+        239,
+        271,
+        277,
+        281,
+        291,
+        297,
+        309,
+        310,
+        314,
+        338,
+        350,
+        363,
+        380,
+        388,
+        395,
+        399,
+        400,
+        422,
+        427,
+        441,
+        448,
+        526,
+        527,
+        551,
+        553,
+        562,
+        565,
+        578,
+        591,
+        595,
+        613,
+        665,
+        680,
+        681,
+        687,
+        701,
+        703,
+        705,
+        709,
+        716,
+        725,
+        740,
+        747,
+        748,
+        754,
+        760,
+        811,
+        816,
+        839,
+        858,
+        859
+      ]
+    },
+    {
+      "code": "architecture_and_system_design",
+      "name": "No Autonomous Architecture/System Design Decisions",
+      "description": "Avoid delegating system design, architecture, high-level planning, or key design choices to AI because these require deep product/org context, long-term thinking, trade-offs, and human accountability/alignment.",
+      "pids": [
+        2,
+        10,
+        20,
+        34,
+        59,
+        73,
+        92,
+        107,
+        131,
+        188,
+        194,
+        200,
+        208,
+        249,
+        260,
+        273,
+        290,
+        291,
+        294,
+        311,
+        359,
+        360,
+        362,
+        370,
+        372,
+        407,
+        422,
+        484,
+        529,
+        545,
+        551,
+        607,
+        614,
+        627,
+        639,
+        661,
+        696,
+        698,
+        705,
+        706,
+        721,
+        732,
+        740,
+        775,
+        781,
+        785,
+        832
+      ]
+    },
+    {
+      "code": "debugging_and_bugfixing",
+      "name": "Limit AI Ownership of Debugging/Bug Fixing (Especially Complex/Critical)",
+      "description": "Avoid AI leading root-cause analysis or implementing fixes for complex, cross-system, or critical bugs because it lacks runtime/context, can be confidently wrong, and may introduce regressions that are difficult to detect.",
+      "pids": [
+        13,
+        28,
+        30,
+        38,
+        59,
+        83,
+        88,
+        193,
+        196,
+        202,
+        205,
+        206,
+        216,
+        223,
+        275,
+        290,
+        331,
+        332,
+        347,
+        356,
+        372,
+        402,
+        422,
+        470,
+        483,
+        502,
+        539,
+        601,
+        623,
+        626,
+        634,
+        671,
+        697,
+        701,
+        819,
+        859
+      ]
+    },
+    {
+      "code": "security_privacy_secrets",
+      "name": "No AI Handling of Security/Privacy-Sensitive Work or Secrets",
+      "description": "Avoid AI owning security-sensitive code, auth/credential handling, privacy-sensitive data, or security bug fixes because subtle vulnerabilities are easy to introduce/miss and sensitive data exposure risks are high.",
+      "pids": [
+        28,
+        38,
+        180,
+        195,
+        218,
+        225,
+        227,
+        253,
+        261,
+        266,
+        273,
+        294,
+        338,
+        363,
+        390,
+        427,
+        487,
+        610,
+        613,
+        619,
+        638,
+        716,
+        723,
+        730,
+        744,
+        747,
+        780,
+        831
+      ]
+    },
+    {
+      "code": "performance_optimization",
+      "name": "No Autonomous Performance Optimization Changes",
+      "description": "Avoid AI autonomously changing code/architecture for performance because optimization is context-specific, requires rigorous measurement, and poorly understood changes can degrade performance or introduce hard-to-debug issues.",
+      "pids": [
+        40,
+        43,
+        83,
+        170,
+        189,
+        196,
+        202,
+        260,
+        278,
+        280,
+        286,
+        295,
+        310,
+        313,
+        332,
+        359,
+        446,
+        476,
+        549,
+        576,
+        648,
+        698,
+        700,
+        701
+      ]
+    },
+    {
+      "code": "requirements_business_logic_api_ux",
+      "name": "Don\u2019t Let AI Decide Requirements, Business Logic, API/UX Trade-offs",
+      "description": "Limit AI involvement in interpreting requirements/specs, implementing core business logic, and making API surface/UX decisions because misinterpretation and missed nuance can cause product/UX issues and incorrect trade-offs.",
+      "pids": [
+        10,
+        11,
+        86,
+        110,
+        143,
+        161,
+        218,
+        249,
+        281,
+        360,
+        457,
+        559,
+        561,
+        611,
+        614,
+        638,
+        678,
+        681,
+        697,
+        706,
+        723,
+        781,
+        825
+      ]
+    },
+    {
+      "code": "human_agency_learning_enjoyment",
+      "name": "Preserve Human Agency, Learning, Creativity, and Job Ownership",
+      "description": "Developers want to remain the driver: keep enjoyable/meaningful work (coding, debugging, ideation/innovation), protect learning/growth, avoid overreliance or job replacement, and retain control over what they work on.",
+      "pids": [
+        17,
+        30,
+        42,
+        44,
+        74,
+        75,
+        113,
+        148,
+        171,
+        174,
+        176,
+        196,
+        215,
+        239,
+        295,
+        305,
+        310,
+        347,
+        381,
+        394,
+        401,
+        428,
+        443,
+        447,
+        451,
+        483,
+        506,
+        519,
+        533,
+        580,
+        590,
+        591,
+        598,
+        603,
+        605,
+        607,
+        626,
+        627,
+        634,
+        653,
+        667,
+        674,
+        696,
+        721,
+        726,
+        754,
+        767,
+        781,
+        783,
+        791,
+        799,
+        809
+      ]
+    },
+    {
+      "code": "reliability_context_verifiability",
+      "name": "Avoid Tasks Where AI Output Is Unreliable, Lacks Context, or Is Hard to Verify",
+      "description": "Developers restrict AI when it hallucinates, makes wrong assumptions, suggests outdated/invalid APIs, produces non-compiling code, ignores repo conventions, or generates outputs that are difficult/time-consuming to validate\u2014especially in large codebases requiring deep context.",
+      "pids": [
+        2,
+        11,
+        18,
+        29,
+        34,
+        43,
+        49,
+        62,
+        64,
+        67,
+        69,
+        83,
+        86,
+        88,
+        101,
+        111,
+        114,
+        122,
+        126,
+        133,
+        145,
+        151,
+        153,
+        156,
+        158,
+        161,
+        163,
+        188,
+        193,
+        198,
+        199,
+        202,
+        205,
+        206,
+        208,
+        211,
+        212,
+        221,
+        223,
+        225,
+        228,
+        236,
+        240,
+        245,
+        251,
+        254,
+        267,
+        270,
+        278,
+        280,
+        282,
+        286,
+        297,
+        303,
+        305,
+        309,
+        311,
+        328,
+        331,
+        332,
+        337,
+        339,
+        341,
+        350,
+        360,
+        366,
+        368,
+        372,
+        376,
+        377,
+        386,
+        400,
+        402,
+        407,
+        409,
+        413,
+        428,
+        430,
+        443,
+        446,
+        449,
+        451,
+        456,
+        459,
+        464,
+        467,
+        470,
+        476,
+        483,
+        500,
+        502,
+        508,
+        520,
+        533,
+        535,
+        547,
+        549,
+        561,
+        565,
+        576,
+        599,
+        609,
+        610,
+        623,
+        625,
+        635,
+        637,
+        639,
+        640,
+        653,
+        664,
+        671,
+        680,
+        687,
+        697,
+        709,
+        720,
+        722,
+        727,
+        744,
+        748,
+        759,
+        767,
+        768,
+        790,
+        791,
+        809,
+        811,
+        813,
+        815,
+        825,
+        826,
+        827,
+        832,
+        833,
+        839,
+        857,
+        859
+      ]
+    },
+    {
+      "code": "no_constraints_open",
+      "name": "No Specific No-Go Zones (Open to AI Handling Most/All Tasks)",
+      "description": "Respondents explicitly reported no areas they want to prohibit (often with the caveat that AI must work well), or they primarily expressed desired capabilities rather than constraints.",
+      "pids": [
+        3,
+        8,
+        26,
+        41,
+        46,
+        48,
+        55,
+        57,
+        78,
+        91,
+        117,
+        128,
+        150,
+        164,
+        165,
+        166,
+        169,
+        182,
+        187,
+        264,
+        276,
+        293,
+        296,
+        317,
+        319,
+        325,
+        329,
+        340,
+        344,
+        346,
+        348,
+        369,
+        375,
+        384,
+        387,
+        397,
+        493,
+        523,
+        524,
+        558,
+        564,
+        569,
+        587,
+        608,
+        620,
+        644,
+        657,
+        666,
+        688,
+        693,
+        704,
+        717,
+        751,
+        756,
+        762,
+        769,
+        771,
+        773,
+        774,
+        776,
+        788,
+        789
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "major_unscoped_code_changes",
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "debugging_and_bugfixing"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "debugging_and_bugfixing",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "debugging_and_bugfixing",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 34,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 38,
+      "themes": [
+        "debugging_and_bugfixing",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 41,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 44,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 57,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "architecture_and_system_design",
+        "debugging_and_bugfixing",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 62,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 78,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "debugging_and_bugfixing",
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 91,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 107,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 110,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 122,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 128,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 131,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 150,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 188,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "major_unscoped_code_changes",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "debugging_and_bugfixing",
+        "major_unscoped_code_changes",
+        "performance_optimization",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 198,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 199,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "major_unscoped_code_changes",
+        "debugging_and_bugfixing",
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 208,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 215,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "debugging_and_bugfixing",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 218,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 221,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 223,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "major_unscoped_code_changes",
+        "security_privacy_secrets",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 227,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 239,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 251,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 260,
+      "themes": [
+        "architecture_and_system_design",
+        "performance_optimization",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "security_privacy_secrets",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 282,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "debugging_and_bugfixing",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 295,
+      "themes": [
+        "performance_optimization",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 296,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 297,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 309,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "performance_optimization",
+        "human_in_the_loop_for_merge_deploy",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 311,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 319,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 329,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "architecture_and_system_design",
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "debugging_and_bugfixing",
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 337,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 338,
+      "themes": [
+        "security_privacy_secrets",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "debugging_and_bugfixing",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "debugging_and_bugfixing"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "performance_optimization",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 363,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "reliability_context_verifiability",
+        "debugging_and_bugfixing",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 399,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "reliability_context_verifiability",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "architecture_and_system_design",
+        "debugging_and_bugfixing",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "security_privacy_secrets",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 430,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 441,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 447,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 448,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 449,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 451,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "debugging_and_bugfixing",
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "reliability_context_verifiability",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 487,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 519,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 523,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 524,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 529,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 539,
+      "themes": [
+        "debugging_and_bugfixing",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 541,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 547,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 551,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "architecture_and_system_design",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 561,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 562,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 576,
+      "themes": [
+        "performance_optimization",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 580,
+      "themes": [
+        "architecture_and_system_design",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 595,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 599,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 601,
+      "themes": [
+        "debugging_and_bugfixing"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 605,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "architecture_and_system_design",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "security_privacy_secrets",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 613,
+      "themes": [
+        "security_privacy_secrets",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 614,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 619,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 626,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "debugging_and_bugfixing"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "architecture_and_system_design",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "debugging_and_bugfixing",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 638,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 648,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 653,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 661,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 666,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "debugging_and_bugfixing",
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 678,
+      "themes": [
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 681,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 693,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "architecture_and_system_design",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "debugging_and_bugfixing",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "performance_optimization",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "debugging_and_bugfixing",
+        "performance_optimization",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 705,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 709,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_secrets",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 720,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "architecture_and_system_design",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 722,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "security_privacy_secrets",
+        "requirements_business_logic_api_ux"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 726,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 727,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 732,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "architecture_and_system_design",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "security_privacy_secrets",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 747,
+      "themes": [
+        "security_privacy_secrets",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_agency_learning_enjoyment",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 759,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 760,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 762,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 768,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 771,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 773,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "architecture_and_system_design",
+        "requirements_business_logic_api_ux",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 783,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "no_constraints_open"
+      ]
+    },
+    {
+      "pid": 790,
+      "themes": [
+        "reliability_context_verifiability",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "human_agency_learning_enjoyment"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "human_agency_learning_enjoyment",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 811,
+      "themes": [
+        "reliability_context_verifiability",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 815,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 816,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 819,
+      "themes": [
+        "debugging_and_bugfixing",
+        "major_unscoped_code_changes"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "requirements_business_logic_api_ux",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 831,
+      "themes": [
+        "security_privacy_secrets"
+      ]
+    },
+    {
+      "pid": 832,
+      "themes": [
+        "architecture_and_system_design",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 833,
+      "themes": [
+        "major_unscoped_code_changes",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 839,
+      "themes": [
+        "major_unscoped_code_changes",
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 857,
+      "themes": [
+        "reliability_context_verifiability"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "human_in_the_loop_for_merge_deploy"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "debugging_and_bugfixing",
+        "human_in_the_loop_for_merge_deploy",
+        "reliability_context_verifiability"
+      ]
+    }
+  ]
+}

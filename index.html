@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Systems Developers Want (and Don't Want) from AI</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background: #f8fafc;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+  color: #fff;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+.site-header .subtitle {
+  font-size: 1.05rem;
+  color: #b8d4ea;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.site-header .badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #dbeafe;
+}
+
+/* Main layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Card sections */
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.card h2 {
+  font-size: 1.25rem;
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card h2 .icon { font-size: 1.3rem; }
+.card p { color: #475569; margin-bottom: 1rem; }
+.card .link-btn {
+  display: inline-block;
+  background: #2d5a87;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.card .link-btn:hover { background: #1e3a5f; }
+
+/* Artifact lists */
+.artifact-section { margin-top: 0.75rem; }
+.artifact-section h3 {
+  font-size: 1rem;
+  color: #334155;
+  margin: 1.25rem 0 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.artifact-list { list-style: none; padding: 0; }
+.artifact-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+.artifact-list li:last-child { border-bottom: none; }
+.artifact-list .file-tag {
+  display: inline-block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.78rem;
+  background: #f1f5f9;
+  color: #2d5a87;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.artifact-list .file-desc {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+.artifact-list .file-links {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+.artifact-list .file-links a {
+  color: #2d5a87;
+  text-decoration: none;
+  margin-left: 0.6rem;
+}
+.artifact-list .file-links a:hover { text-decoration: underline; }
+
+/* Model outputs collapsible */
+.model-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.model-toggle .arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+}
+.model-toggle.open .arrow { transform: rotate(90deg); }
+.model-grid { display: none; }
+.model-grid.open { display: block; }
+.model-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+.model-grid th {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+.model-grid td {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+.model-grid td a {
+  color: #2d5a87;
+  text-decoration: none;
+}
+.model-grid td a:hover { text-decoration: underline; }
+
+/* Markdown viewer modal */
+.md-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+.md-overlay.open { display: flex; }
+.md-panel {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  max-width: 860px;
+  width: 100%;
+  max-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+}
+.md-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+.md-panel-header h3 {
+  font-size: 1rem;
+  color: #1e3a5f;
+  margin: 0;
+}
+.md-panel-header .md-actions { display: flex; gap: 0.75rem; align-items: center; }
+.md-panel-header .md-actions a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+.md-panel-header .md-actions a:hover { color: #2d5a87; }
+.md-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #94a3b8;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.2rem;
+}
+.md-close-btn:hover { color: #475569; }
+.md-panel-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Rendered markdown styles */
+.md-rendered h1 { font-size: 1.5rem; color: #1e293b; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #e2e8f0; }
+.md-rendered h2 { font-size: 1.25rem; color: #1e3a5f; margin: 1.25rem 0 0.5rem; }
+.md-rendered h3 { font-size: 1.1rem; color: #334155; margin: 1rem 0 0.4rem; }
+.md-rendered h4 { font-size: 1rem; color: #475569; margin: 0.75rem 0 0.3rem; }
+.md-rendered p { margin: 0.6rem 0; color: #334155; }
+.md-rendered ul, .md-rendered ol { margin: 0.5rem 0 0.5rem 1.5rem; }
+.md-rendered li { margin: 0.25rem 0; }
+.md-rendered code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.88em;
+  background: #f1f5f9;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  color: #b91c1c;
+}
+.md-rendered pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.md-rendered pre code { background: none; color: inherit; padding: 0; }
+.md-rendered table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.88rem;
+}
+.md-rendered th, .md-rendered td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+.md-rendered th { background: #f8fafc; font-weight: 600; color: #1e3a5f; }
+.md-rendered blockquote {
+  border-left: 3px solid #2d5a87;
+  margin: 0.75rem 0;
+  padding: 0.5rem 1rem;
+  background: #f8fafc;
+  color: #475569;
+}
+.md-rendered hr { border: none; border-top: 1px solid #e2e8f0; margin: 1.5rem 0; }
+.md-rendered a { color: #2d5a87; }
+.md-rendered strong { color: #1e293b; }
+
+.md-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #94a3b8;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  border-top: 1px solid #e2e8f0;
+}
+.site-footer a { color: #64748b; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .site-header { padding: 2rem 1rem 1.75rem; }
+  .site-header h1 { font-size: 1.5rem; }
+  .container { padding: 1.25rem 1rem 2rem; }
+  .card { padding: 1.25rem; }
+  .artifact-list li { flex-direction: column; gap: 0.2rem; }
+  .artifact-list .file-links { margin-left: 0; }
+  .md-panel-body { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>22 Systems Developers Want (and Don't Want) from AI</h1>
+  <p class="subtitle">
+    A multi-model thematic analysis of ~2,400 open-ended developer responses identifying
+    31 themes across 5 categories — and 22 research-opportunity project cards for future AI tools.
+  </p>
+  <span class="badge">3 AI models · 6-phase pipeline · Thematic analysis</span>
+</header>
+
+<main class="container">
+
+  <!-- Interactive Report -->
+  <div class="card">
+    <h2><span class="icon">📊</span> Interactive Report</h2>
+    <p>
+      Explore the full thematic analysis results, including category breakdowns, theme prevalence charts,
+      supporting quotes, and research opportunity cards — all in a self-contained interactive view.
+    </p>
+    <a href="report.html" class="link-btn">Open Interactive Report →</a>
+  </div>
+
+  <!-- Methodology -->
+  <div class="card">
+    <h2><span class="icon">🔬</span> Methodology</h2>
+    <p>
+      Detailed walkthrough of the 6-phase multi-model analysis pipeline: from independent theme discovery
+      through reconciliation, systematic coding, inter-rater reliability, and prevalence estimation.
+    </p>
+    <a href="methodology.html" class="link-btn">Read Methodology →</a>
+  </div>
+
+  <!-- Method Artifacts -->
+  <div class="card">
+    <h2><span class="icon">📁</span> Method Artifacts</h2>
+    <p>
+      All analysis artifacts are provided for transparency and reproducibility.
+      Markdown files open in a rendered viewer below; JSON files link directly.
+    </p>
+
+    <div class="artifact-section">
+      <h3>Core Documentation</h3>
+      <ul class="artifact-list">
+        <li>
+          <span class="file-tag">ANALYSIS_METHODOLOGY.md</span>
+          <span class="file-desc">Full 6-phase methodology description</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/ANALYSIS_METHODOLOGY.md','Analysis Methodology');return false">View</a>
+            <a href="artifacts/ANALYSIS_METHODOLOGY.md">Raw</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">DATA_DICTIONARY.md</span>
+          <span class="file-desc">Variable definitions and data schema</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/DATA_DICTIONARY.md','Data Dictionary');return false">View</a>
+            <a href="artifacts/DATA_DICTIONARY.md">Raw</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">PROGRESS_LOG.md</span>
+          <span class="file-desc">Chronological analysis progress log</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/PROGRESS_LOG.md','Progress Log');return false">View</a>
+            <a href="artifacts/PROGRESS_LOG.md">Raw</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">RESEARCH_OPPORTUNITIES_SUMMARY.md</span>
+          <span class="file-desc">Summary of 25 research opportunities identified</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/RESEARCH_OPPORTUNITIES_SUMMARY.md','Research Opportunities');return false">View</a>
+            <a href="artifacts/RESEARCH_OPPORTUNITIES_SUMMARY.md">Raw</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3>Codebooks</h3>
+      <ul class="artifact-list">
+        <li>
+          <span class="file-tag">consolidated_codebook.json</span>
+          <span class="file-desc">Final "want AI help" codebook — 31 themes across 5 categories</span>
+          <span class="file-links">
+            <a href="artifacts/consolidated_codebook.json">View JSON</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">constraint_codebook.json</span>
+          <span class="file-desc">Final "don't want AI help" codebook</span>
+          <span class="file-links">
+            <a href="artifacts/constraint_codebook.json">View JSON</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3>Cross-Cutting Analysis</h3>
+      <ul class="artifact-list">
+        <li>
+          <span class="file-tag">cross_cutting_themes.md</span>
+          <span class="file-desc">Themes that span multiple categories</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/cross_cutting_themes.md','Cross-Cutting Themes');return false">View</a>
+            <a href="artifacts/cross_cutting_themes.md">Raw</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">cross_category_overlaps.md</span>
+          <span class="file-desc">Overlap analysis between categories</span>
+          <span class="file-links">
+            <a href="#" onclick="viewMd('artifacts/cross_category_overlaps.md','Cross-Category Overlaps');return false">View</a>
+            <a href="artifacts/cross_category_overlaps.md">Raw</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3>Quantitative Results</h3>
+      <ul class="artifact-list">
+        <li>
+          <span class="file-tag">phase5_irr_results.json</span>
+          <span class="file-desc">Inter-rater reliability (IRR) results across models</span>
+          <span class="file-links">
+            <a href="artifacts/phase5_irr_results.json">View JSON</a>
+          </span>
+        </li>
+        <li>
+          <span class="file-tag">phase6_prevalence_results.json</span>
+          <span class="file-desc">Theme prevalence data from final coding</span>
+          <span class="file-links">
+            <a href="artifacts/phase6_prevalence_results.json">View JSON</a>
+          </span>
+        </li>
+      </ul>
+
+      <h3 class="model-toggle" onclick="toggleModels(this)" id="model-toggle">
+        <span class="arrow">▶</span> Per-Model Theme Outputs (30 files)
+      </h3>
+      <div class="model-grid" id="model-grid">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>GPT-5.2</th>
+              <th>Gemini-2.5-Pro</th>
+              <th>Claude Opus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Design &amp; Planning</strong></td>
+              <td><a href="artifacts/model_outputs/design_planning_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_gpt.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/design_planning_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_gemini.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/design_planning_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_opus.json">constraints</a></td>
+            </tr>
+            <tr>
+              <td><strong>Development</strong></td>
+              <td><a href="artifacts/model_outputs/development_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_gpt.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/development_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_gemini.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/development_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_opus.json">constraints</a></td>
+            </tr>
+            <tr>
+              <td><strong>Quality &amp; Risk</strong></td>
+              <td><a href="artifacts/model_outputs/quality_risk_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_gpt.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/quality_risk_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_gemini.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/quality_risk_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_opus.json">constraints</a></td>
+            </tr>
+            <tr>
+              <td><strong>Infrastructure &amp; Ops</strong></td>
+              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_gpt.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_gemini.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_opus.json">constraints</a></td>
+            </tr>
+            <tr>
+              <td><strong>Meta Work</strong></td>
+              <td><a href="artifacts/model_outputs/meta_work_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_gpt.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/meta_work_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_gemini.json">constraints</a></td>
+              <td><a href="artifacts/model_outputs/meta_work_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_opus.json">constraints</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Markdown Viewer Modal -->
+<div class="md-overlay" id="md-overlay" onclick="if(event.target===this)closeMd()">
+  <div class="md-panel">
+    <div class="md-panel-header">
+      <h3 id="md-title">Document</h3>
+      <div class="md-actions">
+        <a href="#" id="md-raw-link" target="_blank">View Raw ↗</a>
+        <button class="md-close-btn" onclick="closeMd()" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="md-panel-body">
+      <div id="md-content" class="md-rendered">
+        <div class="md-loading">Loading…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>
+    Companion materials for
+    <em>"AI Where It Matters: What Developers Really Want from AI-Assisted Software Development"</em>
+    — Choudhuri et al., 2025.
+  </p>
+  <p style="margin-top:0.4rem">
+    <a href="https://github.com/cabird/22-systems-devs-want">GitHub Repository</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+function toggleModels(el) {
+  el.classList.toggle('open');
+  document.getElementById('model-grid').classList.toggle('open');
+}
+
+function viewMd(path, title) {
+  var overlay = document.getElementById('md-overlay');
+  var content = document.getElementById('md-content');
+  var titleEl = document.getElementById('md-title');
+  var rawLink = document.getElementById('md-raw-link');
+
+  titleEl.textContent = title;
+  rawLink.href = path;
+  content.innerHTML = '<div class="md-loading">Loading…</div>';
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  fetch(path)
+    .then(function(r) {
+      if (!r.ok) throw new Error('Failed to load');
+      return r.text();
+    })
+    .then(function(text) {
+      content.innerHTML = marked.parse(text);
+    })
+    .catch(function() {
+      content.innerHTML = '<p style="color:#b91c1c">Failed to load document. <a href="' + path + '">Open raw file</a></p>';
+    });
+}
+
+function closeMd() {
+  document.getElementById('md-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMd();
+});
+</script>
+</body>
+</html>

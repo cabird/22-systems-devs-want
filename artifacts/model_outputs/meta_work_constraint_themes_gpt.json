@@ -1,0 +1,1007 @@
+{
+  "model": "gpt-5.2",
+  "category": "meta_work",
+  "category_name": "Meta-Work",
+  "response_count": 123,
+  "timestamp": "2026-03-07T09:14:27.443678",
+  "themes": [
+    {
+      "code": "human_led_mentoring_onboarding",
+      "name": "Keep mentoring/onboarding human-led",
+      "description": "AI should not directly mentor or onboard people. Developers describe mentoring/onboarding as culturally and emotionally grounded work that depends on human-to-human connection, empathy, trust, and relationship-building; mistakes here are costly and can harm morale and growth. AI may assist with logistics/rote steps, but the core activity should remain human-led.",
+      "pids": [
+        11,
+        18,
+        28,
+        52,
+        73,
+        74,
+        82,
+        86,
+        88,
+        101,
+        120,
+        125,
+        126,
+        155,
+        169,
+        171,
+        213,
+        219,
+        236,
+        278,
+        281,
+        286,
+        317,
+        347,
+        372,
+        400,
+        500,
+        533,
+        590,
+        609,
+        610,
+        637,
+        667,
+        734,
+        791
+      ]
+    },
+    {
+      "code": "keep_human_authentic_communication",
+      "name": "Human-authored interpersonal communication",
+      "description": "Developers want communication between people (especially internal/coworker communication) to remain human-written and human-voiced. Reasons include authenticity, cultural nuance, avoiding obviously bot-written messages, and preserving real human interaction rather than replacing it with AI-generated text.",
+      "pids": [
+        18,
+        24,
+        126,
+        174,
+        182,
+        317,
+        457,
+        484,
+        556,
+        611,
+        657,
+        813
+      ]
+    },
+    {
+      "code": "restrict_external_stakeholder_customer_comms",
+      "name": "Limit AI in client/stakeholder/customer communications",
+      "description": "AI should not own external communications (customers/clients/stakeholders) or nuanced multi-stakeholder messaging. Developers cite the need for empathy, trust-building, context and team-dynamics awareness, and the high impact of errors. AI may be acceptable for summaries or suggestions when closely supervised.",
+      "pids": [
+        164,
+        179,
+        187,
+        195,
+        196,
+        225,
+        236,
+        245,
+        277,
+        346,
+        457,
+        520,
+        535,
+        627,
+        696,
+        744,
+        775,
+        827
+      ]
+    },
+    {
+      "code": "preserve_hands_on_learning",
+      "name": "Don't outsource learning new technologies",
+      "description": "AI should not replace the hands-on process of learning new technologies. Developers want to learn themselves (learn-by-doing), and they worry about unverifiable accuracy, outdated information, and skill/understanding erosion if AI becomes the primary learning mechanism without strong verification.",
+      "pids": [
+        26,
+        29,
+        40,
+        46,
+        69,
+        166,
+        200,
+        205,
+        228,
+        280,
+        286,
+        390,
+        591,
+        610,
+        651
+      ]
+    },
+    {
+      "code": "limit_ai_research_brainstorming",
+      "name": "Don't let AI drive research/brainstorming/idea generation",
+      "description": "Developers resist AI taking over research, deep thinking, brainstorming, or coming up with new ideas. Concerns include reduced creativity, interrupting human thought processes, plagiarism/derivativeness, loss of system understanding, and low-quality or outdated outputs that are more work to verify than they're worth.",
+      "pids": [
+        19,
+        46,
+        145,
+        193,
+        225,
+        236,
+        270,
+        298,
+        303,
+        368,
+        377,
+        381,
+        470,
+        492,
+        590,
+        639,
+        734
+      ]
+    },
+    {
+      "code": "human_accountability_for_judgment_calls",
+      "name": "No AI as final authority for high-stakes judgments (architecture/design/prioritization/evaluations/core technical work)",
+      "description": "AI should not be the decision-maker for consequential judgment calls such as architecture/design decisions, prioritization trade-offs, employee evaluations, or other high-responsibility technical work. Developers emphasize accountability, the 'human factor', contextual judgment, and the risk of probabilistic/idealized AI reasoning driving real outcomes.",
+      "pids": [
+        8,
+        129,
+        165,
+        179,
+        325,
+        640,
+        644,
+        696,
+        706
+      ]
+    },
+    {
+      "code": "avoid_unvetted_documentation",
+      "name": "No unsupervised documentation creation/retrieval",
+      "description": "AI should not generate, fill in, or retrieve documentation as a primary/authoritative source without strong human control. Developers cite hallucinations, confusing phrasing, low-signal 'AI slop', and missing/permissioned internal context that can lead to incorrect or misleading documentation.",
+      "pids": [
+        18,
+        75,
+        174,
+        196,
+        240,
+        341,
+        394,
+        400,
+        456,
+        493
+      ]
+    },
+    {
+      "code": "do_not_handle_confidential_data",
+      "name": "Keep AI away from confidential/sensitive information",
+      "description": "Developers do not want AI involved with confidential data or sensitive communications (e.g., secret/important emails, privacy-sensitive stakeholder/customer info, or permissioned internal content). The constraint is driven by privacy, security, and access-control concerns.",
+      "pids": [
+        179,
+        187,
+        240,
+        343,
+        776
+      ]
+    },
+    {
+      "code": "require_human_review_before_share",
+      "name": "Require human review/approval before sharing or acting on AI output",
+      "description": "Even when AI drafts content or proposes actions, developers want explicit human review and approval before anything is sent, shared, or acted upon (especially communications and customer-impacting actions). This constrains tool autonomy and emphasizes oversight to prevent costly mistakes.",
+      "pids": [
+        18,
+        75,
+        105,
+        126,
+        164,
+        211,
+        346,
+        493,
+        520,
+        526,
+        627,
+        744,
+        775
+      ]
+    },
+    {
+      "code": "no_specific_constraints_or_unsure",
+      "name": "No specific no-go zones / unsure",
+      "description": "Respondents either stated no constraints, welcomed AI involvement broadly, or were unsure/declined to answer with a specific limitation.",
+      "pids": [
+        106,
+        202,
+        211,
+        267,
+        290,
+        291,
+        384,
+        395,
+        407,
+        432,
+        564,
+        569,
+        620,
+        717,
+        751,
+        754,
+        769,
+        774,
+        781,
+        788,
+        789
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 8,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "keep_human_authentic_communication",
+        "avoid_unvetted_documentation",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 46,
+      "themes": [
+        "preserve_hands_on_learning",
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 52,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "avoid_unvetted_documentation",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "keep_human_authentic_communication",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 164,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 165,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "keep_human_authentic_communication",
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "human_accountability_for_judgment_calls",
+        "do_not_handle_confidential_data"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "do_not_handle_confidential_data"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "require_human_review_before_share",
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "restrict_external_stakeholder_customer_comms",
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "avoid_unvetted_documentation",
+        "do_not_handle_confidential_data"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    },
+    {
+      "pid": 267,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 303,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "do_not_handle_confidential_data"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 432,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "avoid_unvetted_documentation"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "keep_human_authentic_communication",
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 492,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "avoid_unvetted_documentation",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    },
+    {
+      "pid": 556,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "preserve_hands_on_learning"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "human_accountability_for_judgment_calls"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": [
+        "human_led_mentoring_onboarding",
+        "limit_ai_research_brainstorming"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms",
+        "require_human_review_before_share"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "do_not_handle_confidential_data"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 789,
+      "themes": [
+        "no_specific_constraints_or_unsure"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "human_led_mentoring_onboarding"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "keep_human_authentic_communication"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "restrict_external_stakeholder_customer_comms"
+      ]
+    }
+  ]
+}

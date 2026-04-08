@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology: Multi-LLM Qualitative Analysis of Developer AI Preferences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --blue-bg: #eff6ff;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --amber-bg: #fffbeb;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --green-bg: #ecfdf5;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --purple-bg: #f5f3ff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --radius: 8px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+    --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+    --toc-width: 240px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--gray-800);
+    background: var(--gray-50);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ---- Layout ---- */
+  .page-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* ---- Sticky TOC sidebar ---- */
+  nav.toc {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    width: var(--toc-width);
+    min-width: var(--toc-width);
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2rem 1rem 2rem 1.25rem;
+    border-right: 1px solid var(--gray-200);
+    background: #fff;
+    font-size: 13px;
+    z-index: 10;
+  }
+  nav.toc h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: .75rem; }
+  nav.toc ol { list-style: none; counter-reset: toc-counter; }
+  nav.toc li { counter-increment: toc-counter; margin-bottom: .35rem; }
+  nav.toc a {
+    color: var(--gray-600);
+    text-decoration: none;
+    display: block;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: background .15s, color .15s;
+  }
+  nav.toc a::before { content: counter(toc-counter) ". "; color: var(--gray-400); font-weight: 500; }
+  nav.toc a:hover { background: var(--gray-100); color: var(--gray-900); }
+  nav.toc a.active { background: var(--blue-light); color: var(--blue); font-weight: 600; }
+
+  /* ---- Main content ---- */
+  main {
+    flex: 1;
+    max-width: 1100px;
+    padding: 2.5rem 3rem 4rem;
+    min-width: 0;
+  }
+
+  /* ---- Header ---- */
+  .page-header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--gray-200); padding-bottom: 2rem; }
+  .page-header h1 { font-size: 1.85rem; font-weight: 800; color: var(--gray-900); line-height: 1.25; margin-bottom: .35rem; }
+  .page-header .subtitle { font-size: 1.05rem; color: var(--gray-500); font-weight: 400; margin-bottom: 1.25rem; }
+  .page-header .citation { font-size: .82rem; color: var(--gray-400); font-style: italic; }
+
+  /* ---- Stats row ---- */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: .75rem;
+    margin: 1.5rem 0 1.75rem;
+  }
+  .stat-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: .85rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-card .value { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); }
+  .stat-card .label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-500); margin-top: .15rem; }
+  .stat-card.blue { border-top: 3px solid var(--blue); }
+  .stat-card.amber { border-top: 3px solid var(--amber); }
+  .stat-card.green { border-top: 3px solid var(--green); }
+  .stat-card.purple { border-top: 3px solid var(--purple); }
+
+  /* ---- Sections ---- */
+  section { margin-bottom: 3rem; }
+  section > h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    border-bottom: 2px solid var(--gray-200);
+    padding-bottom: .45rem;
+    margin-bottom: 1.25rem;
+  }
+  h3 { font-size: 1.05rem; font-weight: 600; color: var(--gray-800); margin: 1.5rem 0 .6rem; }
+  h4 { font-size: .92rem; font-weight: 600; color: var(--gray-700); margin: 1.1rem 0 .4rem; }
+
+  p { margin-bottom: .85rem; }
+  ul, ol { margin-bottom: .85rem; padding-left: 1.4rem; }
+  li { margin-bottom: .3rem; }
+
+  /* ---- Tables ---- */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: .88rem; }
+  thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--gray-500);
+    border-bottom: 2px solid var(--gray-200);
+    padding: .5rem .6rem;
+  }
+  tbody td { padding: .55rem .6rem; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+  tbody tr:hover { background: var(--gray-50); }
+
+  /* ---- Code ---- */
+  code, pre {
+    font-family: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+  }
+  code {
+    background: var(--gray-100);
+    padding: .1em .35em;
+    border-radius: 3px;
+    font-size: .85em;
+    color: var(--gray-700);
+  }
+  pre {
+    background: var(--gray-800);
+    color: #e5e7eb;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-size: .82rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+  pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+
+  /* ---- Info boxes ---- */
+  .info-box {
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: .9rem;
+  }
+  .info-box.blue { background: var(--blue-bg); border-left: 4px solid var(--blue); }
+  .info-box.amber { background: var(--amber-bg); border-left: 4px solid var(--amber); }
+  .info-box.green { background: var(--green-bg); border-left: 4px solid var(--green); }
+  .info-box.purple { background: var(--purple-bg); border-left: 4px solid var(--purple); }
+  .info-box strong { font-weight: 600; }
+
+  /* ---- Pipeline diagram ---- */
+  .pipeline-diagram {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 0;
+    margin: 2rem 0;
+    font-size: .85rem;
+  }
+  .lane-header {
+    font-weight: 700;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    text-align: center;
+    padding: .6rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .lane-header.opp { background: var(--blue); color: #fff; }
+  .lane-header.shared { background: var(--gray-300); color: var(--gray-700); font-size: .7rem; }
+  .lane-header.con { background: var(--amber); color: #fff; }
+
+  .lane-box {
+    border: 2px solid;
+    padding: .7rem .85rem;
+    margin: 0;
+    position: relative;
+    min-height: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lane-box.opp { border-color: var(--blue); background: var(--blue-bg); }
+  .lane-box.con { border-color: var(--amber); background: var(--amber-bg); }
+  .lane-box.shared {
+    grid-column: 1 / -1;
+    border-color: var(--gray-300);
+    background: var(--gray-100);
+    text-align: center;
+  }
+  .lane-box.human {
+    grid-column: 1 / -1;
+    border-color: var(--purple);
+    background: var(--purple-bg);
+    text-align: center;
+    border-style: dashed;
+    border-width: 2px;
+  }
+  .lane-box.green-band {
+    grid-column: 1 / -1;
+    border-color: var(--green);
+    background: var(--green-bg);
+    text-align: center;
+  }
+  .lane-box .box-title { font-weight: 600; margin-bottom: .15rem; }
+  .lane-box .box-sub { font-size: .78rem; color: var(--gray-600); }
+  .connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-size: 1.1rem;
+  }
+  .arrow-down {
+    text-align: center;
+    color: var(--gray-400);
+    font-size: .9rem;
+    padding: .2rem 0;
+    grid-column: 1 / -1;
+  }
+
+  /* ---- Details / collapsible ---- */
+  details {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  details > summary {
+    padding: .85rem 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .92rem;
+    color: var(--gray-800);
+    user-select: none;
+  }
+  details > summary::before { content: "\25B6"; font-size: .65rem; transition: transform .15s; color: var(--gray-400); }
+  details[open] > summary::before { transform: rotate(90deg); }
+  details > summary::-webkit-details-marker { display: none; }
+  details > .detail-body { padding: .25rem 1.15rem 1.15rem; }
+
+  /* ---- Badges ---- */
+  .badge {
+    display: inline-block;
+    padding: .15em .55em;
+    border-radius: 10px;
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    vertical-align: middle;
+  }
+  .badge.blue { background: var(--blue-light); color: var(--blue); }
+  .badge.amber { background: var(--amber-light); color: var(--amber); }
+  .badge.green { background: var(--green-light); color: var(--green); }
+  .badge.purple { background: var(--purple-light); color: var(--purple); }
+
+  /* ---- Decision table ---- */
+  .decision-table td:first-child { font-weight: 500; white-space: nowrap; }
+  .decision-table td:nth-child(3) { font-size: .84rem; color: var(--gray-600); }
+
+  /* ---- Artifact list ---- */
+  .artifact-list { font-size: .85rem; }
+  .artifact-list code { font-size: .8rem; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 900px) {
+    nav.toc { display: none; }
+    main { padding: 1.5rem 1.25rem 3rem; }
+    .pipeline-diagram { grid-template-columns: 1fr; }
+    .lane-box.opp, .lane-box.con { grid-column: auto; }
+    .connector { display: none; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<!-- ======== TOC Sidebar ======== -->
+<nav class="toc" id="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#overview">Executive Summary</a></li>
+    <li><a href="#research-questions">Research Questions & Data</a></li>
+    <li><a href="#pipeline">Pipeline Overview</a></li>
+    <li><a href="#stage1">Stage 1: Theme Discovery</a></li>
+    <li><a href="#stage2">Stage 2: Systematic Coding</a></li>
+    <li><a href="#controls">Methodological Controls</a></li>
+    <li><a href="#decisions">Design Decisions</a></li>
+    <li><a href="#limitations">Limitations & Mitigations</a></li>
+    <li><a href="#artifacts">Artifacts & Replication</a></li>
+    <li><a href="#appendix">Appendix</a></li>
+  </ol>
+</nav>
+
+<!-- ======== Main Content ======== -->
+<main>
+
+<!-- ---- 1. Header & Executive Summary ---- -->
+<header class="page-header" id="overview">
+  <h1>Multi-LLM Qualitative Analysis Methodology</h1>
+  <p class="subtitle">Analyzing 860 Microsoft developer survey responses on AI automation preferences using triangulated thematic analysis</p>
+  <p class="citation">Source survey: "AI Where It Matters: Where, Why, and How Developers Want AI Support in Daily Work" (Choudhuri et al., 2025)</p>
+</header>
+
+<div class="stats-row">
+  <div class="stat-card blue"><div class="value">2</div><div class="label">Analysis Tracks</div></div>
+  <div class="stat-card amber"><div class="value">5</div><div class="label">Task Categories</div></div>
+  <div class="stat-card green"><div class="value">3</div><div class="label">LLM Coders</div></div>
+  <div class="stat-card blue"><div class="value">20</div><div class="label">Batch Size</div></div>
+  <div class="stat-card purple"><div class="value">&alpha;</div><div class="label">IRR Metric</div></div>
+</div>
+
+<p>
+  This document describes the full methodology for a multi-model qualitative analysis pipeline that identifies
+  <strong>research opportunities</strong> (what developers want AI to do) and <strong>design constraints</strong>
+  (what developers do not want AI to handle) from open-ended survey responses. Three frontier LLMs serve as
+  independent coders, with inter-rater reliability calculated via Krippendorff's alpha and consensus reached
+  through majority vote. A human review gate validates codebooks before systematic coding begins.
+</p>
+
+<!-- ---- 2. Research Questions & Data ---- -->
+<section id="research-questions">
+  <h2>Research Questions & Data</h2>
+
+  <h3>Survey Questions (per category)</h3>
+  <div class="info-box blue">
+    <strong>Opportunity track:</strong> "Where do you want AI to play the biggest role in [category] activities?"<br>
+    Open-ended responses capturing desired capabilities and unmet needs.
+  </div>
+  <div class="info-box amber">
+    <strong>Constraint track:</strong> "What aspects do you NOT want AI to handle and why?"<br>
+    Open-ended responses capturing guardrails, no-go zones, and boundary conditions.
+  </div>
+
+  <h3>Unit of Analysis</h3>
+  <p>Each unit is a single respondent's open-ended answer to one of the two questions within a category. Respondents answered about 2&ndash;3 categories each, and a single response may be assigned multiple theme codes.</p>
+
+  <h3>Task Categories & Response Counts</h3>
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Respondents</th><th>Tasks Covered</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Development</td><td>816</td><td>Coding, Bug Fixing, Perf Optimization, Refactoring, AI Development</td></tr>
+      <tr><td>Design & Planning</td><td>548</td><td>System Architecture, Requirements Gathering, Project Planning</td></tr>
+      <tr><td>Meta-Work</td><td>532</td><td>Documentation, Communication, Mentoring, Learning, Research</td></tr>
+      <tr><td>Quality & Risk</td><td>401</td><td>Testing & QA, Code Review / PRs, Security & Compliance</td></tr>
+      <tr><td>Infrastructure & Ops</td><td>283</td><td>DevOps / CI-CD, Environment Setup, Monitoring, Customer Support</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Data Quality Note</h3>
+  <p>
+    Approximately <strong>11% of responses</strong> contain data quality issues detected during coding:
+    misplaced answers (respondent wrote a "want" answer in the "not want" field or vice-versa),
+    back-references to prior answers that are unintelligible on their own, or terse non-responses.
+    These are flagged with <code>ISSUE_*</code> codes rather than discarded,
+    avoiding pre-filter bias (see <a href="#controls">Methodological Controls</a>).
+  </p>
+</section>
+
+<!-- ---- 3. Pipeline Overview ---- -->
+<section id="pipeline">
+  <h2>Pipeline Overview</h2>
+  <p>The analysis runs in two stages with a human review gate between them. Both the opportunity and constraint tracks follow identical process steps but with track-specific prompts and codebooks.</p>
+
+  <div class="pipeline-diagram">
+    <!-- Headers -->
+    <div class="lane-header opp">Opportunity Track</div>
+    <div class="lane-header shared">&nbsp;</div>
+    <div class="lane-header con">Constraint Track</div>
+
+    <!-- Row 1: Theme Discovery -->
+    <div class="lane-box opp">
+      <div class="box-title">Theme Discovery</div>
+      <div class="box-sub">3 models discover "want" themes independently</div>
+    </div>
+    <div class="connector">&harr;</div>
+    <div class="lane-box con">
+      <div class="box-title">Theme Discovery</div>
+      <div class="box-sub">3 models discover "not want" themes independently</div>
+    </div>
+
+    <div class="arrow-down">&darr;</div>
+
+    <!-- Row 2: Reconciliation -->
+    <div class="lane-box opp">
+      <div class="box-title">Reconciliation</div>
+      <div class="box-sub">GPT-5.2 merges themes into unified codebook</div>
+    </div>
+    <div class="connector">&harr;</div>
+    <div class="lane-box con">
+      <div class="box-title">Reconciliation</div>
+      <div class="box-sub">GPT-5.2 merges constraint themes into codebook</div>
+    </div>
+
+    <div class="arrow-down">&darr;</div>
+
+    <!-- Row 3: Human Gate -->
+    <div class="lane-box human">
+      <div class="box-title"><span class="badge purple">Human Gate</span> &nbsp;Author Review & Codebook Approval</div>
+      <div class="box-sub">Researcher validates themes, merges/splits/renames as needed, approves before coding proceeds</div>
+    </div>
+
+    <div class="arrow-down">&darr;</div>
+
+    <!-- Row 4: Systematic Coding -->
+    <div class="lane-box opp">
+      <div class="box-title">Systematic Coding</div>
+      <div class="box-sub">3 models code every response (batch=20)</div>
+    </div>
+    <div class="connector">&harr;</div>
+    <div class="lane-box con">
+      <div class="box-title">Systematic Coding</div>
+      <div class="box-sub">3 models code every constraint response</div>
+    </div>
+
+    <div class="arrow-down">&darr;</div>
+
+    <!-- Row 5: IRR + Consensus -->
+    <div class="lane-box green-band">
+      <div class="box-title"><span class="badge green">Triangulation</span> &nbsp;IRR Calculation &amp; Majority-Vote Consensus</div>
+      <div class="box-sub">Krippendorff's &alpha; per theme &bull; 2-of-3 majority vote &bull; ISSUE code aggregation</div>
+    </div>
+
+    <div class="arrow-down">&darr;</div>
+
+    <!-- Row 6: Outputs -->
+    <div class="lane-box opp">
+      <div class="box-title">Rich Opportunity Cards</div>
+      <div class="box-sub">Top-5 per category, 3-model synthesis</div>
+    </div>
+    <div class="connector">&harr;</div>
+    <div class="lane-box con">
+      <div class="box-title">Constraint Maps & Design Principles</div>
+      <div class="box-sub">No-go zones with guardrail guidance</div>
+    </div>
+  </div>
+</section>
+
+<!-- ---- 4. Stage 1 ---- -->
+<section id="stage1">
+  <h2>Stage 1: Theme Discovery & Reconciliation</h2>
+
+  <h3>Phase 1: Independent 3-Model Discovery</h3>
+  <p>Each model receives <em>all</em> responses for a given category and independently proposes 4&ndash;15 themes with supporting evidence (PIDs). The prompt instructs models to create specific, actionable, problem-focused themes and to allow multi-coding.</p>
+
+  <table>
+    <thead><tr><th>Model</th><th>Provider</th><th>Thinking Mode</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td>GPT-5.2</td><td>OpenAI</td><td><code>reasoning_effort="high"</code></td><td>Independent coder & reconciler</td></tr>
+      <tr><td>Gemini 3.1 Pro</td><td>Google</td><td><code>thinking_level="HIGH"</code></td><td>Independent coder</td></tr>
+      <tr><td>Claude Opus 4.6</td><td>Anthropic</td><td><code>thinking: adaptive, effort: high</code></td><td>Independent coder</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Inputs</h4>
+  <ul>
+    <li>Open-ended survey responses with PIDs (e.g., 816 Development responses or 548 Design & Planning responses)</li>
+    <li>Category name and context description</li>
+  </ul>
+
+  <h4>Outputs (per category, per model)</h4>
+  <ul>
+    <li>Theme codebook: code, name, description, supporting PIDs</li>
+    <li>Per-response codings: PID &rarr; [theme_code_1, theme_code_2, ...]</li>
+    <li>Files: <code>{category}_themes_{model}.json</code> (15 opportunity files + 15 constraint files)</li>
+  </ul>
+
+  <h3>Phase 2: GPT-5.2 Reconciliation</h3>
+  <p>A single reconciliation model (GPT-5.2) receives all three models' theme sets and produces a <strong>unified codebook</strong> per category by:</p>
+  <ol>
+    <li>Identifying overlapping themes across models (same concept, different names)</li>
+    <li>Merging overlapping themes into single unified entries</li>
+    <li>Retaining single-model themes only if substantive (&ge;3 PIDs)</li>
+    <li>Dropping themes that are too vague or have very few supporting responses</li>
+    <li>Targeting 5&ndash;10 unified themes per category</li>
+  </ol>
+  <p>Each unified theme records its <code>source_models</code> (which of the three models independently proposed it) and <code>source_codes</code> (original model-specific code names), providing full provenance.</p>
+
+  <h4>Outputs</h4>
+  <ul>
+    <li><code>consolidated_codebook.json</code> &mdash; all 5 category codebooks (opportunity track)</li>
+    <li><code>constraint_codebook.json</code> &mdash; all 5 category codebooks (constraint track)</li>
+  </ul>
+
+  <h3>Human Review Gate <span class="badge purple">Required</span></h3>
+  <p>The pipeline pauses for researcher review before systematic coding begins. The researcher:</p>
+  <ul>
+    <li>Reviews each proposed theme and reads sample supporting responses</li>
+    <li>Checks themes for specificity, granularity, and completeness</li>
+    <li>Can <strong>keep, rename, merge, split, or remove</strong> any theme</li>
+    <li>Can add themes the models missed</li>
+    <li>Documents rationale for all changes</li>
+  </ul>
+  <p>Systematic coding (Stage 2) does not proceed until the codebook is explicitly approved.</p>
+</section>
+
+<!-- ---- 5. Stage 2 ---- -->
+<section id="stage2">
+  <h2>Stage 2: Systematic Coding & Analysis</h2>
+
+  <h3>Coding Protocol</h3>
+  <p>All three models independently re-code <em>every</em> response against the finalized codebook. Key protocol elements:</p>
+
+  <table>
+    <thead><tr><th>Parameter</th><th>Value</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>Batch size</td><td>20 responses per API call</td><td>Balances context window usage against API call count</td></tr>
+      <tr><td>Rationale-first</td><td>Model writes rationale before assigning codes</td><td>Improves accuracy via chain-of-thought; enables auditability</td></tr>
+      <tr><td>Cross-response context</td><td>Each response shown alongside opposite-question answer</td><td>Enables misresponse detection (ISSUE codes)</td></tr>
+      <tr><td>Multi-coding</td><td>0, 1, or many themes per response</td><td>Captures full semantic content</td></tr>
+      <tr><td>Codebook-only</td><td>Only codebook codes or ISSUE_* codes allowed</td><td>Prevents code drift across batches</td></tr>
+    </tbody>
+  </table>
+
+  <h3>ISSUE Code System</h3>
+  <p>During systematic coding, models flag data quality problems rather than silently discarding responses:</p>
+  <table>
+    <thead><tr><th>Code</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><code>ISSUE_WRONG_FIELD</code></td><td>Respondent answered the opposite question</td><td>Describing constraints in the "want" field</td></tr>
+      <tr><td><code>ISSUE_BACK_REFERENCE</code></td><td>References a prior answer; unintelligible alone</td><td>"Same as before", "see above"</td></tr>
+      <tr><td><code>ISSUE_NON_RESPONSE</code></td><td>Terse non-answer with no analyzable content</td><td>"N/A", "none", "no"</td></tr>
+    </tbody>
+  </table>
+  <p>Models may create additional <code>ISSUE_*</code> codes if they encounter other data quality problems. The ISSUE prefix ensures these are never confused with substantive themes.</p>
+
+  <h3>Inter-Rater Reliability (IRR)</h3>
+  <p>Agreement between the three LLM coders is measured per theme using <strong>Krippendorff's alpha (&alpha;)</strong>, the standard multi-rater reliability coefficient for qualitative research. For each theme, a binary (present/absent) coding matrix is built across all responses, and &alpha; is calculated at the nominal level.</p>
+
+  <table>
+    <thead><tr><th>Range</th><th>Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td>&alpha; &ge; 0.80</td><td><span class="badge green">Excellent</span> agreement &mdash; publishable</td></tr>
+      <tr><td>&alpha; &ge; 0.67</td><td><span class="badge blue">Acceptable</span> agreement &mdash; tentative conclusions</td></tr>
+      <tr><td>&alpha; &ge; 0.50</td><td><span class="badge amber">Moderate</span> agreement &mdash; use with caution</td></tr>
+      <tr><td>&alpha; &lt; 0.50</td><td>Poor agreement &mdash; unreliable for this theme</td></tr>
+    </tbody>
+  </table>
+
+  <p>Additionally, <strong>pairwise Cohen's kappa (&kappa;)</strong> is calculated for each model pair (GPT&ndash;Gemini, GPT&ndash;Opus, Gemini&ndash;Opus) and <strong>3-rater percent agreement</strong> (all three models assign the same code) is reported per theme.</p>
+
+  <h3>Consensus Voting</h3>
+  <p>Final theme assignments use a <strong>majority vote: 2 of 3 models must agree</strong> for a theme to be assigned to a response. This is applied independently per response and per theme code.</p>
+
+  <h4>ISSUE code handling</h4>
+  <p>If 2+ models flag <em>any</em> ISSUE code for a response (regardless of which specific ISSUE code), the response receives a generic <code>ISSUE</code> marker and is excluded from substantive analysis. This prevents a single aggressive model from filtering out too many responses.</p>
+
+  <h3>Rich Opportunity Cards</h3>
+  <p>For the top 5 themes per category (by prevalence), all three models independently generate detailed opportunity cards including:</p>
+  <ul>
+    <li>Problem statement and proposed capability description</li>
+    <li>Required context sources and capability steps</li>
+    <li>Impact description with supporting evidence quotes</li>
+    <li>Success criteria (qualitative and quantitative measures)</li>
+    <li>Constraints and guardrails drawn from the constraint track</li>
+    <li>Prevalence data and quantitative signals (AI preference, usage gap)</li>
+  </ul>
+  <p>Cards from the three models are merged using a union-and-deduplicate strategy: longest title wins, context sources are combined (max 7), capability steps use the longest sequence (max 6), and constraints are deduplicated (max 4).</p>
+
+  <h3>Constraint Maps & Design Principles</h3>
+  <p>Constraint-track prevalence is calculated identically to the opportunity track. The top no-go zones per category are documented with:</p>
+  <ul>
+    <li>Zone name, description, and prevalence count</li>
+    <li>Up to 10 supporting respondent quotes</li>
+    <li>3&ndash;6 synthesized design principles per category (generated by GPT-5.2)</li>
+    <li>Each principle includes implementation guidance and derivation provenance</li>
+  </ul>
+</section>
+
+<!-- ---- 6. Methodological Controls ---- -->
+<section id="controls">
+  <h2>Methodological Controls</h2>
+  <p>The pipeline incorporates several controls designed to increase rigor beyond what a single-model analysis can provide.</p>
+
+  <table>
+    <thead><tr><th>Control</th><th>Mechanism</th><th>What It Mitigates</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Multi-LLM triangulation</strong></td>
+        <td>3 frontier models from different families code independently</td>
+        <td>Single-model bias, training-data artifacts, idiosyncratic interpretations</td>
+      </tr>
+      <tr>
+        <td><strong>Rationale-first coding</strong></td>
+        <td>Models write reasoning before assigning codes</td>
+        <td>Snap-judgment errors; enables post-hoc audit of coding decisions</td>
+      </tr>
+      <tr>
+        <td><strong>Cross-response context</strong></td>
+        <td>Both "want" and "not want" answers shown to coder</td>
+        <td>Misresponse blindness; enables ISSUE_WRONG_FIELD detection</td>
+      </tr>
+      <tr>
+        <td><strong>ISSUE code system</strong></td>
+        <td>Flag quality problems in-band rather than pre-filtering</td>
+        <td>Pre-filter bias from silently dropping ambiguous responses</td>
+      </tr>
+      <tr>
+        <td><strong>Idempotent checkpointing</strong></td>
+        <td>Staleness detection skips phases whose inputs haven't changed</td>
+        <td>Wasted computation; ensures reproducible reruns</td>
+      </tr>
+      <tr>
+        <td><strong>Consensus merging</strong></td>
+        <td>Majority vote (2/3) for codes; union-and-deduplicate for synthesis</td>
+        <td>Noise from single-model outlier codes; incomplete synthesis from any single model</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ---- 7. Design Decisions ---- -->
+<section id="decisions">
+  <h2>Design Decisions & Trade-offs</h2>
+
+  <table class="decision-table">
+    <thead><tr><th>Decision</th><th>Rationale</th><th>Trade-off</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>3 models, not 2 or 5</td>
+        <td>Minimum for meaningful IRR (Krippendorff's &alpha;); covers 3 major LLM families</td>
+        <td>Higher API cost (&sim;3&times;); manageable with batch parallelism</td>
+      </tr>
+      <tr>
+        <td>HIGH thinking for all models</td>
+        <td>Qualitative coding benefits from extended reasoning; reduces surface-level pattern matching</td>
+        <td>Slower inference, higher token cost (thinking tokens billed at output rate)</td>
+      </tr>
+      <tr>
+        <td>Batch size of 20</td>
+        <td>Enough responses for cross-response pattern recognition; fits comfortably in context windows</td>
+        <td>More API calls than larger batches; but avoids context truncation risks</td>
+      </tr>
+      <tr>
+        <td>Majority vote (2/3)</td>
+        <td>Balances sensitivity and specificity; equivalent to &gt;50% agreement threshold</td>
+        <td>May miss themes where only one model sees a valid pattern</td>
+      </tr>
+      <tr>
+        <td>Human gate before coding</td>
+        <td>Prevents systematic errors from propagating through the entire coding phase</td>
+        <td>Introduces a manual pause in an otherwise automated pipeline</td>
+      </tr>
+      <tr>
+        <td>No pre-filtering of responses</td>
+        <td>ISSUE codes capture quality problems without discarding data points</td>
+        <td>Models must process noisy responses; ISSUE detection is itself imperfect</td>
+      </tr>
+      <tr>
+        <td>GPT-5.2 as sole reconciler</td>
+        <td>Reconciliation requires structured comparison rather than independent generation; one model suffices</td>
+        <td>Reconciliation may inherit GPT-specific biases in theme naming</td>
+      </tr>
+      <tr>
+        <td>Streaming for Claude Opus</td>
+        <td>Avoids 10-minute HTTP timeout on long-running inference</td>
+        <td>More complex error handling; no retry on partial stream failures</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ---- 8. Limitations ---- -->
+<section id="limitations">
+  <h2>Limitations & Mitigations</h2>
+
+  <table>
+    <thead><tr><th>Limitation</th><th>Impact</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>LLM nondeterminism</strong></td>
+        <td>Exact codings may vary across runs even with identical inputs</td>
+        <td>3-model triangulation smooths out individual variance; IRR quantifies remaining disagreement; idempotent checkpointing ensures reproducible runs when inputs are stable</td>
+      </tr>
+      <tr>
+        <td><strong>LLM rationalization</strong></td>
+        <td>Models may construct plausible but incorrect rationales</td>
+        <td>Multi-model disagreement surfaces cases where rationalization diverges; majority vote filters single-model confabulations</td>
+      </tr>
+      <tr>
+        <td><strong>Prompt sensitivity</strong></td>
+        <td>Different prompt wording could yield different themes</td>
+        <td>Codebook-anchored coding constrains coder freedom; prompts are documented and versioned for replication</td>
+      </tr>
+      <tr>
+        <td><strong>Not replacing human qualitative research</strong></td>
+        <td>LLM coders lack lived experience; may miss cultural nuances</td>
+        <td>Human review gate validates codebook; methodology is positioned as <em>accelerating</em> qualitative work, not replacing it; all outputs include supporting quotes for human verification</td>
+      </tr>
+      <tr>
+        <td><strong>Survey sample</strong></td>
+        <td>860 Microsoft developers may not represent the broader industry</td>
+        <td>Out of scope for the analysis methodology itself; noted as a limitation of the source data</td>
+      </tr>
+      <tr>
+        <td><strong>LLM knowledge contamination</strong></td>
+        <td>Models may have been trained on similar survey analyses</td>
+        <td>Codebook-first design constrains output to researcher-approved themes; verbatim quotes provide verifiable evidence independent of model knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ---- 9. Artifacts & Replication ---- -->
+<section id="artifacts">
+  <h2>Artifacts & Replication</h2>
+
+  <h3>Artifact Inventory</h3>
+  <table class="artifact-list">
+    <thead><tr><th>Phase</th><th>File Pattern</th><th>Count</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>Data</td><td><code>{category}_responses.json</code></td><td>5</td><td>Extracted open-ended responses with PIDs</td></tr>
+      <tr><td>Data</td><td><code>{category}_quantitative.json</code></td><td>5</td><td>Aggregated Likert scale metrics per task</td></tr>
+      <tr><td>Data</td><td><code>{category}_do_not_want_responses.json</code></td><td>5</td><td>Extracted constraint responses with PIDs</td></tr>
+      <tr><td>Stage 1</td><td><code>{category}_themes_{model}.json</code></td><td>15</td><td>Independent opportunity theme discoveries</td></tr>
+      <tr><td>Stage 1</td><td><code>{category}_constraint_themes_{model}.json</code></td><td>15</td><td>Independent constraint theme discoveries</td></tr>
+      <tr><td>Stage 1</td><td><code>consolidated_codebook.json</code></td><td>1</td><td>Unified opportunity codebook (all categories)</td></tr>
+      <tr><td>Stage 1</td><td><code>constraint_codebook.json</code></td><td>1</td><td>Unified constraint codebook (all categories)</td></tr>
+      <tr><td>Stage 2</td><td><code>{category}_phase4_codings.json</code></td><td>5</td><td>3-model systematic codings with rationales</td></tr>
+      <tr><td>Stage 2</td><td><code>phase5_irr_results.json</code></td><td>1</td><td>Krippendorff's &alpha;, Cohen's &kappa;, agreement %</td></tr>
+      <tr><td>Stage 2</td><td><code>phase6_prevalence_results.json</code></td><td>1</td><td>Majority-vote consensus and theme prevalence</td></tr>
+      <tr><td>Stage 2</td><td><code>phase6_rich_opportunities.json</code></td><td>1</td><td>Top-5 opportunity cards per category (3-model synthesis)</td></tr>
+      <tr><td>Stage 2</td><td><code>constraint_maps.json</code></td><td>1</td><td>No-go zones and design principles</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Dependency Chain</h3>
+  <div class="info-box blue" style="font-family: 'IBM Plex Mono', monospace; font-size: .78rem; line-height: 1.7; white-space: pre;">data.xlsx  &rarr;  {cat}_responses.json
+                  {cat}_do_not_want_responses.json
+                  {cat}_quantitative.json
+                        &darr;
+              {cat}_themes_{model}.json  (3&times;5 = 15 files)
+              {cat}_constraint_themes_{model}.json  (15 files)
+                        &darr;
+              consolidated_codebook.json
+              constraint_codebook.json
+                        &darr;
+              <span style="color: var(--purple);">&#9632; HUMAN REVIEW GATE</span>
+                        &darr;
+              {cat}_phase4_codings.json  (5 files, 3 models each)
+                        &darr;
+              phase5_irr_results.json
+              phase6_prevalence_results.json
+                     &darr;            &darr;
+      phase6_rich_opportunities.json   constraint_maps.json</div>
+
+  <h3>Staleness Detection</h3>
+  <p>Every pipeline phase checks whether its output is <strong>stale</strong> relative to its inputs by comparing file modification times. If all inputs are older than the output, the phase is skipped. If any input is newer, the output is regenerated. This enables:</p>
+  <ul>
+    <li><strong>Incremental reruns:</strong> updating one category's theme discovery only regenerates downstream outputs for that category</li>
+    <li><strong>Safe restarts:</strong> if the pipeline crashes mid-phase, only the incomplete phase reruns</li>
+    <li><strong>Force override:</strong> <code>--force</code> flag bypasses staleness checks for full regeneration</li>
+  </ul>
+
+  <h3>How to Rerun</h3>
+  <ol>
+    <li>Ensure API keys are set in <code>.env</code> for OpenAI, Google, and Anthropic</li>
+    <li>Install dependencies: <code>uv sync</code></li>
+    <li>Run full pipeline: <code>bash run_full_pipeline.sh</code></li>
+    <li>Pipeline pauses after Stage 1 for human codebook review</li>
+    <li>After approval, Stage 2 runs automatically</li>
+    <li>To force regeneration: <code>bash run_full_pipeline.sh --force</code></li>
+    <li>To rerun a single category: <code>uv run phase4_systematic_coding.py design_planning</code></li>
+  </ol>
+</section>
+
+<!-- ---- 10. Appendix ---- -->
+<section id="appendix">
+  <h2>Appendix</h2>
+
+  <!-- A: Coding Prompts -->
+  <!-- Codebooks -->
+  <details>
+    <summary>Opportunity Codebook (All 5 Categories, 48 Themes)</summary>
+    <div class="detail-body">
+      <p>Unified codebook produced by GPT-5.2 reconciliation of themes independently discovered by all three models. Each theme lists which models independently identified it.</p>
+
+      <h4>Development <span class="badge blue">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>refactoring_modernization</code></td><td>Automated Refactoring, Modernization & Tech-Debt Reduction</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>boilerplate_scaffolding_feature_codegen</code></td><td>Boilerplate, Scaffolding & Routine Feature Code Generation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>automated_testing_validation</code></td><td>Automated Test Generation, Coverage & Change Validation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>debugging_root_cause_fixing</code></td><td>Debugging, Root Cause Analysis & Bug Fix Assistance</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>repo_wide_context_dependency_awareness</code></td><td>Repo-Wide Context, Dependency Awareness & Safe Multi-File Changes</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>code_quality_review_security_compliance</code></td><td>Code Quality, Review Automation, Standards & Security/Compliance Guidance</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>performance_profiling_optimization</code></td><td>Performance Profiling & Optimization Suggestions</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>architecture_design_planning_support</code></td><td>Architecture, Design Brainstorming & Planning Support</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>devops_ci_cd_iac_workflow_automation</code></td><td>DevOps, CI/CD, IaC & Engineering Workflow Automation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>documentation_knowledge_retrieval_onboarding</code></td><td>Documentation Generation, Knowledge Retrieval & Onboarding/Learning Support</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Design & Planning <span class="badge blue">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>requirements_gathering_synthesis</code></td><td>Requirements Gathering, Synthesis & Clarification</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>architecture_design_generation</code></td><td>Architecture & System Design Generation/Iteration</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>interactive_brainstorming_design_partner</code></td><td>Interactive Brainstorming & Design Copilot</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>tradeoff_decision_support_simulation</code></td><td>Trade-off Analysis, What-if Simulation & Decision Support</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>design_validation_risk_edge_cases</code></td><td>Design Validation, Risk Assessment & Edge-Case Discovery</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>project_planning_tasking_status_automation</code></td><td>Project Planning, Ticket/Task Breakdown & Status Automation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>documentation_spec_diagram_generation</code></td><td>Documentation, Specs & Diagram/Artifact Generation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>context_retrieval_codebase_and_institutional_memory</code></td><td>Context Retrieval: Codebase Understanding & Institutional Memory</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>research_and_information_synthesis</code></td><td>Research, Information Gathering & Knowledge Synthesis</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>trustworthy_outputs_with_citations</code></td><td>Trustworthy Outputs: Higher Accuracy & Verifiable Citations</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Quality & Risk <span class="badge blue">9 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>automated_test_generation_and_quality_gates</code></td><td>Automated Test Generation, Maintenance & Quality Gates</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>intelligent_pr_code_review</code></td><td>Intelligent PR/Code Review Assistant</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>security_vulnerability_detection_and_fix_guidance</code></td><td>Security Vulnerability Detection & Fix Guidance</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>compliance_and_audit_automation</code></td><td>Compliance, Standards & Audit Process Automation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>proactive_risk_monitoring_and_prediction</code></td><td>Proactive Risk Monitoring, Prediction & Anomaly Detection</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>debugging_root_cause_and_failure_triage</code></td><td>Debugging, Root Cause Analysis & Failure Triage</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>knowledge_retrieval_and_standards_guidance</code></td><td>Knowledge Retrieval, Summarization & Standards Guidance</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>agentic_workflow_automation_and_remediation</code></td><td>Agentic Workflow Automation & Automated Remediation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ai_driven_exploratory_chaos_and_fuzz_testing</code></td><td>AI-Driven Exploratory, Chaos & Fuzz Testing</td><td>Opus only</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Infrastructure & Ops <span class="badge blue">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>intelligent_monitoring_alerting_anomaly_detection</code></td><td>Intelligent Monitoring, Alerting & Anomaly Detection</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>incident_response_rca_mitigation_self_heal</code></td><td>Incident Response Automation (Triage, RCA, Mitigation, Self-Heal)</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>cicd_pipeline_and_deployment_automation</code></td><td>CI/CD Pipeline & Deployment Automation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>infrastructure_provisioning_and_iac_generation</code></td><td>Automated Environment Setup & IaC Generation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>infrastructure_maintenance_upgrades_security_cost_optimization</code></td><td>Proactive Maintenance, Upgrades, Security/Compliance & Cost Optimization</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>customer_support_triage_and_autoresponse</code></td><td>Customer Support Triage & Auto-Response</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>knowledge_management_doc_search_and_system_context</code></td><td>Knowledge Management, Documentation Search & System Context</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ops_toil_automation_and_script_generation</code></td><td>Ops Toil Automation & Script Writing/Debugging</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>testing_quality_validation_and_safe_deploy</code></td><td>Testing, Quality Validation & Safer Releases</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ai_tooling_ux_accuracy_and_cohesive_workflows</code></td><td>Better AI Tooling UX (Accuracy, Control & Cohesive Workflows)</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Meta-Work <span class="badge blue">9 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>automated_documentation</code></td><td>Automated Documentation Generation & Maintenance</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>knowledge_search_and_discovery</code></td><td>Project Knowledge Search & Discovery (with Traceable Sources)</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>brainstorming_and_solution_exploration</code></td><td>Brainstorming, Option Generation & Rapid Exploration</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>personalized_learning_and_upskilling</code></td><td>Personalized Learning for New Technologies</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>team_onboarding_and_mentoring</code></td><td>Team Onboarding, Mentoring & Institutional Knowledge Transfer</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>stakeholder_communication_support</code></td><td>Stakeholder/Client Communication Drafting & Translation</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>meeting_assistance</code></td><td>Meeting Scheduling, Notes, Summaries & Action Items</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>planning_prioritization_and_status_tracking</code></td><td>Planning, Prioritization, Blocker Detection & Status Reporting</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>proactive_personal_agent_and_admin_automation</code></td><td>Proactive Personal Agent & Routine Admin Automation</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details>
+    <summary>Constraint Codebook (All 5 Categories, 50 Themes)</summary>
+    <div class="detail-body">
+      <p>Unified constraint codebook produced by GPT-5.2 reconciliation. Captures what developers do <em>not</em> want AI to handle.</p>
+
+      <h4>Development <span class="badge amber">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>no_autonomous_architecture_system_design</code></td><td>No Autonomous Architecture or System Design Decisions</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_large_unscoped_refactors</code></td><td>No Large, Unscoped, or Sweeping Codebase Changes</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_autonomous_execution_merge_deploy_or_agentic_control</code></td><td>No Autonomous Execution, Merging/Deploying, or Agentic Control</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_complex_debugging_or_critical_bug_fixes</code></td><td>No AI Ownership of Complex Debugging or Critical Bug Fixes</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_security_privacy_secrets_handling</code></td><td>No Security/Privacy-Sensitive Work or Secrets Handling</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_autonomous_performance_optimization</code></td><td>No Autonomous Performance Optimization</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_deciding_requirements_business_logic_or_api_ux</code></td><td>No AI-Led Requirements, Core Business Logic, or API/UX Decisions</td><td>GPT, Gemini</td></tr>
+          <tr><td><code>preserve_developer_agency_learning_and_job_ownership</code></td><td>Preserve Developer Agency, Learning, and Ownership</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>avoid_ai_when_unreliable_contextless_hard_to_verify_or_intrusive</code></td><td>Avoid AI Output That Is Unreliable, Contextless, Hard to Verify, or Intrusive</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_constraints_open_to_ai_help</code></td><td>No Specific No-Go Zones (Open to AI Help)</td><td>GPT, Gemini</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Design & Planning <span class="badge amber">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>human_accountability_final_decisions</code></td><td>No AI Final Decision-Making (Human Accountability Required)</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_led_architecture_design</code></td><td>No AI as Primary System Architect / High-Level Designer</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_project_management_task_assignment</code></td><td>No AI Running Project Management</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_requirements_stakeholder_elicitation</code></td><td>No AI-Led Requirements Gathering or Stakeholder Alignment</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_empathy_team_dynamics</code></td><td>No Replacement of Human Empathy, Collaboration, or Interpersonal Dynamics</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ai_assistant_human_in_loop</code></td><td>No Autopilot: AI Should Assist with Human-in-the-Loop Oversight</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>trust_accuracy_and_context_limitations</code></td><td>Avoid AI for High-Stakes Work Due to Reliability & Missing Context</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>privacy_confidentiality_ip_and_message_control</code></td><td>No AI Handling Sensitive/Confidential Data or Uncontrolled Messaging</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_vision_strategy_creativity_taste</code></td><td>No AI Owning Product Vision, Strategy, or Creative Judgments</td><td>GPT, Gemini</td></tr>
+          <tr><td><code>no_constraints_or_unsure</code></td><td>No Constraints Stated / Welcome Full AI Involvement</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Quality & Risk <span class="badge amber">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>human_final_decision_and_accountability</code></td><td>Humans Must Make Final High-Stakes Decisions</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_autonomous_code_or_production_actions</code></td><td>No Autonomous Code/Repo/Production Actions Without Approval</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_code_review_gate_required</code></td><td>Human Code Review / PR Approval Must Remain the Gate</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>security_and_compliance_must_be_human_led</code></td><td>Security, Compliance, and Threat Modeling Must Be Human-Led</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_sensitive_data_or_credentials_access</code></td><td>Do Not Give AI Access to Sensitive/Customer Data or Credentials</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ai_outputs_must_be_verifiable_and_not_self_validated</code></td><td>AI Must Be Reliable, Verifiable, and Not Self-Validated</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>humans_own_requirements_architecture_and_tradeoffs</code></td><td>Humans Must Own Requirements, Architecture, and Trade-Offs</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_led_test_strategy_intent_and_signoff</code></td><td>Test Strategy and Sign-Off Must Be Human-Led</td><td>GPT only</td></tr>
+          <tr><td><code>preserve_human_ethics_empathy_and_human_centric_work</code></td><td>Preserve Human Ethics, Empathy, and Human-Centric Work</td><td>GPT, Gemini</td></tr>
+          <tr><td><code>no_constraints_stated</code></td><td>No Specific No-Go Areas Stated</td><td>GPT, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Infrastructure & Ops <span class="badge amber">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>no_direct_customer_interaction</code></td><td>No Direct AI-to-Customer Interaction</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_autonomous_production_changes</code></td><td>No Autonomous Production Deployments or Changes</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_approval_before_consequential_actions</code></td><td>Human Approval Required Before Consequential Actions</td><td>GPT, Opus</td></tr>
+          <tr><td><code>no_security_permissions_secrets_management</code></td><td>No AI Management of Security, Access, Permissions, or Secrets</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_autonomous_incident_response_or_overrides</code></td><td>No Autonomous Incident Response or Critical Overrides</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>avoid_ai_for_high_precision_deterministic_work</code></td><td>Avoid AI for High-Precision/Deterministic Work</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_full_autonomy_for_environment_setup_maintenance</code></td><td>No Full Autonomy for Environment Setup and Maintenance</td><td>GPT, Gemini</td></tr>
+          <tr><td><code>preserve_human_learning_and_accountability</code></td><td>Preserve Human Learning, System Understanding, and Accountability</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_ai_initiated_irreversible_or_destructive_data_actions</code></td><td>No AI-Initiated Irreversible/Destructive Data Operations</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_constraints_expressed_or_pro_automation</code></td><td>No Constraints Expressed / Comfortable with Broad Automation</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Meta-Work <span class="badge amber">10 themes</span></h4>
+      <table>
+        <thead><tr><th>Code</th><th>Theme</th><th>Models</th></tr></thead>
+        <tbody>
+          <tr><td><code>human_led_mentoring_onboarding</code></td><td>Keep mentoring and onboarding human-led</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_authored_communication</code></td><td>Keep interpersonal communications human-authored</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_review_required_before_sending_or_publishing</code></td><td>No autonomous sending/publishing without human review</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>no_confidential_or_sensitive_data</code></td><td>Keep AI away from confidential or sensitive information</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>preserve_hands_on_learning</code></td><td>Don't outsource learning and skills development to AI</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>preserve_human_research_and_ideation</code></td><td>Keep research/brainstorming primarily human</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>human_accountability_for_high_stakes_decisions</code></td><td>High-stakes decisions must remain human-led</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>avoid_unvetted_documentation</code></td><td>AI-generated documentation must be vetted</td><td>GPT, Gemini, Opus</td></tr>
+          <tr><td><code>ai_outputs_not_trustworthy_as_primary_source</code></td><td>Don't treat AI output as trustworthy/authoritative</td><td>Opus only</td></tr>
+          <tr><td><code>no_constraints_or_unsure</code></td><td>No constraints stated / unsure</td><td>GPT, Gemini, Opus</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details>
+    <summary>Coding Prompt: Opportunity Track (Phase 4)</summary>
+    <div class="detail-body">
+<pre><code>You are a qualitative research coder. Your task is to systematically code
+each "WANT" response using ONLY the themes from the provided codebook.
+
+Each response is shown alongside the same respondent's answer to a related
+question about what they do NOT want AI to handle, for additional context.
+
+CODEBOOK:
+{codebook themes listed here}
+
+ISSUE CODES (assign when a response has data quality issues):
+- ISSUE_WRONG_FIELD: The respondent appears to have answered the other question
+- ISSUE_BACK_REFERENCE: Response references a prior answer and is unintelligible
+  on its own
+- ISSUE_NON_RESPONSE: Terse non-answer with no analyzable content
+- You may create other ISSUE_* codes if you encounter a different type of data
+  quality problem
+
+INSTRUCTIONS:
+1. Read each response carefully
+2. For each response, write a brief rationale
+3. Then assign ALL applicable theme codes from the codebook
+4. A response can have 0, 1, or multiple themes
+5. Only use codes from the codebook or ISSUE codes
+6. If no themes apply, return an empty array
+
+RESPONSES TO CODE:
+[Batches of 20 responses, each with context from opposite question]
+
+OUTPUT FORMAT:
+[
+  {"pid": 8, "rationale": "...", "themes": ["theme_code_1", "theme_code_2"]},
+  {"pid": 11, "rationale": "...", "themes": ["ISSUE_BACK_REFERENCE"]}
+]
+
+Return ONLY the JSON array, no other text.</code></pre>
+    </div>
+  </details>
+
+  <details>
+    <summary>Coding Prompt: Constraint Track</summary>
+    <div class="detail-body">
+      <p>Identical structure to the opportunity track prompt, but with:</p>
+      <ul>
+        <li>Constraint codebook themes replacing opportunity themes</li>
+        <li>"NOT WANT" responses as the primary coding target</li>
+        <li>"WANT" responses shown as cross-response context</li>
+        <li>Same ISSUE code system applies</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>Theme Discovery Prompt Template</summary>
+    <div class="detail-body">
+<pre><code>You are analyzing open-ended survey responses from software developers about
+where they want AI assistance in their work. Your task is to identify themes
+in these responses.
+
+Guidelines for theme creation:
+- Themes should be SPECIFIC and ACTIONABLE
+  (e.g., "Automated test generation for edge cases" not just "Testing")
+- Themes should be PROBLEM-FOCUSED (describe the pain point, not a solution)
+- A response can belong to MULTIPLE themes
+- Aim for 4-15 themes that capture the major patterns
+
+For each response, return:
+{
+  "pid": &lt;participant ID&gt;,
+  "themes": ["theme_code_1", "theme_code_2", ...]
+}
+
+Also provide a theme codebook:
+{
+  "themes": [
+    {
+      "code": "snake_case_theme_code",
+      "name": "Human-Readable Theme Name",
+      "description": "What this capability means and why developers want it",
+      "pids": [list of PIDs expressing this]
+    }
+  ],
+  "codings": [
+    {"pid": 123, "themes": ["theme_code_1", "theme_code_2"]}
+  ]
+}
+
+RESPONSES TO ANALYZE:
+[All responses for the category]</code></pre>
+    </div>
+  </details>
+
+  <details>
+    <summary>Theme Reconciliation Prompt Template</summary>
+    <div class="detail-body">
+<pre><code>You are a qualitative research analyst performing theme reconciliation.
+
+CONTEXT: Three independent AI models analyzed survey responses from the
+"[category]" category. Each identified opportunity themes. Your job is to
+reconcile these into a unified codebook.
+
+--- GPT-5.2 THEMES ---
+[All GPT themes with names, descriptions, PIDs]
+
+--- GEMINI THEMES ---
+[All Gemini themes]
+
+--- OPUS THEMES ---
+[All Opus themes]
+
+TASK: Create a unified codebook by:
+1. Identifying themes that overlap across models (same concept, different names)
+2. Merging overlapping themes into single unified themes
+3. Keeping single-model themes IF substantive (&ge;3 PIDs)
+4. Dropping themes that are too vague or have very few supporting responses
+5. Aim for 5-10 unified themes per category
+
+For each unified theme, provide:
+- code: snake_case identifier
+- name: Human-readable name
+- description: Clear description of the desired capability
+- source_models: which models identified it (["gpt", "gemini", "opus"])
+- source_codes: the original codes from each model
+
+Return ONLY valid JSON, no other text.</code></pre>
+    </div>
+  </details>
+
+  <details>
+    <summary>ISSUE Code Taxonomy</summary>
+    <div class="detail-body">
+      <table>
+        <thead><tr><th>Code</th><th>Definition</th><th>Detection Signal</th><th>Consensus Rule</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>ISSUE_WRONG_FIELD</code></td>
+            <td>Respondent answered the opposite question (e.g., wrote constraints in the "want" field)</td>
+            <td>Cross-response context reveals contradictory intent</td>
+            <td rowspan="3">2+ models flag <em>any</em> ISSUE_* &rarr; generic ISSUE marker applied</td>
+          </tr>
+          <tr>
+            <td><code>ISSUE_BACK_REFERENCE</code></td>
+            <td>Response references a prior answer ("same as before", "see above") and is unintelligible alone</td>
+            <td>Short response with deictic language</td>
+          </tr>
+          <tr>
+            <td><code>ISSUE_NON_RESPONSE</code></td>
+            <td>Terse reply with no analyzable content</td>
+            <td>"N/A", "none", "no", single punctuation</td>
+          </tr>
+          <tr>
+            <td><code>ISSUE_*</code> (custom)</td>
+            <td>Models may create additional issue codes for novel quality problems</td>
+            <td>Varies</td>
+            <td>Same 2/3 majority rule; prefix matching ensures grouping</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details>
+    <summary>Output JSON Schemas</summary>
+    <div class="detail-body">
+      <h4>Theme Discovery Output</h4>
+<pre><code>{
+  "model": "gpt-5.2",
+  "category": "design_planning",
+  "category_name": "Design & Planning",
+  "response_count": 223,
+  "timestamp": "ISO-8601",
+  "themes": [
+    {
+      "code": "string",
+      "name": "string",
+      "description": "string",
+      "pids": [integer]
+    }
+  ],
+  "codings": [
+    { "pid": integer, "themes": ["string"] }
+  ]
+}</code></pre>
+
+      <h4>Consolidated Codebook</h4>
+<pre><code>{
+  "metadata": {
+    "phase": "Opportunity Theme Reconciliation",
+    "timestamp": "ISO-8601",
+    "reconciliation_model": "gpt-5.2",
+    "discovery_models": ["gpt-5.2", "gemini-3.1-pro-preview", "claude-opus-4-6"]
+  },
+  "categories": {
+    "category_key": {
+      "category": "string",
+      "category_name": "string",
+      "theme_count": integer,
+      "models_reconciled": ["gpt", "gemini", "opus"],
+      "themes": [
+        {
+          "code": "string",
+          "name": "string",
+          "description": "string",
+          "source_models": ["gpt", "gemini", "opus"],
+          "source_codes": {
+            "gpt": ["string"],
+            "gemini": ["string"],
+            "opus": ["string"]
+          }
+        }
+      ]
+    }
+  }
+}</code></pre>
+
+      <h4>Systematic Codings (Phase 4)</h4>
+<pre><code>{
+  "category": "string",
+  "phase": "Phase 4 - Systematic Coding",
+  "timestamp": "ISO-8601",
+  "models": ["gpt-5.2", "gemini-3.1-pro-preview", "claude-opus-4-6"],
+  "codebook": [ { "code": "string", "name": "string", "description": "string" } ],
+  "response_count": integer,
+  "codings": {
+    "gpt": [ { "pid": integer, "rationale": "string", "themes": ["string"] } ],
+    "gemini": [ ... ],
+    "opus": [ ... ]
+  },
+  "cost": { ... }
+}</code></pre>
+
+      <h4>IRR Results (Phase 5)</h4>
+<pre><code>{
+  "phase": "Phase 5 - Inter-Rater Reliability",
+  "methodology": {
+    "raters": ["gpt-5.2", "gemini-3.1-pro-preview", "claude-opus-4-6"],
+    "metrics": ["Krippendorff's Alpha", "Cohen's Kappa (pairwise)", "Percent Agreement"]
+  },
+  "overall_statistics": {
+    "mean_krippendorff_alpha": float,
+    "mean_percent_agreement": float,
+    "interpretation": "string"
+  },
+  "category_results": {
+    "category_key": {
+      "krippendorff_alpha": { "theme_code": float },
+      "percent_agreement": { "theme_code": float },
+      "pairwise_kappa": {
+        "gpt_vs_gemini": { "theme_code": float },
+        "gpt_vs_opus": { "theme_code": float },
+        "gemini_vs_opus": { "theme_code": float }
+      },
+      "code_frequencies": { "gpt": {}, "gemini": {}, "opus": {} }
+    }
+  }
+}</code></pre>
+
+      <h4>Prevalence Results (Phase 6)</h4>
+<pre><code>{
+  "methodology": {
+    "consensus_method": "majority_vote",
+    "threshold": "2+ of 3 models must agree"
+  },
+  "category_results": {
+    "category_key": {
+      "theme_prevalence": [
+        {
+          "code": "string",
+          "count": integer,
+          "percentage": float,
+          "pids": [integer]
+        }
+      ],
+      "consensus_codings": { "pid": ["theme1", "theme2"] }
+    }
+  }
+}</code></pre>
+
+      <h4>Rich Opportunity Card</h4>
+<pre><code>{
+  "rank": integer,
+  "theme_code": "string",
+  "category": "string",
+  "title": "string",
+  "problem_statement": "string",
+  "proposed_capability": {
+    "summary": "string",
+    "context_sources_needed": ["string"],
+    "capability_steps": ["string"]
+  },
+  "impact": {
+    "description": "string",
+    "evidence_quotes": [ { "pid": integer, "quote": "string" } ]
+  },
+  "success_definition": {
+    "qualitative_measures": ["string"],
+    "quantitative_measures": ["string"]
+  },
+  "constraints_and_guardrails": [
+    {
+      "constraint": "string",
+      "supporting_quote": { "pid": integer, "quote": "string" }
+    }
+  ],
+  "who_it_affects": {
+    "prevalence_count": integer,
+    "prevalence_percentage": float,
+    "description": "string",
+    "signals": ["string"]
+  },
+  "models_consulted": ["gpt-5.2", "gemini-3.1-pro-preview", "claude-opus-4-6"]
+}</code></pre>
+    </div>
+  </details>
+
+  <details>
+    <summary>IRR Interpretation Guide</summary>
+    <div class="detail-body">
+      <h4>Why Krippendorff's Alpha?</h4>
+      <ul>
+        <li>Designed for multi-rater reliability (3+ raters)</li>
+        <li>Handles missing data gracefully (if one model fails on a batch)</li>
+        <li>Supports nominal-level measurement (categorical theme codes)</li>
+        <li>Does not assume a fixed rater set</li>
+        <li>More conservative than simple percent agreement, adjusting for chance</li>
+      </ul>
+
+      <h4>How It's Calculated</h4>
+      <p>For each theme code, a binary matrix is constructed:</p>
+<pre><code># Row per model, column per response
+#                PID_1  PID_2  PID_3  PID_4  ...
+# GPT:          [  1,     0,     1,     0,   ...]
+# Gemini:       [  1,     0,     1,     0,   ...]
+# Opus:         [  1,     0,     0,     0,   ...]
+
+alpha = krippendorff.alpha(
+    reliability_data=matrix,
+    level_of_measurement="nominal"
+)</code></pre>
+
+      <h4>Reporting</h4>
+      <ul>
+        <li>Per-theme &alpha; values identify which themes models agree/disagree on</li>
+        <li>Themes with &alpha; &lt; 0.67 are flagged for potential human adjudication</li>
+        <li>Overall mean &alpha; provides a summary reliability score</li>
+        <li>Pairwise &kappa; identifies whether specific model pairs diverge</li>
+        <li>Code frequency counts reveal systematic over/under-coding by individual models</li>
+      </ul>
+
+      <h4>What IRR Tells Us (and Doesn't)</h4>
+      <p>High &alpha; means the three models consistently apply the same theme to the same responses&mdash;the codebook is operationally clear and the models "understand" it similarly. Low &alpha; on a specific theme may indicate the theme definition is ambiguous, the theme requires human judgment the models handle differently, or the theme captures a rare pattern where base-rate effects inflate disagreement.</p>
+      <p>IRR does <em>not</em> tell us whether the codes are <em>correct</em>&mdash;only that the coders agree. This is why the human review gate exists: to ensure the codebook itself captures meaningful, well-defined themes before reliability is measured.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Model Configuration & Cost Tracking</summary>
+    <div class="detail-body">
+      <h4>Model Parameters</h4>
+      <table>
+        <thead><tr><th>Model</th><th>Thinking Config</th><th>Temperature</th><th>Streaming</th></tr></thead>
+        <tbody>
+          <tr><td>GPT-5.2</td><td><code>reasoning_effort="high"</code></td><td>1</td><td>No</td></tr>
+          <tr><td>Gemini 3.1 Pro</td><td><code>ThinkingConfig(thinking_level="HIGH")</code></td><td>Default</td><td>No</td></tr>
+          <tr><td>Claude Opus 4.6</td><td><code>thinking: adaptive, effort: high</code></td><td>Default</td><td>Yes (timeout avoidance)</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Token Pricing (per 1M tokens)</h4>
+      <table>
+        <thead><tr><th>Model</th><th>Input</th><th>Output</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>GPT-5.2</td><td>$1.75</td><td>$14.00</td><td>Thinking tokens billed at output rate</td></tr>
+          <tr><td>Gemini 3.1 Pro</td><td>$2.00</td><td>$12.00</td><td>Thinking tokens billed at output rate</td></tr>
+          <tr><td>Claude Opus 4.6</td><td>$5.00</td><td>$25.00</td><td>Thinking tokens billed at output rate</td></tr>
+        </tbody>
+      </table>
+
+      <p>The <code>CostTracker</code> class in <code>llm.py</code> tracks input, output, and thinking tokens separately per API call, with phase-level summaries printed to console.</p>
+    </div>
+  </details>
+</section>
+
+</main>
+</div>
+
+<!-- ======== TOC Active State Script ======== -->
+<script>
+(function() {
+  const toc = document.getElementById('toc');
+  const links = toc.querySelectorAll('a');
+  const sections = Array.from(links).map(a => ({
+    link: a,
+    target: document.querySelector(a.getAttribute('href'))
+  })).filter(s => s.target);
+
+  function update() {
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.target.getBoundingClientRect().top <= 80) current = s;
+    }
+    links.forEach(l => l.classList.remove('active'));
+    if (current) current.link.classList.add('active');
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+
+</body>
+</html>

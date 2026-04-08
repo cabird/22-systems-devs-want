@@ -1,0 +1,1231 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "design_planning",
+  "category_name": "Design & Planning",
+  "response_count": 162,
+  "timestamp": "2026-03-06T18:32:07.614420",
+  "themes": [
+    {
+      "code": "no_autonomous_decisions",
+      "name": "No Autonomous Decision-Making",
+      "description": "Developers do not want AI to make final decisions, judgment calls, or critical trade-offs autonomously. AI should inform, suggest, and present options, but humans must retain the authority to make the final call. This includes strategic decisions, prioritization, design trade-offs, and any high-stakes choices where accountability matters.",
+      "pids": [
+        3,
+        10,
+        11,
+        40,
+        59,
+        69,
+        112,
+        158,
+        166,
+        179,
+        249,
+        276,
+        294,
+        300,
+        305,
+        306,
+        345,
+        366,
+        386,
+        422,
+        428,
+        483,
+        508,
+        566,
+        696,
+        716,
+        721,
+        723,
+        774,
+        788,
+        809,
+        823,
+        859
+      ]
+    },
+    {
+      "code": "no_autonomous_system_architecture",
+      "name": "No Autonomous System Architecture & Design",
+      "description": "Developers want to retain control over system architecture and high-level design decisions. Concerns include AI defaulting to stale or generic patterns, lacking long-term vision, producing unmaintainable designs, and not understanding the full complexity of multi-component systems. AI may assist or act as a sounding board, but should not drive architecture independently.",
+      "pids": [
+        29,
+        93,
+        114,
+        163,
+        195,
+        200,
+        205,
+        217,
+        219,
+        228,
+        290,
+        349,
+        359,
+        360,
+        391,
+        432,
+        443,
+        456,
+        533,
+        545,
+        549,
+        553,
+        560,
+        607,
+        680,
+        698,
+        704,
+        748,
+        852
+      ]
+    },
+    {
+      "code": "no_requirements_gathering",
+      "name": "No Autonomous Requirements Gathering",
+      "description": "Developers believe requirements gathering requires deep human-to-human communication, customer empathy, and contextual understanding that AI cannot replicate. AI should not independently define or assume requirements, though it may help organize or refine them after humans have gathered them.",
+      "pids": [
+        28,
+        153,
+        193,
+        281,
+        300,
+        314,
+        344,
+        533,
+        598,
+        780,
+        827
+      ]
+    },
+    {
+      "code": "no_project_management_task_assignment",
+      "name": "No Autonomous Project Management or Task Assignment",
+      "description": "Developers do not want AI to manage projects, assign tasks to individuals, or handle planning that requires understanding team dynamics, individual strengths, and real-world unpredictability. AI lacks awareness of human factors like workload, morale, and sudden changes.",
+      "pids": [
+        48,
+        53,
+        75,
+        82,
+        143,
+        161,
+        291,
+        341,
+        356,
+        390,
+        407,
+        440,
+        493,
+        506,
+        636,
+        682,
+        687,
+        730,
+        753,
+        859
+      ]
+    },
+    {
+      "code": "human_empathy_and_interpersonal",
+      "name": "No Replacement of Human Empathy, Collaboration & Interpersonal Dynamics",
+      "description": "Developers want to preserve human-driven aspects of work that require empathy, emotional intelligence, team dynamics, stakeholder alignment, and interpersonal communication. AI should not lead activities that depend on reading people, building relationships, or navigating organizational politics.",
+      "pids": [
+        10,
+        75,
+        82,
+        179,
+        266,
+        313,
+        345,
+        422,
+        526,
+        611,
+        830,
+        854
+      ]
+    },
+    {
+      "code": "ai_as_assistant_not_replacement",
+      "name": "AI Should Assist, Not Replace Human Agency",
+      "description": "Developers want AI to serve as a collaborative tool, sounding board, or assistant rather than an autonomous agent. They value their own agency, learning, and professional growth, and fear that full AI autonomy would undermine their skills, ownership, and sense of control over their work.",
+      "pids": [
+        17,
+        29,
+        40,
+        158,
+        281,
+        366,
+        387,
+        391,
+        483,
+        527,
+        545,
+        587,
+        608,
+        717,
+        809
+      ]
+    },
+    {
+      "code": "hallucination_and_trust",
+      "name": "Insufficient Trust Due to Hallucinations and Inaccuracy",
+      "description": "Developers do not want AI handling tasks where accuracy is critical because current AI tools hallucinate, produce unreliable outputs, or lack up-to-date knowledge. Until reliability improves, AI should not be trusted with consequential design or planning work.",
+      "pids": [
+        55,
+        101,
+        133,
+        211,
+        368,
+        370,
+        372,
+        456,
+        625,
+        664,
+        813
+      ]
+    },
+    {
+      "code": "context_and_domain_limitations",
+      "name": "AI Lacks Sufficient Context and Domain Knowledge",
+      "description": "Developers are concerned that AI cannot understand the full organizational, technical, or business context needed for effective design and planning. This includes unwritten decisions, team-specific constraints, proprietary environments, and long-term strategic goals that are difficult to convey to AI.",
+      "pids": [
+        59,
+        69,
+        93,
+        145,
+        182,
+        192,
+        240,
+        294,
+        409,
+        470,
+        603,
+        671,
+        852
+      ]
+    },
+    {
+      "code": "data_privacy_and_ip_concerns",
+      "name": "Data Privacy, Confidentiality & IP Concerns",
+      "description": "Developers do not want AI handling sensitive data, confidential information, or proprietary product ideas due to concerns about data exposure and intellectual property protection.",
+      "pids": [
+        259,
+        261,
+        275
+      ]
+    },
+    {
+      "code": "no_concerns_welcome_ai",
+      "name": "No Constraints \u2014 Welcome Full AI Involvement",
+      "description": "Some developers expressed no reservations about AI involvement in design and planning, welcoming AI in all capacities or stating they have no specific areas they want to exclude AI from.",
+      "pids": [
+        8,
+        26,
+        190,
+        384,
+        394,
+        402,
+        459,
+        558,
+        756,
+        792,
+        814
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "no_autonomous_decisions",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "no_requirements_gathering",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "no_autonomous_decisions",
+        "ai_as_assistant_not_replacement",
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": []
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "no_project_management_task_assignment",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "hallucination_and_trust",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 57,
+      "themes": []
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "no_autonomous_decisions",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "no_autonomous_decisions",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "human_empathy_and_interpersonal",
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "human_empathy_and_interpersonal",
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 101,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "no_project_management_task_assignment",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "no_requirements_gathering",
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "no_autonomous_decisions",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "no_autonomous_decisions",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": []
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "hallucination_and_trust",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 192,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 217,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 248,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "no_autonomous_decisions",
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "data_privacy_and_ip_concerns"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "data_privacy_and_ip_concerns"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "data_privacy_and_ip_concerns"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "no_requirements_gathering",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "no_autonomous_decisions",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 300,
+      "themes": [
+        "no_autonomous_decisions",
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "no_autonomous_decisions",
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": []
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "no_autonomous_decisions",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": []
+    },
+    {
+      "pid": 328,
+      "themes": []
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "no_autonomous_decisions",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": []
+    },
+    {
+      "pid": 349,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 357,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "no_autonomous_decisions",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 368,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 391,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 407,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "no_autonomous_decisions",
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 432,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 434,
+      "themes": []
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "hallucination_and_trust",
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "no_autonomous_decisions",
+        "ai_as_assistant_not_replacement",
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 511,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 522,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "no_requirements_gathering",
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 566,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": []
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "human_empathy_and_interpersonal",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 682,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "no_autonomous_decisions",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": []
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "no_autonomous_decisions",
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 734,
+      "themes": []
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "no_autonomous_system_architecture"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "no_project_management_task_assignment"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 769,
+      "themes": []
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 792,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "ai_as_assistant_not_replacement",
+        "no_autonomous_decisions"
+      ]
+    },
+    {
+      "pid": 813,
+      "themes": [
+        "hallucination_and_trust"
+      ]
+    },
+    {
+      "pid": 814,
+      "themes": [
+        "no_concerns_welcome_ai"
+      ]
+    },
+    {
+      "pid": 823,
+      "themes": [
+        "no_autonomous_decisions",
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": []
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "no_requirements_gathering"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "ai_as_assistant_not_replacement"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "no_autonomous_system_architecture",
+        "context_and_domain_limitations"
+      ]
+    },
+    {
+      "pid": 854,
+      "themes": [
+        "human_empathy_and_interpersonal"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "no_autonomous_decisions",
+        "no_project_management_task_assignment"
+      ]
+    }
+  ]
+}

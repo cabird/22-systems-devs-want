@@ -1,0 +1,2283 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "development",
+  "category_name": "Development",
+  "response_count": 353,
+  "timestamp": "2026-03-07T09:06:46.163900",
+  "themes": [
+    {
+      "code": "architecture_and_system_design",
+      "name": "System Architecture & High-Level Design",
+      "description": "Developers do not want AI defining core system architecture, low-level or high-level design, or technology stack choices. They feel AI lacks the holistic project context, long-term vision, intuition, and deep domain knowledge required to make these nuanced trade-offs.",
+      "pids": [
+        2,
+        10,
+        11,
+        20,
+        34,
+        59,
+        73,
+        86,
+        92,
+        107,
+        122,
+        131,
+        161,
+        179,
+        188,
+        194,
+        200,
+        208,
+        249,
+        260,
+        273,
+        290,
+        291,
+        294,
+        311,
+        331,
+        337,
+        359,
+        360,
+        362,
+        370,
+        422,
+        457,
+        484,
+        529,
+        545,
+        551,
+        559,
+        580,
+        607,
+        611,
+        614,
+        627,
+        639,
+        661,
+        696,
+        698,
+        705,
+        706,
+        716,
+        721,
+        732,
+        740,
+        775,
+        781,
+        785,
+        832
+      ]
+    },
+    {
+      "code": "large_refactoring_and_scale",
+      "name": "Large-Scale Changes & Complex Refactoring",
+      "description": "Developers want to avoid AI making massive structural changes, refactoring complex multi-file components, or rewriting entire features at once. They find large AI-generated pull requests hard to review, prone to losing context, and likely to create unmaintainable or overly verbose code.",
+      "pids": [
+        11,
+        18,
+        19,
+        36,
+        40,
+        111,
+        112,
+        114,
+        145,
+        153,
+        158,
+        163,
+        189,
+        196,
+        202,
+        211,
+        221,
+        225,
+        254,
+        260,
+        270,
+        282,
+        298,
+        305,
+        339,
+        341,
+        376,
+        399,
+        413,
+        443,
+        461,
+        464,
+        500,
+        508,
+        520,
+        527,
+        535,
+        539,
+        541,
+        553,
+        578,
+        599,
+        625,
+        635,
+        640,
+        665,
+        671,
+        722,
+        748,
+        767,
+        768,
+        811,
+        816,
+        819,
+        833,
+        839,
+        857
+      ]
+    },
+    {
+      "code": "security_privacy_and_business_logic",
+      "name": "Security, Privacy & Core Business Logic",
+      "description": "Developers do not trust AI with critical business logic, handling customer PII, secrets, or implementing core security and authentication code. The high stakes of missing subtle vulnerabilities or deploying non-compliant code make these areas strictly off-limits.",
+      "pids": [
+        28,
+        38,
+        110,
+        143,
+        180,
+        195,
+        218,
+        225,
+        227,
+        249,
+        253,
+        261,
+        266,
+        273,
+        294,
+        317,
+        338,
+        363,
+        377,
+        390,
+        427,
+        487,
+        565,
+        610,
+        613,
+        619,
+        638,
+        678,
+        716,
+        723,
+        730,
+        744,
+        747,
+        780,
+        781,
+        825,
+        831
+      ]
+    },
+    {
+      "code": "autonomous_execution_and_approvals",
+      "name": "Autonomous Execution & Final Approvals",
+      "description": "Developers strictly oppose AI acting autonomously without oversight. They do not want AI running commands, deploying production code, handling code reviews, or merging pull requests without explicit human review, citing the absolute need for human accountability.",
+      "pids": [
+        22,
+        40,
+        42,
+        43,
+        49,
+        64,
+        69,
+        73,
+        105,
+        106,
+        120,
+        125,
+        133,
+        151,
+        171,
+        174,
+        179,
+        180,
+        199,
+        211,
+        216,
+        219,
+        236,
+        239,
+        271,
+        277,
+        281,
+        291,
+        297,
+        309,
+        310,
+        314,
+        337,
+        350,
+        363,
+        380,
+        388,
+        395,
+        400,
+        441,
+        448,
+        483,
+        526,
+        527,
+        551,
+        562,
+        591,
+        595,
+        603,
+        665,
+        681,
+        687,
+        703,
+        705,
+        716,
+        725,
+        748,
+        858,
+        859
+      ]
+    },
+    {
+      "code": "debugging_and_bug_fixing",
+      "name": "Complex Debugging & Bug Fixing",
+      "description": "AI should not independently handle complex debugging or critical bug fixes, especially in distributed systems or intricate stateful issues. Developers note that AI often hallucinates fixes, introduces regressions, and lacks the troubleshooting intuition needed for root cause analysis.",
+      "pids": [
+        3,
+        13,
+        28,
+        30,
+        38,
+        59,
+        83,
+        88,
+        126,
+        153,
+        193,
+        196,
+        202,
+        205,
+        206,
+        216,
+        223,
+        275,
+        290,
+        325,
+        331,
+        332,
+        347,
+        356,
+        372,
+        402,
+        422,
+        470,
+        483,
+        502,
+        539,
+        558,
+        601,
+        610,
+        623,
+        626,
+        634,
+        671,
+        697,
+        701,
+        747,
+        819,
+        859
+      ]
+    },
+    {
+      "code": "performance_optimization",
+      "name": "Performance Optimization",
+      "description": "AI is often seen as inadequate for heavy performance optimizations (whether local code optimizations or architectural scaling). Finding correct performance trade-offs requires an understanding of the 'big picture', constraints, and runtime scenarios that AI currently lacks.",
+      "pids": [
+        40,
+        41,
+        43,
+        83,
+        128,
+        170,
+        187,
+        189,
+        196,
+        202,
+        260,
+        278,
+        280,
+        286,
+        295,
+        310,
+        313,
+        332,
+        359,
+        369,
+        446,
+        476,
+        549,
+        576,
+        648,
+        698,
+        700,
+        701
+      ]
+    },
+    {
+      "code": "developer_enjoyment_and_learning",
+      "name": "Developer Enjoyment & Skill Development",
+      "description": "Developers want to protect the parts of their job they find interesting and fun, such as core programming and problem-solving. They fear over-reliance on AI will erode their coding skills, their underlying understanding of the system, and their general job satisfaction.",
+      "pids": [
+        3,
+        17,
+        44,
+        113,
+        148,
+        176,
+        295,
+        347,
+        381,
+        428,
+        451,
+        506,
+        519,
+        580,
+        590,
+        598,
+        607,
+        626,
+        627,
+        634,
+        726,
+        754,
+        756
+      ]
+    },
+    {
+      "code": "intrusive_autocompletion_and_unprompted_edits",
+      "name": "Intrusive Autocompletion & Unprompted Edits",
+      "description": "Developers restrict AI from making unprompted code modifications, aggressive inline completions, or auto-formatting that assumes context. These features break developers' train of thought, add random imports, and often require more time to clean up than they save.",
+      "pids": [
+        29,
+        62,
+        67,
+        145,
+        156,
+        212,
+        328,
+        366,
+        467,
+        476,
+        541,
+        609,
+        664,
+        725,
+        727,
+        760,
+        791,
+        799,
+        809,
+        815
+      ]
+    },
+    {
+      "code": "no_constraints_open_to_all",
+      "name": "No Constraints / Open to All AI Help",
+      "description": "Many developers do not want to limit AI at all. They are open to AI handling any development activity, welcoming maximum assistance, provided they still have the opportunity to validate or review the output.",
+      "pids": [
+        8,
+        26,
+        48,
+        57,
+        78,
+        91,
+        117,
+        166,
+        169,
+        182,
+        264,
+        276,
+        293,
+        314,
+        319,
+        340,
+        344,
+        346,
+        375,
+        384,
+        387,
+        388,
+        394,
+        395,
+        397,
+        441,
+        587,
+        608,
+        620,
+        644,
+        657,
+        667,
+        703,
+        704,
+        717,
+        751,
+        774,
+        776,
+        788,
+        839
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "large_refactoring_and_scale",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 19,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 20,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 34,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 36,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 38,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "large_refactoring_and_scale",
+        "autonomous_execution_and_approvals",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 41,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 43,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 44,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 57,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "architecture_and_system_design",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 62,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "architecture_and_system_design",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 78,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 91,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 105,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 107,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 110,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 111,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 122,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 125,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 126,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 128,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 131,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "architecture_and_system_design",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 188,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "large_refactoring_and_scale",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "performance_optimization",
+        "large_refactoring_and_scale",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 199,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 202,
+      "themes": [
+        "large_refactoring_and_scale",
+        "debugging_and_bug_fixing",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 208,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "large_refactoring_and_scale",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 218,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 221,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 223,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "security_privacy_and_business_logic",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 227,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 239,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 254,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 260,
+      "themes": [
+        "performance_optimization",
+        "architecture_and_system_design",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 270,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 271,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 273,
+      "themes": [
+        "security_privacy_and_business_logic",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 278,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 280,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 282,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "architecture_and_system_design",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 293,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 295,
+      "themes": [
+        "performance_optimization",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 297,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 298,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 309,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "performance_optimization",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 311,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "no_constraints_open_to_all",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 317,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 319,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 325,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "architecture_and_system_design",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 337,
+      "themes": [
+        "architecture_and_system_design",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 338,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 347,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "performance_optimization",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 362,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 363,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "performance_optimization",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 372,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 375,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 377,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 388,
+      "themes": [
+        "no_constraints_open_to_all",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "no_constraints_open_to_all",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 399,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 427,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 441,
+      "themes": [
+        "no_constraints_open_to_all",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 448,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 451,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 457,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 461,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 464,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 487,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 500,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 502,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 519,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 520,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "large_refactoring_and_scale",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 529,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 539,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 541,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 551,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 561,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 562,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 576,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 578,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 580,
+      "themes": [
+        "architecture_and_system_design",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 595,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 599,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 601,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "architecture_and_system_design",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 610,
+      "themes": [
+        "security_privacy_and_business_logic",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 613,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 614,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 619,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 625,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 626,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "architecture_and_system_design",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 638,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 639,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 644,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 648,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 661,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 667,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 678,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 681,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 697,
+      "themes": [
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "performance_optimization",
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "performance_optimization"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "no_constraints_open_to_all",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 705,
+      "themes": [
+        "architecture_and_system_design",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 706,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_and_business_logic",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 722,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 725,
+      "themes": [
+        "autonomous_execution_and_approvals",
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 726,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 727,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 732,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 744,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 747,
+      "themes": [
+        "security_privacy_and_business_logic",
+        "debugging_and_bug_fixing"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "large_refactoring_and_scale",
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 756,
+      "themes": [
+        "developer_enjoyment_and_learning"
+      ]
+    },
+    {
+      "pid": 760,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 768,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 781,
+      "themes": [
+        "architecture_and_system_design",
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 788,
+      "themes": [
+        "no_constraints_open_to_all"
+      ]
+    },
+    {
+      "pid": 791,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 811,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 815,
+      "themes": [
+        "intrusive_autocompletion_and_unprompted_edits"
+      ]
+    },
+    {
+      "pid": 816,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 819,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 825,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 831,
+      "themes": [
+        "security_privacy_and_business_logic"
+      ]
+    },
+    {
+      "pid": 832,
+      "themes": [
+        "architecture_and_system_design"
+      ]
+    },
+    {
+      "pid": 833,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 839,
+      "themes": [
+        "no_constraints_open_to_all",
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 857,
+      "themes": [
+        "large_refactoring_and_scale"
+      ]
+    },
+    {
+      "pid": 858,
+      "themes": [
+        "autonomous_execution_and_approvals"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "debugging_and_bug_fixing",
+        "autonomous_execution_and_approvals"
+      ]
+    }
+  ]
+}

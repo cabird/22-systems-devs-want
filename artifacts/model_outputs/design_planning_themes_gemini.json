@@ -1,0 +1,1677 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "category": "design_planning",
+  "category_name": "Design & Planning",
+  "response_count": 223,
+  "timestamp": "2026-03-07T13:12:52.064889",
+  "themes": [
+    {
+      "code": "architecture_and_design_generation",
+      "name": "Architecture & System Design Generation",
+      "description": "Automatically generating high-level system architectures, technical design proposals, or directional plans based on feature requirements.",
+      "pids": [
+        11,
+        26,
+        30,
+        59,
+        68,
+        78,
+        82,
+        112,
+        130,
+        156,
+        175,
+        176,
+        240,
+        245,
+        261,
+        264,
+        266,
+        306,
+        322,
+        348,
+        356,
+        357,
+        381,
+        402,
+        403,
+        412,
+        467,
+        493,
+        515,
+        558,
+        566,
+        579,
+        598,
+        664,
+        671,
+        696,
+        721,
+        767,
+        774,
+        780,
+        848,
+        854
+      ]
+    },
+    {
+      "code": "design_tradeoffs_and_alternatives",
+      "name": "Evaluating Trade-offs & Alternatives",
+      "description": "Analyzing different technological approaches, providing objective pros and cons, and helping developers compare architectural options against constraints.",
+      "pids": [
+        2,
+        13,
+        59,
+        69,
+        114,
+        151,
+        166,
+        213,
+        249,
+        276,
+        294,
+        300,
+        312,
+        313,
+        322,
+        386,
+        390,
+        395,
+        402,
+        428,
+        467,
+        470,
+        505,
+        572,
+        687,
+        763,
+        848
+      ]
+    },
+    {
+      "code": "work_item_generation_and_task_breakdown",
+      "name": "Work Item Generation & Task Breakdown",
+      "description": "Breaking down large features or technical designs into discrete, trackable work items (e.g., ADO tickets, Jira) and hierarchal tasks.",
+      "pids": [
+        8,
+        28,
+        68,
+        75,
+        96,
+        128,
+        145,
+        153,
+        158,
+        180,
+        194,
+        195,
+        212,
+        366,
+        380,
+        533,
+        553,
+        607,
+        627,
+        636,
+        687,
+        698,
+        704,
+        752,
+        823
+      ]
+    },
+    {
+      "code": "project_management_and_status_reporting",
+      "name": "Project Management & Status Reporting",
+      "description": "Managing schedules, resource allocation, estimating effort, tracking burndown, and automating administrative tasks like status updates and meetings.",
+      "pids": [
+        3,
+        5,
+        8,
+        10,
+        15,
+        28,
+        29,
+        73,
+        128,
+        133,
+        145,
+        150,
+        151,
+        155,
+        157,
+        169,
+        170,
+        180,
+        193,
+        200,
+        206,
+        216,
+        266,
+        305,
+        310,
+        380,
+        409,
+        422,
+        432,
+        440,
+        456,
+        511,
+        522,
+        533,
+        545,
+        560,
+        564,
+        597,
+        603,
+        607,
+        608,
+        611,
+        627,
+        635,
+        698,
+        721,
+        767,
+        823,
+        830
+      ]
+    },
+    {
+      "code": "requirements_gathering_and_analysis",
+      "name": "Requirements Gathering & Analysis",
+      "description": "Assisting with capturing, consolidating, analyzing, prioritizing, and clarifying user requirements across various inputs and documents.",
+      "pids": [
+        3,
+        11,
+        13,
+        40,
+        114,
+        156,
+        157,
+        161,
+        200,
+        205,
+        211,
+        290,
+        291,
+        314,
+        319,
+        348,
+        349,
+        359,
+        360,
+        366,
+        370,
+        432,
+        505,
+        522,
+        549,
+        560,
+        636,
+        748,
+        809,
+        830,
+        842
+      ]
+    },
+    {
+      "code": "architecture_review_and_risk_assessment",
+      "name": "Architecture Review & Risk Assessment",
+      "description": "Validating proposed designs, identifying security risks, surfacing edge cases, pointing out system dependencies, and catching flaws before implementation.",
+      "pids": [
+        10,
+        48,
+        59,
+        83,
+        189,
+        219,
+        249,
+        281,
+        328,
+        343,
+        345,
+        349,
+        366,
+        369,
+        387,
+        394,
+        422,
+        428,
+        448,
+        508,
+        526,
+        527,
+        587,
+        627,
+        628,
+        680,
+        696,
+        721,
+        752,
+        760,
+        810,
+        827,
+        830,
+        851
+      ]
+    },
+    {
+      "code": "documentation_and_diagram_generation",
+      "name": "Documentation & Diagram Generation",
+      "description": "Automatically drafting formal specification documents, writing user-facing documentation, and generating visual architecture diagrams (e.g., UML, flowcharts).",
+      "pids": [
+        57,
+        75,
+        124,
+        163,
+        170,
+        179,
+        213,
+        228,
+        245,
+        253,
+        275,
+        314,
+        328,
+        332,
+        387,
+        401,
+        417,
+        459,
+        483,
+        506,
+        515,
+        553,
+        560,
+        628,
+        730,
+        737,
+        795,
+        814,
+        830
+      ]
+    },
+    {
+      "code": "internal_context_and_codebase_understanding",
+      "name": "Codebase Context & Institutional Knowledge",
+      "description": "Indexing massive existing codebases, internal APIs, standard libraries, and organizational constraints to inform and align new designs.",
+      "pids": [
+        17,
+        26,
+        55,
+        68,
+        83,
+        138,
+        166,
+        182,
+        190,
+        208,
+        237,
+        259,
+        281,
+        291,
+        341,
+        390,
+        396,
+        435,
+        569,
+        572,
+        682,
+        716,
+        717,
+        780,
+        792
+      ]
+    },
+    {
+      "code": "meeting_and_decision_context_tracking",
+      "name": "Meeting Tracking & Design Decision History",
+      "description": "Tracking historical design decisions, summarising cross-channel communications (meetings, emails), and remembering the specific rationale for past choices.",
+      "pids": [
+        2,
+        40,
+        161,
+        169,
+        179,
+        190,
+        193,
+        206,
+        245,
+        313,
+        387,
+        417,
+        440,
+        666,
+        748,
+        753,
+        809,
+        852
+      ]
+    },
+    {
+      "code": "interactive_design_partner",
+      "name": "Interactive Brainstorming & Design Assistant",
+      "description": "Acting as an active, conversational collaborator to bounce ideas off of, provide ongoing feedback, and co-design systems interactively.",
+      "pids": [
+        93,
+        112,
+        130,
+        143,
+        215,
+        249,
+        250,
+        332,
+        384,
+        391,
+        483,
+        555,
+        851
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 2,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 3,
+      "themes": [
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 5,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 8,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 11,
+      "themes": [
+        "architecture_and_design_generation",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 13,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 17,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 26,
+      "themes": [
+        "architecture_and_design_generation",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 28,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 29,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 30,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 40,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 57,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "architecture_and_design_generation",
+        "architecture_review_and_risk_assessment",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 68,
+      "themes": [
+        "architecture_and_design_generation",
+        "internal_context_and_codebase_understanding",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 69,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 73,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 75,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 78,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 83,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 96,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 112,
+      "themes": [
+        "architecture_and_design_generation",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 114,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 124,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 128,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 130,
+      "themes": [
+        "architecture_and_design_generation",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 133,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 138,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 145,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 150,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 151,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 156,
+      "themes": [
+        "architecture_and_design_generation",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 157,
+      "themes": [
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 158,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 161,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 163,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 166,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 169,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 170,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 175,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 176,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 179,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 180,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 182,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 189,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 190,
+      "themes": [
+        "internal_context_and_codebase_understanding",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 193,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 194,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 195,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 200,
+      "themes": [
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 205,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 208,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 211,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 213,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 215,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 216,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 219,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 228,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 237,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 240,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 245,
+      "themes": [
+        "architecture_and_design_generation",
+        "documentation_and_diagram_generation",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "design_tradeoffs_and_alternatives",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 250,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 253,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 259,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 261,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 266,
+      "themes": [
+        "architecture_and_design_generation",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 281,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 290,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 291,
+      "themes": [
+        "internal_context_and_codebase_understanding",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 294,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 300,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 306,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 312,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 314,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 319,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 322,
+      "themes": [
+        "architecture_and_design_generation",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 332,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 341,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 348,
+      "themes": [
+        "architecture_and_design_generation",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 349,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 356,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 357,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 366,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "requirements_gathering_and_analysis",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 370,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 381,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 384,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 386,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "documentation_and_diagram_generation",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 390,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 391,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 394,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 395,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 396,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 401,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "architecture_and_design_generation",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 403,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 409,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 412,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 417,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 422,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 432,
+      "themes": [
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 435,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 440,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 448,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 456,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 467,
+      "themes": [
+        "architecture_and_design_generation",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 470,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 493,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 505,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 508,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 511,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 515,
+      "themes": [
+        "architecture_and_design_generation",
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 522,
+      "themes": [
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 526,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 527,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 533,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 549,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 553,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 555,
+      "themes": [
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 558,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 560,
+      "themes": [
+        "documentation_and_diagram_generation",
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 564,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 566,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 569,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 572,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 579,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 597,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 607,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 611,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 627,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 628,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 635,
+      "themes": [
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "requirements_gathering_and_analysis",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 664,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 666,
+      "themes": [
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 671,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 680,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 682,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "design_tradeoffs_and_alternatives",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 696,
+      "themes": [
+        "architecture_and_design_generation",
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 698,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 704,
+      "themes": [
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 716,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 717,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "architecture_and_design_generation",
+        "architecture_review_and_risk_assessment",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 730,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 748,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 752,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 760,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 763,
+      "themes": [
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 767,
+      "themes": [
+        "architecture_and_design_generation",
+        "project_management_and_status_reporting"
+      ]
+    },
+    {
+      "pid": 774,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    },
+    {
+      "pid": 780,
+      "themes": [
+        "architecture_and_design_generation",
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 792,
+      "themes": [
+        "internal_context_and_codebase_understanding"
+      ]
+    },
+    {
+      "pid": 795,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 809,
+      "themes": [
+        "meeting_and_decision_context_tracking",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 810,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 814,
+      "themes": [
+        "documentation_and_diagram_generation"
+      ]
+    },
+    {
+      "pid": 823,
+      "themes": [
+        "project_management_and_status_reporting",
+        "work_item_generation_and_task_breakdown"
+      ]
+    },
+    {
+      "pid": 827,
+      "themes": [
+        "architecture_review_and_risk_assessment"
+      ]
+    },
+    {
+      "pid": 830,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "documentation_and_diagram_generation",
+        "project_management_and_status_reporting",
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 842,
+      "themes": [
+        "requirements_gathering_and_analysis"
+      ]
+    },
+    {
+      "pid": 848,
+      "themes": [
+        "architecture_and_design_generation",
+        "design_tradeoffs_and_alternatives"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "architecture_review_and_risk_assessment",
+        "interactive_design_partner"
+      ]
+    },
+    {
+      "pid": 852,
+      "themes": [
+        "meeting_and_decision_context_tracking"
+      ]
+    },
+    {
+      "pid": 854,
+      "themes": [
+        "architecture_and_design_generation"
+      ]
+    }
+  ]
+}

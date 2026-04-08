@@ -1,0 +1,952 @@
+{
+  "model": "claude-opus-4-6",
+  "category": "quality_risk",
+  "category_name": "Quality & Risk Management",
+  "response_count": 124,
+  "timestamp": "2026-03-06T18:26:57.122531",
+  "themes": [
+    {
+      "code": "no_final_decisions_without_human_approval",
+      "name": "No Final Decision-Making Without Human Approval",
+      "description": "Developers do not want AI to make final decisions on high-stakes matters such as release readiness, risk acceptance, incident severity, ship/don't-ship calls, or any consequential judgment. AI can inform and suggest, but the ultimate decision must rest with a human who bears accountability. This reflects concerns about ethical judgment, nuanced context, stakeholder impact, and the irreplaceable nature of human responsibility.",
+      "pids": [
+        10,
+        15,
+        59,
+        106,
+        249,
+        305,
+        313,
+        331,
+        345,
+        346,
+        387,
+        476,
+        483,
+        506,
+        565,
+        637,
+        640,
+        657,
+        687,
+        703,
+        721,
+        723,
+        740,
+        742,
+        775
+      ]
+    },
+    {
+      "code": "no_autonomous_code_changes_or_production_actions",
+      "name": "No Autonomous Code Changes or Production Actions Without Human Review",
+      "description": "Developers strongly oppose AI making direct changes to code, committing to repositories, merging PRs, modifying production systems, or touching cloud infrastructure without explicit human review and sign-off. This includes auto-committing fixes, pushing code, adjusting production configurations, and any bulk or agentic operations outside of local sandboxed changes.",
+      "pids": [
+        22,
+        24,
+        155,
+        196,
+        212,
+        225,
+        380,
+        429,
+        559,
+        574,
+        636,
+        651,
+        701
+      ]
+    },
+    {
+      "code": "human_code_review_required",
+      "name": "Human Code Review Must Be Preserved",
+      "description": "Developers insist that code review (PR review) must retain meaningful human involvement. AI code review tools are seen as currently inadequate \u2014 they lack domain context, miss intentional design decisions, produce noisy or off-base suggestions, and cannot replace the judgment of an experienced reviewer who understands the codebase and business logic. AI may assist or flag issues, but humans must remain the primary reviewers.",
+      "pids": [
+        21,
+        48,
+        82,
+        92,
+        210,
+        286,
+        535,
+        545,
+        590,
+        591,
+        598,
+        665,
+        785
+      ]
+    },
+    {
+      "code": "no_unsupervised_security_compliance",
+      "name": "No Unsupervised Security and Compliance Work",
+      "description": "Developers do not trust AI to handle security, compliance, threat modeling, or security-related code changes without strong human oversight. Security is seen as too critical, too dynamic (changing attack vectors and regulations), and too consequential for errors. AI hallucinations in this domain could lead to catastrophic breaches. AI may scan and suggest, but humans must verify and be accountable for security correctness.",
+      "pids": [
+        1,
+        42,
+        153,
+        174,
+        206,
+        276,
+        402,
+        428,
+        459,
+        608,
+        737,
+        753,
+        754
+      ]
+    },
+    {
+      "code": "no_handling_sensitive_private_data",
+      "name": "No AI Handling of Sensitive or Private Data",
+      "description": "Developers express concern about AI accessing, processing, or being entrusted with sensitive information, customer data, or private data. The fear is data leakage, privacy breaches, and non-compliance with data protection requirements. AI should not be given access to confidential data without strict safeguards.",
+      "pids": [
+        187,
+        292,
+        413,
+        620,
+        851
+      ]
+    },
+    {
+      "code": "ai_lacks_architectural_and_complex_understanding",
+      "name": "AI Cannot Handle Complex Architecture, Business Logic, or System-Level Reasoning",
+      "description": "Developers observe that current AI struggles with understanding overall system architecture, complex integrations, nuanced business logic, and large codebases. It lacks the holistic understanding needed for software design, complex algorithms, and maintaining coherent system-level decisions. These tasks should remain human-driven.",
+      "pids": [
+        49,
+        93,
+        360,
+        376,
+        400,
+        688,
+        700,
+        826
+      ]
+    },
+    {
+      "code": "ai_hallucination_and_correctness_concerns",
+      "name": "AI Unreliability, Hallucination, and Correctness Prevent Trust",
+      "description": "A cross-cutting concern that AI frequently hallucinates, produces incorrect output with false confidence, and lacks the reliability needed for critical tasks. Some developers refuse to use AI at all until correctness improves significantly. This concern underpins many other constraints \u2014 developers cannot delegate verification to a tool that itself needs verification.",
+      "pids": [
+        18,
+        55,
+        88,
+        94,
+        236,
+        350,
+        609
+      ]
+    },
+    {
+      "code": "human_accountability_must_be_preserved",
+      "name": "Human Accountability and Responsibility Must Not Be Eroded",
+      "description": "Developers emphasize that humans must remain accountable for all outputs, whether AI-assisted or not. AI should not absolve people of responsibility. Someone must always verify what AI did, own the results, and be answerable for quality. This is about organizational and professional responsibility, not just oversight.",
+      "pids": [
+        47,
+        120,
+        143,
+        153,
+        476,
+        484,
+        701
+      ]
+    },
+    {
+      "code": "human_must_define_requirements_and_criteria",
+      "name": "Humans Must Define Requirements, Goals, and Evaluation Criteria",
+      "description": "Developers want to retain control over defining what should be built, what quality criteria to test for, what risks matter, and what requirements are. AI should not decide the 'what' or 'why' \u2014 only help with the 'how'. This includes test planning criteria, security verification standards, and strategic priorities.",
+      "pids": [
+        15,
+        171,
+        344,
+        359,
+        506,
+        859
+      ]
+    },
+    {
+      "code": "no_concerns_or_not_applicable",
+      "name": "No Concerns / AI Can Handle Everything",
+      "description": "Some developers expressed no specific constraints, either because they trust AI broadly, believe it can help in all areas (with human oversight implied), or had no opinion on the matter.",
+      "pids": [
+        64,
+        117,
+        264,
+        275,
+        310,
+        339,
+        369,
+        397,
+        751,
+        776
+      ]
+    }
+  ],
+  "codings": [
+    {
+      "pid": 1,
+      "themes": [
+        "no_unsupervised_security_compliance",
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 10,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 15,
+      "themes": [
+        "no_final_decisions_without_human_approval",
+        "human_must_define_requirements_and_criteria"
+      ]
+    },
+    {
+      "pid": 18,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 21,
+      "themes": [
+        "human_code_review_required",
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 22,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 24,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 42,
+      "themes": [
+        "no_unsupervised_security_compliance",
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 47,
+      "themes": [
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 48,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 49,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 53,
+      "themes": [
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 55,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 59,
+      "themes": [
+        "no_final_decisions_without_human_approval",
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 64,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 67,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 74,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 82,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 86,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 88,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 92,
+      "themes": [
+        "human_code_review_required",
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 93,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 94,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 106,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 113,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 117,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 120,
+      "themes": [
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 129,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 143,
+      "themes": [
+        "human_accountability_must_be_preserved",
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 148,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 153,
+      "themes": [
+        "no_unsupervised_security_compliance",
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 155,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 171,
+      "themes": [
+        "human_must_define_requirements_and_criteria",
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 174,
+      "themes": [
+        "no_unsupervised_security_compliance",
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 187,
+      "themes": [
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 196,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 206,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 210,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 212,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 221,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 225,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 236,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 249,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 263,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 264,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 275,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 276,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 277,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 286,
+      "themes": [
+        "human_code_review_required",
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 292,
+      "themes": [
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 305,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 310,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 313,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 328,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 331,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 339,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 340,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 343,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 344,
+      "themes": [
+        "human_must_define_requirements_and_criteria"
+      ]
+    },
+    {
+      "pid": 345,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 346,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 350,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 359,
+      "themes": [
+        "human_must_define_requirements_and_criteria"
+      ]
+    },
+    {
+      "pid": 360,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 369,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 376,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 380,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 387,
+      "themes": [
+        "human_code_review_required",
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 397,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 400,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 402,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 413,
+      "themes": [
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 428,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 429,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions",
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 443,
+      "themes": [
+        "human_must_define_requirements_and_criteria"
+      ]
+    },
+    {
+      "pid": 446,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 459,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 476,
+      "themes": [
+        "human_accountability_must_be_preserved",
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 483,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 484,
+      "themes": [
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 506,
+      "themes": [
+        "human_must_define_requirements_and_criteria",
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 535,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 545,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 559,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 565,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 574,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 587,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 590,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 591,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 598,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 603,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 608,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 609,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 620,
+      "themes": [
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 623,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 634,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 636,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions",
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 637,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 640,
+      "themes": [
+        "no_final_decisions_without_human_approval",
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 651,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions"
+      ]
+    },
+    {
+      "pid": 657,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 663,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 665,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 674,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 687,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 688,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 700,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 701,
+      "themes": [
+        "no_autonomous_code_changes_or_production_actions",
+        "human_accountability_must_be_preserved"
+      ]
+    },
+    {
+      "pid": 703,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 721,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 723,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 737,
+      "themes": [
+        "no_handling_sensitive_private_data",
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 740,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 742,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 751,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 753,
+      "themes": [
+        "no_unsupervised_security_compliance"
+      ]
+    },
+    {
+      "pid": 754,
+      "themes": [
+        "no_unsupervised_security_compliance",
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 775,
+      "themes": [
+        "no_final_decisions_without_human_approval"
+      ]
+    },
+    {
+      "pid": 776,
+      "themes": [
+        "no_concerns_or_not_applicable"
+      ]
+    },
+    {
+      "pid": 785,
+      "themes": [
+        "human_code_review_required"
+      ]
+    },
+    {
+      "pid": 799,
+      "themes": [
+        "ai_lacks_architectural_and_complex_understanding"
+      ]
+    },
+    {
+      "pid": 826,
+      "themes": [
+        "ai_hallucination_and_correctness_concerns"
+      ]
+    },
+    {
+      "pid": 851,
+      "themes": [
+        "no_handling_sensitive_private_data"
+      ]
+    },
+    {
+      "pid": 859,
+      "themes": [
+        "human_must_define_requirements_and_criteria"
+      ]
+    }
+  ]
+}
