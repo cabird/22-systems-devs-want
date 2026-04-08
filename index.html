@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>22 Systems Developers Want (and Don't Want) from AI</title>
+<title>To Copilot and Beyond: 22 AI Systems Developers Want Built</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -128,46 +128,6 @@ body {
   margin-left: 0.6rem;
 }
 .artifact-list .file-links a:hover { text-decoration: underline; }
-
-/* Model outputs collapsible */
-.model-toggle {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.model-toggle .arrow {
-  display: inline-block;
-  transition: transform 0.2s;
-  font-size: 0.7rem;
-}
-.model-toggle.open .arrow { transform: rotate(90deg); }
-.model-grid { display: none; }
-.model-grid.open { display: block; }
-.model-grid table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-  margin-top: 0.5rem;
-}
-.model-grid th {
-  text-align: left;
-  padding: 0.4rem 0.5rem;
-  background: #f8fafc;
-  color: #475569;
-  font-weight: 600;
-  border-bottom: 2px solid #e2e8f0;
-}
-.model-grid td {
-  padding: 0.35rem 0.5rem;
-  border-bottom: 1px solid #f1f5f9;
-}
-.model-grid td a {
-  color: #2d5a87;
-  text-decoration: none;
-}
-.model-grid td a:hover { text-decoration: underline; }
 
 /* Markdown viewer modal */
 .md-overlay {
@@ -309,7 +269,7 @@ body {
 <body>
 
 <header class="site-header">
-  <h1>22 Systems Developers Want (and Don't Want) from AI</h1>
+  <h1>To Copilot and Beyond: 22 AI Systems Developers Want Built</h1>
   <p class="subtitle">
     A multi-model thematic analysis of ~2,400 open-ended developer responses identifying
     31 themes across 5 categories — and 22 research-opportunity project cards for future AI tools.
@@ -422,71 +382,7 @@ body {
         </li>
       </ul>
 
-      <h3>Quantitative Results</h3>
-      <ul class="artifact-list">
-        <li>
-          <span class="file-tag">phase5_irr_results.json</span>
-          <span class="file-desc">Inter-rater reliability (IRR) results across models</span>
-          <span class="file-links">
-            <a href="artifacts/phase5_irr_results.json">View JSON</a>
-          </span>
-        </li>
-        <li>
-          <span class="file-tag">phase6_prevalence_results.json</span>
-          <span class="file-desc">Theme prevalence data from final coding</span>
-          <span class="file-links">
-            <a href="artifacts/phase6_prevalence_results.json">View JSON</a>
-          </span>
-        </li>
-      </ul>
 
-      <h3 class="model-toggle" onclick="toggleModels(this)" id="model-toggle">
-        <span class="arrow">▶</span> Per-Model Theme Outputs (30 files)
-      </h3>
-      <div class="model-grid" id="model-grid">
-        <table>
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>GPT-5.2</th>
-              <th>Gemini-2.5-Pro</th>
-              <th>Claude Opus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Design &amp; Planning</strong></td>
-              <td><a href="artifacts/model_outputs/design_planning_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_gpt.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/design_planning_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_gemini.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/design_planning_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/design_planning_constraint_themes_opus.json">constraints</a></td>
-            </tr>
-            <tr>
-              <td><strong>Development</strong></td>
-              <td><a href="artifacts/model_outputs/development_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_gpt.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/development_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_gemini.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/development_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/development_constraint_themes_opus.json">constraints</a></td>
-            </tr>
-            <tr>
-              <td><strong>Quality &amp; Risk</strong></td>
-              <td><a href="artifacts/model_outputs/quality_risk_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_gpt.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/quality_risk_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_gemini.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/quality_risk_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/quality_risk_constraint_themes_opus.json">constraints</a></td>
-            </tr>
-            <tr>
-              <td><strong>Infrastructure &amp; Ops</strong></td>
-              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_gpt.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_gemini.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/infrastructure_ops_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/infrastructure_ops_constraint_themes_opus.json">constraints</a></td>
-            </tr>
-            <tr>
-              <td><strong>Meta Work</strong></td>
-              <td><a href="artifacts/model_outputs/meta_work_themes_gpt.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_gpt.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/meta_work_themes_gemini.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_gemini.json">constraints</a></td>
-              <td><a href="artifacts/model_outputs/meta_work_themes_opus.json">themes</a> · <a href="artifacts/model_outputs/meta_work_constraint_themes_opus.json">constraints</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
 
@@ -513,8 +409,8 @@ body {
 <footer class="site-footer">
   <p>
     Companion materials for
-    <em>"AI Where It Matters: What Developers Really Want from AI-Assisted Software Development"</em>
-    — Choudhuri et al., 2025.
+    <em>"To Copilot and Beyond: 22 AI Systems Developers Want Built"</em>
+    — Rudrajit Choudhuri, Christian Bird, Carmen Badea, Anita Sarma. Oregon State University &amp; Microsoft Research, 2025.
   </p>
   <p style="margin-top:0.4rem">
     <a href="https://github.com/cabird/22-systems-devs-want">GitHub Repository</a>
@@ -523,11 +419,6 @@ body {
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-function toggleModels(el) {
-  el.classList.toggle('open');
-  document.getElementById('model-grid').classList.toggle('open');
-}
-
 function viewMd(path, title) {
   var overlay = document.getElementById('md-overlay');
   var content = document.getElementById('md-content');
